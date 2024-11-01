@@ -1,12 +1,173 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\entities\\prediction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\prediction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\entities\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60DA0CD8-28CE-4717-84F4-17ED4A9A2BC6}|Application\\Application.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60DA0CD8-28CE-4717-84F4-17ED4A9A2BC6}|Application\\Application.csproj|solutionrelative:application\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\repositories\\ipredictionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\ipredictionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii-2024-2025\\.net\\proiect\\predictive-healthcare-management-system\\domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pacient.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Pacient.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Pacient.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Pacient.cs",
+              "RelativeToolTip": "Domain\\Entities\\Pacient.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:58:13.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Prediction.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prediction.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Prediction.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prediction.cs",
+              "RelativeToolTip": "Domain\\Entities\\Prediction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:52:17.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Appointment.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
+              "RelativeToolTip": "Domain\\Entities\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:50:46.294Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MedicalRecord.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\MedicalRecord.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\MedicalRecord.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Entities\\MedicalRecord.cs",
+              "RelativeToolTip": "Domain\\Entities\\MedicalRecord.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:51:51.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Class1.cs",
+              "RelativeDocumentMoniker": "Application\\Class1.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Class1.cs",
+              "RelativeToolTip": "Application\\Class1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:09:04.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IPredictionRepository.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IPredictionRepository.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IPredictionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:07:48.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IAppointmentRepository.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:02:38.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IMedicalRecordRepository.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:02:59.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IPatientRepository.cs",
+              "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPatientRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IPatientRepository.cs",
+              "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPatientRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IPatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:01:51.528Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
