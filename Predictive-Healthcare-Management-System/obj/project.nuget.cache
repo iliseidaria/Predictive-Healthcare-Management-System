@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "dEXQNRXS4k0=",
+  "dgSpecHash": "5V3v3TrEbQg=",
   "success": true,
   "projectFilePath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Andreea\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
+    "C:\\Users\\Andreea\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
+    "C:\\Users\\Andreea\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.10.0\\fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
     "C:\\Users\\Andreea\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Andreea\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\Andreea\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -1,0 +1,8 @@
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.csproj.AssemblyReference.cache
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.GeneratedMSBuildEditorConfig.editorconfig
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.AssemblyInfoInputs.cache
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.AssemblyInfo.cs
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.csproj.CoreCompileInputs.cache
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.MvcApplicationPartsAssemblyInfo.cs
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.MvcApplicationPartsAssemblyInfo.cache
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.sourcelink.json

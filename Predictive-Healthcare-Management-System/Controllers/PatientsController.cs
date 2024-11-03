@@ -1,4 +1,6 @@
-﻿using MediatR;
+﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Queries;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Predictive_Healthcare_Management_System.Controllers
@@ -17,7 +19,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _mediator.Send(new GetAllPatientsQuery());
+            var result = await _mediator.Send(new GetPatientsQuery());
             return Ok(result);
         }
 

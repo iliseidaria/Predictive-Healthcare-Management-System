@@ -6,7 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Predictive-Healthcare-Management-System", "Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System.csproj", "{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}"
 	ProjectSection(ProjectDependencies) = postProject
 		{7C8B8000-6F75-4A46-BB50-BA7F92341BD0} = {7C8B8000-6F75-4A46-BB50-BA7F92341BD0}
-		{7E40BED6-6B85-4487-8C0C-382481941E3C} = {7E40BED6-6B85-4487-8C0C-382481941E3C}
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{B76BCA1C-D17A-4398-B9BE-A17DC09D86E7}"
@@ -19,12 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "..\dotNetClassProjects\Infrastructure\Infrastructure.csproj", "{7E40BED6-6B85-4487-8C0C-382481941E3C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "..\dotNetClassProjects\Application\Application.csproj", "{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}"
 	ProjectSection(ProjectDependencies) = postProject
 		{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6} = {919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "..\dotNetClassProjects\Application\Application.csproj", "{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure\Infrastructure.csproj", "{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6} = {919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}
 	EndProjectSection
@@ -43,14 +42,14 @@ Global
 		{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7E40BED6-6B85-4487-8C0C-382481941E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7E40BED6-6B85-4487-8C0C-382481941E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7E40BED6-6B85-4487-8C0C-382481941E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7E40BED6-6B85-4487-8C0C-382481941E3C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -58,8 +57,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{0AC8458E-A6E8-4140-A788-731CCFF0A8A4} = {B76BCA1C-D17A-4398-B9BE-A17DC09D86E7}
 		{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6} = {06B63739-818C-466F-BFB3-4176C2336702}
-		{7E40BED6-6B85-4487-8C0C-382481941E3C} = {660D0B05-B69D-4563-859A-658F4028E7A1}
 		{7C8B8000-6F75-4A46-BB50-BA7F92341BD0} = {75F38616-5663-4B4D-8EFC-48A938AE55B5}
+		{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3} = {660D0B05-B69D-4563-859A-658F4028E7A1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {99AD231D-877D-4A18-88E5-C6F5A7748B71}
