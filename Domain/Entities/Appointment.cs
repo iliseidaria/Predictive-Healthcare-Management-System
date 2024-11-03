@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace Domain.Entities
 {
+    public enum AppointmentStatus
+    {
+        Scheduled,
+        Completed,
+        Canceled
+    }
     public class Appointment
     {
         public Guid AppointmentId { get; set; }

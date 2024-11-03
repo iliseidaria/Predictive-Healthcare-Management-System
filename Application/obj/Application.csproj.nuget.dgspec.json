@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Application.csproj": {}
+    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Application.csproj": {}
   },
   "projects": {
-    "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Application.csproj": {
+    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
+        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\obj\\",
+        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +29,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+              "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
               }
             }
           }
@@ -87,17 +87,17 @@
         }
       }
     },
-    "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
+    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\obj\\",
+        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

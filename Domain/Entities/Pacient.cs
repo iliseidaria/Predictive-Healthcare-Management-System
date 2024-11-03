@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Domain.Entities
+﻿namespace Domain.Entities
 {
-   public class Patient
+    public enum Gender
+    {
+        Male,
+        Female,
+        Other
+    }
+
+    public class Patient
     {
         public Guid PatientId { get; set; }
         public string FirstName { get; set; }

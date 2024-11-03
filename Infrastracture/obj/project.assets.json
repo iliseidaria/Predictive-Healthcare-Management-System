@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
-      "projectName": "Domain",
-      "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+      "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\Infrastracture.csproj",
+      "projectName": "Infrastracture",
+      "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\Infrastracture.csproj",
       "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\obj\\",
+      "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",

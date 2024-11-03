@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {}
+    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\Infrastracture.csproj": {}
   },
   "projects": {
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
+    "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\Infrastracture.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
-        "projectName": "Predictive-Healthcare-Management-System",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
+        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\Infrastracture.csproj",
+        "projectName": "Infrastracture",
+        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\Infrastracture.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\obj\\",
+        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastracture\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,22 +45,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "MediatR": {
-              "target": "Package",
-              "version": "[12.4.1, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[8.0.10, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -73,9 +57,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
