@@ -3,10 +3,13 @@
   "WorkspaceRootPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\updatepatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commandhandlers\\createpatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commandhandlers\\deletepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\createpatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -15,67 +18,33 @@
       "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\createpatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commandhandlers\\createpatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\deletepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\queryhandlers\\getpatientbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\updatepatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\queryhandlers\\getpatientsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\queryhandlers\\getpatientbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\queries\\getpatientbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commandhandlers\\deletepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E40BED6-6B85-4487-8C0C-382481941E3C}|..\\dotNetClassProjects\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E40BED6-6B85-4487-8C0C-382481941E3C}|..\\dotNetClassProjects\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E40BED6-6B85-4487-8C0C-382481941E3C}|..\\dotNetClassProjects\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\utils\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\utils\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\use cases\\commands\\deletepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\pacient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\ipredictionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -86,12 +55,43 @@
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\prediction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\utils\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C8B8000-6F75-4A46-BB50-BA7F92341BD0}|..\\dotNetClassProjects\\Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\application\\utils\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E40BED6-6B85-4487-8C0C-382481941E3C}|..\\dotNetClassProjects\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E40BED6-6B85-4487-8C0C-382481941E3C}|..\\dotNetClassProjects\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E40BED6-6B85-4487-8C0C-382481941E3C}|..\\dotNetClassProjects\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\dotnetclassprojects\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -101,11 +101,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CreatePatientCommandValidator.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\CreatePatientCommandValidator.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\CreatePatientCommandValidator.cs",
@@ -118,20 +118,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CreatePatientCommand.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
               "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
               "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T14:10:50.539Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DeletePatientCommandHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T13:46:32.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CreatePatientCommandHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T13:46:17.589Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PatientDTO.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T12:13:54.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DeletePatientCommand.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T14:11:02.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "UpdatePatientCommand.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
@@ -144,7 +196,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 7,
               "Title": "UpdatePatientCommandValidator.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\UpdatePatientCommandValidator.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\UpdatePatientCommandValidator.cs",
@@ -153,58 +205,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T14:11:26.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreatePatientCommandHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T13:46:17.589Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PatientDTO.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\DTOs\\PatientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T12:13:54.463Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "GetPatientsQuery.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T14:23:04.078Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GetPatientByIdQueryHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T14:27:09.306Z",
               "EditorCaption": ""
             },
             {
@@ -223,6 +223,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 9,
+              "Title": "GetPatientByIdQueryHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T14:27:09.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetPatientsQuery.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T14:23:04.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "GetPatientByIdQuery.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientByIdQuery.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Queries\\GetPatientByIdQuery.cs",
@@ -235,111 +261,72 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "DeletePatientCommandHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T13:46:32.473Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PatientRepository.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T12:42:49.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAuwBAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T14:51:46.738Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "DependencyInjection.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAAwA4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T19:31:13.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PatientsController.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
-              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
-              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T12:05:38.711Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
               "Title": "IPatientRepository.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPatientRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Repositories\\IPatientRepository.cs",
               "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPatientRepository.cs",
               "RelativeToolTip": "Domain\\Repositories\\IPatientRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAYAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T11:01:51.528Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IAppointmentRepository.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
-              "RelativeDocumentMoniker": "Domain\\Repositories\\IAppointmentRepository.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
-              "RelativeToolTip": "Domain\\Repositories\\IAppointmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "DocumentIndex": 13,
+              "Title": "Pacient.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Pacient.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Pacient.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Pacient.cs",
+              "RelativeToolTip": "Domain\\Entities\\Pacient.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T11:02:38.385Z",
+              "WhenOpened": "2024-11-01T10:58:13.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPredictionRepository.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IPredictionRepository.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IPredictionRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:07:48.539Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Prediction.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prediction.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Prediction.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prediction.cs",
+              "RelativeToolTip": "Domain\\Entities\\Prediction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:52:17.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Prescription.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Prescription.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
+              "RelativeToolTip": "Domain\\Entities\\Prescription.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T12:19:28.46Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "Appointment.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Appointment.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
-              "RelativeToolTip": "Domain\\Entities\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T10:50:46.294Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Utils\\MappingProfile.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Utils\\MappingProfile.cs",
@@ -352,41 +339,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "ValidationBehaviour.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Utils\\ValidationBehaviour.cs",
               "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Utils\\ValidationBehaviour.cs",
               "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Utils\\ValidationBehaviour.cs",
               "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Utils\\ValidationBehaviour.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-03T11:43:40.157Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "DeletePatientCommand.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
-              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
-              "RelativeToolTip": "..\\dotNetClassProjects\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T14:11:02.04Z",
+              "WhenOpened": "2024-11-03T14:51:46.738Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAcAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T12:42:49.561Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 21,
-              "Title": "Pacient.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Pacient.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Pacient.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Pacient.cs",
-              "RelativeToolTip": "Domain\\Entities\\Pacient.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "..\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "..\\dotNetClassProjects\\Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAwA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T10:58:13.156Z",
+              "WhenOpened": "2024-11-02T19:31:13.424Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "PatientsController.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-03T12:05:38.711Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "IAppointmentRepository.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IAppointmentRepository.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IAppointmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:02:38.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Appointment.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
+              "RelativeToolTip": "Domain\\Entities\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T10:50:46.294Z",
               "EditorCaption": ""
             },
             {
@@ -403,7 +442,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 25,
               "Title": "IMedicalRecordRepository.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IMedicalRecordRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Repositories\\IMedicalRecordRepository.cs",
@@ -416,33 +455,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "IPredictionRepository.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
-              "RelativeDocumentMoniker": "Domain\\Repositories\\IPredictionRepository.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
-              "RelativeToolTip": "Domain\\Repositories\\IPredictionRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T11:07:48.539Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Prediction.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prediction.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Prediction.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prediction.cs",
-              "RelativeToolTip": "Domain\\Entities\\Prediction.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T10:52:17.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "MedicalRecord.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\MedicalRecord.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\MedicalRecord.cs",
@@ -451,19 +464,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-01T10:51:51.259Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "Prescription.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\Prescription.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
-              "RelativeToolTip": "Domain\\Entities\\Prescription.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-03T12:19:28.46Z",
               "EditorCaption": ""
             }
           ]
