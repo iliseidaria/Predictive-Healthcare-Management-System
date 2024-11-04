@@ -1,6 +1,7 @@
 ﻿using Application.Use_Cases.Commands;
 using Application.Use_Cases.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Components.Forms;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Predictive_Healthcare_Management_System.Controllers
@@ -24,23 +25,46 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CreatePatientCommand command)
+        public async Task<IActionResult> Create(CreatePatientCommand command)
         {
-            var result = await _mediator.Send(command);
-            if (result.IsSuccess)
-                return CreatedAtAction(nameof(GetAll), new { id = result.Value.PatientId }, result.Value);
+        //    var result = await _mediator.Send(command);
+        //    if (result != null && result.IsSuccess)
+        //        return CreatedAtAction(nameof(GetAll), new { id = result.Value.PatientId }, result.Value);
+        //    return BadRequest(result.Errors);
 
-            return BadRequest(result.Errors);
+            try
+            {
+                var patientId = await _mediator.Send(command);
+                return CreatedAtAction(nameof(GetAll), new { id = patientId }, new { id = patientId });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Error = ex.Message });
+            }
+
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, [FromBody] UpdatePatientCommand command)
+        public async Task<IActionResult> Update(Guid id, UpdatePatientCommand command)
         {
+            //if (id != command.PatientId)
+            //    return BadRequest("Id in URL and command must match");
+
+            //var result = await _mediator.Send(command);
+            //return result.IsSuccess ? Ok(result.Value) : BadRequest(result.Errors);
+
             if (id != command.PatientId)
                 return BadRequest("Id in URL and command must match");
 
-            var result = await _mediator.Send(command);
-            return result.IsSuccess ? Ok(result.Value) : BadRequest(result.Errors);
+            try
+            {
+                await _mediator.Send(command);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { Error = ex.Message });
+            }
         }
         //private readonly IMediator mediator;
         //public PatientsController(IMediator mediator)

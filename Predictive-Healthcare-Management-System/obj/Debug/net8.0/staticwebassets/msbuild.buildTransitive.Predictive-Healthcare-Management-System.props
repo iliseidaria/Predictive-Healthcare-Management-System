@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Predictive-Healthcare-Management-System.props" />
+</Project>

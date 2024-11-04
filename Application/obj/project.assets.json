@@ -352,8 +352,8 @@
     },
     "Domain/1.0.0": {
       "type": "project",
-      "path": "../../Predictive-Healthcare-Management-System/Domain/Domain.csproj",
-      "msbuildProject": "../../Predictive-Healthcare-Management-System/Domain/Domain.csproj"
+      "path": "../Domain/Domain.csproj",
+      "msbuildProject": "../Domain/Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -366,19 +366,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andreea\\.nuget\\packages\\": {}
+    "C:\\Users\\Asus\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Application\\obj\\",
+      "projectPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
+      "outputPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -393,11 +393,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Domain\\Domain.csproj": {
-              "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\dotNetClassProjects\\Domain\\Domain.csproj"
-            },
-            "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
-              "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+            "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
             }
           }
         }
