@@ -27,6 +27,48 @@
   },
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
+    "Method": "GetById",
+    "RelativePath": "api/v1/Patients/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Application.DTOs.PatientDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/Patients/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
     "Method": "Update",
     "RelativePath": "api/v1/Patients/{id}",
     "HttpMethod": "PUT",

@@ -2,6 +2,7 @@
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
+using System.ComponentModel.DataAnnotations;
 
 namespace Application.Use_Cases.CommandHandlers
 {
@@ -17,6 +18,17 @@ namespace Application.Use_Cases.CommandHandlers
         }
         public async Task<Guid> Handle(CreatePatientCommand request, CancellationToken cancellationToken)
         {
+            CreatePatientCommandValidator validationRule = new CreatePatientCommandValidator();
+            var validator = validationRule.Validate(request);
+            if (!validator.IsValid)
+            {
+                var errorsResult = new List<string>();
+                foreach (var error in validator.Errors)
+                {
+                    errorsResult.Add(error.ErrorMessage);
+                }
+                throw new ValidationException(errorsResult.ToString());
+            }
             var product = mapper.Map<Patient>(request);
             return await repository.AddPatientAsync(product);
         }

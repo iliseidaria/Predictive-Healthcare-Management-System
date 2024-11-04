@@ -12,7 +12,7 @@ namespace Infrastructure
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(configuration.GetConnectionString("DefaultConnection"),
-                b => b.MigrationsAssembly("Predictive-Healthcare-Management-System"))
+                b => b.MigrationsAssembly("Infrastructure"))
             );
             services.AddScoped<IPatientRepository, PatientRepository>();
             return services;

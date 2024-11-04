@@ -1,21 +1,25 @@
 ﻿using Application.Use_Cases.Commands;
+using AutoMapper;
+using Domain.Entities;
 using MediatR;
 using System.ComponentModel.DataAnnotations;
 
-namespace Application.Use_Cases.CommandHandlers
+namespace Application.CommandHandlers
 {
-    public class DeletePatientCommandHandler : IRequestHandler<DeletePatientCommand>
+    public class UpdatePatientCommandHandler : IRequestHandler<UpdatePatientCommand>
     {
         private readonly IPatientRepository repository;
+        private readonly IMapper mapper;
 
-        public DeletePatientCommandHandler(IPatientRepository repository)
+        public UpdatePatientCommandHandler(IPatientRepository repository, IMapper mapper)
         {
             this.repository = repository;
+            this.mapper = mapper;
         }
-        public async Task Handle(DeletePatientCommand request, CancellationToken cancellationToken)
+
+        public async Task Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
         {
-            // Validate the request
-            DeletePatientCommandValidator validationRule = new DeletePatientCommandValidator();
+            UpdatePatientCommandValidator validationRule = new UpdatePatientCommandValidator();
             var validator = validationRule.Validate(request);
             if (!validator.IsValid)
             {
@@ -28,15 +32,17 @@ namespace Application.Use_Cases.CommandHandlers
             }
 
             // Check if the patient exists
-            var existingPatient = await repository.GetPatientByIdAsync(request.Id);
+            var existingPatient = await repository.GetPatientByIdAsync(request.PatientId);
             if (existingPatient == null)
             {
                 throw new KeyNotFoundException("Patient not found");
             }
 
-            // Delete the patient
-            await repository.DeletePatientAsync(request.Id);
-        }
 
+            repository.Detach(existingPatient);
+
+            var p = mapper.Map<Patient>(request);
+            await repository.UpdateAsync(p);
+        }
     }
 }

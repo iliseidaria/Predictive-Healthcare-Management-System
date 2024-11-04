@@ -9,10 +9,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Predictive_Healthcare_Management_System.Migrations
+namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20241104185818_InitialCreate")]
+    [Migration("20241104191507_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />

@@ -7,11 +7,6 @@ namespace Application.Use_Cases.CommandHandlers
     {
         public CreatePatientCommandValidator()
         {
-            RuleFor(p => p.PatientId)
-                .NotEmpty()
-                .Must(BeAValidGuid)
-                .WithMessage("'{PropertyName}' must be a valid Guid.");
-
             RuleFor(p => p.FirstName)
                 .NotEmpty()
                 .MaximumLength(100);
