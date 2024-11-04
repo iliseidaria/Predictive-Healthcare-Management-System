@@ -10,10 +10,13 @@ namespace Infrastructure.Persistence
         }
 
         public DbSet<Patient> Patients { get; set; }
+        public DbSet<MedicalRecord> MedicalRecords { get; set; }
+        public DbSet<Appointment> Appointments { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasPostgresExtension("uuid-ossp");
+
             modelBuilder.Entity<Patient>(entity =>
             {
                 entity.ToTable("patients");
@@ -28,6 +31,34 @@ namespace Infrastructure.Persistence
                 entity.Property(e => e.Gender).IsRequired();
                 entity.Property(e => e.ContactInformation).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(300);
+            });
+
+            modelBuilder.Entity<MedicalRecord>(entity =>
+            {
+                entity.ToTable("medical_records");
+                entity.HasKey(e => e.RecordId);
+                entity.Property(e => e.RecordId)
+                    .HasColumnType("uuid")
+                    .HasDefaultValueSql("uuid_generate_v4()")
+                    .ValueGeneratedOnAdd();
+                entity.Property(e => e.PatientId).IsRequired();
+                entity.Property(e => e.Date).IsRequired();
+                entity.Property(e => e.Diagnosis).IsRequired().HasMaxLength(500);
+                entity.Property(e => e.Notes).HasMaxLength(1000);
+                entity.HasMany(e => e.Prescriptions).WithOne().HasForeignKey(p => p.PrescriptionId);
+            });
+
+            modelBuilder.Entity<Appointment>(entity =>
+            {
+                entity.ToTable("appointments");
+                entity.HasKey(e => e.AppointmentId);
+                entity.Property(e => e.AppointmentId)
+                    .HasColumnType("uuid")
+                    .HasDefaultValueSql("uuid_generate_v4()")
+                    .ValueGeneratedOnAdd();
+                entity.Property(e => e.PatientId).IsRequired();
+                entity.Property(e => e.AppointmentDate).IsRequired();
+                entity.Property(e => e.Reason).HasMaxLength(1000);
             });
         }
     }
