@@ -34,3 +34,15 @@ C:\Users\Andreea\Source\Repos\Predictive-Healthcare-Management-System\Domain\obj
 C:\Users\Andreea\Source\Repos\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Users\Andreea\Source\Repos\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Users\Andreea\Source\Repos\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\FII\dotNet\health\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\FII\dotNet\health\Domain\bin\Debug\net8.0\Domain.dll
+D:\FII\dotNet\health\Domain\bin\Debug\net8.0\Domain.pdb
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.dll
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.pdb
+D:\FII\dotNet\health\Domain\obj\Debug\net8.0\ref\Domain.dll

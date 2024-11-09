@@ -30,7 +30,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
             if (patient == null)
             {
-                return NotFound(new { Error = "Patient not found" });
+                throw new NotFoundException(); // Use centralized error handling
             }
             return Ok(patient);
         }
@@ -38,15 +38,8 @@ namespace Predictive_Healthcare_Management_System.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreatePatientCommand command)
         {
-            try
-            {
-                var patientId = await _mediator.Send(command);
-                return CreatedAtAction(nameof(GetById), new { id = patientId }, new { id = patientId });
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { Error = ex.Message });
-            }
+            var patientId = await _mediator.Send(command);
+            return CreatedAtAction(nameof(GetById), new { id = patientId }, new { id = patientId });
         }
 
         [HttpDelete("{id}")]
@@ -55,33 +48,28 @@ namespace Predictive_Healthcare_Management_System.Controllers
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
             if (patient == null)
             {
-                return NotFound(new { Error = "Patient not found" });
+                throw new NotFoundException();
             }
             await _mediator.Send(new DeletePatientCommand { Id = id });
-            return StatusCode(StatusCodes.Status204NoContent);
+            return NoContent();
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, UpdatePatientCommand command)
         {
             if (id != command.PatientId)
-                return BadRequest("Id in URL and command must match");
+            {
+                throw new IdMismatchException(); 
+            }
 
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
             if (patient == null)
             {
-                return NotFound(new { Error = "Patient not found" });
+                throw new NotFoundException(); 
             }
 
-            try
-            {
-                await _mediator.Send(command);
-                return NoContent();
-            }
-            catch (Exception ex)
-            {
-                return BadRequest(new { Error = ex.Message });
-            }
+            await _mediator.Send(command);
+            return NoContent();
         }
     }
 }

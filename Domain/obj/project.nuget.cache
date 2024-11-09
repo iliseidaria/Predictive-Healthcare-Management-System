@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zH8WDwBxTFI=",
+  "dgSpecHash": "VV2cV605CZPbVLjN/eSQSfBbwusoDLk1hih4XPAQKFQX6GlCAnoKA2CT2J0m3Ma74M672a5WvHVfH4h5iB+90g==",
   "success": true,
-  "projectFilePath": "D:\\FII-2024-2025\\.NET\\PROIECT\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\FII\\dotNet\\health\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
