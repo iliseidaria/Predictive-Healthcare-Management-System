@@ -5,6 +5,8 @@ public class DeletePatientCommandValidator : AbstractValidator<DeletePatientComm
 {
     public DeletePatientCommandValidator()
     {
-        RuleFor(x => x.Id).NotEmpty().WithMessage("Patient ID must not be empty.");
+        RuleFor(x => x.Id)
+            .NotEmpty()
+            .WithMessage("Patient ID must not be empty.");
     }
 }

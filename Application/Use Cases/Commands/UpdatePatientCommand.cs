@@ -3,7 +3,7 @@ using MediatR;
 
 namespace Application.Use_Cases.Commands
 {
-    public class UpdatePatientCommand : IRequest
+    public class UpdatePatientCommand : IRequest<Unit>
     {
         public Guid PatientId { get; set; }
         public string FirstName { get; set; }

@@ -16,6 +16,7 @@
         public Gender Gender { get; set; }
         public string ContactInformation { get; set; }
         public string Address { get; set; }
+        public string PhotoPath { get; set; }
         public List<MedicalRecord> MedicalHistory { get; set; } = new List<MedicalRecord>();
         public List<Appointment> Appointments { get; set; } = new List<Appointment>();
     }
