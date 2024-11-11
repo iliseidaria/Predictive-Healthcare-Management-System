@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 public interface IMedicalRecordRepository
 {
+    Task<List<MedicalRecord>> GetMedicalRecordsAsync();
     Task<List<MedicalRecord>> GetAllByPatientIdAsync(Guid patientId);
-    Task<MedicalRecord> GetByIdAsync(Guid recordId);
-    Task<bool> AddAsync(MedicalRecord medicalRecord);
+    Task<MedicalRecord> GetMedicalRecordByIdAsync(Guid recordId);
+    Task<Guid> AddMedicalRecordAsync(MedicalRecord medicalRecord);
     Task<bool> UpdateAsync(MedicalRecord medicalRecord);
     Task<bool> DeleteAsync(Guid recordId);
 }

@@ -94,3 +94,5 @@ M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Appli
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\obj\Debug\net8.0\refint\Application.dll
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\obj\Debug\net8.0\Application.pdb
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\obj\Debug\net8.0\ref\Application.dll
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\bin\Debug\net8.0\Infrastructure.dll
+M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\bin\Debug\net8.0\Infrastructure.pdb

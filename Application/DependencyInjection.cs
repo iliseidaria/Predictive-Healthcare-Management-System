@@ -1,6 +1,7 @@
 ﻿using Application.Use_Cases.CommandHandlers;
 using Application.Utils;
 using FluentValidation;
+using Infrastructure.Repositories;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -16,6 +17,7 @@ namespace Application
             services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>();
             //services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly); //nuj daca i corect asa
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+            services.AddTransient<IMedicalRecordRepository, MedicalRecordRepository>();
             return services;
         }
     }

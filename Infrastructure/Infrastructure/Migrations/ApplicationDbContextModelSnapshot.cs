@@ -117,6 +117,10 @@ namespace Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("character varying(100)");
 
+                    b.Property<string>("PhotoPath")
+                        .IsRequired()
+                        .HasColumnType("text");
+
                     b.HasKey("PatientId");
 
                     b.ToTable("patients", (string)null);

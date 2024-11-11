@@ -31,6 +31,9 @@
             "projectReferences": {
               "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
                 "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+              },
+              "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
