@@ -9,5 +9,6 @@ namespace Infrastructure.Repositories
         Task<Guid> AddAppointmentAsync(Appointment appointment);
         Task<bool> UpdateAppointmentAsync(Appointment appointment);
         Task<bool> DeleteAppointmentAsync(Guid appointmentId);
+        void Detach(Appointment appointment);
     }
 }

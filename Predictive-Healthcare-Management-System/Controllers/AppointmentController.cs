@@ -30,7 +30,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
             var result = await _mediator.Send(new GetAppointmentByIdQuery { Id = id });
             if (result == null)
             {
-                throw new NotFoundException(); // Use centralized error handling
+                throw new AppointmentNotFound(); // Use centralized error handling
             }
             return Ok(result);
         }
@@ -51,15 +51,23 @@ namespace Predictive_Healthcare_Management_System.Controllers
             return CreatedAtAction(nameof(GetById), new { id = appointmentId }, new { id = appointmentId });
         }
 
-        /*[HttpPut("{id}")]
+        [HttpPut("{id}")]
         public async Task<IActionResult> Update(Guid id, UpdateAppointmentCommand command)
         {
             if (id != command.AppointmentId)
-                return BadRequest("Id in URL and command must match");
+            {
+                throw new IdMismatchException();
+            }
+
+            var record = await _mediator.Send(new GetAppointmentByIdQuery { Id = id });
+            if (record == null)
+            {
+                throw new AppointmentNotFound();
+            }
 
             var result = await _mediator.Send(command);
-            return result ? NoContent() : BadRequest("Update failed");
-        }*/
+            return NoContent();
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
@@ -68,7 +76,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
             var patient = await _mediator.Send(new GetAppointmentByIdQuery { Id = id });
             if (patient == null)
             {
-                throw new NotFoundException();
+                throw new AppointmentNotFound();
             }
             await _mediator.Send(new DeleteAppointmentCommand { Id = id });
             return NoContent();

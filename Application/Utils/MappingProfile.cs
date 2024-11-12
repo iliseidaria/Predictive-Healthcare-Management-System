@@ -23,7 +23,7 @@ namespace Application.Utils
             // Appointment mappings
             CreateMap<Appointment, AppointmentDTO>().ReverseMap();
             CreateMap<CreateAppointmentCommand, Appointment>().ReverseMap();
-            //CreateMap<UpdateAppointmentCommand, Appointment>().ReverseMap();
+            CreateMap<UpdateAppointmentCommand, Appointment>().ReverseMap();
 
         }
     }

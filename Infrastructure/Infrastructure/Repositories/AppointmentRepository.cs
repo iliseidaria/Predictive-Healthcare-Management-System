@@ -47,5 +47,9 @@ namespace Infrastructure.Repositories
             _context.Appointments.Remove(appointment);
             return await _context.SaveChangesAsync() > 0;
         }
+        public void Detach(Appointment appointment)
+        {
+            _context.Entry(appointment).State = EntityState.Detached;  
+        }
     }
 }
