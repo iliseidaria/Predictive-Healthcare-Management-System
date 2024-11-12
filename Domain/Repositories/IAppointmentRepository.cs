@@ -1,14 +1,13 @@
-﻿// Domain/Interfaces/IAppointmentRepository.cs
-using Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using Domain.Entities;
 
-public interface IAppointmentRepository
+namespace Infrastructure.Repositories
 {
-    Task<List<Appointment>> GetAllByPatientIdAsync(Guid patientId);
-    Task<Appointment> GetByIdAsync(Guid appointmentId);
-    Task<bool> AddAsync(Appointment appointment);
-    Task<bool> UpdateAsync(Appointment appointment);
-    Task<bool> DeleteAsync(Guid appointmentId);
+    public interface IAppointmentRepository
+    {
+        Task<Appointment> GetAppointmentByIdAsync(Guid appointmentId);
+        Task<List<Appointment>> GetAllAppointmentsAsync();
+        Task<Guid> AddAppointmentAsync(Appointment appointment);
+        Task<bool> UpdateAppointmentAsync(Appointment appointment);
+        Task<bool> DeleteAppointmentAsync(Guid appointmentId);
+    }
 }
