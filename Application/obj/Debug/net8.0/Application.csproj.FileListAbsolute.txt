@@ -73,7 +73,6 @@ D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs
 D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
 D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.sourcelink.json
-D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.csproj.CopyComplete
 D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.dll
 D:\FII\dotNet\health\Application\obj\Debug\net8.0\refint\Application.dll
 D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.pdb
@@ -96,3 +95,6 @@ M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Appli
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\obj\Debug\net8.0\ref\Application.dll
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\bin\Debug\net8.0\Infrastructure.dll
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Application\bin\Debug\net8.0\Infrastructure.pdb
+D:\FII\dotNet\health\Application\bin\Debug\net8.0\Infrastructure.dll
+D:\FII\dotNet\health\Application\bin\Debug\net8.0\Infrastructure.pdb
+D:\FII\dotNet\health\Application\obj\Debug\net8.0\Application.csproj.CopyComplete

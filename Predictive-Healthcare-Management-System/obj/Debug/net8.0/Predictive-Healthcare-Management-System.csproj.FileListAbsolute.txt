@@ -366,7 +366,6 @@ D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\st
 D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Predictive-Healthcare-Management-System.props
 D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\staticwebassets.pack.json
 D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\scopedcss\bundle\Predictive-Healthcare-Management-System.styles.css
-D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.csproj.CopyComplete
 D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.dll
 D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\refint\Predictive-Healthcare-Management-System.dll
 D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.pdb
@@ -486,3 +485,4 @@ M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predi
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.pdb
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.genruntimeconfig.cache
 M:\fromC\OneDrive\Documente\GitHub\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\ref\Predictive-Healthcare-Management-System.dll
+D:\FII\dotNet\health\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.csproj.CopyComplete

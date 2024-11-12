@@ -65,7 +65,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
             var record = await _mediator.Send(new GetMedicalRecordByIdQuery { Id = id });
             if (record == null)
             {
-                throw new NotFoundException();
+                throw new MedicalRecordNotFoundException();
             }
 
             await _mediator.Send(command);
