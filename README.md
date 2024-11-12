@@ -171,6 +171,12 @@ Validators ensure data integrity and improve user experience by catching common 
 ---
 
 ## 6. API Endpoints
+### AppointmentController Endpoints
+- **GET /api/v1/Appointment**: Retrieves a list of all appointments.
+- **POST /api/v1/Appointment**: Creates a new appointment.
+- **GET /api/v1/Appointment/{id}**: Retrieves details of a specific appointment by its ID.
+- **PUT /api/v1/Appointment/{id}**: Updates an existing appointment.
+- **DELETE /api/v1/Appointment/{id}**: Deletes a specific appointment by its ID.
 
 ### PatientController Endpoints
 - **GET /api/patients**: Retrieves a list of all patients.
