@@ -78,7 +78,8 @@ The **Prescription** entity models prescribed medications for patient treatment:
 ---
 
 ### Domain Model Overview
-The domain model is represented using a Level 2 C4 diagram.
+The domain model is represented using a Level 2 C4 diagram:
+https://s.icepanel.io/kfVxScaCFTOU3F/sJJo
 
 ---
 
