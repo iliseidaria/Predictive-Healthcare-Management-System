@@ -17,6 +17,7 @@ namespace Application.Utils
             // MedicalRecord mappings
             CreateMap<MedicalRecord, MedicalRecordDTO>().ReverseMap();
             CreateMap<CreateMedicalRecordCommand, MedicalRecord>().ReverseMap();
+            CreateMap<UpdateMedicalRecordCommand, MedicalRecord>().ReverseMap();
             //CreateMap<Prescription, PrescriptionDTO>().ReverseMap();
 
             // Appointment mappings

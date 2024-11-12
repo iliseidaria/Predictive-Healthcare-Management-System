@@ -10,9 +10,9 @@ namespace Application.Use_Cases.Commands
     public class UpdateMedicalRecordCommandValidator : AbstractValidator<UpdateMedicalRecordCommand>
     {
         private readonly IPatientRepository _patientRepository;
-        private async Task<bool> PatientExists(Guid patientId, CancellationToken cancellationToken)
+        private bool PatientExists(Guid patientId)
         {
-            return await _patientRepository.PatientExistsAsync(patientId);
+            return _patientRepository.PatientExistsAsync(patientId).GetAwaiter().GetResult();
         }
         public UpdateMedicalRecordCommandValidator(IPatientRepository patientRepository) {
             _patientRepository = patientRepository;
@@ -23,7 +23,7 @@ namespace Application.Use_Cases.Commands
             RuleFor(x => x.PatientId)
                 .NotEmpty()
                 .WithMessage("Patient ID must not be empty.")
-                .MustAsync(PatientExists)
+                .Must(PatientExists)
                 .WithMessage("Patient ID does not exist.");
             RuleFor(p => p.Date)
                 .NotEmpty()

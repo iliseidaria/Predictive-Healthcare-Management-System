@@ -59,6 +59,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         {
             if (id != command.PatientId)
             {
+                Console.WriteLine(id.ToString(), command.PatientId);
                 throw new IdMismatchException(); 
             }
 
