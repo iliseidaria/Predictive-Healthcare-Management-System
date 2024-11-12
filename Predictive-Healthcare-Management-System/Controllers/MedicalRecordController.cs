@@ -42,34 +42,34 @@ namespace Predictive_Healthcare_Management_System.Controllers
             return Ok(result);
         }
 
-        //[HttpDelete("{id}")]
-        //public async Task<IActionResult> Delete(Guid id)
-        //{
-        //    var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
-        //    if (patient == null)
-        //    {
-        //        throw new NotFoundException();
-        //    }
-        //    await _mediator.Send(new DeletePatientCommand { Id = id });
-        //    return NoContent();
-        //}
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var patient = await _mediator.Send(new GetMedicalRecordByIdQuery { Id = id });
+            if (patient == null)
+            {
+                throw new NotFoundException();
+            }
+            await _mediator.Send(new DeleteMedicalRecordCommand { Id = id });
+            return NoContent();
+        }
 
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> Update(Guid id, UpdatePatientCommand command)
-        //{
-        //    if (id != command.PatientId)
-        //    {
-        //        throw new IdMismatchException();
-        //    }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, UpdateMedicalRecordCommand command)
+        {
+            if (id != command.RecordId)
+            {
+                throw new IdMismatchException();
+            }
 
-        //    var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
-        //    if (patient == null)
-        //    {
-        //        throw new NotFoundException();
-        //    }
+            var record = await _mediator.Send(new GetMedicalRecordByIdQuery { Id = id });
+            if (record == null)
+            {
+                throw new NotFoundException();
+            }
 
-        //    await _mediator.Send(command);
-        //    return NoContent();
-        //}
+            await _mediator.Send(command);
+            return NoContent();
+        }
     }
 }

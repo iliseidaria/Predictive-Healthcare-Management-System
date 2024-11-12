@@ -9,4 +9,5 @@ public interface IPatientRepository
     Task<Guid> DeletePatientAsync(Guid patientId);
     Task<Guid> AddPatientAsync(Patient product);
     void Detach(Patient existingPatient);
+    Task<bool> PatientExistsAsync(Guid patientId);
 }

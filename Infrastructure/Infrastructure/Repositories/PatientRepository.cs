@@ -58,10 +58,13 @@ namespace Infrastructure.Repositories
             context.Entry(patient).State = EntityState.Modified;
             return await context.SaveChangesAsync() > 0;
         }
-
         public void Detach(Patient patient)
         {
             context.Entry(patient).State = EntityState.Detached;
+        }
+        public async Task<bool> PatientExistsAsync(Guid patientId)
+        {
+            return await context.Patients.AnyAsync(p => p.PatientId == patientId);
         }
     }
 }

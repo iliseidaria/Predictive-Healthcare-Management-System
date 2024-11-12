@@ -24,6 +24,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    //app.UseExceptionHandler("/error");
+}
+
+// Use exception handler for production
+if (!app.Environment.IsDevelopment())
+{
     app.UseExceptionHandler("/error");
 }
 

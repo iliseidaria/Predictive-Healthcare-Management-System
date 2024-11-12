@@ -3,64 +3,80 @@
   "WorkspaceRootPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\queries\\getmedicalrecordbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getmedicalrecordbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\utils\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\utils\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\queryhandlers\\getmedicalrecordbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getmedicalrecordbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\updatemedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatemedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\queryhandlers\\getpatientbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getpatientbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commandhandlers\\updatemedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updatemedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\createmedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createmedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\createmedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createmedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\createpatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createpatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\dtos\\medicalrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\medicalrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\medicalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\medicalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\patientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\updatemedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatemedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\queries\\getpatientbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getpatientbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\repositories\\medicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\medicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\queryhandlers\\getpatientsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getpatientsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\imedicalrecordrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\utils\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\utils\\mappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commandhandlers\\createmedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\createmedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commandhandlers\\updatepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updatepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\createmedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createmedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\deletemedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\deletemedicalrecordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\dtos\\medicalrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\medicalrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commandhandlers\\deletepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\deletepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commandhandlers\\deletemedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\deletemedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\deletepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\deletepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\fromc\\onedrive\\documente\\github\\predictive-healthcare-management-system\\application\\use cases\\commands\\deletepatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\deletepatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -70,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -86,197 +102,249 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "GetMedicalRecordByIdQueryHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByIdQueryHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByIdQueryHandler.cs",
-              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByIdQueryHandler.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:25:34.773Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "GetMedicalRecordByIdQuery.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetMedicalRecordByIdQuery.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetMedicalRecordByIdQuery.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetMedicalRecordByIdQuery.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetMedicalRecordByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ValidationBehaviour.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Utils\\ValidationBehaviour.cs",
+              "RelativeDocumentMoniker": "Application\\Utils\\ValidationBehaviour.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Utils\\ValidationBehaviour.cs",
+              "RelativeToolTip": "Application\\Utils\\ValidationBehaviour.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAQwBcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:25:31.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateMedicalRecordCommand.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:03:24.395Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CreatePatientCommand.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:05:20.981Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GetPatientByIdQueryHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetPatientByIdQueryHandler.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:08:14.188Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MedicalRecordDTO.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\DTOs\\MedicalRecordDTO.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\MedicalRecordDTO.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\DTOs\\MedicalRecordDTO.cs",
-              "RelativeToolTip": "Application\\DTOs\\MedicalRecordDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:03:09.313Z",
+              "WhenOpened": "2024-11-12T00:24:47.471Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CreateMedicalRecordCommandValidator.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommandValidator.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommandValidator.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommandValidator.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommandValidator.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Program.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Program.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Program.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:03:41.332Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MedicalRecordController.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
-              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
-              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:06:35.187Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PatientDTO.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PatientDTO.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\PatientDTO.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PatientDTO.cs",
-              "RelativeToolTip": "Application\\DTOs\\PatientDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:07:32.168Z",
+              "WhenOpened": "2024-11-12T00:16:42.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "GetPatientsQuery.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAtAAAAAAAAAA==",
+              "Title": "MappingProfile.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Utils\\MappingProfile.cs",
+              "RelativeDocumentMoniker": "Application\\Utils\\MappingProfile.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Utils\\MappingProfile.cs",
+              "RelativeToolTip": "Application\\Utils\\MappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:07:36.796Z",
+              "WhenOpened": "2024-11-11T23:36:35.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UpdateMedicalRecordCommandValidator.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdateMedicalRecordCommandValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdateMedicalRecordCommandValidator.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdateMedicalRecordCommandValidator.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Commands\\UpdateMedicalRecordCommandValidator.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAkAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:55:04.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEIAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T23:35:59.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UpdateMedicalRecordCommandHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdateMedicalRecordCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdateMedicalRecordCommandHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdateMedicalRecordCommandHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\UpdateMedicalRecordCommandHandler.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAswBsAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T23:28:05.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MedicalRecordController.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAowD8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:44:45.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IMedicalRecordRepository.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IMedicalRecordRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:43:24.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UpdateMedicalRecordCommand.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdateMedicalRecordCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdateMedicalRecordCommand.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdateMedicalRecordCommand.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Commands\\UpdateMedicalRecordCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:50:14.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MedicalRecordRepository.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\MedicalRecordRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\MedicalRecordRepository.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\MedicalRecordRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\MedicalRecordRepository.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAswDgAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:43:45.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "GetPatientByIdQuery.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetPatientByIdQuery.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetPatientByIdQuery.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetPatientByIdQuery.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetPatientByIdQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "UpdatePatientCommandHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:07:43.421Z",
+              "WhenOpened": "2024-11-11T23:28:15.735Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "GetPatientsQueryHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
-              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:08:10.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "MedicalRecord.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\MedicalRecord.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\MedicalRecord.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Domain\\Entities\\MedicalRecord.cs",
-              "RelativeToolTip": "Domain\\Entities\\MedicalRecord.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:05:47.893Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "CreateMedicalRecordCommandHandler.cs",
-              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\CreateMedicalRecordCommandHandler.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\CreateMedicalRecordCommandHandler.cs",
-              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\CreateMedicalRecordCommandHandler.cs",
-              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\CreateMedicalRecordCommandHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:05:25.537Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
               "Title": "UpdatePatientCommand.cs",
               "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "RelativeToolTip": "Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:50:16.783Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateMedicalRecordCommand.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-11T22:04:19.894Z",
+              "WhenOpened": "2024-11-11T22:59:33.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "MedicalRecordDTO.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\DTOs\\MedicalRecordDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\MedicalRecordDTO.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\DTOs\\MedicalRecordDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\MedicalRecordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:50:22.755Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "DeleteMedicalRecordCommand.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\DeleteMedicalRecordCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\DeleteMedicalRecordCommand.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\DeleteMedicalRecordCommand.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Commands\\DeleteMedicalRecordCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:36:16.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "DeletePatientCommandHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwA8AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:41:20.202Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "DeleteMedicalRecordCommandHandler.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\DeleteMedicalRecordCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\DeleteMedicalRecordCommandHandler.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\DeleteMedicalRecordCommandHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\DeleteMedicalRecordCommandHandler.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAswA8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:41:16.142Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "DeletePatientCommandValidator.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\DeletePatientCommandValidator.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\DeletePatientCommandValidator.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\DeletePatientCommandValidator.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Commands\\DeletePatientCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:37:16.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DeletePatientCommand.cs",
+              "DocumentMoniker": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "ToolTip": "M:\\fromC\\OneDrive\\Documente\\GitHub\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Commands\\DeletePatientCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-11T22:36:25.822Z",
               "EditorCaption": ""
             }
           ]

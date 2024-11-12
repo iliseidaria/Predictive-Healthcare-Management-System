@@ -23,7 +23,7 @@ namespace Infrastructure.Repositories
             return await context.MedicalRecords.ToListAsync();
         }
 
-        public async Task<bool> DeleteAsync(Guid recordId)
+        public async Task<bool> DeleteMedicalRecordAsync(Guid recordId)
         {
             var medicalRecord = await context.MedicalRecords.FindAsync(recordId);
             if (medicalRecord == null)
@@ -51,6 +51,10 @@ namespace Infrastructure.Repositories
             context.MedicalRecords.Update(medicalRecord);
             await context.SaveChangesAsync();
             return true;
+        }
+        public void Detach(MedicalRecord record)
+        {
+            context.Entry(record).State = EntityState.Detached;
         }
     }
 }

@@ -11,5 +11,6 @@ public interface IMedicalRecordRepository
     Task<MedicalRecord> GetMedicalRecordByIdAsync(Guid recordId);
     Task<Guid> AddMedicalRecordAsync(MedicalRecord medicalRecord);
     Task<bool> UpdateAsync(MedicalRecord medicalRecord);
-    Task<bool> DeleteAsync(Guid recordId);
+    Task<bool> DeleteMedicalRecordAsync(Guid recordId);
+    void Detach(MedicalRecord existingRecord);
 }
