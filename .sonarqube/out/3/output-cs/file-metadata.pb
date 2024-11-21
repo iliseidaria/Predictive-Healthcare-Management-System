@@ -1,0 +1,19 @@
+ 
+”D:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\obj\Debug\net8.0\PredictiveHealthcare.Application.UnitTests.AssemblyInfo.csutf-8”
+ˆD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8¢
+–D:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\obj\Debug\net8.0\PredictiveHealthcare.Application.UnitTests.GlobalUsings.g.csutf-8|
+qC:\Users\Asus\.nuget\packages\microsoft.net.test.sdk\17.8.0\build\netcoreapp3.1\Microsoft.NET.Test.Sdk.Program.csutf-8u
+lD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\UpdatePatientCommandHandlerTests.csutf-8|
+sD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\UpdateMedicalRecordCommandHandler.Tests.csutf-8r
+iD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\GetPatientByQueryHandlerTests.csutf-8t
+kD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\GetPatientByIdQueryHandlerTests.csutf-8x
+oD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\GetMedicalRecordsQueryHandler.Tests.csutf-8{
+rD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\GetMedicalRecordByIdQueryHandler.Tests.csutf-8u
+lD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\GetAppointmentQueryHandler.Tests.csutf-8y
+pD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\GetAppointmentByIdQueryHandler.Tests.csutf-8u
+lD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\DeletePatientCommandHandlerTests.csutf-8|
+sD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\DeleteMedicalRecordCommandHandler.Tests.csutf-8z
+qD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\DeleteAppointmentCommandHandler.Tests.csutf-8u
+lD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\CreatePatientCommandHandlerTests.csutf-8{
+rD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\CreateMedicalRecordCommandHandler.Test.csutf-8z
+qD:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\CreateAppointmentCommandHandler.Tests.csutf-8

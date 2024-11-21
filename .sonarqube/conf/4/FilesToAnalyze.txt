@@ -1,0 +1,13 @@
+﻿D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\AppointmentController.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\ErrorController.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\MedicalRecordController.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\PatientsController.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Program.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.GlobalUsings.g.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.AssemblyInfo.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.MvcApplicationPartsAssemblyInfo.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\appsettings.Development.json
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\appsettings.json
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System.http
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Properties\launchSettings.json

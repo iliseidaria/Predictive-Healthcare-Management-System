@@ -1,0 +1,10 @@
+’
+…D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.MvcApplicationPartsAssemblyInfo.csutf-8¬
+∂D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.AssemblyInfo.csutf-8π
+≠D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\.NETCoreApp,Version=v8.0.AssemblyAttributes.csutf-8ƒ
+∏D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\obj\Debug\net8.0\Predictive-Healthcare-Management-System.GlobalUsings.g.csutf-8Å
+xD:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Program.csutf-8ô
+èD:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\PatientsController.csutf-8û
+îD:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\MedicalRecordController.csutf-8ñ
+åD:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\ErrorController.csutf-8ú
+íD:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Controllers\AppointmentController.csutf-8

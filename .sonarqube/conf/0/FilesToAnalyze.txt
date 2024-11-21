@@ -1,0 +1,9 @@
+﻿D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Entities\Appointment.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Entities\MedicalRecord.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Entities\Pacient.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Entities\Prediction.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Entities\Prescription.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Repositories\IAppointmentRepository.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Repositories\IMedicalRecordRepository.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Repositories\IPatientRepository.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Repositories\IPredictionRepository.cs

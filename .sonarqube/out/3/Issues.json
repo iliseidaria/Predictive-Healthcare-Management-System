@@ -1,0 +1,383 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.11.0.0",
+        "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
+        "semanticVersion": "4.11.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/DeletePatientCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 63,
+                  "endLine": 53,
+                  "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<Patient>' cannot be used for parameter 'value' of type 'Task<Patient?>' in 'ConfiguredCall SubstituteExtensions.Returns<Patient?>(Task<Patient?> value, Patient? returnThis, params Patient?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/DeletePatientCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 13,
+                  "endLine": 53,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/DeleteMedicalRecordCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 75,
+                  "endLine": 51,
+                  "endColumn": 94
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<MedicalRecord>' cannot be used for parameter 'value' of type 'Task<MedicalRecord?>' in 'ConfiguredCall SubstituteExtensions.Returns<MedicalRecord?>(Task<MedicalRecord?> value, MedicalRecord? returnThis, params MedicalRecord?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/DeleteMedicalRecordCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 51,
+                  "startColumn": 13,
+                  "endLine": 51,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/DeleteAppointmentCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 71,
+                  "endLine": 49,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<Appointment>' cannot be used for parameter 'value' of type 'Task<Appointment?>' in 'ConfiguredCall SubstituteExtensions.Returns<Appointment?>(Task<Appointment?> value, Appointment? returnThis, params Appointment?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/DeleteAppointmentCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 49,
+                  "startColumn": 13,
+                  "endLine": 49,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/CreateAppointmentCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 70,
+                  "endLine": 82,
+                  "endColumn": 83
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<Patient>' cannot be used for parameter 'value' of type 'Task<Patient?>' in 'ConfiguredCall SubstituteExtensions.Returns<Patient?>(Task<Patient?> value, Patient? returnThis, params Patient?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/CreateAppointmentCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 82,
+                  "startColumn": 13,
+                  "endLine": 82,
+                  "endColumn": 61
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/UpdatePatientCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 63,
+                  "endLine": 78,
+                  "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<Patient>' cannot be used for parameter 'value' of type 'Task<Patient?>' in 'ConfiguredCall SubstituteExtensions.Returns<Patient?>(Task<Patient?> value, Patient? returnThis, params Patient?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/UpdatePatientCommandHandlerTests.cs",
+                "region": {
+                  "startLine": 78,
+                  "startColumn": 13,
+                  "endLine": 78,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/GetAppointmentByIdQueryHandler.Tests.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 71,
+                  "endLine": 76,
+                  "endColumn": 88
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<Appointment>' cannot be used for parameter 'value' of type 'Task<Appointment?>' in 'ConfiguredCall SubstituteExtensions.Returns<Appointment?>(Task<Appointment?> value, Appointment? returnThis, params Appointment?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/GetAppointmentByIdQueryHandler.Tests.cs",
+                "region": {
+                  "startLine": 76,
+                  "startColumn": 13,
+                  "endLine": 76,
+                  "endColumn": 62
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<MedicalRecord>' cannot be used for parameter 'value' of type 'Task<MedicalRecord?>' in 'ConfiguredCall SubstituteExtensions.Returns<MedicalRecord?>(Task<MedicalRecord?> value, MedicalRecord? returnThis, params MedicalRecord?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/GetMedicalRecordByIdQueryHandler.Tests.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 13,
+                  "endLine": 73,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<MedicalRecord>' cannot be used for parameter 'value' of type 'Task<MedicalRecord?>' in 'ConfiguredCall SubstituteExtensions.Returns<MedicalRecord?>(Task<MedicalRecord?> value, MedicalRecord? returnThis, params MedicalRecord?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/UpdateMedicalRecordCommandHandler.Tests.cs",
+                "region": {
+                  "startLine": 88,
+                  "startColumn": 13,
+                  "endLine": 88,
+                  "endColumn": 66
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8600",
+          "level": "warning",
+          "message": "Converting null literal or possible null value to non-nullable type.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/GetPatientByIdQueryHandlerTests.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 63,
+                  "endLine": 77,
+                  "endColumn": 76
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8620",
+          "level": "warning",
+          "message": "Argument of type 'Task<Patient>' cannot be used for parameter 'value' of type 'Task<Patient?>' in 'ConfiguredCall SubstituteExtensions.Returns<Patient?>(Task<Patient?> value, Patient? returnThis, params Patient?[] returnThese)' due to differences in the nullability of reference types.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/PredictiveHealthcare.Application.UnitTests/GetPatientByIdQueryHandlerTests.cs",
+                "region": {
+                  "startLine": 77,
+                  "startColumn": 13,
+                  "endLine": 77,
+                  "endColumn": 54
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8600": {
+          "id": "CS8600",
+          "shortDescription": "Converting null literal or possible null value to non-nullable type.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8600)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8620": {
+          "id": "CS8620",
+          "shortDescription": "Argument cannot be used for parameter due to differences in the nullability of reference types.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8620)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Application.Use_Cases.QueryHandlers
 {
-    internal class GetAppointmentQueryHandler : IRequestHandler<GetAppointmentQuery, List<AppointmentDTO>>
+    public class GetAppointmentQueryHandler : IRequestHandler<GetAppointmentQuery, List<AppointmentDTO>>
     {
         private readonly IAppointmentRepository repository;
         private readonly IMapper mapper;

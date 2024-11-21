@@ -1,0 +1,29 @@
+Product projects
+---------------------------------------
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Domain\Domain.csproj
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Infrastructure.csproj
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Application.csproj
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System\Predictive-Healthcare-Management-System.csproj
+
+
+Test projects
+---------------------------------------
+D:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcare.Application.UnitTests\PredictiveHealthcare.Application.UnitTests.csproj
+D:\FII-2024-2025\.NET\PROIECT\PredictiveHealthcareIntegrationUnitTests\PredictiveHealthcareIntegrationUnitTests.csproj
+
+
+Invalid projects
+---------------------------------------
+{none}
+
+
+Skipped projects
+---------------------------------------
+{none}
+
+
+Excluded projects
+---------------------------------------
+{none}
+
+

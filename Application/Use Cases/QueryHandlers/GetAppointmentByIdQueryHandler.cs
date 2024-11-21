@@ -17,10 +17,22 @@ namespace Application.Use_Cases.QueryHandlers
             this.mapper = mapper;
         }
 
-        public async Task<AppointmentDTO> Handle(GetAppointmentByIdQuery request, CancellationToken cancellationToken)
+        /*public async Task<AppointmentDTO> Handle(GetAppointmentByIdQuery request, CancellationToken cancellationToken)
         {
             var appointment = await repository.GetAppointmentByIdAsync(request.Id);
             return mapper.Map<AppointmentDTO>(appointment);
+        }*/
+        public async Task<AppointmentDTO> Handle(GetAppointmentByIdQuery query, CancellationToken cancellationToken)
+        {
+            var appointment = await this.repository.GetAppointmentByIdAsync(query.Id);
+
+            if (appointment == null)
+            {
+                return null; // Return null without calling Map
+            }
+
+            return mapper.Map<AppointmentDTO>(appointment);
         }
+
     }
 }

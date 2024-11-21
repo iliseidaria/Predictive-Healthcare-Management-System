@@ -1,0 +1,45 @@
+﻿D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\DependencyInjection.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\DTOs\AppointmentDTO.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\DTOs\MedicalRecordDTO.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\DTOs\PatientDTO.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\CreateAppointmentCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\CreateMedicalRecordCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\CreatePatientCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\DeleteAppointmentCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\DeleteMedicalRecordCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\DeletePatientCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\UpdateAppointmentCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\UpdateMedicalRecordCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\CommandHandlers\UpdatePatientCommandHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\CreateAppointmentCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\CreateAppointmentCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\CreateMedicalRecordCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\CreateMedicalRecordCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\CreatePatientCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\CreatePatientCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\DeleteAppointmentCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\DeleteAppointmentCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\DeleteMedicalRecordCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\DeleteMedicalRecordCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\DeletePatientCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\DeletePatientCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\UpdateAppointmentCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\UpdateAppointmentCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\UpdateMedicalRecordCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\UpdateMedicalRecordCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\UpdatePatientCommand.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Commands\UpdatePatientCommandValidator.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Queries\GetAppointmentByIdQuery.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Queries\GetAppointmentQuery.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Queries\GetMedicalRecordByIdQuery.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Queries\GetMedicalRecordsQuery.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Queries\GetPatientByIdQuery.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\Queries\GetPatientsQuery.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\QueryHandlers\GetAppointmentByIdQueryHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\QueryHandlers\GetAppointmentQueryHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\QueryHandlers\GetMedicalRecordByIdQueryHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\QueryHandlers\GetMedicalRecordsQueryHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\QueryHandlers\GetPatientByIdQueryHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Use Cases\QueryHandlers\GetPatientsQueryHandler.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Utils\MappingProfile.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Application\Utils\ValidationBehaviour.cs

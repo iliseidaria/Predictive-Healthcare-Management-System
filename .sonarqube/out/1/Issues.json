@@ -1,0 +1,615 @@
+{
+  "$schema": "http://json.schemastore.org/sarif-1.0.0",
+  "version": "1.0.0",
+  "runs": [
+    {
+      "tool": {
+        "name": "Microsoft (R) Visual C# Compiler",
+        "version": "4.11.0.0",
+        "fileVersion": "4.11.0-3.24365.8 (9e9c7c1d)",
+        "semanticVersion": "4.11.0",
+        "language": "en-US"
+      },
+      "results": [
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Patients' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Persistence/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Persistence/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 12,
+                  "startColumn": 31,
+                  "endLine": 12,
+                  "endColumn": 39
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'MedicalRecords' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Persistence/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Persistence/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 13,
+                  "startColumn": 37,
+                  "endLine": 13,
+                  "endColumn": 51
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8618",
+          "level": "warning",
+          "message": "Non-nullable property 'Appointments' must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring the property as nullable.",
+          "suppressionStates": [
+            "suppressedInSource"
+          ],
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Persistence/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 8,
+                  "startColumn": 16,
+                  "endLine": 8,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Persistence/ApplicationDbContext.cs",
+                "region": {
+                  "startLine": 14,
+                  "startColumn": 35,
+                  "endLine": 14,
+                  "endColumn": 47
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/AppointmentRepository.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 20,
+                  "endLine": 18,
+                  "endColumn": 72
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/PatientRepository.cs",
+                "region": {
+                  "startLine": 37,
+                  "startColumn": 20,
+                  "endLine": 37,
+                  "endColumn": 56
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "CS8603",
+          "level": "warning",
+          "message": "Possible null reference return.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/MedicalRecordRepository.cs",
+                "region": {
+                  "startLine": 46,
+                  "startColumn": 20,
+                  "endLine": 46,
+                  "endColumn": 68
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'patients' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 18,
+                  "startColumn": 23,
+                  "endLine": 18,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 52,
+                  "startColumn": 41,
+                  "endLine": 52,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 73,
+                  "startColumn": 41,
+                  "endLine": 73,
+                  "endColumn": 51
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 125,
+                  "startColumn": 23,
+                  "endLine": 125,
+                  "endColumn": 33
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'timestamp with time zone' 5 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 24,
+                  "startColumn": 64,
+                  "endLine": 24,
+                  "endColumn": 90
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 68,
+                  "endLine": 42,
+                  "endColumn": 94
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 63,
+                  "startColumn": 57,
+                  "endLine": 63,
+                  "endColumn": 83
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 62,
+                  "endLine": 86,
+                  "endColumn": 88
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 60,
+                  "endLine": 87,
+                  "endColumn": 86
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null,
+              "3": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'PatientId' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 53,
+                  "startColumn": 42,
+                  "endLine": 53,
+                  "endColumn": 53
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 74,
+                  "startColumn": 42,
+                  "endLine": 74,
+                  "endColumn": 53
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 104,
+                  "startColumn": 25,
+                  "endLine": 104,
+                  "endColumn": 36
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 109,
+                  "startColumn": 25,
+                  "endLine": 109,
+                  "endColumn": 36
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S1192",
+          "level": "warning",
+          "message": "Define a constant instead of using this literal 'medical_records' 4 times.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 58,
+                  "startColumn": 23,
+                  "endLine": 58,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "relatedLocations": [
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 96,
+                  "startColumn": 41,
+                  "endLine": 96,
+                  "endColumn": 58
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 108,
+                  "startColumn": 24,
+                  "endLine": 108,
+                  "endColumn": 41
+                }
+              }
+            },
+            {
+              "physicalLocation": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Migrations/20241112120443_InitialCreate.cs",
+                "region": {
+                  "startLine": 122,
+                  "startColumn": 23,
+                  "endLine": 122,
+                  "endColumn": 40
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1,
+            "customProperties": {
+              "0": null,
+              "1": null,
+              "2": null
+            }
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'patient' to 'product' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/PatientRepository.cs",
+                "region": {
+                  "startLine": 16,
+                  "startColumn": 57,
+                  "endLine": 16,
+                  "endColumn": 64
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'id' to 'patientId' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/PatientRepository.cs",
+                "region": {
+                  "startLine": 35,
+                  "startColumn": 61,
+                  "endLine": 35,
+                  "endColumn": 63
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'id' to 'patientId' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/PatientRepository.cs",
+                "region": {
+                  "startLine": 23,
+                  "startColumn": 57,
+                  "endLine": 23,
+                  "endColumn": 59
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'record' to 'existingRecord' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/MedicalRecordRepository.cs",
+                "region": {
+                  "startLine": 55,
+                  "startColumn": 42,
+                  "endLine": 55,
+                  "endColumn": 48
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        },
+        {
+          "ruleId": "S927",
+          "level": "warning",
+          "message": "Rename parameter 'patient' to 'existingPatient' to match the interface declaration.",
+          "locations": [
+            {
+              "resultFile": {
+                "uri": "file:///D:/FII-2024-2025/.NET/PROIECT/Predictive-Healthcare-Management-System/Infrastructure/Infrastructure/Repositories/PatientRepository.cs",
+                "region": {
+                  "startLine": 61,
+                  "startColumn": 36,
+                  "endLine": 61,
+                  "endColumn": 43
+                }
+              }
+            }
+          ],
+          "properties": {
+            "warningLevel": 1
+          }
+        }
+      ],
+      "rules": {
+        "CS8603": {
+          "id": "CS8603",
+          "shortDescription": "Possible null reference return.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8603)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "CS8618": {
+          "id": "CS8618",
+          "shortDescription": "Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.",
+          "defaultLevel": "warning",
+          "helpUri": "https://msdn.microsoft.com/query/roslyn.query?appId=roslyn&k=k(CS8618)",
+          "properties": {
+            "category": "Compiler",
+            "isEnabledByDefault": true,
+            "tags": [
+              "Compiler",
+              "Telemetry"
+            ]
+          }
+        },
+        "S1192": {
+          "id": "S1192",
+          "shortDescription": "String literals should not be duplicated",
+          "fullDescription": "Duplicated string literals make the process of refactoring complex and error-prone, as any change would need to be propagated on all occurrences.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-1192",
+          "properties": {
+            "category": "Minor Code Smell",
+            "isEnabledByDefault": false,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "SonarWay"
+            ]
+          }
+        },
+        "S927": {
+          "id": "S927",
+          "shortDescription": "Parameter names should match base declaration and other partial definitions",
+          "fullDescription": "Parameters are part of the method signature and its identity.",
+          "defaultLevel": "warning",
+          "helpUri": "https://rules.sonarsource.com/csharp/RSPEC-927",
+          "properties": {
+            "category": "Critical Code Smell",
+            "isEnabledByDefault": true,
+            "tags": [
+              "C#",
+              "MainSourceScope",
+              "TestSourceScope",
+              "SonarWay"
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

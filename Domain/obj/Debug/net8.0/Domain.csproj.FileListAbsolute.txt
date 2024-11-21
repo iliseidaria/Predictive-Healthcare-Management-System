@@ -46,3 +46,15 @@ D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.dll
 D:\FII\dotNet\health\Domain\obj\Debug\net8.0\refint\Domain.dll
 D:\FII\dotNet\health\Domain\obj\Debug\net8.0\Domain.pdb
 D:\FII\dotNet\health\Domain\obj\Debug\net8.0\ref\Domain.dll
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\bin\Debug\net8.0\Domain.deps.json
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\bin\Debug\net8.0\Domain.dll
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\bin\Debug\net8.0\Domain.pdb
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.dll
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\refint\Domain.dll
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\Domain.pdb
+D:\FII-2024-2025\.NET\PROIECT\ultima-versiune-git\Predictive-Healthcare-Management-System\Domain\obj\Debug\net8.0\ref\Domain.dll

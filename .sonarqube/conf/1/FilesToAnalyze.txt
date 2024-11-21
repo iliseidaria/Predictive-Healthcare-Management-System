@@ -1,0 +1,8 @@
+﻿D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\DependencyInjection.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Migrations\20241112120443_InitialCreate.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Migrations\20241112120443_InitialCreate.Designer.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Migrations\ApplicationDbContextModelSnapshot.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Persistence\ApplicationDbContext.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Repositories\AppointmentRepository.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Repositories\MedicalRecordRepository.cs
+D:\FII-2024-2025\.NET\PROIECT\Predictive-Healthcare-Management-System\Infrastructure\Infrastructure\Repositories\PatientRepository.cs

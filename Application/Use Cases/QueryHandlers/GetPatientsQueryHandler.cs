@@ -1,6 +1,7 @@
 ﻿using Application.DTOs;
 using Application.Use_Cases.Queries;
 using AutoMapper;
+using Domain.Entities;
 using MediatR;
 
 namespace Application.Use_Cases.QueryHandlers
@@ -18,6 +19,13 @@ namespace Application.Use_Cases.QueryHandlers
         public async Task<List<PatientDTO>> Handle(GetPatientsQuery request, CancellationToken cancellationToken)
         {
             var patients = await repository.GetAllPatientsAsync();
+
+            // Ensure the return is an empty list if no patients are found
+            if (patients == null || !patients.Any())
+            {
+                return new List<PatientDTO>();
+            }
+
             return mapper.Map<List<PatientDTO>>(patients);
         }
     }
