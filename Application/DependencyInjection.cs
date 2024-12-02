@@ -17,7 +17,7 @@ namespace Application
             services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>();
             //services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly); //nuj daca i corect asa
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-            services.AddTransient<IMedicalRecordRepository, MedicalRecordRepository>();
+            //services.AddTransient<IMedicalRecordRepository, MedicalRecordRepository>();
             return services;
         }
     }

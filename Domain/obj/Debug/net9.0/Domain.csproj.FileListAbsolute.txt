@@ -1,0 +1,12 @@
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\bin\Debug\net9.0\Domain.deps.json
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\bin\Debug\net9.0\Domain.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\bin\Debug\net9.0\Domain.pdb
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\refint\Domain.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.pdb
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\ref\Domain.dll

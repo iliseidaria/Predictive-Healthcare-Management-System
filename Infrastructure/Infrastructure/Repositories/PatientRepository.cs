@@ -42,11 +42,11 @@ namespace Infrastructure.Repositories
             return await context.Patients.ToListAsync();
         }
 
-        public async Task UpdatePatientAsync(Patient patient)
-        {
-            context.Entry(patient).State = EntityState.Modified;
-            await context.SaveChangesAsync();
-        }
+        //public async Task UpdatePatientAsync(Patient patient)
+        //{
+        //    context.Entry(patient).State = EntityState.Modified;
+        //    await context.SaveChangesAsync();
+        //}
 
         public async Task<List<Patient>> GetAllPatientsAsync()
         {

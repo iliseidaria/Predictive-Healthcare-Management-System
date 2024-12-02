@@ -1,0 +1,16 @@
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\bin\Debug\net9.0\Application.deps.json
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\bin\Debug\net9.0\Application.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\bin\Debug\net9.0\Application.pdb
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\bin\Debug\net9.0\Domain.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\bin\Debug\net9.0\Domain.pdb
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.csproj.AssemblyReference.cache
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.AssemblyInfoInputs.cache
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.AssemblyInfo.cs
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.csproj.CoreCompileInputs.cache
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.sourcelink.json
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Applicat.44B5EDA2.Up2Date
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\refint\Application.dll
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\Application.pdb
+M:\fromC\OneDrive\Documente\GitHub\.net\Predictive-Healthcare-Management-System\Application\obj\Debug\net9.0\ref\Application.dll
