@@ -1,0 +1,32 @@
+<h2>All Patients</h2>
+
+<!-- Display message if no patients are available -->
+<div *ngIf="patients.length === 0">
+  <p>No patients found.</p>
+</div>
+
+<!-- Display patients table -->
+<table *ngIf="patients.length > 0">
+  <thead>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date of Birth</th>
+    <th>Contact Information</th>
+    <th>Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let patient of patients">
+    <td>{{ patient.firstName }}</td>
+    <td>{{ patient.lastName }}</td>
+    <td>{{ patient.dateOfBirth | date:'shortDate' }}</td>
+    <td>{{ patient.contactInformation }}</td>
+    <td>
+      <!-- View and Update actions -->
+      <a [routerLink]="['/patients/detail', patient.id]">View</a> |
+      <a [routerLink]="['/patients/update', patient.id]">Update</a>
+    </td>
+  </tr>
+  </tbody>
+</table>
