@@ -1,4 +1,4 @@
-﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Commands;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
@@ -17,8 +17,10 @@ namespace Application.Use_Cases.CommandHandlers
         }
         public async Task<Guid> Handle(CreatePatientCommand request, CancellationToken cancellationToken)
         {
-            var patient = mapper.Map<Patient>(request);
-            return await repository.AddPatientAsync(patient);
+          request.DateOfBirth = DateTime.SpecifyKind(request.DateOfBirth, DateTimeKind.Utc);
+
+          var patient = mapper.Map<Patient>(request);
+                return await repository.AddPatientAsync(patient);
         }
     }
 }

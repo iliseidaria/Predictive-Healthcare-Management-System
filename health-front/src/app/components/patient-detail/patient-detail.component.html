@@ -1,0 +1,20 @@
+<div *ngIf="patient">
+  <h1>Patient Details</h1>
+
+  <div class="patient-card">
+    <h2>{{ patient.firstName }} {{ patient.lastName }}</h2>
+
+    <ul class="patient-info">
+      <li><strong>Patient ID:</strong> {{ patient.patientId }}</li>
+      <li><strong>Age:</strong> {{ calculateAge(patient.dateOfBirth) }}</li>
+      <li><strong>Date of Birth:</strong> {{ patient.dateOfBirth | date: 'mediumDate' }}</li>
+      <li><strong>Gender:</strong> {{ getGender(patient.gender) }}</li>
+      <li><strong>Address:</strong> {{ patient.address }}</li>
+      <li><strong>Contact Information:</strong> {{ patient.contactInformation }}</li>
+      <li *ngIf="patient.photoPath">
+        <strong>Photo:</strong>
+        <img [src]="patient.photoPath" alt="Patient Photo" />
+      </li>
+    </ul>
+  </div>
+</div>

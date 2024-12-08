@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Qs5cfjAdMWE=",
+  "dgSpecHash": "MXP1MyxOw/A=",
   "success": true,
-  "projectFilePath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
+  "projectFilePath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andreea\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Andreea\\.nuget\\packages\\fluentvalidation\\11.11.0\\fluentvalidation.11.11.0.nupkg.sha512",

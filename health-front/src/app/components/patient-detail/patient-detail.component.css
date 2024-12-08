@@ -1,0 +1,58 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    padding: 2rem;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .patient-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .patient-info {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+  }
+  
+  .patient-info li {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+    color: #555;
+  }
+  
+  .patient-info img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  
+  strong {
+    color: #333;
+  }
+  

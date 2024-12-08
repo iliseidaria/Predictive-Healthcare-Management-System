@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {}
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\obj\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -42,7 +42,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

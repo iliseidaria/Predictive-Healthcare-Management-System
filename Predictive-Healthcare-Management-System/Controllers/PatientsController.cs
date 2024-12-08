@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Commands;
 using Application.Use_Cases.Queries;
 using MediatR;
@@ -17,14 +17,24 @@ namespace Predictive_Healthcare_Management_System.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
-        {
-            var result = await _mediator.Send(new GetPatientsQuery());
-            return Ok(result);
-        }
+    [HttpGet]
+    public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int size = 10)
+    {
+      // Creează comanda folosind valorile de query
+      var result = await _mediator.Send(new GetPatientsQuery
+      {
+        Page = page,
+        Size = size
+      });
 
-        [HttpGet("{id}")]
+      if (result == null || !result.Any())
+        return NotFound("No patients found.");
+
+      return Ok(new { items = result, totalCount = result.Count });
+    }
+
+
+    [HttpGet("{id}")]
         public async Task<ActionResult<PatientDTO>> GetById(Guid id)
         {
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
@@ -35,14 +45,28 @@ namespace Predictive_Healthcare_Management_System.Controllers
             return Ok(patient);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Create(CreatePatientCommand command)
+    [HttpPost]
+    public async Task<IActionResult> Create(CreatePatientCommand command)
+    {
+      if (!ModelState.IsValid)
+      {
+        Console.WriteLine("Model state is invalid:");
+        foreach (var modelState in ModelState.Values)
         {
-            var patientId = await _mediator.Send(command);
-            return CreatedAtAction(nameof(GetById), new { id = patientId }, new { id = patientId });
+          foreach (var error in modelState.Errors)
+          {
+            Console.WriteLine($"Error: {error.ErrorMessage}");
+          }
         }
+        return BadRequest(ModelState);  // Returnează eroarea exactă
+      }
 
-        [HttpDelete("{id}")]
+      var patientId = await _mediator.Send(command);
+      Console.WriteLine($"Patient created with ID: {patientId}");
+      return CreatedAtAction(nameof(GetById), new { id = patientId }, new { id = patientId });
+    }
+
+    [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
@@ -54,23 +78,23 @@ namespace Predictive_Healthcare_Management_System.Controllers
             return NoContent();
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> Update(Guid id, UpdatePatientCommand command)
-        {
-            if (id != command.PatientId)
-            {
-                Console.WriteLine(id.ToString(), command.PatientId);
-                throw new IdMismatchException(); 
-            }
+    [HttpPut("{id}")]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdatePatientCommand command)
+    {
+      if (id != command.PatientId)
+      {
+        return BadRequest("Patient ID in the URL does not match the request body.");
+      }
 
-            var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
-            if (patient == null)
-            {
-                throw new NotFoundException(); 
-            }
+      var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
+      if (patient == null)
+      {
+        return NotFound("Patient not found.");
+      }
 
-            await _mediator.Send(command);
-            return NoContent();
-        }
+      await _mediator.Send(command);
+      return NoContent(); // Return status 204
     }
+
+  }
 }

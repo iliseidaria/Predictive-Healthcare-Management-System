@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "m2JLu6BTi7g=",
+  "dgSpecHash": "qnbZRBpiPJ8=",
   "success": true,
-  "projectFilePath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
+  "projectFilePath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andreea\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Andreea\\.nuget\\packages\\castle.core\\5.1.1\\castle.core.5.1.1.nupkg.sha512",

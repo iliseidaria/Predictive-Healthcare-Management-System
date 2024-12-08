@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Fjvn0up2gds=",
+  "dgSpecHash": "MMD5SR+zVuw=",
   "success": true,
-  "projectFilePath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+  "projectFilePath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Andreea\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Andreea\\.nuget\\packages\\coverlet.collector\\6.0.2\\coverlet.collector.6.0.2.nupkg.sha512",

@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Domain.Entities;
 using AutoMapper;
 using Application.Use_Cases.Commands;
@@ -12,6 +12,10 @@ namespace Application.Utils
             // Patient mappings
             CreateMap<Patient, PatientDTO>().ReverseMap();
             CreateMap<CreatePatientCommand, Patient>().ReverseMap();
+            CreateMap<CreatePatientCommand, Patient>()
+                  .ForMember(dest => dest.DateOfBirth, opt =>
+                    opt.MapFrom(src => DateTime.SpecifyKind(src.DateOfBirth, DateTimeKind.Utc))
+                  );
             CreateMap<UpdatePatientCommand, Patient>().ReverseMap();
 
             // MedicalRecord mappings

@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Persistence
@@ -27,8 +27,8 @@ namespace Infrastructure.Persistence
                     .ValueGeneratedOnAdd();
                 entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
-                entity.Property(e => e.DateOfBirth).IsRequired();
-                entity.Property(e => e.Gender).IsRequired();
+                entity.Property(e => e.DateOfBirth).IsRequired().HasColumnType("timestamp with time zone");
+              entity.Property(e => e.Gender).IsRequired();
                 entity.Property(e => e.ContactInformation).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(300);
             });

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {}
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {}
   },
   "projects": {
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\Application.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\obj\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -32,8 +32,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               }
             }
           }
@@ -46,7 +46,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -87,18 +87,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\obj\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -129,7 +129,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -152,18 +152,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\obj\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -184,8 +184,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               }
             }
           }
@@ -198,7 +198,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -243,18 +243,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
         "projectName": "Predictive-Healthcare-Management-System",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\obj\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -275,14 +275,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\Application.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Application\\Application.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj"
               },
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               },
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -295,7 +295,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -341,18 +341,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
         "projectName": "PredictiveHealthcare.IntegrationTests",
-        "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
         "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-        "outputPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.IntegrationTests\\obj\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -373,11 +373,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
               },
-              "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
-                "projectPath": "M:\\fromC\\OneDrive\\Documente\\GitHub\\.net\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj"
               }
             }
           }
@@ -390,7 +390,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -447,7 +447,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
