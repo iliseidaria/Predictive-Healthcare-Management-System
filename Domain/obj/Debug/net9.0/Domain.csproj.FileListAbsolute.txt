@@ -34,3 +34,15 @@ M:\FACULTATE\ANUL3\.net\healthcare-management\Domain\obj\Debug\net9.0\Domain.dll
 M:\FACULTATE\ANUL3\.net\healthcare-management\Domain\obj\Debug\net9.0\refint\Domain.dll
 M:\FACULTATE\ANUL3\.net\healthcare-management\Domain\obj\Debug\net9.0\Domain.pdb
 M:\FACULTATE\ANUL3\.net\healthcare-management\Domain\obj\Debug\net9.0\ref\Domain.dll
+D:\FII\dotNet\FINAL_FRONT\Domain\bin\Debug\net9.0\Domain.deps.json
+D:\FII\dotNet\FINAL_FRONT\Domain\bin\Debug\net9.0\Domain.dll
+D:\FII\dotNet\FINAL_FRONT\Domain\bin\Debug\net9.0\Domain.pdb
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.dll
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\refint\Domain.dll
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\Domain.pdb
+D:\FII\dotNet\FINAL_FRONT\Domain\obj\Debug\net9.0\ref\Domain.dll

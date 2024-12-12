@@ -17,6 +17,7 @@
       <td>
         <button (click)="deletePatient(patient.patientId)">Delete</button>
         <a [routerLink]="['/patient-detail', patient.patientId]">Details</a>
+        <a [routerLink]="['/update-patient', patient.patientId]">Update</a>
       </td>
     </tr>
   </tbody>

@@ -24,7 +24,7 @@ export class PatientUpdateComponent implements OnInit {
       patientId: [''],
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
+      dateOfBirth: [Date(), Validators.required],  // Default as null, we will handle the date object
       gender: ['', Validators.required],
       contactInformation: ['', Validators.required],
       address: ['', Validators.required],
@@ -36,28 +36,32 @@ export class PatientUpdateComponent implements OnInit {
     this.patientId = this.route.snapshot.paramMap.get('id')!;
     this.patientService.getPatientById(this.patientId).subscribe({
       next: (patient) => {
-        // Conversie a datei în formatul corect pentru <input type="date">
-        patient.dateOfBirth = this.formatDate(patient.dateOfBirth);
+        // Ensure dateOfBirth is a Date object when setting the form value
+        if (patient.dateOfBirth) {
+          patient.dateOfBirth = new Date(patient.dateOfBirth); // Convert to Date object
+        }
         this.patientForm.patchValue(patient);
         console.log('Loaded Patient:', patient);
       },
       error: (err) => console.error('Error loading patient:', err),
     });
   }
-  
-  // Funcție pentru conversia datei
-  private formatDate(date: string): string {
-    const parsedDate = new Date(date);
-    const year = parsedDate.getFullYear();
-    const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
-    const day = parsedDate.getDate().toString().padStart(2, '0');
-    return `${year}-${month}-${day}`;
-  }
 
   onSubmit() {
     if (this.patientForm.valid) {
+      const formValue = this.patientForm.value;
+
+      // Ensure the dateOfBirth is a Date object before sending to the backend
+      if (formValue.dateOfBirth instanceof Date) {
+        // Convert date to UTC if it's not already
+        formValue.dateOfBirth = new Date(formValue.dateOfBirth.toISOString()); // Convert to UTC
+      }
+      else if (typeof formValue.dateOfBirth === 'string') {
+        formValue.dateOfBirth = new Date(formValue.dateOfBirth); // Convert to Date object
+        formValue.dateOfBirth = new Date(formValue.dateOfBirth.toISOString()); // Convert to UTC
+      }
       this.patientService
-        .updatePatient(this.patientId, this.patientForm.value)
+        .updatePatient(this.patientId, formValue)
         .subscribe({
           next: () => alert('Patient updated successfully!'),
           error: (err) => console.error('Error updating patient:', err),
