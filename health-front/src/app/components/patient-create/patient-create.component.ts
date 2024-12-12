@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { PatientService } from '../../services/patient/patient.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 function toUTC(date: string): string {
   const dateObj = new Date(date);
@@ -21,8 +22,9 @@ function toUTC(date: string): string {
 })
 export class PatientCreateComponent {
   patientForm: FormGroup;
+  router: any;
 
-  constructor(private fb: FormBuilder, private patientService: PatientService) {
+  constructor(private fb: FormBuilder, router: Router, private patientService: PatientService) {
     this.patientForm = this.fb.group({
       firstName: ['', [Validators.required]],
       lastName: ['', [Validators.required]],
@@ -43,7 +45,11 @@ export class PatientCreateComponent {
   
       console.log('Form Data Sent:', formData);
       this.patientService.createPatient(formData).subscribe({
-        next: () => alert('Patient created successfully!'),
+        next: () => 
+          {
+            alert('Patient created successfully!');
+            this.router.navigateByUrl('/get-all-patients');
+          },
         error: (err) => console.error('Error:', err),
       });
     } else {

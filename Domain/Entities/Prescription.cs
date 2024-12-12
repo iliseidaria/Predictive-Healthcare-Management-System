@@ -1,8 +1,7 @@
-﻿using System;
-
+// Domain/Interfaces/Prescription.cs
 namespace Domain.Entities
 {
-    public class Prescription
+  public class Prescription
     {
         public Guid PrescriptionId { get; set; }
         public string MedicationName { get; set; }

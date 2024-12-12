@@ -22,27 +22,36 @@ public class AuthService
   {
     if (_context.Users.Any(u => u.Username == registerDto.Username))
     {
-      throw new Exception("User already exists");
+      return "User already exists";
+    }
+
+    if (_context.Users.Any(u => u.Email == registerDto.Email))
+    {
+      return "Email already registered";
     }
 
     var user = new User
     {
       Username = registerDto.Username,
+      Email = registerDto.Email,
       PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerDto.Password)
+      //IsEmailVerified = false
     };
 
     _context.Users.Add(user);
     await _context.SaveChangesAsync();
 
+    //am putea adauga email verification cu un nou entity: emailVerification
+
     return "User registered successfully";
-  }
+ }
 
   public async Task<string> Login(LoginDto loginDto)
   {
-    var user = _context.Users.SingleOrDefault(u => u.Username == loginDto.Username);
+    var user = _context.Users.SingleOrDefault(u => u.Username == loginDto.Username && u.Email == loginDto.Email);
     if (user == null || !BCrypt.Net.BCrypt.Verify(loginDto.Password, user.PasswordHash))
     {
-      throw new Exception("Invalid username or password");
+      return "Invalid username/email or password";
     }
 
     return GenerateJwtToken(user);
@@ -63,7 +72,7 @@ public class AuthService
         _jwtSettings.Issuer,
         _jwtSettings.Audience,
         claims,
-        expires: DateTime.UtcNow.AddMinutes(_jwtSettings.ExpiryInHours),
+        expires: DateTime.UtcNow.AddHours(_jwtSettings.ExpiryInHours),
         signingCredentials: creds
     );
 

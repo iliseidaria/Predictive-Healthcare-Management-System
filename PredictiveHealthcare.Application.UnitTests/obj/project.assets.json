@@ -981,6 +981,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "9.0.0",
           "Npgsql.EntityFrameworkCore.PostgreSQL": "9.0.1"

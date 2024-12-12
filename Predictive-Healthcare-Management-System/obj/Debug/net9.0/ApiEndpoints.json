@@ -1,5 +1,68 @@
 [
   {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AdminController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/v1/Admin/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AdminController",
+    "Method": "GetUserById",
+    "RelativePath": "api/v1/Admin/users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AdminController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/v1/Admin/users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateUserDto",
+        "Type": "Application.DTOs.UserDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AdminController",
+    "Method": "DeleteUser",
+    "RelativePath": "api/v1/Admin/users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AppointmentController",
     "Method": "GetAll",
     "RelativePath": "api/v1/Appointment",

@@ -25,6 +25,10 @@ namespace Predictive_Healthcare_Management_System.Controllers
       try
       {
         var result = await _authService.Register(registerDto);
+        if (result == "User already exists" || result == "Email already registered")
+        {
+          return BadRequest(new { Error = result });
+        }
         return Ok(new { Message = result });
       }
       catch (Exception ex)
@@ -37,14 +41,24 @@ namespace Predictive_Healthcare_Management_System.Controllers
     [HttpPost("login")]
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
+      if (!ModelState.IsValid)
+      {
+        return BadRequest(ModelState); // Return validation errors
+      }
+
       try
       {
-        var token = await _authService.Login(loginDto);
-        return Ok(new { Token = token });
+        var result = await _authService.Login(loginDto);
+        if (result == "Invalid username/email or password")
+        {
+          return Unauthorized(new { Error = result });
+        }
+
+        return Ok(new { Token = result });
       }
       catch (Exception ex)
       {
-        return Unauthorized(ex.Message);
+        return StatusCode(500, new { Error = ex.Message });
       }
     }
   }
