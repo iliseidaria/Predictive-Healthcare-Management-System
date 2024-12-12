@@ -25,7 +25,7 @@ export class PatientUpdateComponent implements OnInit {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
       dateOfBirth: [Date(), Validators.required],  // Default as null, we will handle the date object
-      gender: ['', Validators.required],
+      gender: [0, Validators.required],
       contactInformation: ['', Validators.required],
       address: ['', Validators.required],
       photoPath: [''],
@@ -40,6 +40,7 @@ export class PatientUpdateComponent implements OnInit {
         if (patient.dateOfBirth) {
           patient.dateOfBirth = new Date(patient.dateOfBirth); // Convert to Date object
         }
+        patient.gender= parseInt(patient.gender, 10)
         this.patientForm.patchValue(patient);
         console.log('Loaded Patient:', patient);
       },
@@ -50,6 +51,7 @@ export class PatientUpdateComponent implements OnInit {
   onSubmit() {
     if (this.patientForm.valid) {
       const formValue = this.patientForm.value;
+      formValue.gender=parseInt(formValue.gender, 10);
 
       // Ensure the dateOfBirth is a Date object before sending to the backend
       if (formValue.dateOfBirth instanceof Date) {
