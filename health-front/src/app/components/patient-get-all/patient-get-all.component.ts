@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { PatientService } from '../../services/patient.service';
+import { PatientService } from '../../services/patient/patient.service';
 import {RouterLink} from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-patient-get-all',
   templateUrl: './patient-get-all.component.html',
+  styleUrl: './patient-get-all.component.css',
   imports: [
     CommonModule,
     RouterLink

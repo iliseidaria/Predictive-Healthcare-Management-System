@@ -46,3 +46,5 @@ M:\FACULTATE\ANUL3\.net\healthcare-management\Application\obj\Debug\net9.0\Appli
 M:\FACULTATE\ANUL3\.net\healthcare-management\Application\obj\Debug\net9.0\refint\Application.dll
 M:\FACULTATE\ANUL3\.net\healthcare-management\Application\obj\Debug\net9.0\Application.pdb
 M:\FACULTATE\ANUL3\.net\healthcare-management\Application\obj\Debug\net9.0\ref\Application.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Application\bin\Debug\net9.0\Infrastructure.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Application\bin\Debug\net9.0\Infrastructure.pdb

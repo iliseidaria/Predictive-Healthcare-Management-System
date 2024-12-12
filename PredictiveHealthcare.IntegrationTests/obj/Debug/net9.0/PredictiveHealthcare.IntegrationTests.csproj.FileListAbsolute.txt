@@ -884,3 +884,12 @@ M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTe
 M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\obj\Debug\net9.0\PredictiveHealthcare.IntegrationTests.pdb
 M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\obj\Debug\net9.0\PredictiveHealthcare.IntegrationTests.genruntimeconfig.cache
 M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\obj\Debug\net9.0\ref\PredictiveHealthcare.IntegrationTests.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\BCrypt.Net-Next.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll

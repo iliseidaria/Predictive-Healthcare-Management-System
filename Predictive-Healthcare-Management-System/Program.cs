@@ -3,6 +3,13 @@ using Application;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Infrastructure.Repositories;
+using Application.Utils;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Microsoft.Extensions.Options;
+using Application.Use_Cases.CommandHandlers;
+using FluentValidation;
+using MediatR;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +24,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         b => b.MigrationsAssembly("Infrastructure")));
 
 // Înregistrare Repozitorii
+builder.Services.AddScoped<AuthService>();
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
@@ -42,11 +50,47 @@ builder.Services.AddHttpsRedirection(options =>
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Configure JwtSettings
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+builder.Services.AddSingleton(resolver => resolver.GetRequiredService<IOptions<JwtSettings>>().Value);
+
+builder.Services.AddAuthentication("Bearer")
+    .AddJwtBearer(options =>
+    {
+      var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
+      options.TokenValidationParameters = new TokenValidationParameters
+      {
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = jwtSettings.Issuer,
+        ValidAudience = jwtSettings.Audience,
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
+      };
+    });
+
+builder.Services.AddAuthorization(options =>
+{
+  options.AddPolicy("RequireAdminRole", policy =>
+      policy.RequireRole("Admin"));  // Numai Admin
+  options.AddPolicy("RequireDoctorRole", policy =>
+      policy.RequireRole("Doctor")); // Numai Doctor
+  options.AddPolicy("RequireAdminOrDoctorRole", policy =>
+      policy.RequireRole("Admin", "Doctor")); // Ambele roluri
+});
+
+// Register MediatR and Validators
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
+builder.Services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>();
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
 var app = builder.Build();
 
 // Configurare Middleware
 if (app.Environment.IsDevelopment())
 {
+  app.UseDeveloperExceptionPage();
   app.UseSwagger();
   app.UseSwaggerUI();
 }
@@ -60,6 +104,7 @@ if (!app.Environment.IsDevelopment())
 // Elimină HTTPS (dacă este cazul)
 app.UseCors("AllowAngularApp");
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

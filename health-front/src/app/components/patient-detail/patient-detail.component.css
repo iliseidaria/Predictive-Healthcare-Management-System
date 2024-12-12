@@ -1,58 +1,96 @@
-/* Reset basic styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    padding: 2rem;
-  }
-  
-  h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2rem;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #212529; /* Dark text */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #007bff; /* Primary blue */
+}
+
+.patient-card {
+  background-color: #ffffff; /* White card */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.patient-card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #343a40; /* Dark gray */
+  text-align: center;
+}
+
+.patient-info {
+  list-style-type: none;
+  padding: 0;
+}
+
+.patient-info li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #495057; /* Medium gray text */
+}
+
+.patient-info strong {
+  color: #007bff; /* Highlighted text in blue */
+}
+
+.patient-info img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .patient-card {
-    background: white;
-    border-radius: 8px;
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto;
+    padding: 15px;
   }
-  
-  h2 {
-    font-size: 2rem;
-    color: #007bff;
-    margin-bottom: 1rem;
-    text-align: center;
+
+  h1 {
+    font-size: 1.8rem;
   }
-  
-  .patient-info {
-    list-style: none;
-    padding: 0;
-    margin: 1rem 0;
+
+  .patient-card h2 {
+    font-size: 1.3rem;
   }
-  
+
   .patient-info li {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-    color: #555;
+    font-size: 0.95rem;
   }
-  
-  .patient-info img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 1rem;
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
   }
-  
-  strong {
-    color: #333;
+
+  .patient-card h2 {
+    font-size: 1.2rem;
   }
-  
+
+  .patient-info li {
+    font-size: 0.9rem;
+  }
+}

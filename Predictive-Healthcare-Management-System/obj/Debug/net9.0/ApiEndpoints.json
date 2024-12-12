@@ -89,6 +89,48 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AppointmentController",
+    "Method": "GetProtectedData",
+    "RelativePath": "api/v1/Appointment/protected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/v1/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "Application.DTOs.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "Register",
+    "RelativePath": "api/v1/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "Application.DTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.MedicalRecordController",
     "Method": "Create",
     "RelativePath": "api/v1/MedicalRecord",
@@ -178,13 +220,34 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.MedicalRecordController",
+    "Method": "GetProtectedData",
+    "RelativePath": "api/v1/MedicalRecord/protected",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
     "Method": "GetAll",
     "RelativePath": "api/v1/Patients",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

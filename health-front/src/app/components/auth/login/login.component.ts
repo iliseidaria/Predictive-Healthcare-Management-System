@@ -1,0 +1,43 @@
+import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
+import { AuthService } from '../../../services/auth/auth.service';
+import { CommonModule } from '@angular/common';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule], // NO HttpClientModule needed here
+})
+export class LoginComponent {
+  loginForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
+    this.loginForm = this.fb.group({
+      username: ['', Validators.required],
+      password: ['', Validators.required],
+    });
+  }
+
+  onSubmit() {
+    if (this.loginForm.valid) {
+      const credentials = this.loginForm.value;
+      this.authService.login(credentials).subscribe({
+        next: (response: any) => {
+          if (response.token) {
+            localStorage.setItem('token', response.token); // Save token
+            this.router.navigate(['/test-page']); // Redirect
+          } else {
+            alert('Invalid credentials');
+          }
+        },
+        error: (error) => {
+          console.error('Login error', error);
+          alert('An error occurred during login');
+        },
+      });
+    }
+  }
+}

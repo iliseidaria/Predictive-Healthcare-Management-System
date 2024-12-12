@@ -1,7 +1,8 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Commands;
 using Application.Use_Cases.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Predictive_Healthcare_Management_System.Controllers
@@ -71,5 +72,12 @@ namespace Predictive_Healthcare_Management_System.Controllers
             await _mediator.Send(command);
             return NoContent();
         }
-    }
+
+        [Authorize]
+        [HttpGet("protected")]
+        public IActionResult GetProtectedData()
+        {
+          return Ok("This is a protected endpoint");
+        }
+  }
 }

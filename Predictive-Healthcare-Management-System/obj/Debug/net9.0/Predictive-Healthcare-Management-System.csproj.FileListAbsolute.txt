@@ -1314,3 +1314,13 @@ M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-S
 M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\obj\Debug\net9.0\Predictive-Healthcare-Management-System.pdb
 M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\obj\Debug\net9.0\Predictive-Healthcare-Management-System.genruntimeconfig.cache
 M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\obj\Debug\net9.0\ref\Predictive-Healthcare-Management-System.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\BCrypt.Net-Next.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

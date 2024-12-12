@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class PatientService {
-  private baseUrl = '/api/v1/patients'; // Replace with your API base URL
+  private baseUrl = 'https://localhost:7192/api/v1/Patients'; // Replace with your API base URL
 
   constructor(private http: HttpClient) {}
 
@@ -19,7 +19,7 @@ export class PatientService {
   }
 
   getPatientById(id: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${id}`);
+    return this.http.get<any>(`${this.baseUrl}/${id}`);
   }
 
   createPatient(patientData: any): Observable<any> {

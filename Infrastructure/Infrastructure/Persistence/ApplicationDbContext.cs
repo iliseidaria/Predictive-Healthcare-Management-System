@@ -12,10 +12,14 @@ namespace Infrastructure.Persistence
         public DbSet<Patient> Patients { get; set; }
         public DbSet<MedicalRecord> MedicalRecords { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
+        public DbSet<User> Users { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasPostgresExtension("uuid-ossp");
+
+            modelBuilder.Entity<User>()
+                 .HasKey(u => u.Id); // Configurează `Id` ca PK
 
             modelBuilder.Entity<Patient>(entity =>
             {

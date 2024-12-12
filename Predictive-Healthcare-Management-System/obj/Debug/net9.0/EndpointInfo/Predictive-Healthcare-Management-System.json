@@ -147,6 +147,80 @@
         }
       }
     },
+    "/api/v1/Appointment/protected": {
+      "get": {
+        "tags": [
+          "Appointment"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/error-development": {
       "get": {
         "tags": [
@@ -313,10 +387,42 @@
         }
       }
     },
+    "/api/v1/MedicalRecord/protected": {
+      "get": {
+        "tags": [
+          "MedicalRecord"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/v1/Patients": {
       "get": {
         "tags": [
           "Patients"
+        ],
+        "parameters": [
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "size",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
         ],
         "responses": {
           "200": {
@@ -556,6 +662,20 @@
         "type": "integer",
         "format": "int32"
       },
+      "LoginDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "MedicalRecordDTO": {
         "type": "object",
         "properties": {
@@ -583,6 +703,12 @@
         "additionalProperties": false
       },
       "PatientDTO": {
+        "required": [
+          "address",
+          "contactInformation",
+          "firstName",
+          "lastName"
+        ],
         "type": "object",
         "properties": {
           "patientId": {
@@ -613,6 +739,20 @@
             "nullable": true
           },
           "photoPath": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
             "type": "string",
             "nullable": true
           }
@@ -678,6 +818,10 @@
       "UpdatePatientCommand": {
         "type": "object",
         "properties": {
+          "patientId": {
+            "type": "string",
+            "format": "uuid"
+          },
           "firstName": {
             "type": "string",
             "nullable": true
@@ -704,10 +848,6 @@
           "photoPath": {
             "type": "string",
             "nullable": true
-          },
-          "patientId": {
-            "type": "string",
-            "format": "uuid"
           }
         },
         "additionalProperties": false

@@ -2,13 +2,15 @@ using Application.DTOs;
 using Application.Use_Cases.Commands;
 using Application.Use_Cases.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Predictive_Healthcare_Management_System.Controllers
 {
     [Route("api/v1/[controller]")]
     [ApiController]
-    public class PatientsController : ControllerBase
+    //[Authorize]
+  public class PatientsController : ControllerBase
     {
         private readonly IMediator _mediator;
 
@@ -18,6 +20,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
     [HttpGet]
+    //[Authorize(Policy = "RequireAdminOrDoctorRole")]
     public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int size = 10)
     {
       // Creează comanda folosind valorile de query
@@ -35,7 +38,8 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
 
     [HttpGet("{id}")]
-        public async Task<ActionResult<PatientDTO>> GetById(Guid id)
+    //[Authorize(Policy = "RequireDoctorRole")]
+    public async Task<ActionResult<PatientDTO>> GetById(Guid id)
         {
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
             if (patient == null)
@@ -46,6 +50,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
     [HttpPost]
+    //[Authorize(Policy = "RequireAdminRole")]
     public async Task<IActionResult> Create(CreatePatientCommand command)
     {
       if (!ModelState.IsValid)
@@ -67,7 +72,8 @@ namespace Predictive_Healthcare_Management_System.Controllers
     }
 
     [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(Guid id)
+    //[Authorize(Policy = "RequireAdminRole")]
+    public async Task<IActionResult> Delete(Guid id)
         {
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
             if (patient == null)
@@ -79,6 +85,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
     [HttpPut("{id}")]
+    //[Authorize(Policy = "RequireAdminOrDoctorRole")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdatePatientCommand command)
     {
       if (id != command.PatientId)
@@ -95,6 +102,5 @@ namespace Predictive_Healthcare_Management_System.Controllers
       await _mediator.Send(command);
       return NoContent(); // Return status 204
     }
-
   }
 }
