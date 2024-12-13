@@ -10,6 +10,8 @@ using Microsoft.Extensions.Options;
 using Application.Use_Cases.CommandHandlers;
 using FluentValidation;
 using MediatR;
+using Microsoft.AspNetCore.Diagnostics;
+using Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +27,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 // Înregistrare Repozitorii
 builder.Services.AddScoped<AuthService>();
+builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
@@ -73,11 +76,15 @@ builder.Services.AddAuthentication("Bearer")
 builder.Services.AddAuthorization(options =>
 {
   options.AddPolicy("RequireAdminRole", policy =>
-      policy.RequireRole("Admin"));  // Numai Admin
+      policy.RequireRole("Admin"));
   options.AddPolicy("RequireDoctorRole", policy =>
-      policy.RequireRole("Doctor")); // Numai Doctor
+      policy.RequireRole("Doctor"));
+  options.AddPolicy("RequirePatientRole", policy =>
+      policy.RequireRole("Patient"));
   options.AddPolicy("RequireAdminOrDoctorRole", policy =>
-      policy.RequireRole("Admin", "Doctor")); // Ambele roluri
+      policy.RequireRole("Admin", "Doctor"));
+  options.AddPolicy("RequireAdminOrPatientRole", policy =>
+      policy.RequireRole("Admin", "Patient"));
 });
 
 // Register MediatR and Validators
@@ -86,6 +93,13 @@ builder.Services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidat
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 var app = builder.Build();
+
+// Seed admin user
+using (var scope = app.Services.CreateScope())
+{
+  var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+  DataSeeder.SeedAdminUser(context);
+}
 
 // Configurare Middleware
 if (app.Environment.IsDevelopment())
@@ -100,6 +114,17 @@ if (!app.Environment.IsDevelopment())
 {
   app.UseExceptionHandler("/error");
 }
+
+app.UseExceptionHandler(appBuilder =>
+{
+  appBuilder.Run(async context =>
+  {
+    context.Response.StatusCode = 400;
+    context.Response.ContentType = "application/json";
+    var exception = context.Features.Get<IExceptionHandlerPathFeature>()?.Error;
+    await context.Response.WriteAsJsonAsync(new { message = exception?.Message });
+  });
+});
 
 // Elimină HTTPS (dacă este cazul)
 app.UseCors("AllowAngularApp");

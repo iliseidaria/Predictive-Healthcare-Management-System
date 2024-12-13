@@ -16,6 +16,7 @@ export class LoginComponent {
 
   constructor(private fb: FormBuilder, private router: Router, private authService: AuthService) {
     this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
       username: ['', Validators.required],
       password: ['', Validators.required],
     });
@@ -35,7 +36,11 @@ export class LoginComponent {
         },
         error: (error) => {
           console.error('Login error', error);
-          alert('An error occurred during login');
+          if (error.error && error.error.error) {
+            alert(error.error.error);
+          } else {
+            alert('An error occurred during login');
+          }
         },
       });
     }
