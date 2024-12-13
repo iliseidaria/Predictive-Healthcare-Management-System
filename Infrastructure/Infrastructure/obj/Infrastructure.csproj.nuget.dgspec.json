@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {}
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,7 +42,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -65,24 +65,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,8 +97,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               }
             }
           }
@@ -111,7 +111,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
         "SdkAnalysisLevel": "9.0.100"
       },
@@ -160,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
