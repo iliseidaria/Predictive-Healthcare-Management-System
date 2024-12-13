@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PatientService } from '../../services/patient/patient.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -16,9 +17,11 @@ export class PatientUpdateComponent implements OnInit {
   patientId!: string;
 
   constructor(
-    private route: ActivatedRoute, //ar trebui pus Router
+    private route: ActivatedRoute,
+    private router: Router,
     private fb: FormBuilder,
-    private patientService: PatientService
+    private patientService: PatientService,
+    private authService: AuthService
   ) {
     this.patientForm = this.fb.group({
       patientId: [''],
@@ -33,19 +36,23 @@ export class PatientUpdateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.patientId = this.route.snapshot.paramMap.get('id')!;
-    this.patientService.getPatientById(this.patientId).subscribe({
-      next: (patient) => {
-        // Conversie a datei în formatul corect pentru <input type="date">
-        patient.dateOfBirth = this.formatDate(patient.dateOfBirth);
-        this.patientForm.patchValue(patient);
-        console.log('Loaded Patient:', patient);
-      },
-      error: (err) => console.error('Error loading patient:', err),
-    });
+    if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Doctor') {
+      this.patientId = this.route.snapshot.paramMap.get('id')!;
+      const headers = this.authService.getAuthHeaders();
+      this.patientService.getPatientById(this.patientId, { headers }).subscribe({
+        next: (patient) => {
+          patient.dateOfBirth = this.formatDate(patient.dateOfBirth);
+          this.patientForm.patchValue(patient);
+          console.log('Loaded Patient:', patient);
+        },
+        error: (err) => console.error('Error loading patient:', err),
+      });
+    } else {
+      console.error('Unauthorized or insufficient permissions');
+      // this.router.navigateByUrl('/unauthorized');
+    }
   }
-  
-  // Funcție pentru conversia datei
+
   private formatDate(date: string): string {
     const parsedDate = new Date(date);
     const year = parsedDate.getFullYear();
@@ -55,13 +62,18 @@ export class PatientUpdateComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.patientForm.valid) {
-      this.patientService
-        .updatePatient(this.patientId, this.patientForm.value)
-        .subscribe({
+    if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Patient') {
+      if (this.patientForm.valid) {
+        const headers = this.authService.getAuthHeaders();
+        this.patientService.updatePatient(this.patientId, this.patientForm.value, { headers }).subscribe({
           next: () => alert('Patient updated successfully!'),
           error: (err) => console.error('Error updating patient:', err),
         });
+      } else {
+        console.error('Form is invalid:', this.patientForm);
+      }
+    } else {
+      console.error('Unauthorized or insufficient permissions');
     }
   }
 }

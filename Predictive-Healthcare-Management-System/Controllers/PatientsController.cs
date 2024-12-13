@@ -40,7 +40,6 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
 
     [HttpGet("{id}")]
-    [Authorize(Policy = "RequireDoctorRole")]
     public async Task<ActionResult<PatientDTO>> GetById(Guid id)
         {
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
@@ -87,7 +86,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
     [HttpPut("{id}")]
-    [Authorize(Policy = "RequirePatientRole")]
+    [Authorize(Policy = "RequireAdminOrPatientRole")]
     public async Task<IActionResult> Update(Guid id, [FromBody] UpdatePatientCommand command)
     {
       if (id != command.PatientId)

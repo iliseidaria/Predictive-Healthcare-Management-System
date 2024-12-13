@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { PatientService } from '../../services/patient/patient.service';
+import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -13,23 +14,35 @@ import { CommonModule } from '@angular/common';
 export class PatientDetailComponent implements OnInit {
   patient: any;
 
-  constructor(private route: ActivatedRoute, private patientService: PatientService) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private patientService: PatientService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit(): void {
-    const patientId = this.route.snapshot.paramMap.get('id');
-    if (patientId) {
-      this.loadPatient(patientId);
-    }
+    this.route.paramMap.subscribe(params => {
+      const patientId = params.get('id');
+      console.log('Patient ID from URL:', patientId);
+      if (patientId) {
+        this.loadPatient(patientId);
+      }
+    });
   }
 
   loadPatient(id: string): void {
-    this.patientService.getPatientById(id).subscribe({
-      next: (data) => {
-        this.patient = data;
-        console.log('Patient Details:', this.patient);
-      },
-      error: (err) => console.error('Error loading patient:', err),
-    });
+    if (this.authService.isAuthenticated()) {
+      const headers = this.authService.getAuthHeaders();
+      console.log('Calling endpoint with ID:', id);
+      this.patientService.getPatientById(id, { headers }).subscribe({
+        next: (data) => {
+          this.patient = data;
+          console.log('Patient Details:', this.patient);
+        },
+        error: (err) => console.error('Error loading patient:', err),
+      });
+    }
   }
 
   calculateAge(dateOfBirth: string): number {
@@ -43,7 +56,7 @@ export class PatientDetailComponent implements OnInit {
     }
     return age;
   }
-  
+
   getGender(gender: number): string {
     return gender === 0 ? 'Male' : gender === 1 ? 'Female' : 'Other';
   }

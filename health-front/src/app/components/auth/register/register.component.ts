@@ -26,15 +26,6 @@ export class RegisterComponent {
     );
   }
 
-  navigateTo(path: string) {
-    if (this.authService.isAuthenticated()) {
-      this.router.navigate([path]);
-    } else {
-      alert('You must be logged in to access this page.');
-      this.router.navigate(['/login']);  // Redirect to login page if not authenticated
-    }
-  }
-
   // Validator personalizat pentru potrivirea parolelor
   passwordMatchValidator(form: FormGroup) {
     const password = form.get('password')?.value;

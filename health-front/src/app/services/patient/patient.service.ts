@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 
@@ -11,29 +11,27 @@ export class PatientService {
 
   constructor(private http: HttpClient) {}
 
-  getAllPatients(page: number, size: number): Observable<any> {
+  getAllPatients(page: number, size: number, options?: { headers?: HttpHeaders }): Observable<any> {
     const params = new HttpParams()
       .set('page', page.toString())
       .set('size', size.toString());
 
-    return this.http.get(this.baseUrl, { params });
+    return this.http.get(this.baseUrl, { params, ...options });
   }
 
-  getPatientById(id: string): Observable<any> {
-    return this.http.get<any>(`${this.baseUrl}/${id}`);
+  getPatientById(id: string, options?: { headers?: HttpHeaders }): Observable<any> {
+    return this.http.get<any>(`${this.baseUrl}/${id}`, options);
   }
 
-  createPatient(patientData: any): Observable<any> {
-    return this.http.post(this.baseUrl, patientData, {
-      headers: { 'Content-Type': 'application/json' },
-    });
+  createPatient(patientData: any, options?: { headers?: HttpHeaders }): Observable<any> {
+    return this.http.post(this.baseUrl, patientData, options);
   }
 
-  updatePatient(id: string, patientData: any): Observable<any> {
-    return this.http.put(`${this.baseUrl}/${id}`, patientData);
+  updatePatient(id: string, patientData: any, options?: { headers?: HttpHeaders }): Observable<any> {
+    return this.http.put(`${this.baseUrl}/${id}`, patientData, options);
   }
 
-  deletePatient(id: string): Observable<any> {
-    return this.http.delete(`${this.baseUrl}/${id}`);
+  deletePatient(id: string, options?: { headers?: HttpHeaders }): Observable<any> {
+    return this.http.delete(`${this.baseUrl}/${id}`, options);
   }
 }

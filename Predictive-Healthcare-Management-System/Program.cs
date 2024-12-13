@@ -76,13 +76,15 @@ builder.Services.AddAuthentication("Bearer")
 builder.Services.AddAuthorization(options =>
 {
   options.AddPolicy("RequireAdminRole", policy =>
-      policy.RequireRole("Admin"));  // Numai Admin
+      policy.RequireRole("Admin"));
   options.AddPolicy("RequireDoctorRole", policy =>
-      policy.RequireRole("Doctor")); // Numai Doctor
+      policy.RequireRole("Doctor"));
   options.AddPolicy("RequirePatientRole", policy =>
-      policy.RequireRole("Patient")); // Numai Pacient
+      policy.RequireRole("Patient"));
   options.AddPolicy("RequireAdminOrDoctorRole", policy =>
-      policy.RequireRole("Admin", "Doctor")); // Ambele roluri
+      policy.RequireRole("Admin", "Doctor"));
+  options.AddPolicy("RequireAdminOrPatientRole", policy =>
+      policy.RequireRole("Admin", "Patient"));
 });
 
 // Register MediatR and Validators
