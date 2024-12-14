@@ -2357,23 +2357,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andreea\\.nuget\\packages\\": {},
+    "C:\\Users\\.adia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
+      "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
       "projectName": "PredictiveHealthcare.Application.UnitTests",
-      "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.Application.UnitTests\\obj\\",
+      "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
+      "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.Application.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2388,11 +2388,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj": {
-              "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj"
+            "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj": {
+              "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj"
             },
-            "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
-              "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
+            "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
             }
           }
         }
@@ -2461,13 +2461,5 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.Application.UnitTests\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    }
-  ]
+  }
 }
