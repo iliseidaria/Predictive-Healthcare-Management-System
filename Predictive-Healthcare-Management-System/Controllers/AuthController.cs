@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Application.DTOs;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Predictive_Healthcare_Management_System.Controllers
 {
@@ -59,6 +60,25 @@ namespace Predictive_Healthcare_Management_System.Controllers
       catch (Exception ex)
       {
         return StatusCode(500, new { Error = ex.Message });
+      }
+    }
+
+    [HttpPost("logout")]
+    [Authorize]
+    public IActionResult Logout()
+    {
+      try
+      {
+        var token = Request.Headers["Authorization"].ToString().Replace("Bearer ", "");
+
+        // You can implement token blacklisting here if needed
+        // For now, we'll just return success since the client will remove the token
+
+        return Ok(new { message = "Logged out successfully" });
+      }
+      catch (Exception ex)
+      {
+        return StatusCode(500, new { message = "Error during logout", error = ex.Message });
       }
     }
   }

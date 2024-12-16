@@ -317,6 +317,18 @@
         }
       }
     },
+    "/api/v1/Auth/logout": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/error-development": {
       "get": {
         "tags": [

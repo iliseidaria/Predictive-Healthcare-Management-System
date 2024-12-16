@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
 import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 function toUTC(date: string): string {
   const dateObj = new Date(date);
@@ -22,12 +23,12 @@ function toUTC(date: string): string {
 })
 export class PatientCreateComponent {
   patientForm: FormGroup;
-  router: any;
 
   constructor(
     private fb: FormBuilder,
     private patientService: PatientService,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {
     this.patientForm = this.fb.group({
       firstName: ['', [Validators.required]],
@@ -45,97 +46,33 @@ export class PatientCreateComponent {
       if (this.patientForm.valid) {
         const formData = {
           ...this.patientForm.value,
+          gender: parseInt(this.patientForm.value.gender, 10),
           dateOfBirth: toUTC(this.patientForm.value.dateOfBirth),
         };
 
         console.log('Form Data Sent:', formData);
         const headers = this.authService.getAuthHeaders();
         this.patientService.createPatient(formData, { headers }).subscribe({
-          next: () => {
+          next: (response) => {
             alert('Patient created successfully!');
-            this.router.navigateByUrl('/get-all-patients');
+            console.log('Response ID:', response.id);
+            this.router.navigateByUrl(`/patient-detail/${response.id}`);
           },
-          error: (err) => console.error('Error:', err),
+          error: (err) => {
+            console.error('Error in create:', err);
+            alert('Error creating patient');
+          },
+          complete: () => {
+            console.log('Create operation completed');
+          }
         });
       } else {
         console.error('Form is invalid:', this.patientForm);
       }
     } else {
       console.error('Unauthorized or insufficient permissions');
-    }
-    if (this.patientForm.valid) {
-      const formData = {
-        ...this.patientForm.value,
-        gender: parseInt(this.patientForm.value.gender, 10),
-        dateOfBirth: toUTC(this.patientForm.value.dateOfBirth), // Conversie în UTC
-      };
-
-      console.log('Form Data Sent:', formData);
-      this.patientService.createPatient(formData).subscribe({
-        next: () => alert('Patient created successfully!'),
-        error: (err) => console.error('Error:', err),
-      });
-    } else {
-      console.error('Form is invalid:', this.patientForm);
+      alert('You do not have permission to create a patient');
+      this.router.navigate(['/login']); //ar trebui si sters tokenul cred
     }
   }
-  
 }
-/*
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { PatientService } from '../../../app/services/patient/patient.service';
-
-function toUTC(date: string): string {
-  const dateObj = new Date(date);
-  return new Date(Date.UTC(
-    dateObj.getFullYear(),
-    dateObj.getMonth(),
-    dateObj.getDate(),
-    dateObj.getHours(),
-    dateObj.getMinutes(),
-    dateObj.getSeconds()
-  )).toISOString();
-}
-
-@Component({
-  selector: 'app-patient-create',
-  styleUrl: './patient-create.component.css',
-  templateUrl: './patient-create.component.html',
-  imports: [ReactiveFormsModule],
-  standalone: true,
-})
-export class PatientCreateComponent {
-  patientForm: FormGroup;
-
-  constructor(private fb: FormBuilder, private patientService: PatientService) {
-    this.patientForm = this.fb.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      dateOfBirth: ['', Validators.required],
-      gender: [0, Validators.required],
-      contactInformation: ['', Validators.required],
-      address: ['', Validators.required],
-      photoPath: [''],
-    });
-  }
-
-  onSubmit() {
-    if (this.patientForm.valid) {
-      const formData = {
-        ...this.patientForm.value,
-        dateOfBirth: toUTC(this.patientForm.value.dateOfBirth), // Conversie în UTC
-      };
-
-      console.log('Form Data Sent:', formData);
-      this.patientService.createPatient(formData).subscribe({
-        next: () => alert('Patient created successfully!'),
-        error: (err) => console.error('Error:', err),
-      });
-    } else {
-      console.error('Form is invalid:', this.patientForm);
-    }
-  }
-
-}
-*/

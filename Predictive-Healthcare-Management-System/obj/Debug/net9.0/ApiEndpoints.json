@@ -179,6 +179,16 @@
   },
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "Logout",
+    "RelativePath": "api/v1/Auth/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
     "Method": "Register",
     "RelativePath": "api/v1/Auth/register",
     "HttpMethod": "POST",

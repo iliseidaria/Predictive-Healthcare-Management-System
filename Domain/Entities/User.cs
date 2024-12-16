@@ -18,6 +18,6 @@ namespace Domain.Entities
     [Required]
     public string PasswordHash { get; set; } = string.Empty;
 
-    public string Role { get; set; } = "Patient";
+    public string Role { get; set; } = "Pacient";
   }
 }
