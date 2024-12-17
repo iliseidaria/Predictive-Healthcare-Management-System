@@ -3,6 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
+import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
   selector: 'app-patient-detail',
@@ -10,6 +11,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './patient-detail.component.css',
   standalone: true,
   imports: [CommonModule],
+  providers: [NavigationService]
 })
 export class PatientDetailComponent implements OnInit {
   patient: any;
@@ -18,6 +20,7 @@ export class PatientDetailComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private patientService: PatientService,
+    private navigationService: NavigationService,
     private authService: AuthService
   ) {}
 
@@ -59,5 +62,9 @@ export class PatientDetailComponent implements OnInit {
 
   getGender(gender: number): string {
     return gender === 0 ? 'Male' : gender === 1 ? 'Female' : 'Other';
+  }
+
+  goBack(): void {
+    this.navigationService.goBack();
   }
 }

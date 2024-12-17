@@ -1,0 +1,21 @@
+<div class="user-card" *ngIf="username && email && role">
+  <h2>User Details</h2>
+  <div class="user-info">
+    <div class="info-item">
+      <strong>Username:</strong>
+      <span>{{ username }}</span>
+    </div>
+    <div class="info-item">
+      <strong>Email:</strong>
+      <span>{{ email }}</span>
+    </div>
+    <div class="info-item">
+      <strong>Role:</strong>
+      <span>{{ role }}</span>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="!username || !email || !role" class="error-message">
+  User not found or not authenticated.
+</div>

@@ -4,6 +4,7 @@ import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { NavigationService } from '../../services/navigation/navigation.service';
 
 function toUTC(date: string): string {
   const dateObj = new Date(date);
@@ -20,6 +21,7 @@ function toUTC(date: string): string {
   styleUrl: './patient-create.component.css',
   imports: [ReactiveFormsModule, CommonModule],
   standalone: true,
+  providers: [NavigationService]	
 })
 export class PatientCreateComponent {
   patientForm: FormGroup;
@@ -28,6 +30,7 @@ export class PatientCreateComponent {
     private fb: FormBuilder,
     private patientService: PatientService,
     private authService: AuthService,
+    private navigationService: NavigationService,
     private router: Router
   ) {
     this.patientForm = this.fb.group({
@@ -74,5 +77,9 @@ export class PatientCreateComponent {
       alert('You do not have permission to create a patient');
       this.router.navigate(['/login']); //ar trebui si sters tokenul cred
     }
+  }
+
+  goBack(): void {
+    this.navigationService.goBack();
   }
 }

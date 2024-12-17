@@ -1,28 +1,33 @@
-<h1>Update Patient</h1>
-<form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
-  <label for="firstName">First Name</label>
-  <input id="firstName" formControlName="firstName" />
+<div class="container">
+  <header>
+    <button (click)="goBack()">Back</button>
+    <h1>Update Patient</h1>
+  </header>
+  <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
+    <label for="firstName">First Name</label>
+    <input id="firstName" formControlName="firstName" />
 
-  <label for="lastName">Last Name</label>
-  <input id="lastName" formControlName="lastName" />
+    <label for="lastName">Last Name</label>
+    <input id="lastName" formControlName="lastName" />
 
-  <label for="dateOfBirth">Date of Birth</label>
-  <input id="dateOfBirth" type="date" formControlName="dateOfBirth" />
+    <label for="dateOfBirth">Date of Birth</label>
+    <input id="dateOfBirth" type="date" formControlName="dateOfBirth" />
 
-  <label for="gender">Gender</label>
-  <select id="gender" formControlName="gender">
-    <option value="0">Male</option>
-    <option value="1">Female</option>
-  </select>
+    <label for="gender">Gender</label>
+    <select id="gender" formControlName="gender">
+      <option value="0">Male</option>
+      <option value="1">Female</option>
+    </select>
 
-  <label for="contactInformation">Contact Information</label>
-  <input id="contactInformation" formControlName="contactInformation" />
+    <label for="contactInformation">Contact Information</label>
+    <input id="contactInformation" formControlName="contactInformation" />
 
-  <label for="address">Address</label>
-  <input id="address" formControlName="address" />
+    <label for="address">Address</label>
+    <input id="address" formControlName="address" />
 
-  <label for="photoPath">Photo Path (Optional)</label>
-  <input id="photoPath" formControlName="photoPath" />
+    <label for="photoPath">Photo Path (Optional)</label>
+    <input id="photoPath" formControlName="photoPath" />
 
-  <button type="submit" [disabled]="!patientForm.valid">Update Patient</button>
-</form>
+    <button type="submit" [disabled]="!patientForm.valid">Update Patient</button>
+  </form>
+</div>

@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule], // NO HttpClientModule needed here
+  imports: [ReactiveFormsModule, CommonModule, RouterLink],
 })
 export class LoginComponent {
   loginForm: FormGroup;

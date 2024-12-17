@@ -111,6 +111,24 @@ td a:hover {
   cursor: not-allowed;
 }
 
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #003d80;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   table {

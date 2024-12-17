@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
+import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
   selector: 'app-patient-update',
@@ -11,6 +12,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './patient-update.component.html',
   standalone: true,
   imports: [ReactiveFormsModule, CommonModule],
+  providers: [NavigationService]
 })
 export class PatientUpdateComponent implements OnInit {
   patientForm: FormGroup;
@@ -19,6 +21,7 @@ export class PatientUpdateComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
+    private navigationService: NavigationService,
     private fb: FormBuilder,
     private patientService: PatientService,
     private authService: AuthService
@@ -87,6 +90,10 @@ export class PatientUpdateComponent implements OnInit {
     const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
     const day = parsedDate.getDate().toString().padStart(2, '0');
     return `${year}-${month}-${day}`;
+  }
+
+  goBack(): void {
+    this.navigationService.goBack();
   }
 
   // onSubmit() {

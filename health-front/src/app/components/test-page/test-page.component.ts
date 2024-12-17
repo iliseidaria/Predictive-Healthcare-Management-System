@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {RouterLink, RouterOutlet, Router} from '@angular/router';
+import { RouterLink, RouterOutlet, Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +8,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './test-page.component.html',
   styleUrl: './test-page.component.css',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule]
 })
 export class TestPageComponent {
   constructor(private router: Router, public authService: AuthService) {}
@@ -19,18 +19,27 @@ export class TestPageComponent {
       this.router.navigate([path]);
     } else {
       alert('You must be logged in to access this page.');
-      this.router.navigate(['/login']);  // Redirect to login page if not authenticated
+      this.router.navigate(['/login']);
     }
   }
 
   logout() {
-    this.authService.logout().subscribe({
-      next: () => {
-        localStorage.removeItem('token');
-        this.router.navigateByUrl('/login');
-      },
-      error: (err) => console.error('Error during logout:', err),
-    });
+    if (this.authService.isAuthenticated()) {
+      this.authService.logout().subscribe({
+        next: () => {
+          console.log('Logout successful');
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.error('Logout error:', err);
+          // Still remove token and redirect on error
+          localStorage.removeItem('token');
+          this.router.navigate(['/login']);
+        }
+      });
+    } else {
+      this.router.navigate(['/login']);
+    }
   }
 
   // Optional: Check if the user has a certain role before performing an action

@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { tap } from 'rxjs/operators';
+import { jwtDecode } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root',
@@ -52,5 +53,22 @@ export class AuthService {
     return new HttpHeaders({
       Authorization: `Bearer ${token}`
     });
+  }
+
+  getCurrentUser(): any {
+    const token = localStorage.getItem('token');
+    if (!token) return null;
+
+    try {
+      const decodedToken: any = jwtDecode(token);
+      return {
+        username: decodedToken.unique_name,
+        email: decodedToken.email,
+        role: decodedToken.role
+      };
+    } catch (error) {
+      console.error('Error decoding token:', error);
+      return null;
+    }
   }
 }

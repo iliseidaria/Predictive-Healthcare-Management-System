@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import {RouterLink} from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
   selector: 'app-patient-get-all',
@@ -12,16 +13,20 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     RouterLink
   ],
-  standalone: true
+  standalone: true,
+  providers: [NavigationService]
 })
 export class PatientGetAllComponent implements OnInit {
   patients: any[] = [];
   page = 1;
   size = 10;
+  userRole: string = '';
+  private navigationService = inject(NavigationService);
 
   constructor(private patientService: PatientService, private authService: AuthService) {}
 
   ngOnInit() {
+    this.userRole = this.authService.getUserRole() || '';
     this.loadPatients();
   }
 
@@ -29,7 +34,10 @@ export class PatientGetAllComponent implements OnInit {
     if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Patient') {
       const headers = this.authService.getAuthHeaders();
       this.patientService.getAllPatients(this.page, this.size, { headers }).subscribe({
-        next: (data) => (this.patients = data.items || []),
+        next: (data) => {
+          console.log('Received data:', data);  // Adaugă acest log pentru debug
+          this.patients = data.items || [];
+        },
         error: (err) => console.error(err),
       });
     }
@@ -46,5 +54,9 @@ export class PatientGetAllComponent implements OnInit {
         error: (err) => console.error(err),
       });
     }
+  }
+
+  goBack(): void {
+    this.navigationService.goBack();
   }
 }
