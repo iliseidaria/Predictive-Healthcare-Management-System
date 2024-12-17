@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\use cases\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\infrastructure\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\predictive-healthcare-management-system\\controllers\\patientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +25,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\use cases\\queryhandlers\\getpatientsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getpatientsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\use cases\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\predictive-healthcare-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -55,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\infrastructure\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\patientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\infrastructure\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -81,10 +89,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\utils\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\utils\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\ipatientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\predictive-healthcare-management-system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -121,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getpatientsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\healthcare-management\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -217,7 +217,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 272,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -242,69 +242,32 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Program.cs",
-              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Program.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Program.cs",
-              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAAEAAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T16:32:45.984Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
               "Title": "GetPatientsQueryHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
               "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetPatientsQueryHandler.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T19:01:06.38Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwEIAAAAPAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-09T16:05:52.636Z",
+              "WhenOpened": "2024-12-08T19:01:06.38Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthService.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Services\\AuthService.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Services\\AuthService.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Services\\AuthService.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Services\\AuthService.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAAgwD4AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-16T22:33:31.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PatientsController.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
               "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\PatientsController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAiwBYAAAAxAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-21T18:24:43.938Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "User.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Entities\\User.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
@@ -317,7 +280,82 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetPatientsQuery.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T18:59:52.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IPatientRepository.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Repositories\\IPatientRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IPatientRepository.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Repositories\\IPatientRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IPatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T14:58:48.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PatientRepository.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T16:21:51.661Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Services\\AuthService.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Services\\AuthService.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Services\\AuthService.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAgwD4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-16T22:33:31.985Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAQwEIAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T16:05:52.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Program.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Program.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Program.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAEAAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-09T16:32:45.984Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "CreatePatientCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\CreatePatientCommandHandler.cs",
@@ -329,7 +367,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "CreatePatientCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreatePatientCommand.cs",
@@ -341,7 +379,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "UserDto.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\DTOs\\UserDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\UserDto.cs",
@@ -353,7 +391,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "UserService.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Services\\UserService.cs",
@@ -365,7 +403,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "DataSeeder.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\DataSeeder.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\DataSeeder.cs",
@@ -377,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "appsettings.json",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\appsettings.json",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\appsettings.json",
@@ -389,7 +427,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Pacient.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Entities\\Pacient.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Pacient.cs",
@@ -401,19 +439,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "PatientRepository.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\PatientRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T16:21:51.661Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 17,
               "Title": "CreateMedicalRecordCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommand.cs",
@@ -425,7 +451,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 16,
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\DependencyInjection.cs",
@@ -437,7 +463,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "UpdatePatientCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Commands\\UpdatePatientCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePatientCommandValidator.cs",
@@ -449,7 +475,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Predictive-Healthcare-Management-System.http",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.http",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.http",
@@ -461,7 +487,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "UpdatePatientCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
@@ -473,7 +499,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Utils\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Application\\Utils\\JwtSettings.cs",
@@ -485,19 +511,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "IPatientRepository.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Repositories\\IPatientRepository.cs",
-              "RelativeDocumentMoniker": "Domain\\Repositories\\IPatientRepository.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Repositories\\IPatientRepository.cs",
-              "RelativeToolTip": "Domain\\Repositories\\IPatientRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-10T14:58:48.774Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "PatientDTO.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\DTOs\\PatientDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\PatientDTO.cs",
@@ -509,7 +523,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "launchSettings.json",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Properties\\launchSettings.json",
@@ -521,7 +535,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "UpdatePatientCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
@@ -533,7 +547,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
@@ -545,7 +559,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "RegisterDto.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\DTOs\\RegisterDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\RegisterDto.cs",
@@ -557,7 +571,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "LoginDto.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\DTOs\\LoginDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\LoginDto.cs",
@@ -569,7 +583,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "AppointmentController.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\AppointmentController.cs",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\AppointmentController.cs",
@@ -581,7 +595,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "MedicalRecordController.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
@@ -593,7 +607,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "AppointmentDTO.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\DTOs\\AppointmentDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\AppointmentDTO.cs",
@@ -614,18 +628,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T12:57:35.239Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "GetPatientsQuery.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetPatientsQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-08T18:59:52.59Z"
             },
             {
               "$type": "Document",

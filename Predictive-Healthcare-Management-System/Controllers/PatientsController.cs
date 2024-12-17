@@ -23,7 +23,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
     [Authorize(Policy = "RequireAdminOrDoctorRole")]
     public async Task<IActionResult> GetAll([FromQuery] int page = 1, [FromQuery] int size = 10)
     {
-      var result = await _mediator.Send(new GetPatientsQuery
+      var (result, totalCount) = await _mediator.Send(new GetPatientsQuery
       {
         Page = page,
         Size = size
@@ -35,7 +35,13 @@ namespace Predictive_Healthcare_Management_System.Controllers
         return NotFound("No patients found.");
       }
 
-      return Ok(new { items = result, totalCount = result.Count });
+      return Ok(new
+      {
+        items = result,
+        totalCount = totalCount,
+        currentPage = page,
+        pageSize = size
+      });
     }
 
 
