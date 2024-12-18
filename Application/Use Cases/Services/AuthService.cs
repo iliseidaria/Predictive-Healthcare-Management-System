@@ -6,6 +6,7 @@ using Application.Utils;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.IdentityModel.Tokens;
+using Org.BouncyCastle.Crypto.Generators;
 
 public class AuthService
 {

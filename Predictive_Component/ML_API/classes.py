@@ -31,7 +31,7 @@ class Patient(BaseModel):
     first_name: str
     last_name: str
     date_of_birth: date
-    gender: GenderEnum
+    gender: int
     contact_information: str
     address: str
     photo_path: str

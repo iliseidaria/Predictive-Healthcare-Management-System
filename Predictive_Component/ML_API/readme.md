@@ -38,9 +38,9 @@ This FastAPI-based web application predicts diseases based on patient data. It a
 
 ## Running the Application
 
-Start the FastAPI server on port `2024`:
+Start the FastAPI server on port `8000`:
 ```bash
-uvicorn main:app --host 0.0.0.0 --port 2024 --reload
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
 ---
 ## How does the predictor work?

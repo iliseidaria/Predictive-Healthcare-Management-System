@@ -415,6 +415,19 @@
           }
         }
       },
+      "Portable.BouncyCastle/1.9.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "System.IdentityModel.Tokens.Jwt/8.3.0": {
         "type": "package",
         "dependencies": {
@@ -1086,6 +1099,21 @@
         "postgresql.png"
       ]
     },
+    "Portable.BouncyCastle/1.9.0": {
+      "sha512": "eZZBCABzVOek+id9Xy04HhmgykF0wZg9wpByzrWN7q8qEI0Qen9b7tfd7w8VA3dOeesumMG7C5ZPy0jk7PSRHw==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.9.0.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    },
     "System.IdentityModel.Tokens.Jwt/8.3.0": {
       "sha512": "9GESpDG0Zb17HD5mBW/uEWi2yz/uKPmCthX2UhyLnk42moGH2FpMgXA2Y4l2Qc7P75eXSUTA6wb/c9D9GSVkzw==",
       "type": "package",
@@ -1130,27 +1158,28 @@
       "FluentValidation.DependencyInjectionExtensions >= 11.11.0",
       "Infrastructure >= 1.0.0",
       "MediatR >= 12.4.1",
+      "Portable.BouncyCastle >= 1.9.0",
       "System.IdentityModel.Tokens.Jwt >= 8.3.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andreea\\.nuget\\packages\\": {},
+    "C:\\Users\\.adia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\obj\\",
+      "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
+      "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1165,11 +1194,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
-              "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
+            "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
             },
-            "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+            "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -1209,6 +1238,10 @@
           "MediatR": {
             "target": "Package",
             "version": "[12.4.1, )"
+          },
+          "Portable.BouncyCastle": {
+            "target": "Package",
+            "version": "[1.9.0, )"
           },
           "System.IdentityModel.Tokens.Jwt": {
             "target": "Package",

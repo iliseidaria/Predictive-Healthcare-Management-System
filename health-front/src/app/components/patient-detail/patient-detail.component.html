@@ -2,8 +2,8 @@
   <button (click)="goBack()">Back</button>
   <h1>Patient Details</h1>
 </header>
-<div *ngIf="patient">
 
+<div *ngIf="patient">
   <div class="patient-card">
     <h2>{{ patient.firstName }} {{ patient.lastName }}</h2>
 
@@ -17,6 +17,11 @@
       <li *ngIf="patient.photoPath">
         <strong>Photo:</strong>
         <img [src]="patient.photoPath" alt="Patient Photo" />
+      </li>
+      <li>
+        <strong>Predicted diagnosis for patient:</strong>
+        <span *ngIf="predictions; else loading">{{ formatPredictions(predictions) }}</span>
+        <ng-template #loading>Loading predictions...</ng-template>
       </li>
     </ul>
   </div>
