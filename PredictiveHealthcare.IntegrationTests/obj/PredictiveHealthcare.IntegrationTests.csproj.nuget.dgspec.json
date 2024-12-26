@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {}
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {}
   },
   "projects": {
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -32,11 +32,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               },
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -106,20 +106,20 @@
         }
       }
     },
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -171,20 +171,20 @@
         }
       }
     },
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -199,8 +199,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               }
             }
           }
@@ -266,20 +266,20 @@
         }
       }
     },
-    "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
         "projectName": "Predictive-Healthcare-Management-System",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -294,14 +294,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Application.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application\\Application.csproj"
               },
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain\\Domain.csproj"
               },
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -376,20 +376,20 @@
         }
       }
     },
-    "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
         "projectName": "PredictiveHealthcare.IntegrationTests",
-        "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\PredictiveHealthcare.IntegrationTests\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\PredictiveHealthcare.IntegrationTests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -404,11 +404,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure\\Infrastructure.csproj"
               },
-              "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj"
               }
             }
           }

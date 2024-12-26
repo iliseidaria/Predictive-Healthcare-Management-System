@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PredictiveHealthcare.Application.UnitTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4174cf2fea8d0d9b62bcb0bd0538bec357b88791")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d7c2010cc29c29a445af71a7f2dd947125c624aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("PredictiveHealthcare.Application.UnitTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PredictiveHealthcare.Application.UnitTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

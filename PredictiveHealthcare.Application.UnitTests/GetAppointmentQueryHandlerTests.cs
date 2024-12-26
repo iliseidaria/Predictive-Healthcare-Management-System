@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using Application.Use_Cases.QueryHandlers;
 using AutoMapper;
@@ -26,9 +26,9 @@ namespace PredictiveHealthcare.Application.UnitTests
         public async Task Given_AppointmentsExist_When_HandleIsCalled_Then_ListOfAppointmentDTOsShouldBeReturned()
         {
             // Arrange
-            var query = new GetAppointmentQuery();
+            var query = new GetAppointmentQuery() { Reason = "Routine Checkup" };
 
-            var appointments = new List<Appointment>
+      var appointments = new List<Appointment>
             {
                 new Appointment
                 {
@@ -50,9 +50,9 @@ namespace PredictiveHealthcare.Application.UnitTests
                 }
             };
 
-            var expectedDtos = new List<AppointmentDTO>
+            var expectedDtos = new List<AppointmentDto>
             {
-                new AppointmentDTO
+                new AppointmentDto
                 {
                     AppointmentId = appointments[0].AppointmentId,
                     PatientId = appointments[0].PatientId,
@@ -61,7 +61,7 @@ namespace PredictiveHealthcare.Application.UnitTests
                     Reason = appointments[0].Reason,
                     Status = appointments[0].Status
                 },
-                new AppointmentDTO
+                new AppointmentDto
                 {
                     AppointmentId = appointments[1].AppointmentId,
                     PatientId = appointments[1].PatientId,
@@ -73,14 +73,14 @@ namespace PredictiveHealthcare.Application.UnitTests
             };
 
             repository.GetAllAppointmentsAsync().Returns(appointments);
-            mapper.Map<List<AppointmentDTO>>(appointments).Returns(expectedDtos);
+            mapper.Map<List<AppointmentDto>>(appointments).Returns(expectedDtos);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetAllAppointmentsAsync();
-            mapper.Received(1).Map<List<AppointmentDTO>>(appointments);
+            mapper.Received(1).Map<List<AppointmentDto>>(appointments);
             result.Should().BeEquivalentTo(expectedDtos);
         }
 
@@ -88,20 +88,20 @@ namespace PredictiveHealthcare.Application.UnitTests
         public async Task Given_NoAppointmentsExist_When_HandleIsCalled_Then_EmptyListShouldBeReturned()
         {
             // Arrange
-            var query = new GetAppointmentQuery();
+            var query = new GetAppointmentQuery() { Reason = "Routine Checkup" };
 
-            var appointments = new List<Appointment>();
-            var expectedDtos = new List<AppointmentDTO>();
+      var appointments = new List<Appointment>();
+            var expectedDtos = new List<AppointmentDto>();
 
             repository.GetAllAppointmentsAsync().Returns(appointments);
-            mapper.Map<List<AppointmentDTO>>(appointments).Returns(expectedDtos);
+            mapper.Map<List<AppointmentDto>>(appointments).Returns(expectedDtos);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetAllAppointmentsAsync();
-            mapper.Received(1).Map<List<AppointmentDTO>>(appointments);
+            mapper.Received(1).Map<List<AppointmentDto>>(appointments);
             result.Should().BeEmpty();
         }
     }

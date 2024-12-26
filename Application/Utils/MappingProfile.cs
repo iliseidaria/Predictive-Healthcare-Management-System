@@ -10,7 +10,7 @@ namespace Application.Utils
         public MappingProfile()
         {
             // Patient mappings
-            CreateMap<Patient, PatientDTO>().ReverseMap();
+            CreateMap<Patient, PatientDto>().ReverseMap();
             CreateMap<CreatePatientCommand, Patient>().ReverseMap();
             CreateMap<CreatePatientCommand, Patient>()
                   .ForMember(dest => dest.DateOfBirth, opt =>
@@ -19,13 +19,13 @@ namespace Application.Utils
             CreateMap<UpdatePatientCommand, Patient>().ReverseMap();
 
             // MedicalRecord mappings
-            CreateMap<MedicalRecord, MedicalRecordDTO>().ReverseMap();
+            CreateMap<MedicalRecord, MedicalRecordDto>().ReverseMap();
             CreateMap<CreateMedicalRecordCommand, MedicalRecord>().ReverseMap();
             CreateMap<UpdateMedicalRecordCommand, MedicalRecord>().ReverseMap();
             //CreateMap<Prescription, PrescriptionDTO>().ReverseMap();
 
             // Appointment mappings
-            CreateMap<Appointment, AppointmentDTO>().ReverseMap();
+            CreateMap<Appointment, AppointmentDto>().ReverseMap();
             CreateMap<CreateAppointmentCommand, Appointment>().ReverseMap();
             CreateMap<UpdateAppointmentCommand, Appointment>().ReverseMap();
 

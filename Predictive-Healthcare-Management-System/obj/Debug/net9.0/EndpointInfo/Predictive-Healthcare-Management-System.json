@@ -164,17 +164,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatientDTO"
+                  "$ref": "#/components/schemas/PatientDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatientDTO"
+                  "$ref": "#/components/schemas/PatientDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatientDTO"
+                  "$ref": "#/components/schemas/PatientDto"
                 }
               }
             }
@@ -416,17 +416,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/MedicalRecordDTO"
+                  "$ref": "#/components/schemas/MedicalRecordDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MedicalRecordDTO"
+                  "$ref": "#/components/schemas/MedicalRecordDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/MedicalRecordDTO"
+                  "$ref": "#/components/schemas/MedicalRecordDto"
                 }
               }
             }
@@ -590,17 +590,17 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatientDTO"
+                  "$ref": "#/components/schemas/PatientDto"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatientDTO"
+                  "$ref": "#/components/schemas/PatientDto"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/PatientDTO"
+                  "$ref": "#/components/schemas/PatientDto"
                 }
               }
             }
@@ -788,7 +788,10 @@
         },
         "additionalProperties": false
       },
-      "MedicalRecordDTO": {
+      "MedicalRecordDto": {
+        "required": [
+          "diagnosis"
+        ],
         "type": "object",
         "properties": {
           "recordId": {
@@ -814,7 +817,7 @@
         },
         "additionalProperties": false
       },
-      "PatientDTO": {
+      "PatientDto": {
         "required": [
           "address",
           "contactInformation",
@@ -969,6 +972,11 @@
         "additionalProperties": false
       },
       "UserDto": {
+        "required": [
+          "email",
+          "role",
+          "username"
+        ],
         "type": "object",
         "properties": {
           "id": {

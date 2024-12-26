@@ -1773,3 +1773,4 @@ D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9
 D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9.0\Predictive-Healthcare-Management-System.genruntimeconfig.cache
 D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9.0\ref\Predictive-Healthcare-Management-System.dll
 D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\bin\Debug\net9.0\BouncyCastle.Crypto.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\Predictive-Healthcare-Management-System\bin\Debug\net9.0\BouncyCastle.Crypto.dll

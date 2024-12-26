@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using Application.Use_Cases.QueryHandlers;
 using AutoMapper;
@@ -41,7 +41,7 @@ namespace PredictiveHealthcare.Application.UnitTests
                 Notes = "Sample Notes"
             };
 
-            var expectedDto = new MedicalRecordDTO
+            var expectedDto = new MedicalRecordDto
             {
                 RecordId = medicalRecordId,
                 PatientId = medicalRecord.PatientId,
@@ -51,14 +51,14 @@ namespace PredictiveHealthcare.Application.UnitTests
             };
 
             repository.GetMedicalRecordByIdAsync(medicalRecordId).Returns(medicalRecord);
-            mapper.Map<MedicalRecordDTO>(medicalRecord).Returns(expectedDto);
+            mapper.Map<MedicalRecordDto>(medicalRecord).Returns(expectedDto);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetMedicalRecordByIdAsync(medicalRecordId);
-            mapper.Received(1).Map<MedicalRecordDTO>(medicalRecord);
+            mapper.Received(1).Map<MedicalRecordDto>(medicalRecord);
             result.Should().BeEquivalentTo(expectedDto);
         }
 
@@ -77,7 +77,7 @@ namespace PredictiveHealthcare.Application.UnitTests
 
             // Assert
             await repository.Received(1).GetMedicalRecordByIdAsync(medicalRecordId);
-            mapper.DidNotReceive().Map<MedicalRecordDTO>(Arg.Any<MedicalRecord>());
+            mapper.DidNotReceive().Map<MedicalRecordDto>(Arg.Any<MedicalRecord>());
             result.Should().BeNull();
         }
     }

@@ -26,7 +26,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<MedicalRecordDTO>> GetById(Guid id)
+        public async Task<ActionResult<MedicalRecordDto>> GetById(Guid id)
         {
             var record = await _mediator.Send(new GetMedicalRecordByIdQuery { Id = id });
             if (record == null)
@@ -39,7 +39,10 @@ namespace Predictive_Healthcare_Management_System.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _mediator.Send(new GetMedicalRecordsQuery());
+            var result = await _mediator.Send(new GetMedicalRecordsQuery()
+            {
+              Diagnosis = string.Empty // Set a default value for the required property
+            });
             return Ok(result);
         }
 

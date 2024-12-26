@@ -2,7 +2,7 @@ using Domain.Entities;
 
 namespace Application.DTOs
 {
-    public class PatientDTO
+    public class PatientDto
     {
         public Guid PatientId { get; set; }
         public required string FirstName { get; set; }

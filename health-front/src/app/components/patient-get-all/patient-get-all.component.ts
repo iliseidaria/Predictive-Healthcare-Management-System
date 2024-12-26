@@ -20,6 +20,7 @@ export class PatientGetAllComponent implements OnInit {
   patients: any[] = [];
   page = 1;
   size = 10;
+  totalCount = 0;
   userRole: string = '';
   private navigationService = inject(NavigationService);
 
@@ -30,13 +31,18 @@ export class PatientGetAllComponent implements OnInit {
     this.loadPatients();
   }
 
+  isLastPage(): boolean {
+    return this.page * this.size >= this.totalCount;
+  } 
+
   loadPatients() {
     if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Patient') {
       const headers = this.authService.getAuthHeaders();
       this.patientService.getAllPatients(this.page, this.size, { headers }).subscribe({
         next: (data) => {
-          console.log('Received data:', data);  // Adaugă acest log pentru debug
+          console.log('Received data:', data);
           this.patients = data.items || [];
+          this.totalCount = data.totalCount || 0;
         },
         error: (err) => console.error(err),
       });

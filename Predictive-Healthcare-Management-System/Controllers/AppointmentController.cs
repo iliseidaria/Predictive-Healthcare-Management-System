@@ -21,12 +21,15 @@ namespace Predictive_Healthcare_Management_System.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var result = await _mediator.Send(new GetAppointmentQuery());
+            var result = await _mediator.Send(new GetAppointmentQuery()
+            {
+              Reason = string.Empty // Set a default value for the required property
+            });
             return Ok(result);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<PatientDTO>> GetById(Guid id)
+        public async Task<ActionResult<PatientDto>> GetById(Guid id)
         {
             var result = await _mediator.Send(new GetAppointmentByIdQuery { Id = id });
             if (result == null)

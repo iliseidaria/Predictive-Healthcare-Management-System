@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using Application.Use_Cases.QueryHandlers;
 using AutoMapper;
@@ -30,7 +30,7 @@ namespace PredictiveHealthcare.Application.UnitTests
         public async Task Given_ExistingMedicalRecords_When_HandleIsCalled_Then_ListOfMedicalRecordDTOsShouldBeReturned()
         {
             // Arrange
-            var query = new GetMedicalRecordsQuery();
+            var query = new GetMedicalRecordsQuery() { Diagnosis = string.Empty };
 
             var medicalRecords = new List<MedicalRecord>
             {
@@ -38,21 +38,21 @@ namespace PredictiveHealthcare.Application.UnitTests
                 new MedicalRecord { RecordId = Guid.NewGuid(), PatientId = Guid.NewGuid(), Date = DateTime.Now, Diagnosis = "Diagnosis 2", Notes = "Notes 2" }
             };
 
-            var expectedDtos = new List<MedicalRecordDTO>
+            var expectedDtos = new List<MedicalRecordDto>
             {
-                new MedicalRecordDTO { RecordId = medicalRecords[0].RecordId, PatientId = medicalRecords[0].PatientId, Date = medicalRecords[0].Date, Diagnosis = "Diagnosis 1", Notes = "Notes 1" },
-                new MedicalRecordDTO { RecordId = medicalRecords[1].RecordId, PatientId = medicalRecords[1].PatientId, Date = medicalRecords[1].Date, Diagnosis = "Diagnosis 2", Notes = "Notes 2" }
+                new MedicalRecordDto { RecordId = medicalRecords[0].RecordId, PatientId = medicalRecords[0].PatientId, Date = medicalRecords[0].Date, Diagnosis = "Diagnosis 1", Notes = "Notes 1" },
+                new MedicalRecordDto { RecordId = medicalRecords[1].RecordId, PatientId = medicalRecords[1].PatientId, Date = medicalRecords[1].Date, Diagnosis = "Diagnosis 2", Notes = "Notes 2" }
             };
 
             repository.GetMedicalRecordsAsync().Returns(medicalRecords);
-            mapper.Map<List<MedicalRecordDTO>>(medicalRecords).Returns(expectedDtos);
+            mapper.Map<List<MedicalRecordDto>>(medicalRecords).Returns(expectedDtos);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetMedicalRecordsAsync();
-            mapper.Received(1).Map<List<MedicalRecordDTO>>(medicalRecords);
+            mapper.Received(1).Map<List<MedicalRecordDto>>(medicalRecords);
             result.Should().BeEquivalentTo(expectedDtos);
         }
 
@@ -60,20 +60,23 @@ namespace PredictiveHealthcare.Application.UnitTests
         public async Task Given_NoMedicalRecords_When_HandleIsCalled_Then_EmptyListShouldBeReturned()
         {
             // Arrange
-            var query = new GetMedicalRecordsQuery();
+            var query = new GetMedicalRecordsQuery()
+            {
+              Diagnosis = string.Empty // Set a default value for the required property
+            };
 
             var medicalRecords = new List<MedicalRecord>();
-            var expectedDtos = new List<MedicalRecordDTO>();
+            var expectedDtos = new List<MedicalRecordDto>();
 
             repository.GetMedicalRecordsAsync().Returns(medicalRecords);
-            mapper.Map<List<MedicalRecordDTO>>(medicalRecords).Returns(expectedDtos);
+            mapper.Map<List<MedicalRecordDto>>(medicalRecords).Returns(expectedDtos);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetMedicalRecordsAsync();
-            mapper.Received(1).Map<List<MedicalRecordDTO>>(medicalRecords);
+            mapper.Received(1).Map<List<MedicalRecordDto>>(medicalRecords);
             result.Should().BeEmpty();
         }
     }

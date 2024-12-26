@@ -28,6 +28,7 @@ export class AuthService {
 
   logout(): Observable<any> {
     const headers = this.getAuthHeaders();
+    localStorage.removeItem('token');
     return this.http.post(`${this.apiUrl}/logout`, {}, { headers }).pipe(
       tap(() => {
         localStorage.removeItem('token');
@@ -36,7 +37,8 @@ export class AuthService {
   }
 
   isAuthenticated(): boolean {
-    return !!localStorage.getItem('token');
+    const token = localStorage.getItem('token');
+    return !!token;
   }
 
   getUserRole(): string | null {

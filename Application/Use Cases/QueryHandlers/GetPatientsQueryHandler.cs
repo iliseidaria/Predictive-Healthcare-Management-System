@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Application.Use_Cases.QueryHandlers
 {
-  public class GetPatientsQueryHandler : IRequestHandler<GetPatientsQuery, (List<PatientDTO> Patients, int TotalCount)>
+  public class GetPatientsQueryHandler : IRequestHandler<GetPatientsQuery, (List<PatientDto> Patients, int TotalCount)>
   {
     private readonly IPatientRepository repository;
     private readonly IMapper mapper;
@@ -17,13 +17,13 @@ namespace Application.Use_Cases.QueryHandlers
       this.mapper = mapper;
     }
 
-    public async Task<(List<PatientDTO> Patients, int TotalCount)> Handle(GetPatientsQuery request, CancellationToken cancellationToken)
+    public async Task<(List<PatientDto> Patients, int TotalCount)> Handle(GetPatientsQuery request, CancellationToken cancellationToken)
     {
       var totalPatients = await repository.GetTotalPatientsCountAsync(); // Adaugă o metodă pentru a obține totalul
 
       var patients = await repository.GetAllPatientsAsync(request.Page, request.Size);
 
-      var mappedPatients = mapper.Map<List<PatientDTO>>(patients);
+      var mappedPatients = mapper.Map<List<PatientDto>>(patients);
 
       return (mappedPatients, totalPatients);
     }

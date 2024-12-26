@@ -28,5 +28,5 @@
   <button (click)="page = page - 1; loadPatients()" [disabled]="page <= 1">
     Previous
   </button>
-  <button (click)="page = page + 1; loadPatients()">Next</button>
+  <button (click)="page = page + 1; loadPatients()" [disabled]="isLastPage()">Next</button>
 </div>

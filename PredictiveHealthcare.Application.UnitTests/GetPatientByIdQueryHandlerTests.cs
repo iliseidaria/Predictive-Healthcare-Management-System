@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using Application.Use_Cases.QueryHandlers;
 using AutoMapper;
@@ -42,7 +42,7 @@ namespace PredictiveHealthcare.Application.UnitTests
                 PhotoPath = "john_doe.png"
             };
 
-            var patientDTO = new PatientDTO
+            var patientDTO = new PatientDto
             {
                 PatientId = patient.PatientId,
                 FirstName = patient.FirstName,
@@ -55,7 +55,7 @@ namespace PredictiveHealthcare.Application.UnitTests
             };
 
             repository.GetPatientByIdAsync(patientId).Returns(patient);
-            mapper.Map<PatientDTO>(patient).Returns(patientDTO);
+            mapper.Map<PatientDto>(patient).Returns(patientDTO);
 
             var query = new GetPatientByIdQuery { Id = patientId };
 
@@ -66,7 +66,7 @@ namespace PredictiveHealthcare.Application.UnitTests
             result.Should().NotBeNull();
             result.Should().BeEquivalentTo(patientDTO);
             await repository.Received(1).GetPatientByIdAsync(patientId);
-            mapper.Received(1).Map<PatientDTO>(patient);
+            mapper.Received(1).Map<PatientDto>(patient);
         }
 
         [Fact]
@@ -74,7 +74,7 @@ namespace PredictiveHealthcare.Application.UnitTests
         {
             // Arrange
             var patientId = Guid.NewGuid();
-            repository.GetPatientByIdAsync(patientId).Returns((Patient)null);
+            repository.GetPatientByIdAsync(patientId).Returns(Task.FromResult<Patient>(null));
 
             var query = new GetPatientByIdQuery { Id = patientId };
 
@@ -84,7 +84,7 @@ namespace PredictiveHealthcare.Application.UnitTests
             // Assert
             result.Should().BeNull();
             await repository.Received(1).GetPatientByIdAsync(patientId);
-            mapper.DidNotReceive().Map<PatientDTO>(Arg.Any<Patient>());
+            mapper.DidNotReceive().Map<PatientDto>(Arg.Any<Patient>());
         }
     }
 }

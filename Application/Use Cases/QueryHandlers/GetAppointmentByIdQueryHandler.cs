@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using AutoMapper;
 using Infrastructure.Repositories;
@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Application.Use_Cases.QueryHandlers
 {
-    public class GetAppointmentByIdQueryHandler : IRequestHandler<GetAppointmentByIdQuery, AppointmentDTO>
+    public class GetAppointmentByIdQueryHandler : IRequestHandler<GetAppointmentByIdQuery, AppointmentDto>
     {
         public readonly IAppointmentRepository repository;
         public readonly IMapper mapper;
@@ -22,7 +22,7 @@ namespace Application.Use_Cases.QueryHandlers
             var appointment = await repository.GetAppointmentByIdAsync(request.Id);
             return mapper.Map<AppointmentDTO>(appointment);
         }*/
-        public async Task<AppointmentDTO> Handle(GetAppointmentByIdQuery query, CancellationToken cancellationToken)
+        public async Task<AppointmentDto> Handle(GetAppointmentByIdQuery query, CancellationToken cancellationToken)
         {
             var appointment = await this.repository.GetAppointmentByIdAsync(query.Id);
 
@@ -31,7 +31,7 @@ namespace Application.Use_Cases.QueryHandlers
                 return null; // Return null without calling Map
             }
 
-            return mapper.Map<AppointmentDTO>(appointment);
+            return mapper.Map<AppointmentDto>(appointment);
         }
 
     }

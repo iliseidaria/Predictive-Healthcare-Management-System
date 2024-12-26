@@ -893,3 +893,4 @@ M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTe
 M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
 M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
+M:\FACULTATE\ANUL3\.net\healthcare-management\PredictiveHealthcare.IntegrationTests\bin\Debug\net9.0\BouncyCastle.Crypto.dll

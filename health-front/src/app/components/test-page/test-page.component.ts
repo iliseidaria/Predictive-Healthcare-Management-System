@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet, Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
@@ -42,8 +42,17 @@ export class TestPageComponent {
     }
   }
 
-  // Optional: Check if the user has a certain role before performing an action
-  // hasAdminAccess(): boolean {
-  //   return this.authService.hasRole('Admin');
-  // }
+  loadProfile() {
+    if (this.authService.isAuthenticated()) {
+      const currentUser = this.authService.getCurrentUser();
+      if (currentUser) {
+        alert(`Profile Information:\nUsername: ${currentUser.username}\nEmail: ${currentUser.email}`);
+      } else {
+        alert('Could not load profile information.');
+      }
+    } else {
+      alert('You must be logged in to view your profile.');
+      this.router.navigate(['/login']);
+    }
+  }
 }

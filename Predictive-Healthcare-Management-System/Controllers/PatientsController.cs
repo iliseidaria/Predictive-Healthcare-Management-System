@@ -46,7 +46,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<PatientDTO>> GetById(Guid id)
+    public async Task<ActionResult<PatientDto>> GetById(Guid id)
         {
             var patient = await _mediator.Send(new GetPatientByIdQuery { Id = id });
             if (patient == null)

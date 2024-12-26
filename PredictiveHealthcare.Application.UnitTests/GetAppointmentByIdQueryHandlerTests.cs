@@ -1,4 +1,4 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using Application.Use_Cases.QueryHandlers;
 using AutoMapper;
@@ -43,7 +43,7 @@ namespace PredictiveHealthcare.Application.UnitTests
                 Status = AppointmentStatus.Scheduled
             };
 
-            var expectedDto = new AppointmentDTO
+            var expectedDto = new AppointmentDto
             {
                 AppointmentId = appointment.AppointmentId,
                 PatientId = appointment.PatientId,
@@ -54,14 +54,14 @@ namespace PredictiveHealthcare.Application.UnitTests
             };
 
             repository.GetAppointmentByIdAsync(appointmentId).Returns(appointment);
-            mapper.Map<AppointmentDTO>(appointment).Returns(expectedDto);
+            mapper.Map<AppointmentDto>(appointment).Returns(expectedDto);
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetAppointmentByIdAsync(appointmentId);
-            mapper.Received(1).Map<AppointmentDTO>(appointment);
+            mapper.Received(1).Map<AppointmentDto>(appointment);
             result.Should().BeEquivalentTo(expectedDto);
         }
 
@@ -73,14 +73,14 @@ namespace PredictiveHealthcare.Application.UnitTests
             var query = new GetAppointmentByIdQuery { Id = appointmentId };
 
             // Set up repository to return null, indicating the appointment does not exist
-            repository.GetAppointmentByIdAsync(appointmentId).Returns((Appointment)null);
+            repository.GetAppointmentByIdAsync(appointmentId).Returns(Task.FromResult<Appointment>(null!));
 
             // Act
             var result = await handler.Handle(query, CancellationToken.None);
 
             // Assert
             await repository.Received(1).GetAppointmentByIdAsync(appointmentId);
-            mapper.DidNotReceive().Map<AppointmentDTO>(Arg.Any<Appointment>());
+            mapper.DidNotReceive().Map<AppointmentDto>(Arg.Any<Appointment>());
             result.Should().BeNull();
         }
     }

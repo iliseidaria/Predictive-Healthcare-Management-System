@@ -104,7 +104,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Application.DTOs.PatientDTO",
+        "Type": "Application.DTOs.PatientDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -245,7 +245,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Application.DTOs.MedicalRecordDTO",
+        "Type": "Application.DTOs.MedicalRecordDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -355,7 +355,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Application.DTOs.PatientDTO",
+        "Type": "Application.DTOs.PatientDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
