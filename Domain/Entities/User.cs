@@ -6,8 +6,8 @@ namespace Domain.Entities
   public class User
   {
     [Key]  // `Id` ca PK
-    [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto-increment
-    public int Id { get; set; }
+    //[DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto-increment
+    public Guid Id { get; set; }
 
     [Required]
     public string Username { get; set; } = string.Empty;

@@ -10,15 +10,7 @@ import { PLATFORM_ID, Inject } from '@angular/core';
   template: `<router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
-    if (isPlatformBrowser(this.platformId)) {
-      window.addEventListener('unload', () => {
-        if (localStorage.getItem('token')) {
-          localStorage.removeItem('token');
-        }
-      });
-    }
-  }
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {

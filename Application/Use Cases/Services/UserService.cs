@@ -19,10 +19,10 @@ namespace Application.Services
       return await _context.Users.ToListAsync();
     }
 
-    public async Task<User> GetUserByIdAsync(int id)
-    {
-      return await _context.Users.FindAsync(id);
-    }
+        public async Task<User?> GetUserByIdAsync(Guid id)
+        {
+            return await _context.Users.FindAsync(id);
+        }
 
     public async Task<bool> UpdateUserAsync(UserDto updateUserDto)
     {
@@ -41,7 +41,7 @@ namespace Application.Services
       return true;
     }
 
-    public async Task<bool> DeleteUserAsync(int id)
+    public async Task<bool> DeleteUserAsync(Guid id)
     {
       var user = await _context.Users.FindAsync(id);
       if (user == null)

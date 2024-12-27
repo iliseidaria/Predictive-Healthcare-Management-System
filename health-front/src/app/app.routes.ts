@@ -8,6 +8,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { AuthGuard } from './services/guards/auth.guard';
 import { NonAuthGuard } from './services/guards/non-auth.guard';
+import { AppointmentCreateComponent } from './components/appointment-create/appointment-create.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -18,4 +19,5 @@ export const routes: Routes = [
   { path: 'get-all-patients', component: PatientGetAllComponent, canActivate: [AuthGuard] },
   { path: 'update-patient/:id', component: PatientUpdateComponent, canActivate: [AuthGuard] },
   { path: 'patient-detail/:id', component: PatientDetailComponent, canActivate: [AuthGuard] },
+  { path: 'create-appointment', component: AppointmentCreateComponent, canActivate: [AuthGuard] },
 ];

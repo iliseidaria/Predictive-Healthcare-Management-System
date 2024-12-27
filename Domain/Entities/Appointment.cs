@@ -1,6 +1,6 @@
 namespace Domain.Entities
 {
-  public enum AppointmentStatus
+    public enum AppointmentStatus
     {
         Scheduled,
         Completed,

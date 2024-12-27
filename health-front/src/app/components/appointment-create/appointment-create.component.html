@@ -1,0 +1,23 @@
+<header>
+  <button (click)="goBack()">Back</button>
+  <h1>Create New Appointment</h1>
+</header>
+
+<form [formGroup]="appointmentForm" (ngSubmit)="onSubmit()">
+  <label for="patientId">Patient ID</label>
+  <input id="patientId" formControlName="patientId" />
+
+  <label for="providerId">Provider ID</label>
+  <input id="providerId" formControlName="providerId" />
+
+  <label for="appointmentDate">Appointment Date</label>
+  <input id="appointmentDate" type="date" formControlName="appointmentDate" />
+
+  <label for="appointmentTime">Appointment Time</label>
+  <input id="appointmentTime" type="time" formControlName="appointmentTime" />
+
+  <label for="reason">Reason for Appointment</label>
+  <textarea id="reason" formControlName="reason" rows="4"></textarea>
+
+  <button type="submit" [disabled]="!appointmentForm.valid">Schedule Appointment</button>
+</form>

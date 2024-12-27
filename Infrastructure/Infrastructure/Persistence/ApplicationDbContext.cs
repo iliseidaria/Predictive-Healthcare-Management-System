@@ -18,10 +18,21 @@ namespace Infrastructure.Persistence
         {
             modelBuilder.HasPostgresExtension("uuid-ossp");
 
-            modelBuilder.Entity<User>()
-                 .HasKey(u => u.Id); // Configurează `Id` ca PK
+      modelBuilder.Entity<User>(entity =>
+            {
+              entity.ToTable("users");
+              entity.HasKey(e => e.Id);
+              entity.Property(e => e.Id)
+                  .HasColumnType("uuid")
+                  .HasDefaultValueSql("uuid_generate_v4()")
+                  .ValueGeneratedOnAdd();
+              entity.Property(e => e.Username).IsRequired().HasMaxLength(100);
+              entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
+              entity.Property(e => e.PasswordHash).IsRequired().HasMaxLength(200);
+              entity.Property(e => e.Role).HasMaxLength(50).HasDefaultValue("Doctor");
+            });
 
-            modelBuilder.Entity<Patient>(entity =>
+      modelBuilder.Entity<Patient>(entity =>
             {
                 entity.ToTable("patients");
                 entity.HasKey(e => e.PatientId);

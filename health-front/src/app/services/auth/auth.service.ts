@@ -73,4 +73,26 @@ export class AuthService {
       return null;
     }
   }
+
+  restoreAuthState(token: string): boolean {
+    try {
+      // Attempt to decode the token
+      const decodedToken: any = jwtDecode(token);
+      
+      // Check if token is expired
+      const currentTime = Date.now() / 1000;
+      if (decodedToken.exp < currentTime) {
+        localStorage.removeItem('token');
+        return false;
+      }
+
+      // If token is valid, store it
+      localStorage.setItem('token', token);
+      return true;
+    } catch (error) {
+      console.error('Error restoring auth state:', error);
+      localStorage.removeItem('token');
+      return false;
+    }
+  }
 }
