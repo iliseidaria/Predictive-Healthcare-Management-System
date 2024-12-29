@@ -1,12 +1,15 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { provideHttpClient } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
-import { routes } from './app/app.routes';
+import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { provideRouter } from '@angular/router';
+import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes), // Your app's routes
-    provideHttpClient(),     // Provide HttpClient globally
-  ],
-}).catch((err) => console.error(err));
+    provideHttpClient(
+      // You can add interceptors here if needed
+      // withInterceptors([])
+    ),
+    provideRouter(routes)
+  ]
+}).catch(err => console.error(err));

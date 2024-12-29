@@ -63,10 +63,14 @@ export class AuthService {
 
     try {
       const decodedToken: any = jwtDecode(token);
+      console.log('Decoded token claims:', decodedToken);
+
+      // Extract standard JWT claims and custom claims
       return {
-        username: decodedToken.unique_name,
-        email: decodedToken.email,
-        role: decodedToken.role
+        id: decodedToken['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier'] || decodedToken.sub,
+        username: decodedToken['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'] || decodedToken.name,
+        email: decodedToken['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress'] || decodedToken.email,
+        role: decodedToken['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'] || decodedToken.role
       };
     } catch (error) {
       console.error('Error decoding token:', error);

@@ -1,4 +1,4 @@
-﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Commands;
 using FluentValidation;
 
 namespace Application.Use_Cases.Commands
@@ -17,13 +17,14 @@ namespace Application.Use_Cases.Commands
                 .NotEmpty()
                 .GreaterThan(DateTime.Now)
                 .WithMessage("Date of appointment must be in the past.");
-            RuleFor(p => p.Reason)
+            RuleFor(a => a.Reason)
                 .NotEmpty()
                 .WithMessage("Reason is required.")
-                .MaximumLength(500);
-            RuleFor(p => p.Status)
-                .NotNull()
-                .WithMessage("Status is required.");
-        }
+                .MaximumLength(1000)
+                .WithMessage("Reason cannot exceed 1000 characters.");
+            RuleFor(a => a.Status)
+                .IsInEnum()
+                .WithMessage("Invalid appointment status.");
+    }
     }
 }

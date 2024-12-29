@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #212529; /* Dark text for better readability */
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+  background-color: #007bff; /* Primary blue header */
+}
+
+th {
+  text-align: left;
+  padding: 15px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+}
+
+tbody tr {
+  background-color: #fff;
+  border-bottom: 1px solid #dee2e6; /* Subtle row separator */
+}
+
+tbody tr:hover {
+  background-color: #f1f3f5; /* Light gray hover */
+}
+
+td {
+  padding: 15px;
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+td button,
+td a {
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+td button {
+  background-color: #dc3545; /* Red button for delete */
+  color: #fff;
+  border: none;
+}
+
+td button:hover {
+  background-color: #e4606d;
+}
+
+td a {
+  background-color: #28a745; /* Green button for details */
+  color: #fff;
+}
+
+td a:hover {
+  background-color: #218838;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 15px;
+}
+
+.pagination button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Same as header */
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+.pagination button:disabled {
+  background-color: #6c757d; /* Gray for disabled */
+  cursor: not-allowed;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #003d80;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  table {
+    width: 90%;
+  }
+
+  th, td {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
+
+  .pagination button {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  table {
+    width: 100%;
+  }
+
+  th, td {
+    font-size: 0.7rem;
+    padding: 8px;
+  }
+
+  .pagination button {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+}

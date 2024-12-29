@@ -4,7 +4,8 @@ import { Router } from '@angular/router';
 import { AppointmentService } from '../../services/appointment/appointment.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
-import { AppointmentStatus } from '../../models/appointment';
+import { CreateAppointmentRequest, AppointmentStatus } from '../../models/appointment';
+import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
   selector: 'app-appointment-create',
@@ -20,33 +21,39 @@ export class AppointmentCreateComponent {
     private fb: FormBuilder,
     private appointmentService: AppointmentService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private navigationService: NavigationService
   ) {
     this.appointmentForm = this.fb.group({
       patientId: ['', [Validators.required]],
-      providerId: ['', [Validators.required]],
       appointmentDate: ['', [Validators.required]],
       appointmentTime: ['', [Validators.required]],
       reason: ['', [Validators.required]]
     });
   }
 
-  goBack() {
-    this.router.navigate(['/test-page']);
+  goBack(): void {
+    this.navigationService.goBack();
   }
 
   onSubmit() {
     if (this.appointmentForm.valid) {
       const formValue = this.appointmentForm.value;
+      const currentUser = this.authService.getCurrentUser();
       
-      // Combine date and time
+      if (!currentUser?.id) {
+        alert('Provider ID not available. Please log in again.');
+        return;
+      }
+
+      // Combine date and time into a proper ISO string
       const dateStr = formValue.appointmentDate;
       const timeStr = formValue.appointmentTime;
       const combinedDate = new Date(`${dateStr}T${timeStr}`);
 
-      const appointment = {
+      const appointment: CreateAppointmentRequest = {
         patientId: formValue.patientId,
-        providerId: formValue.providerId,
+        providerId: currentUser.id,
         appointmentDate: combinedDate,
         reason: formValue.reason,
         status: AppointmentStatus.Scheduled
@@ -54,7 +61,7 @@ export class AppointmentCreateComponent {
 
       this.appointmentService.createAppointment(appointment).subscribe({
         next: () => {
-          this.router.navigate(['/appointments']);
+          this.router.navigate(['/appointment-detail/:id']); //aici trb bagat bearer token
         },
         error: (error) => {
           console.error('Error creating appointment:', error);

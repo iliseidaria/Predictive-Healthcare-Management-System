@@ -9,6 +9,9 @@ import { RegisterComponent } from './components/auth/register/register.component
 import { AuthGuard } from './services/guards/auth.guard';
 import { NonAuthGuard } from './services/guards/non-auth.guard';
 import { AppointmentCreateComponent } from './components/appointment-create/appointment-create.component';
+import { AppointmentGetAllComponent } from './components/appointment-get-all/appointment-get-all.component';
+import { AppointmentDetailComponent } from './components/appointment-detail/appointment-detail.component';
+import { AppointmentUpdateComponent } from './components/appointment-update/appointment-update.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -20,4 +23,7 @@ export const routes: Routes = [
   { path: 'update-patient/:id', component: PatientUpdateComponent, canActivate: [AuthGuard] },
   { path: 'patient-detail/:id', component: PatientDetailComponent, canActivate: [AuthGuard] },
   { path: 'create-appointment', component: AppointmentCreateComponent, canActivate: [AuthGuard] },
+  { path: 'get-all-appointments', component: AppointmentGetAllComponent, canActivate: [AuthGuard] },
+  { path: 'appointment-detail/:id', component: AppointmentDetailComponent, canActivate: [AuthGuard] },
+  { path: 'update-appointment/:id', component: AppointmentUpdateComponent, canActivate: [AuthGuard] },
 ];

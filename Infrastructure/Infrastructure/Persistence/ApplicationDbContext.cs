@@ -14,25 +14,25 @@ namespace Infrastructure.Persistence
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<User> Users { get; set; }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.HasPostgresExtension("uuid-ossp");
 
-      modelBuilder.Entity<User>(entity =>
+            modelBuilder.Entity<User>(entity =>
             {
-              entity.ToTable("users");
-              entity.HasKey(e => e.Id);
-              entity.Property(e => e.Id)
-                  .HasColumnType("uuid")
-                  .HasDefaultValueSql("uuid_generate_v4()")
-                  .ValueGeneratedOnAdd();
-              entity.Property(e => e.Username).IsRequired().HasMaxLength(100);
-              entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
-              entity.Property(e => e.PasswordHash).IsRequired().HasMaxLength(200);
-              entity.Property(e => e.Role).HasMaxLength(50).HasDefaultValue("Doctor");
+                entity.ToTable("users");
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id)
+                    .HasColumnType("uuid")
+                    .HasDefaultValueSql("uuid_generate_v4()")
+                    .ValueGeneratedOnAdd();
+                entity.Property(e => e.Username).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.Email).IsRequired().HasMaxLength(100);
+                entity.Property(e => e.PasswordHash).IsRequired().HasMaxLength(200);
+                entity.Property(e => e.Role).HasMaxLength(50).HasDefaultValue("Doctor");
             });
 
-      modelBuilder.Entity<Patient>(entity =>
+            modelBuilder.Entity<Patient>(entity =>
             {
                 entity.ToTable("patients");
                 entity.HasKey(e => e.PatientId);
@@ -43,9 +43,21 @@ namespace Infrastructure.Persistence
                 entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
                 entity.Property(e => e.DateOfBirth).IsRequired().HasColumnType("timestamp with time zone");
-              entity.Property(e => e.Gender).IsRequired();
+                entity.Property(e => e.Gender).IsRequired();
                 entity.Property(e => e.ContactInformation).IsRequired().HasMaxLength(200);
                 entity.Property(e => e.Address).IsRequired().HasMaxLength(300);
+
+                // Configure one-to-one relationship with MedicalRecord
+                entity.HasOne(e => e.MedicalHistory)
+                    .WithOne()
+                    .HasForeignKey<MedicalRecord>(mr => mr.PatientId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                // Configure one-to-many relationship with Appointments
+                entity.HasMany(e => e.Appointments)
+                    .WithOne()
+                    .HasForeignKey(a => a.PatientId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<MedicalRecord>(entity =>
@@ -72,8 +84,21 @@ namespace Infrastructure.Persistence
                     .HasDefaultValueSql("uuid_generate_v4()")
                     .ValueGeneratedOnAdd();
                 entity.Property(e => e.PatientId).IsRequired();
+                entity.Property(e => e.ProviderId).IsRequired();
                 entity.Property(e => e.AppointmentDate).IsRequired();
                 entity.Property(e => e.Reason).HasMaxLength(1000);
+                entity.Property(e => e.Status).HasDefaultValue(AppointmentStatus.Scheduled);
+
+                // Configure foreign keys
+                entity.HasOne<Patient>()
+                    .WithMany(p => p.Appointments)
+                    .HasForeignKey(e => e.PatientId)
+                    .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne<User>()
+                    .WithMany()
+                    .HasForeignKey(e => e.ProviderId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
         }
     }

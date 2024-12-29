@@ -1,4 +1,4 @@
-﻿namespace Domain.Entities
+namespace Domain.Entities
 {
     public enum Gender
     {
@@ -17,7 +17,7 @@
         public string ContactInformation { get; set; }
         public string Address { get; set; }
         public string PhotoPath { get; set; }
-        public List<MedicalRecord> MedicalHistory { get; set; } = new List<MedicalRecord>();
+        public MedicalRecord MedicalHistory { get; set; }
         public List<Appointment> Appointments { get; set; } = new List<Appointment>();
     }
 }

@@ -45,10 +45,14 @@ export class TestPageComponent {
   loadProfile() {
     if (this.authService.isAuthenticated()) {
       const currentUser = this.authService.getCurrentUser();
-      if (currentUser) {
-        alert(`Profile Information:\nUsername: ${currentUser.username}\nEmail: ${currentUser.email}`);
+      if (currentUser && (currentUser.username || currentUser.email)) {
+        alert(`Profile Information:
+              Username: ${currentUser.username || 'Not available'}
+              Email: ${currentUser.email || 'Not available'}
+              Role: ${currentUser.role || 'Not available'}`
+        );
       } else {
-        alert('Could not load profile information.');
+        alert('Could not load profile information. Token may be invalid.');
       }
     } else {
       alert('You must be logged in to view your profile.');
