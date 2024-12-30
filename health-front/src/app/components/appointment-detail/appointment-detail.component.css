@@ -1,96 +1,154 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+.appointment-detail {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
 }
 
-body {
-  background-color: #f8f9fa; /* Light gray background */
-  color: #212529; /* Dark text */
+.appointment-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.appointment-card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.appointment-info {
+  display: grid;
+  gap: 20px;
+}
+
+.info-row {
   display: flex;
-  justify-content: center;
-  padding: 20px;
+  align-items: center;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
 }
 
-h1 {
-  font-size: 2rem;
+.info-row:hover {
+  background: #e9ecef;
+}
+
+.info-row strong {
+  min-width: 120px;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.info-row span {
+  color: #495057;
+  flex: 1;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  display: inline-block;
+}
+
+.status-scheduled {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status-completed {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status-cancelled {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.back-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #2980b9;
+  transform: translateX(-5px);
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border-radius: 8px;
   margin-bottom: 20px;
   text-align: center;
-  color: #007bff; /* Primary blue */
 }
 
-.patient-card {
-  background-color: #ffffff; /* White card */
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.patient-card h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
-  color: #343a40; /* Dark gray */
-  text-align: center;
-}
-
-.patient-info {
-  list-style-type: none;
-  padding: 0;
-}
-
-.patient-info li {
-  margin-bottom: 10px;
-  font-size: 1rem;
-  color: #495057; /* Medium gray text */
-}
-
-.patient-info strong {
-  color: #007bff; /* Highlighted text in blue */
-}
-
-.patient-info img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin-top: 10px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Responsive Design */
 @media (max-width: 768px) {
-  .patient-card {
-    padding: 15px;
+  .appointment-card {
+    padding: 20px;
   }
 
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .patient-card h2 {
-    font-size: 1.3rem;
-  }
-
-  .patient-info li {
-    font-size: 0.95rem;
+  h2 {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
+  .appointment-detail {
+    margin: 20px auto;
   }
 
-  .patient-card h2 {
-    font-size: 1.2rem;
+  .appointment-card {
+    padding: 15px;
   }
 
-  .patient-info li {
-    font-size: 0.9rem;
+  h2 {
+    font-size: 18px;
+  }
+
+  .status-badge {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .info-row strong {
+    min-width: auto;
   }
 }

@@ -4,7 +4,8 @@
   <h1>Healthy</h1>
   <nav>
     <button (click)="navigateTo('create-patient')">Create Patient</button>
-    <button (click)="navigateTo('get-all-patients')">Get All Patients</button>
-    <button (click)="navigateTo('create-appointment')">Create Appointment</button>
+    <button (click)="navigateTo('get-all-patients')">See All Patients</button>
+    <button (click)="navigateTo('get-all-appointments')">See all Appointments</button>
+    <button *ngIf="isAdmin()" (click)="navigateTo('get-all-users')">Users Management</button>
   </nav>
 </div>

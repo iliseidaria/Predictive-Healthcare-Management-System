@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterLink, RouterOutlet, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
+import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-test-page',
@@ -10,8 +11,45 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [CommonModule]
 })
-export class TestPageComponent {
+export class TestPageComponent implements OnInit, OnDestroy {
+  private tokenCheckSubscription?: Subscription;
+
   constructor(private router: Router, public authService: AuthService) {}
+
+  ngOnInit() {
+    // Check token every minute
+    this.tokenCheckSubscription = interval(60000).subscribe(() => {
+      const token = localStorage.getItem('token');
+      if (token) {
+        try {
+          const payload = JSON.parse(atob(token.split('.')[1]));
+          const expirationTime = payload.exp * 1000; // Convert to milliseconds
+          if (Date.now() >= expirationTime) {
+            localStorage.removeItem('token');
+            this.router.navigate(['/login']);
+          }
+        } catch (error) {
+          localStorage.removeItem('token');
+          this.router.navigate(['/login']);
+        }
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.tokenCheckSubscription) {
+      this.tokenCheckSubscription.unsubscribe();
+    }
+  }
+
+  isAdmin(): boolean {
+    const currentUser = this.authService.getCurrentUser();
+    if (currentUser && currentUser.role === 'Admin') {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
   // Navigate to a specific route only if the user is authenticated
   navigateTo(path: string) {

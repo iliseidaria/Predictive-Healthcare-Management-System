@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { tap } from 'rxjs/operators';
 import { jwtDecode } from 'jwt-decode';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -11,7 +12,7 @@ import { jwtDecode } from 'jwt-decode';
 export class AuthService {
   private apiUrl = environment.apiUrl + '/api/v1/Auth';
 
-  constructor(private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient) {}
 
   login(credentials: { username: string; password: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, credentials, { headers: this.getAuthHeaders() });
@@ -41,14 +42,29 @@ export class AuthService {
     return !!token;
   }
 
-  getUserRole(): string | null {
-    const token = localStorage.getItem('token');
-    if (!token) {
-      return null;
-    }
-    const payload = JSON.parse(atob(token.split('.')[1]));
-    return payload.role || null;
-  }
+  // getUserRole(): string | null {
+  //   const token = localStorage.getItem('token');
+  //   if (token) {
+  //     try {
+  //       const payload = JSON.parse(atob(token.split('.')[1]));
+  //       console.log('Token payload:', payload); // Debug log
+  //       return payload.role;
+  //     } catch (error) {
+  //       console.error('Error parsing token:', error);
+  //       return null;
+  //     }
+  //   }
+  //   return null;
+  // }
+
+  // getUserRole(): string | null {
+  //   const token = localStorage.getItem('token');
+  //   if (!token) {
+  //     return null;
+  //   }
+  //   const payload = JSON.parse(atob(token.split('.')[1]));
+  //   return payload.role || null;
+  // }
 
   getAuthHeaders(): HttpHeaders {
     const token = localStorage.getItem('token');
@@ -98,5 +114,29 @@ export class AuthService {
       localStorage.removeItem('token');
       return false;
     }
+  }
+
+  checkTokenExpiration(): boolean {
+    const token = localStorage.getItem('token');
+    if (!token) return false;
+
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      const expirationTime = payload.exp * 1000;
+      
+      if (Date.now() >= expirationTime) {
+        this.handleLogout();
+        return false;
+      }
+      return true;
+    } catch (error) {
+      this.handleLogout();
+      return false;
+    }
+  }
+
+  private handleLogout(): void {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
   }
 }

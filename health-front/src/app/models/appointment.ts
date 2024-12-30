@@ -5,19 +5,19 @@ export enum AppointmentStatus {
 }
 
 export interface Appointment {
-  appointmentId?: string;  // Optional for creation
+  appointmentId?: string;
   patientId: string;
   providerId: string;
+  patientName?: string;
+  doctorName?: string;
   appointmentDate: Date;
   reason: string;
   status: AppointmentStatus;
 }
 
-// Optional: Create a separate interface for appointment creation
-export interface CreateAppointmentRequest {
-  patientId: string;
-  providerId: string;
-  appointmentDate: Date;
-  reason: string;
-  status: AppointmentStatus;
+export interface PaginatedResponse {
+  items: Appointment[];
+  totalCount: number;
+  page: number;
+  pageSize: number;
 }

@@ -1,1 +1,89 @@
-<p>appointment-get-all works!</p>
+<div class="appointments-container">
+    <button class="back-button" (click)="goBack()">← Back</button>
+    
+    <h2>Appointments</h2>
+    
+    <div class="actions">
+      <a class="create-btn" routerLink="/create-appointment">Create New Appointment</a>
+    </div>
+
+    <!-- Loading State -->
+    <div *ngIf="loading" class="loading">
+        Loading appointments...
+    </div>
+
+    <!-- Error State -->
+    <div *ngIf="error" class="error-message">
+        {{ error }}
+    </div>
+  
+    <div class="table-container" *ngIf="!loading && !error">
+      <div class="table-responsive">
+        <table>
+          <thead>
+            <tr>
+              <th>Patient</th>
+              <th>Doctor</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Description</th>
+              <th>Status</th>
+              <th class="actions-cell">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let appointment of appointments">
+                <td>{{appointment.patientName}}</td>
+                <td>{{appointment.doctorName}}</td>
+                <td>{{appointment.appointmentDate | date:'dd/MM/yyyy'}}</td>
+                <td>{{appointment.appointmentDate | date:'shortTime'}}</td>
+                <td>{{appointment.reason}}</td>
+                <!-- <td>
+                <span class="status-badge" 
+                    [ngClass]="{
+                      'status-scheduled': appointment.status === AppointmentStatus.Scheduled,
+                      'status-completed': appointment.status === AppointmentStatus.Completed,
+                      'status-cancelled': appointment.status === AppointmentStatus.Cancelled
+                    }">
+                {{getStatusText(appointment.status)}}
+                </span>
+              </td> -->
+              <td>
+                <select 
+                  [ngModel]="appointment.status"
+                  (ngModelChange)="onStatusChange(appointment, $event)"
+                  class="status-select"
+                  [ngClass]="{
+                    'status-scheduled': appointment.status === AppointmentStatus.Scheduled,
+                    'status-completed': appointment.status === AppointmentStatus.Completed,
+                    'status-cancelled': appointment.status === AppointmentStatus.Cancelled
+                  }">
+                  <option [ngValue]="AppointmentStatus.Scheduled">{{getStatusText(AppointmentStatus.Scheduled)}}</option>
+                  <option [ngValue]="AppointmentStatus.Completed">{{getStatusText(AppointmentStatus.Completed)}}</option>
+                  <option [ngValue]="AppointmentStatus.Cancelled">{{getStatusText(AppointmentStatus.Cancelled)}}</option>
+                </select>
+              </td>
+              <td class="actions-cell">
+                <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="action-btn view">View</a>
+                <a [routerLink]="['/update-appointment', appointment.appointmentId]" class="action-btn edit">Edit</a>
+                <button class="action-btn delete" (click)="appointment.appointmentId && deleteAppointment(appointment.appointmentId)">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+  
+        <div *ngIf="!appointments?.length" class="no-data">
+            No appointments found.
+          </div>
+      </div>
+    </div>
+  
+    <div class="pagination" *ngIf="totalCount > 0">
+      <button [disabled]="page === 1" (click)="page = page - 1; loadAppointments()">
+        Previous
+      </button>
+      <button [disabled]="isLastPage()" (click)="page = page + 1; loadAppointments()">
+        Next
+      </button>
+    </div>
+  </div>

@@ -1,5 +1,5 @@
 <header>
-  <button (click)="goBack()">Back</button>
+  <button class="back-button" (click)="goBack()">← Back</button>
   <h1>Create New Patient</h1>
 </header>
 <form [formGroup]="patientForm" (ngSubmit)="onSubmit()">
