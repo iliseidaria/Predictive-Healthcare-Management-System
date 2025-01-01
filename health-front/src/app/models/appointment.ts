@@ -15,6 +15,10 @@ export interface Appointment {
   status: AppointmentStatus;
 }
 
+export interface AppointmentResponse extends Appointment {
+  id?: string;
+}
+
 export interface PaginatedResponse {
   items: Appointment[];
   totalCount: number;

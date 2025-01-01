@@ -38,7 +38,7 @@ export class PatientDetailComponent implements OnInit {
   }
 
   loadPatient(id: string): void {
-    if (this.authService.isAuthenticated()) {
+    if (this.authService.validateToken()) {
       const headers = this.authService.getAuthHeaders();
       console.log('Calling endpoint with ID:', id);
       this.patientService.getPatientById(id, { headers }).subscribe({

@@ -3,9 +3,9 @@
 <div class="container">
   <h1>Healthy</h1>
   <nav>
-    <button (click)="navigateTo('create-patient')">Create Patient</button>
-    <button (click)="navigateTo('get-all-patients')">See All Patients</button>
-    <button (click)="navigateTo('get-all-appointments')">See all Appointments</button>
-    <button *ngIf="isAdmin()" (click)="navigateTo('get-all-users')">Users Management</button>
+    <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-patients')">See All Patients</button>
+    <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-appointments')">See all Appointments</button>
+    <button *ngIf="userRole === 'Patient'" (click)="navigateTo('get-user-appointments')">See your Appointments</button>
+    <button *ngIf="userRole === 'Admin'" (click)="navigateTo('get-all-users')">Users Management</button>
   </nav>
 </div>

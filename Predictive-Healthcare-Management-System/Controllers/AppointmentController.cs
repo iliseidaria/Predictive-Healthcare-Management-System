@@ -1,4 +1,5 @@
 using Application.DTOs;
+using Application.Queries;
 using Application.Use_Cases.Commands;
 using Application.Use_Cases.Queries;
 using MediatR;
@@ -39,7 +40,16 @@ namespace Predictive_Healthcare_Management_System.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        // GET: api/v1/Appointment/user/{userId}
+        [HttpGet("user/{userId}")]
+        public async Task<IActionResult> GetUserAppointments(Guid userId, [FromQuery] int page = 1, [FromQuery] int size = 10)
+        {
+          var query = new GetUserAppointmentsQuery(userId, page, size);
+          var response = await _mediator.Send(query);
+          return Ok(response);
+        }
+
+    [HttpPost]
         public async Task<IActionResult> CreateAppointment(CreateAppointmentCommand command)
         {
             /*if (command == null)

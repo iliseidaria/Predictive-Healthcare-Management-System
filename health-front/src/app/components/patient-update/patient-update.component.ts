@@ -55,7 +55,7 @@ export class PatientUpdateComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Doctor') {
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Doctor') {
       this.patientId = this.route.snapshot.paramMap.get('id')!;
       const headers = this.authService.getAuthHeaders();
       const formValue = this.patientForm.value;

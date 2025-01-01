@@ -13,6 +13,8 @@ import { AppointmentGetAllComponent } from './components/appointment-get-all/app
 import { AppointmentDetailComponent } from './components/appointment-detail/appointment-detail.component';
 import { AppointmentUpdateComponent } from './components/appointment-update/appointment-update.component';
 import { UsersGetAllComponent } from './components/users-get-all/users-get-all.component';
+import { UserGetAppointmentsComponent } from './components/user-get-appointments/user-get-appointments.component';
+import { UserUpdateComponent } from './components/user-update/user-update.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -28,4 +30,6 @@ export const routes: Routes = [
   { path: 'appointment-detail/:id', component: AppointmentDetailComponent, canActivate: [AuthGuard] },
   { path: 'update-appointment/:id', component: AppointmentUpdateComponent, canActivate: [AuthGuard] },
   { path: 'get-all-users', component: UsersGetAllComponent, canActivate: [AuthGuard] },
+  { path: 'update-user/:id', component: UserUpdateComponent, canActivate: [AuthGuard] },
+  { path: 'get-user-appointments', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
 ];

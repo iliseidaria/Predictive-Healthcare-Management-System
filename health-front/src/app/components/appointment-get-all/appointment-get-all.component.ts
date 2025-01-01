@@ -34,7 +34,6 @@ export class AppointmentGetAllComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    if (!this.authService.checkTokenExpiration()) return;
     this.loadAppointments();
   }
 
@@ -43,37 +42,39 @@ export class AppointmentGetAllComponent implements OnInit {
   }
 
   loadAppointments(): void {
-    this.loading = true;
-    this.appointmentService.getAppointments(this.page, this.size).subscribe({
-      next: (appointments: Appointment[]) => {
-        const patientRequests = appointments.map(appointment => 
-          this.patientService.getPatientById(appointment.patientId, {
-            headers: this.authService.getAuthHeaders()
-          })
-        );
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+      this.loading = true;
+      this.appointmentService.getAppointments(this.page, this.size).subscribe({
+        next: (appointments: Appointment[]) => {
+          const patientRequests = appointments.map(appointment => 
+            this.patientService.getPatientById(appointment.patientId, {
+              headers: this.authService.getAuthHeaders()
+            })
+          );
 
-        forkJoin(patientRequests).subscribe({
-          next: (patients) => {
-            this.appointments = appointments.map((appointment, index) => ({
-              ...appointment,
-              patientName: `${patients[index].firstName} ${patients[index].lastName}`
-            }));
-            this.totalCount = appointments.length;
-            this.loading = false;
-          },
-          error: (error) => {
-            console.error('Error loading patient details:', error);
-            this.error = 'Failed to load patient details';
-            this.loading = false;
-          }
-        });
-      },
-      error: (error) => {
-        this.error = 'Failed to load appointments';
-        this.loading = false;
-        console.error('Error:', error);
-      }
-    });
+          forkJoin(patientRequests).subscribe({
+            next: (patients) => {
+              this.appointments = appointments.map((appointment, index) => ({
+                ...appointment,
+                patientName: `${patients[index].firstName} ${patients[index].lastName}`
+              }));
+              this.totalCount = appointments.length;
+              this.loading = false;
+            },
+            error: (error) => {
+              console.error('Error loading patient details:', error);
+              this.error = 'Failed to load patient details';
+              this.loading = false;
+            }
+          });
+        },
+        error: (error) => {
+          this.error = 'Failed to load appointments';
+          this.loading = false;
+          console.error('Error:', error);
+        }
+      });
+    }
   }
 
   onStatusChange(appointment: Appointment, newStatus: AppointmentStatus): void {

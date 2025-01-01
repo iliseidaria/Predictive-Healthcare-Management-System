@@ -13,26 +13,22 @@ import { interval, Subscription } from 'rxjs';
 })
 export class TestPageComponent implements OnInit, OnDestroy {
   private tokenCheckSubscription?: Subscription;
+  userRole: string = '';
 
   constructor(private router: Router, public authService: AuthService) {}
 
   ngOnInit() {
-    // Check token every minute
+    // Check token immediately on init
+    if (!this.authService.validateToken()) {
+      this.router.navigate(['/login']);
+      return;
+    }
+
+    this.userRole = this.authService.getCurrentUser().role || '';
+
+    // Continue checking token every minute
     this.tokenCheckSubscription = interval(60000).subscribe(() => {
-      const token = localStorage.getItem('token');
-      if (token) {
-        try {
-          const payload = JSON.parse(atob(token.split('.')[1]));
-          const expirationTime = payload.exp * 1000; // Convert to milliseconds
-          if (Date.now() >= expirationTime) {
-            localStorage.removeItem('token');
-            this.router.navigate(['/login']);
-          }
-        } catch (error) {
-          localStorage.removeItem('token');
-          this.router.navigate(['/login']);
-        }
-      }
+      this.authService.validateToken();
     });
   }
 
@@ -42,18 +38,9 @@ export class TestPageComponent implements OnInit, OnDestroy {
     }
   }
 
-  isAdmin(): boolean {
-    const currentUser = this.authService.getCurrentUser();
-    if (currentUser && currentUser.role === 'Admin') {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
   // Navigate to a specific route only if the user is authenticated
   navigateTo(path: string) {
-    if (this.authService.isAuthenticated()) {
+    if (this.authService.validateToken()) {
       this.router.navigate([path]);
     } else {
       alert('You must be logged in to access this page.');
@@ -62,7 +49,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
   }
 
   logout() {
-    if (this.authService.isAuthenticated()) {
+    if (this.authService.validateToken()) {
       this.authService.logout().subscribe({
         next: () => {
           console.log('Logout successful');
@@ -70,9 +57,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
         },
         error: (err) => {
           console.error('Logout error:', err);
-          // Still remove token and redirect on error
-          localStorage.removeItem('token');
-          this.router.navigate(['/login']);
+          this.authService.handleLogout();
         }
       });
     } else {
@@ -81,7 +66,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
   }
 
   loadProfile() {
-    if (this.authService.isAuthenticated()) {
+    if (this.authService.validateToken()) {
       const currentUser = this.authService.getCurrentUser();
       if (currentUser && (currentUser.username || currentUser.email)) {
         alert(`Profile Information:

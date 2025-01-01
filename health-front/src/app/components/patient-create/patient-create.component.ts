@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { NavigationService } from '../../services/navigation/navigation.service';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 function toUTC(date: string): string {
   const dateObj = new Date(date);
@@ -21,7 +22,8 @@ function toUTC(date: string): string {
   styleUrl: './patient-create.component.css',
   imports: [ReactiveFormsModule, CommonModule],
   standalone: true,
-  providers: [NavigationService]	
+  providers: [PatientService, NavigationService],
+  viewProviders: []
 })
 export class PatientCreateComponent {
   patientForm: FormGroup;
@@ -30,22 +32,20 @@ export class PatientCreateComponent {
     private fb: FormBuilder,
     private patientService: PatientService,
     private authService: AuthService,
-    private navigationService: NavigationService,
-    private router: Router
-  ) {
-    this.patientForm = this.fb.group({
-      firstName: ['', [Validators.required]],
-      lastName: ['', [Validators.required]],
-      dateOfBirth: ['', [Validators.required]],
-      gender: [0, [Validators.required]],
-      contactInformation: ['', [Validators.required]],
-      address: ['', Validators.required],
-      photoPath: [''],
-    });
-  }
+    private router: Router,
+    private navigationService: NavigationService  ) {
+      this.patientForm = this.fb.group({
+        firstName: ['', [Validators.required]],
+        lastName: ['', [Validators.required]],
+        dateOfBirth: ['', [Validators.required]],
+        gender: [0, [Validators.required]],
+        contactInformation: ['', [Validators.required]],
+        address: ['', Validators.required],
+        photoPath: [''],
+  });}
 
   onSubmit() {
-    if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Patient') {
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
       if (this.patientForm.valid) {
         const formData = {
           ...this.patientForm.value,

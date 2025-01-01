@@ -41,30 +41,32 @@ export class AppointmentDetailComponent implements OnInit {
   }
 
   loadAppointment(id: string) {
-    this.loading = true;
-    this.appointmentService.getAppointmentById(id).subscribe({
-      next: (appointment) => {
-        this.patientService.getPatientById(appointment.patientId, {
-          headers: this.authService.getAuthHeaders()
-        }).subscribe({
-          next: (patient) => {
-            this.appointment = {
-              ...appointment,
-              patientName: `${patient.firstName} ${patient.lastName}`
-            };
-            this.loading = false;
-          },
-          error: (error) => {
-            this.error = 'Failed to load patient details';
-            this.loading = false;
-          }
-        });
-      },
-      error: (error) => {
-        this.error = 'Failed to load appointment';
-        this.loading = false;
-      }
-    });
+    if (this.authService.validateToken()) {
+      this.loading = true;
+      this.appointmentService.getAppointmentById(id).subscribe({
+        next: (appointment) => {
+          this.patientService.getPatientById(appointment.patientId, {
+            headers: this.authService.getAuthHeaders()
+          }).subscribe({
+            next: (patient) => {
+              this.appointment = {
+                ...appointment,
+                patientName: `${patient.firstName} ${patient.lastName}`
+              };
+              this.loading = false;
+            },
+            error: (error) => {
+              this.error = 'Failed to load patient details';
+              this.loading = false;
+            }
+          });
+        },
+        error: (error) => {
+          this.error = 'Failed to load appointment';
+          this.loading = false;
+        }
+      });
+    }
   }
 
   goBack(): void {

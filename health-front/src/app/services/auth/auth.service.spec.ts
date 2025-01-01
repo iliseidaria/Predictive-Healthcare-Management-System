@@ -1,15 +1,23 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { AuthService } from './auth.service';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Router } from '@angular/router';
+import { environment } from '../../../environments/environment';
 
 describe('AuthService', () => {
   let service: AuthService;
   let httpMock: HttpTestingController;
+  let router: jasmine.SpyObj<Router>;
 
   beforeEach(() => {
+    router = jasmine.createSpyObj('Router', ['navigate']);
+    
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [AuthService],
+      providers: [
+        AuthService,
+        { provide: Router, useValue: router }
+      ]
     });
 
     service = TestBed.inject(AuthService);
@@ -17,46 +25,116 @@ describe('AuthService', () => {
   });
 
   afterEach(() => {
-    httpMock.verify(); // Verifică dacă nu există cereri nerezolvate
+    httpMock.verify();
+    localStorage.clear();
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  describe('Authentication', () => {
+    it('should login successfully', () => {
+      const credentials = { username: 'test', password: 'test123' };
+      const mockResponse = { token: 'fake-token' };
 
-  it('should send login request and return token', () => {
-    const mockResponse = { token: 'mock-jwt-token' };
-
-    service.login({ username: 'testuser', password: 'testpassword' }).subscribe((response) => {
-      expect(response).toEqual(mockResponse);
+      service.login(credentials).subscribe();
+      
+      const req = httpMock.expectOne(`${environment.apiUrl}/api/v1/Auth/login`);
+      expect(req.request.method).toBe('POST');
+      req.flush(mockResponse);
     });
 
-    const req = httpMock.expectOne('/api/v1/auth');
-    expect(req.request.method).toBe('POST');
-    expect(req.request.body).toEqual({
-      username: 'testuser',
-      password: 'testpassword',
+    it('should register new user', () => {
+      const user = {
+        username: 'test',
+        email: 'test@test.com',
+        password: 'test123',
+        confirmPassword: 'test123'
+      };
+
+      service.register(user).subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiUrl}/api/v1/Auth/register`);
+      expect(req.request.method).toBe('POST');
+      req.flush({});
     });
 
-    // Simulează un răspuns de succes din backend
-    req.flush(mockResponse);
+    it('should logout user', () => {
+      localStorage.setItem('token', 'test-token');
+      
+      service.logout().subscribe();
+
+      const req = httpMock.expectOne(`${environment.apiUrl}/api/v1/Auth/logout`);
+      expect(req.request.method).toBe('POST');
+      req.flush({});
+      
+      expect(localStorage.getItem('token')).toBeNull();
+    });
   });
 
-  it('should handle login error', () => {
-    const errorMessage = 'Invalid credentials';
+  describe('Token Management', () => {
+    it('should get auth headers', () => {
+      const token = 'test-token';
+      localStorage.setItem('token', token);
+      
+      const headers = service.getAuthHeaders();
+      expect(headers.get('Authorization')).toBe(`Bearer ${token}`);
+    });
 
-    service.login({ username: 'wronguser', password: 'wrongpassword' }).subscribe(
-      () => fail('Expected an error, not a token'),
-      (error) => {
-        expect(error.status).toBe(401); // Unauthorized
-        expect(error.statusText).toBe('Unauthorized');
-      }
-    );
+    it('should store token', () => {
+      const token = 'test-token';
+      service.storeToken(token);
+      expect(localStorage.getItem('token')).toBe(token);
+    });
+  });
 
-    const req = httpMock.expectOne('/api/v1/auth');
-    expect(req.request.method).toBe('POST');
+  describe('User Management', () => {
+    it('should get current user from valid token', () => {
+      const token = createMockJWT(3600);
+      localStorage.setItem('token', token);
+      
+      const user = service.getCurrentUser();
+      expect(user).toBeTruthy();
+      expect(user.role).toBe('Admin');
+    });
 
-    // Simulează o eroare de autentificare
-    req.flush(errorMessage, { status: 401, statusText: 'Unauthorized' });
+    it('should return null for invalid token', () => {
+      localStorage.setItem('token', 'invalid-token');
+      expect(service.getCurrentUser()).toBeNull();
+    });
+  });
+
+  describe('Health Checks', () => {
+    it('should check server health', fakeAsync(() => {
+      service.checkServerHealth().subscribe(isHealthy => {
+        expect(isHealthy).toBeTrue();
+      });
+
+      const req = httpMock.expectOne(`${environment.apiUrl}/api/v1/Auth`);
+      expect(req.request.method).toBe('OPTIONS');
+      req.flush({});
+      
+      tick(100);
+    }));
+
+    it('should handle server timeout', fakeAsync(() => {
+      service.checkServerHealth().subscribe(isHealthy => {
+        expect(isHealthy).toBeFalse();
+      });
+
+      const req = httpMock.expectOne(`${environment.apiUrl}/api/v1/Auth`);
+      req.error(new ErrorEvent('timeout'));
+      
+      tick(3100);
+    }));
   });
 });
+
+function createMockJWT(expiresIn: number): string {
+  const header = btoa(JSON.stringify({ alg: 'HS256', typ: 'JWT' }));
+  const payload = btoa(JSON.stringify({
+    exp: Math.floor(Date.now() / 1000) + expiresIn,
+    sub: 'test-user',
+    role: 'Admin',
+    'http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role': 'Admin'
+  }));
+  const signature = 'mock-signature';
+  return `${header}.${payload}.${signature}`;
+}

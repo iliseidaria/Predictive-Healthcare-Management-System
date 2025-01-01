@@ -1,51 +1,53 @@
+<button class="back-button" (click)="goBack()">← Back</button>
 <div class="users-container">
-    <h2>Users Management</h2>
-  
-    <div *ngIf="loading" class="loading">
-      Loading users...
-    </div>
-  
-    <div *ngIf="error" class="error-message">
-      {{ error }}
-    </div>
-  
-    <div class="table-container" *ngIf="!loading && !error">
-      <div class="table-responsive">
-        <table>
-          <thead>
-            <tr>
-              <th>Username</th>
-              <th>Email</th>
-              <th>Role</th>
-              <th class="actions-cell">Actions</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let user of users">
-              <td>{{user.username}}</td>
-              <td>{{user.email}}</td>
-              <td>{{user.role}}</td>
-              <td class="actions-cell">
-                <a [routerLink]="['/user-detail', user.id]" class="action-btn view">View</a>
-                <a [routerLink]="['/update-user', user.id]" class="action-btn edit">Edit</a>
-                <button (click)="deleteUser(user.id)" class="action-btn delete">Delete</button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-  
-        <div *ngIf="users.length === 0" class="no-data">
-          No users found.
-        </div>
+  <h2>Users Management</h2>
+
+  <div *ngIf="loading" class="loading">
+    Loading users...
+  </div>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div class="table-container" *ngIf="!loading && !error">
+    <div class="table-responsive">
+      <table *ngIf="users">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Role</th>
+            <th class="actions-cell">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users">
+            <td>{{user.username}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.role}}</td>
+            <td class="actions-cell">
+              <ng-container *ngIf="user.role !== 'Admin'">
+              <a [routerLink]="['/update-user', user.id]" class="action-btn edit">Edit</a>
+              <button (click)="deleteUser(user.id)" class="action-btn delete">Delete</button>
+            </ng-container>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div *ngIf="users && users.length === 0" class="no-data">
+        No users found.
       </div>
     </div>
-  
-    <div class="pagination" *ngIf="totalCount > 0">
-      <button [disabled]="page === 1" (click)="page = page - 1; loadUsers()">
-        Previous
-      </button>
-      <button [disabled]="isLastPage()" (click)="page = page + 1; loadUsers()">
-        Next
-      </button>
-    </div>
   </div>
+
+  <div class="pagination" *ngIf="totalCount > 0">
+    <button [disabled]="page === 1" (click)="page = page - 1; loadUsers()">
+      Previous
+    </button>
+    <button [disabled]="isLastPage()" (click)="page = page + 1; loadUsers()">
+      Next
+    </button>
+  </div>
+</div>

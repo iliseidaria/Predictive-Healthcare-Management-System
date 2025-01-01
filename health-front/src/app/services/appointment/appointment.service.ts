@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { catchError, Observable, tap } from 'rxjs';
 import { environment } from '../../../environments/environment';
 import { Appointment, AppointmentStatus, PaginatedResponse } from '../../models/appointment';
@@ -12,12 +12,6 @@ export class AppointmentService {
   private apiUrl = environment.apiUrl + `/api/v1/Appointment`;
 
   constructor(private http: HttpClient, private authService: AuthService) {}
-
-  // createAppointment(appointment: Appointment): Observable<Appointment> {
-  //   return this.http.post<Appointment>(this.apiUrl, appointment, {
-  //     headers: this.authService.getAuthHeaders()
-  //   });
-  // }
 
   getStatusText(status: AppointmentStatus): string {
       switch (status) {
@@ -64,7 +58,24 @@ export class AppointmentService {
         throw error;
       })
     );
-}
+  }
+
+  getUserAppointments(userId: string, page: number, size: number, options?: { headers?: HttpHeaders }): Observable<Appointment[]> {
+    const params = new HttpParams()
+      .set('pageNumber', page.toString())
+      .set('pageSize', size.toString());
+  
+    return this.http.get<Appointment[]>(
+      `${this.apiUrl}/user/${userId}`,
+      { params, ...options }
+    ).pipe(
+      tap(response => console.log('API Response:', response)),
+      catchError(error => {
+        console.error('API Error:', error);
+        throw error;
+      })
+    );
+  }
 
   // getAppointments(page: number, pageSize: number): Observable<PaginatedResponse> {
   //   const params = { page: page.toString(), pageSize: pageSize.toString() };

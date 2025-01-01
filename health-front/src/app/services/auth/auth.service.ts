@@ -1,18 +1,42 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnDestroy } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { forkJoin, Observable, of } from 'rxjs';
 import { environment } from '../../../environments/environment';
-import { tap } from 'rxjs/operators';
+import { catchError, map, tap, timeout } from 'rxjs/operators';
 import { jwtDecode } from 'jwt-decode';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
 })
-export class AuthService {
+export class AuthService implements OnDestroy {
   private apiUrl = environment.apiUrl + '/api/v1/Auth';
+  private healthCheckInterval: any;
 
-  constructor(private router: Router, private http: HttpClient) {}
+  constructor(private router: Router, private http: HttpClient) {
+    // Add window close listener
+    window.addEventListener('beforeunload', () => {
+      this.handleLogout();
+    });
+
+    // Start periodic health check every 30 seconds
+    this.healthCheckInterval = setInterval(() => {
+      this.checkServerHealth().subscribe(isHealthy => {
+        if (!isHealthy) {
+          this.handleLogout();
+        }
+      });
+    }, 30000);
+  }
+
+  ngOnDestroy() {
+    if (this.healthCheckInterval) {
+      clearInterval(this.healthCheckInterval);
+    }
+    window.removeEventListener('beforeunload', () => {
+      this.handleLogout();
+    });
+  }
 
   login(credentials: { username: string; password: string }): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, credentials, { headers: this.getAuthHeaders() });
@@ -32,45 +56,80 @@ export class AuthService {
     localStorage.removeItem('token');
     return this.http.post(`${this.apiUrl}/logout`, {}, { headers }).pipe(
       tap(() => {
-        localStorage.removeItem('token');
+        this.handleLogout();
       })
     );
   }
 
-  isAuthenticated(): boolean {
-    const token = localStorage.getItem('token');
-    return !!token;
+  handleLogout(): void {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
   }
-
-  // getUserRole(): string | null {
-  //   const token = localStorage.getItem('token');
-  //   if (token) {
-  //     try {
-  //       const payload = JSON.parse(atob(token.split('.')[1]));
-  //       console.log('Token payload:', payload); // Debug log
-  //       return payload.role;
-  //     } catch (error) {
-  //       console.error('Error parsing token:', error);
-  //       return null;
-  //     }
-  //   }
-  //   return null;
-  // }
-
-  // getUserRole(): string | null {
-  //   const token = localStorage.getItem('token');
-  //   if (!token) {
-  //     return null;
-  //   }
-  //   const payload = JSON.parse(atob(token.split('.')[1]));
-  //   return payload.role || null;
-  // }
 
   getAuthHeaders(): HttpHeaders {
     const token = localStorage.getItem('token');
     return new HttpHeaders({
       Authorization: `Bearer ${token}`
     });
+  }
+
+  storeToken(token: string) {
+    localStorage.setItem('token', token);
+  }
+
+  checkServerHealth(): Observable<boolean> {
+    // Simple ping to root endpoint
+    const backendHealth = this.http.options(`${this.apiUrl}`, {
+      headers: this.getAuthHeaders()
+    }).pipe(
+      timeout(3000),
+      map(() => true),
+      catchError(error => {
+        console.log('Backend server status:', error.status);
+        return of(false);
+      })
+    );
+  
+    // Check if Angular app is responsive
+    const frontendHealth = new Observable<boolean>(observer => {
+      const start = performance.now();
+      requestAnimationFrame(() => {
+        const delta = performance.now() - start;
+        observer.next(delta < 100); // Frame rendered within 100ms
+        observer.complete();
+      });
+    });
+  
+    return forkJoin([backendHealth, frontendHealth]).pipe(
+      map(([backend, frontend]) => {
+        console.log('Servers Status - Backend:', backend, 'Frontend:', frontend);
+        if (!backend || !frontend) {
+          this.handleLogout();
+          return false;
+        }
+        return true;
+      })
+    );
+  }
+  validateToken(): boolean {
+    const token = localStorage.getItem('token');
+    if (!token) {
+      return false;
+    }
+
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      const expirationTime = payload.exp * 1000;
+      
+      if (Date.now() >= expirationTime) {
+        this.handleLogout();
+        return false;
+      }
+      return true;
+    } catch (error) {
+      this.handleLogout();
+      return false;
+    }
   }
 
   getCurrentUser(): any {
@@ -94,49 +153,25 @@ export class AuthService {
     }
   }
 
-  restoreAuthState(token: string): boolean {
-    try {
-      // Attempt to decode the token
-      const decodedToken: any = jwtDecode(token);
+  // restoreAuthState(token: string): boolean {
+  //   try {
+  //     // Attempt to decode the token
+  //     const decodedToken: any = jwtDecode(token);
       
-      // Check if token is expired
-      const currentTime = Date.now() / 1000;
-      if (decodedToken.exp < currentTime) {
-        localStorage.removeItem('token');
-        return false;
-      }
+  //     // Check if token is expired
+  //     const currentTime = Date.now() / 1000;
+  //     if (decodedToken.exp < currentTime) {
+  //       localStorage.removeItem('token');
+  //       return false;
+  //     }
 
-      // If token is valid, store it
-      localStorage.setItem('token', token);
-      return true;
-    } catch (error) {
-      console.error('Error restoring auth state:', error);
-      localStorage.removeItem('token');
-      return false;
-    }
-  }
-
-  checkTokenExpiration(): boolean {
-    const token = localStorage.getItem('token');
-    if (!token) return false;
-
-    try {
-      const payload = JSON.parse(atob(token.split('.')[1]));
-      const expirationTime = payload.exp * 1000;
-      
-      if (Date.now() >= expirationTime) {
-        this.handleLogout();
-        return false;
-      }
-      return true;
-    } catch (error) {
-      this.handleLogout();
-      return false;
-    }
-  }
-
-  private handleLogout(): void {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
-  }
+  //     // If token is valid, store it
+  //     localStorage.setItem('token', token);
+  //     return true;
+  //   } catch (error) {
+  //     console.error('Error restoring auth state:', error);
+  //     localStorage.removeItem('token');
+  //     return false;
+  //   }
+  // }
 }

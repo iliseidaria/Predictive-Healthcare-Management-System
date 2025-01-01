@@ -26,24 +26,11 @@ export class RegisterComponent {
     );
   }
 
-  // Validator personalizat pentru potrivirea parolelor
   passwordMatchValidator(form: FormGroup) {
     const password = form.get('password')?.value;
     const confirmPassword = form.get('confirmPassword')?.value;
     return password === confirmPassword ? null : { passwordMismatch: true };
   }
-
-  // onSubmit(): void {
-  //   if (this.registerForm.valid) {
-  //     this.authService.register(this.registerForm.value).subscribe({
-  //       next: () => {
-  //         alert('Registration successful!');
-  //         this.router.navigateByUrl('/login');
-  //       },
-  //       error: (err) => console.error('Registration failed:', err),
-  //     });
-  //   }
-  // }
 
   onSubmit(): void {
     if (this.registerForm.valid) {

@@ -4,10 +4,14 @@ export enum UserRole {
     Admin = 'Admin'
 }
 
+export interface UsersResponse {
+    users: User[];
+    totalUsers: number;
+}
+
 export interface User {
     id: string;
     username: string;
     email: string;
-    passwordHash?: string;
     role: string;
 }

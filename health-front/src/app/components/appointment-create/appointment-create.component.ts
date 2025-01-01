@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { AppointmentService } from '../../services/appointment/appointment.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
-import { Appointment, AppointmentStatus } from '../../models/appointment';
+import { Appointment, AppointmentResponse, AppointmentStatus } from '../../models/appointment';
 import { NavigationService } from '../../services/navigation/navigation.service';
 
 @Component({
@@ -37,7 +37,7 @@ export class AppointmentCreateComponent {
   }
 
   onSubmit() {
-    if (this.appointmentForm.valid && this.authService.isAuthenticated() && this.authService.getCurrentUser().role !== 'Patient') {
+    if (this.appointmentForm.valid && this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
       const formValue = this.appointmentForm.value;
       const currentUser = this.authService.getCurrentUser();
       
@@ -46,17 +46,8 @@ export class AppointmentCreateComponent {
         return;
       }
 
-      // Combine date and time into a proper ISO string
       const dateStr = formValue.appointmentDate;
       const timeStr = formValue.appointmentTime;
-      // Ensure proper date format
-      // const [year, month, day] = dateStr.split('-').map(Number);
-      // const [hours, minutes] = timeStr.split(':').map(Number);
-      // const combinedDate = new Date(Date.UTC(year, month - 1, day, hours, minutes));
-
-      // if (isNaN(combinedDate.getTime())) {
-      //   throw new Error('Invalid date/time combination');
-      // }
       const combinedDate = new Date(`${dateStr}T${timeStr}`);
 
       const appointment: Appointment = {
@@ -69,11 +60,11 @@ export class AppointmentCreateComponent {
 
       console.log('Form Data Sent:', appointment);
       this.appointmentService.createAppointment(appointment).subscribe({
-        next: (response) => {
+        next: (response: AppointmentResponse) => {
           console.log('Full response:', response);
           alert('Appointment created successfully!');
-          console.log('Response ID:', response.appointmentId);
-          this.router.navigateByUrl(`/appointment-detail/${response.appointmentId}`);
+          console.log('Response ID:', response.id);
+          this.router.navigateByUrl(`/appointment-detail/${response.id}`);
         },
         error: (error) => {
           console.error('Error creating appointment:', error);

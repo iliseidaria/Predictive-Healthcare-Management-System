@@ -27,7 +27,7 @@ export class PatientGetAllComponent implements OnInit {
   constructor(private patientService: PatientService, private authService: AuthService) {}
 
   ngOnInit() {
-    this.userRole = this.authService.getUserRole() || '';
+    this.userRole = this.authService.getCurrentUser().role || ''; //pentru html
     this.loadPatients();
   }
 
@@ -36,7 +36,7 @@ export class PatientGetAllComponent implements OnInit {
   } 
 
   loadPatients() {
-    if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Patient') {
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
       const headers = this.authService.getAuthHeaders();
       this.patientService.getAllPatients(this.page, this.size, { headers }).subscribe({
         next: (data) => {
