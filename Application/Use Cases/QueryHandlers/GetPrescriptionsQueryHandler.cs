@@ -1,28 +1,30 @@
-﻿using Application.DTOs;
+using Application.DTOs;
 using Application.Use_Cases.Queries;
 using AutoMapper;
+using Domain.Entities;
 using MediatR;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 
-namespace Application.Use_Cases.QueryHandlers
+namespace Application.Use_Cases.Handlers
 {
-    public class GetPrescriptionsQueryHandler : IRequestHandler<GetPrescriptionsQuery, List<PrescriptionDTO>>
+  public class GetPrescriptionsQueryHandler : IRequestHandler<GetPrescriptionsQuery, (List<PrescriptionDto> Prescriptions, int TotalCount)>
+  {
+    private readonly IPrescriptionRepository _repository;
+    private readonly IMapper _mapper;
+
+    public GetPrescriptionsQueryHandler(IPrescriptionRepository repository, IMapper mapper)
     {
-        private readonly IPrescriptionRepository _repository;
-        private readonly IMapper _mapper;
-
-        public GetPrescriptionsQueryHandler(IPrescriptionRepository repository, IMapper mapper)
-        {
-            _repository = repository;
-            _mapper = mapper;
-        }
-
-        public async Task<List<PrescriptionDTO>> Handle(GetPrescriptionsQuery request, CancellationToken cancellationToken)
-        {
-            var prescriptions = await _repository.GetAllPrescriptionsAsync();
-            return _mapper.Map<List<PrescriptionDTO>>(prescriptions);
-        }
+      _repository = repository;
+      _mapper = mapper;
     }
+
+    public async Task<(List<PrescriptionDto> Prescriptions, int TotalCount)> Handle(GetPrescriptionsQuery request, CancellationToken cancellationToken)
+    {
+      var totalCount = await _repository.GetTotalCountAsync();
+      var prescriptions = await _repository.GetAllPrescriptionsAsync(request.Page, request.Size);
+
+      var mappedPrescriptions = _mapper.Map<List<PrescriptionDto>>(prescriptions);
+
+      return (mappedPrescriptions, totalCount);
+    }
+  }
 }

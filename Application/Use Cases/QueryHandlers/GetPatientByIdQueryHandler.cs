@@ -19,10 +19,6 @@ namespace Application.Use_Cases.QueryHandlers
         public async Task<PatientDto> Handle(GetPatientByIdQuery request, CancellationToken cancellationToken)
         {
             var patient = await repository.GetPatientByIdAsync(request.Id);
-            if (patient == null)
-            {
-                return null; // Return null without calling Map
-            }
             return mapper.Map<PatientDto>(patient);
         }
     }

@@ -19,5 +19,6 @@ namespace Domain.Entities
         public string PhotoPath { get; set; }
         public MedicalRecord MedicalHistory { get; set; }
         public List<Appointment> Appointments { get; set; } = new List<Appointment>();
-    }
+        public List<Prescription> Prescriptions { get; set; } = new List<Prescription>();
+  }
 }

@@ -65,6 +65,12 @@ namespace Infrastructure.Persistence
                     .WithOne()
                     .HasForeignKey(a => a.PatientId)
                     .OnDelete(DeleteBehavior.Cascade);
+
+              // Configure one-to-many relationship with Prescriptions
+              entity.HasMany(e => e.Prescriptions)
+                    .WithOne()
+                    .HasForeignKey(p => p.PatientId)
+                    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<MedicalRecord>(entity =>
@@ -112,16 +118,23 @@ namespace Infrastructure.Persistence
         entity.ToTable("prescriptions");
         entity.HasKey(e => e.PrescriptionId);
         entity.Property(e => e.PrescriptionId)
-                  .HasColumnType("uuid")
-                  .HasDefaultValueSql("uuid_generate_v4()")
-                  .ValueGeneratedOnAdd();
+            .HasColumnType("uuid")
+            .HasDefaultValueSql("uuid_generate_v4()")
+            .ValueGeneratedOnAdd();
+        entity.Property(e => e.PatientId).IsRequired();
+        entity.Property(e => e.MedicationName).IsRequired().HasMaxLength(100);
         entity.Property(e => e.Dosage).IsRequired().HasMaxLength(100);
         entity.Property(e => e.Frequency).IsRequired().HasMaxLength(100);
         entity.Property(e => e.StartDate).IsRequired();
         entity.Property(e => e.EndDate).IsRequired();
-      }
+        entity.Property(e => e.Notes).HasMaxLength(1000);
 
-        );
+        // Configure foreign key relationship with Patient
+        entity.HasOne<Patient>()
+            .WithMany(p => p.Prescriptions)
+            .HasForeignKey(e => e.PatientId)
+            .OnDelete(DeleteBehavior.Cascade);
+      });
     }
     }
 }

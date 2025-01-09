@@ -5,6 +5,7 @@
   <nav>
     <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-patients')">See All Patients</button>
     <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-appointments')">See all Appointments</button>
+    <button *ngIf="userRole === 'Patient'" (click)="navigateTo('patient-detail:id')">Your Personal Details</button>
     <button *ngIf="userRole === 'Patient'" (click)="navigateTo('get-user-appointments')">See your Appointments</button>
     <button *ngIf="userRole === 'Admin'" (click)="navigateTo('get-all-users')">Users Management</button>
   </nav>

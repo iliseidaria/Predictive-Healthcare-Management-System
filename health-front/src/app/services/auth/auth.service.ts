@@ -62,8 +62,10 @@ export class AuthService implements OnDestroy {
   }
 
   handleLogout(): void {
-    localStorage.removeItem('token');
-    this.router.navigate(['/login']);
+    if (window.performance.navigation.type !== window.performance.navigation.TYPE_RELOAD) {
+      localStorage.removeItem('token');
+      this.router.navigate(['/login']);
+    }
   }
 
   getAuthHeaders(): HttpHeaders {

@@ -1,4 +1,5 @@
-﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Commands;
+using AutoMapper;
 using Domain.Entities;
 using MediatR;
 using System.Threading;
@@ -6,29 +7,32 @@ using System.Threading.Tasks;
 
 namespace Application.Use_Cases.CommandHandlers
 {
-    public class UpdatePrescriptionCommandHandler : IRequestHandler<UpdatePrescriptionCommand, bool>
+    public class UpdatePrescriptionCommandHandler : IRequestHandler<UpdatePrescriptionCommand, Unit>
     {
         private readonly IPrescriptionRepository _repository;
+        private readonly IMapper _mapper;
 
-        public UpdatePrescriptionCommandHandler(IPrescriptionRepository repository)
+        public UpdatePrescriptionCommandHandler(IPrescriptionRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
-        public async Task<bool> Handle(UpdatePrescriptionCommand request, CancellationToken cancellationToken)
+        public async Task<Unit> Handle(UpdatePrescriptionCommand request, CancellationToken cancellationToken)
         {
-            var prescription = new Prescription
+            // Check if the patient exists
+            var existingPrescription = await _repository.GetPrescriptionByIdAsync(request.PrescriptionId);
+            if (existingPrescription == null)
             {
-                PrescriptionId = request.PrescriptionId,
-                MedicationName = request.MedicationName,
-                Dosage = request.Dosage,
-                Frequency = request.Frequency,
-                StartDate = request.StartDate,
-                EndDate = request.EndDate,
-                Notes = request.Notes
-            };
+                throw new KeyNotFoundException("Prescription not found");
+            }
 
-            return await _repository.UpdateAsync(prescription);
+            _repository.Detach(existingPrescription);
+
+            var prescription = _mapper.Map<Prescription>(request);
+            await _repository.UpdateAsync(prescription);
+
+            return Unit.Value;
         }
     }
 }
