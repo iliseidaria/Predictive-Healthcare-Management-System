@@ -18,7 +18,7 @@ export class AuthService implements OnDestroy {
     window.addEventListener('beforeunload', () => {
       this.handleLogout();
     });
-
+    /*
     // Start periodic health check every 30 seconds
     this.healthCheckInterval = setInterval(() => {
       this.checkServerHealth().subscribe(isHealthy => {
@@ -26,7 +26,7 @@ export class AuthService implements OnDestroy {
           this.handleLogout();
         }
       });
-    }, 30000);
+    }, 70000);*/
   }
 
   ngOnDestroy() {
@@ -89,7 +89,7 @@ export class AuthService implements OnDestroy {
         return of(false);
       })
     );
-  
+
     // Check if Angular app is responsive
     const frontendHealth = new Observable<boolean>(observer => {
       const start = performance.now();
@@ -99,7 +99,7 @@ export class AuthService implements OnDestroy {
         observer.complete();
       });
     });
-  
+
     return forkJoin([backendHealth, frontendHealth]).pipe(
       map(([backend, frontend]) => {
         console.log('Servers Status - Backend:', backend, 'Frontend:', frontend);
@@ -120,7 +120,7 @@ export class AuthService implements OnDestroy {
     try {
       const payload = JSON.parse(atob(token.split('.')[1]));
       const expirationTime = payload.exp * 1000;
-      
+
       if (Date.now() >= expirationTime) {
         this.handleLogout();
         return false;
@@ -157,7 +157,7 @@ export class AuthService implements OnDestroy {
   //   try {
   //     // Attempt to decode the token
   //     const decodedToken: any = jwtDecode(token);
-      
+
   //     // Check if token is expired
   //     const currentTime = Date.now() / 1000;
   //     if (decodedToken.exp < currentTime) {

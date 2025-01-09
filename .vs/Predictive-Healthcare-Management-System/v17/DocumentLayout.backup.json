@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\final_front\\infrastructure\\infrastructure\\migrations\\20241209174143_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241209174143_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\final_front\\application\\use cases\\commands\\createappointmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createappointmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\final_front\\infrastructure\\infrastructure\\migrations\\20241209195231_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241209195231_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\final_front\\infrastructure\\infrastructure\\migrations\\20241209174143_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241209174143_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\final_front\\application\\use cases\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -349,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CreateAppointmentCommandValidator.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Use Cases\\Commands\\CreateAppointmentCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateAppointmentCommandValidator.cs",
@@ -362,7 +362,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CreateAppointmentCommand.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Application\\Use Cases\\Commands\\CreateAppointmentCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateAppointmentCommand.cs",
@@ -375,7 +375,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "20241209195231_Users.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
@@ -388,7 +388,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "20241209174143_AddUserTable.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
@@ -407,7 +407,7 @@
               "RelativeDocumentMoniker": "Domain\\Entities\\Appointment.cs",
               "ToolTip": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Entities\\Appointment.cs",
               "RelativeToolTip": "Domain\\Entities\\Appointment.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T06:36:57.444Z",
               "EditorCaption": ""
@@ -420,14 +420,14 @@
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\AppointmentRepository.cs",
               "ToolTip": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Repositories\\AppointmentRepository.cs",
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\AppointmentRepository.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAIA4wBwAAAAuAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAjwBwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T06:36:57.485Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "20241229161728_addedFKtoAppointment.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Migrations\\20241229161728_addedFKtoAppointment.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241229161728_addedFKtoAppointment.cs",
@@ -440,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IAppointmentRepository.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Repositories\\IAppointmentRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Repositories\\IAppointmentRepository.cs",
@@ -453,7 +453,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContextModelSnapshot.cs",
               "DocumentMoniker": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
