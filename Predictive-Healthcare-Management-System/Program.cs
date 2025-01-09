@@ -32,6 +32,7 @@ builder.Services.AddScoped<UserService>();
 builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 builder.Services.AddScoped<IPatientRepository, PatientRepository>();
 builder.Services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
+builder.Services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
 
 // Configurare CORS
 builder.Services.AddCors(options =>

@@ -2222,3 +2222,4 @@ D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9
 D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9.0\Predictive-Healthcare-Management-System.pdb
 D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9.0\Predictive-Healthcare-Management-System.genruntimeconfig.cache
 D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9.0\ref\Predictive-Healthcare-Management-System.dll
+D:\FII\dotNet\FINAL_FRONT\Predictive-Healthcare-Management-System\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

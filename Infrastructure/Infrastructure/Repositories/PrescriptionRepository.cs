@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-  internal class PrescriptionRepository :IPrescriptionRepository
+  public class PrescriptionRepository :IPrescriptionRepository
   {
     private readonly ApplicationDbContext context;
 

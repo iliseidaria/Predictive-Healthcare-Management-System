@@ -13,10 +13,9 @@ namespace Application.Use_Cases.Commands
             RuleFor(p => p.ProviderId)
                 .NotEmpty()
                 .WithMessage("Provider Id is required.");
-            RuleFor(p => p.AppointmentDate)
+      RuleFor(p => p.AppointmentDate)
                 .NotEmpty()
-                .GreaterThan(DateTime.Now)
-                .WithMessage("Date of appointment must be in the past.");
+                .WithMessage("Appointment date is required."); 
             RuleFor(a => a.Reason)
                 .NotEmpty()
                 .WithMessage("Reason is required.")
