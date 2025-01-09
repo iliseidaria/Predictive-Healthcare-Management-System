@@ -1,6 +1,6 @@
 {
-  "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Application",
-  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Domain",
-  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Infrastructure\\Infrastructure",
-  "Predictive-Healthcare-Management-System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "M:\\FACULTATE\\ANUL3\\.net\\healthcare-management\\Predictive-Healthcare-Management-System"
+  "Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\FII\\dotNet\\FINAL_FRONT\\Application",
+  "Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain",
+  "Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure",
+  "Predictive-Healthcare-Management-System, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "D:\\FII\\dotNet\\FINAL_FRONT\\Predictive-Healthcare-Management-System"
 }

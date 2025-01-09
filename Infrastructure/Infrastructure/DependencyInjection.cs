@@ -1,4 +1,4 @@
-﻿using Infrastructure.Persistence;
+using Infrastructure.Persistence;
 using Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -16,6 +16,8 @@ namespace Infrastructure
             );
             services.AddScoped<IPatientRepository, PatientRepository>();
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
+            services.AddScoped<IMedicalRecordRepository, MedicalRecordRepository>();
+            services.AddScoped < IPrescriptionRepository, PrescriptionRepository>();
             return services;
         }
     }

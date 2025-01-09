@@ -1,5 +1,7 @@
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
+using Microsoft.Extensions.Options;
 
 namespace Infrastructure.Persistence
 {
@@ -13,10 +15,15 @@ namespace Infrastructure.Persistence
         public DbSet<MedicalRecord> MedicalRecords { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Prescription> Prescriptions { get; set; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+      optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));
+    }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.HasPostgresExtension("uuid-ossp");
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+      modelBuilder.HasPostgresExtension("uuid-ossp");
 
             modelBuilder.Entity<User>(entity =>
             {
@@ -100,6 +107,21 @@ namespace Infrastructure.Persistence
                     .HasForeignKey(e => e.ProviderId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
-        }
+      modelBuilder.Entity<Prescription>(entity =>
+      {
+        entity.ToTable("prescriptions");
+        entity.HasKey(e => e.PrescriptionId);
+        entity.Property(e => e.PrescriptionId)
+                  .HasColumnType("uuid")
+                  .HasDefaultValueSql("uuid_generate_v4()")
+                  .ValueGeneratedOnAdd();
+        entity.Property(e => e.Dosage).IsRequired().HasMaxLength(100);
+        entity.Property(e => e.Frequency).IsRequired().HasMaxLength(100);
+        entity.Property(e => e.StartDate).IsRequired();
+        entity.Property(e => e.EndDate).IsRequired();
+      }
+
+        );
+    }
     }
 }
