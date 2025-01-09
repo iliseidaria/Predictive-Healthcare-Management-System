@@ -2876,23 +2876,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Andreea\\.nuget\\packages\\": {},
+    "C:\\Users\\.adia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+      "projectUniqueName": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
       "projectName": "Infrastructure",
-      "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
-      "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
-      "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\obj\\",
+      "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+      "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
+      "outputPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Infrastructure\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2907,8 +2907,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
-              "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
+            "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\FII\\dotNet\\FINAL_FRONT\\Domain\\Domain.csproj"
             }
           }
         }
