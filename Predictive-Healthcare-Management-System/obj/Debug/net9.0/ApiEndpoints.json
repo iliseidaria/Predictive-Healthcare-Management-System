@@ -530,6 +530,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PrescriptionController",
+    "Method": "GetPrescriptionsByPatientId",
+    "RelativePath": "api/v1/Prescription/patient/{patientId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "patientId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.ErrorController",
     "Method": "HandleError",
     "RelativePath": "error",

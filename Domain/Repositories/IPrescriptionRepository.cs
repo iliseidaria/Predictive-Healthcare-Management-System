@@ -9,4 +9,5 @@ public interface IPrescriptionRepository
   Task<Guid> AddPrescriptionAsync(Prescription prescriptionDto);
   void Detach(Prescription existingPrescription);
   Task<int> GetTotalCountAsync();
+  Task<List<Prescription>> GetPrescriptionsByPatientIdAsync(Guid patientId);
 }

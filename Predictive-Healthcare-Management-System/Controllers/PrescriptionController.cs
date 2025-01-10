@@ -44,8 +44,21 @@ namespace Predictive_Healthcare_Management_System.Controllers
             });
         }
 
-        // GET: api/v1/Prescription/{id}
-        [HttpGet("{id}")]
+    // GET: api/v1/Prescription/patient/{patientId}
+    [HttpGet("patient/{patientId}")]
+    public async Task<IActionResult> GetPrescriptionsByPatientId(Guid patientId)
+    {
+      var prescriptions = await _mediator.Send(new GetPrescriptionsByPatientIdQuery { PatientId = patientId });
+      if (prescriptions == null || !prescriptions.Any())
+      {
+        return NotFound("No prescriptions found for the specified patient.");
+      }
+      return Ok(prescriptions);
+    }
+
+
+    // GET: api/v1/Prescription/{id}
+    [HttpGet("{id}")]
         public async Task<IActionResult> GetPrescriptionById(Guid id)
         {
             var prescription = await _mediator.Send(new GetPrescriptionByIdQuery(id));

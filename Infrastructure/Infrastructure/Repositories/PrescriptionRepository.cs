@@ -13,6 +13,13 @@ namespace Infrastructure.Repositories
       this.context = context;
     }
 
+    public async Task<List<Prescription>> GetPrescriptionsByPatientIdAsync(Guid patientId)
+    {
+      return await context.Prescriptions
+          .Where(p => p.PatientId == patientId)
+          .ToListAsync();
+    }
+
     public async Task<List<Prescription>> GetAllPrescriptionsAsync(int page, int size)
     {
       return await context.Prescriptions
