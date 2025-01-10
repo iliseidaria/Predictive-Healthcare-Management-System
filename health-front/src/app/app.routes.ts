@@ -15,6 +15,8 @@ import { AppointmentUpdateComponent } from './components/appointment-update/appo
 import { UsersGetAllComponent } from './components/users-get-all/users-get-all.component';
 import { UserGetAppointmentsComponent } from './components/user-get-appointments/user-get-appointments.component';
 import { UserUpdateComponent } from './components/user-update/user-update.component';
+import { PrescriptionGetAllComponent } from './components/prescription-get-all/prescription-get-all.component';
+import { PrescriptionDetailComponent } from './components/prescription-detail/prescription-detail.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -32,4 +34,9 @@ export const routes: Routes = [
   { path: 'get-all-users', component: UsersGetAllComponent, canActivate: [AuthGuard] },
   { path: 'update-user/:id', component: UserUpdateComponent, canActivate: [AuthGuard] },
   { path: 'get-user-appointments', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
+  { path: 'get-all-prescriptions', component: PrescriptionGetAllComponent, canActivate: [AuthGuard] },
+  { path: 'get-user-prescriptions', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
+  { path: 'create-prescription', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
+  { path: 'update-prescription/:id', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
+  { path: 'prescription-detail/:id', component: PrescriptionDetailComponent, canActivate: [AuthGuard] },
 ];

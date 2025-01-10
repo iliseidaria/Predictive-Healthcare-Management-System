@@ -386,8 +386,7 @@
               "ViewState": "AgIAACUAAAAAAAAAAAAWwC8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T16:23:01.013Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -449,8 +448,7 @@
               "RelativeToolTip": "Application\\DTOs\\PrescriptionDto.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:18:48.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T12:18:48.782Z"
             },
             {
               "$type": "Document",
@@ -460,7 +458,7 @@
               "RelativeDocumentMoniker": "Domain\\Entities\\Prescription.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
               "RelativeToolTip": "Domain\\Entities\\Prescription.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwAkAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T06:36:57.269Z",
               "EditorCaption": ""
@@ -475,8 +473,7 @@
               "RelativeToolTip": "Predictive-Healthcare-Management-System\\Program.cs",
               "ViewState": "AgIAAJsAAAAAAAAAAADgv6cAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T06:36:57.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T06:36:57.304Z"
             },
             {
               "$type": "Document",
@@ -488,8 +485,7 @@
               "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:57:38.961Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T12:57:38.961Z"
             },
             {
               "$type": "Document",
@@ -501,8 +497,7 @@
               "RelativeToolTip": "Application\\Use Cases\\Queries\\GetPrescriptionsByPatientIdQuery.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:54:06.532Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T12:54:06.532Z"
             },
             {
               "$type": "Document",
@@ -514,8 +509,7 @@
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T11:13:48.731Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T11:13:48.731Z"
             },
             {
               "$type": "Document",
@@ -527,8 +521,7 @@
               "RelativeToolTip": "Domain\\Repositories\\IPrescriptionRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T21:05:44.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T21:05:44.542Z"
             },
             {
               "$type": "Document",

@@ -1,0 +1,48 @@
+<div class="prescription-detail">
+    <button class="back-button" (click)="goBack()">← Back</button>
+  
+    <div *ngIf="loading" class="loading">Loading prescription details...</div>
+    
+    <div *ngIf="error" class="error">{{ error }}</div>
+  
+    <div *ngIf="!loading && !error && prescription" class="detail-content">
+      <h2>Prescription Details</h2>
+      
+      <div class="detail-grid">
+        <div class="detail-item">
+          <label>Patient:</label>
+          <span>{{ patientName }}</span>
+        </div>
+  
+        <div class="detail-item">
+          <label>Medication:</label>
+          <span>{{ prescription.medicationName }}</span>
+        </div>
+  
+        <div class="detail-item">
+          <label>Dosage:</label>
+          <span>{{ prescription.dosage }}</span>
+        </div>
+  
+        <div class="detail-item">
+          <label>Frequency:</label>
+          <span>{{ prescription.frequency }}</span>
+        </div>
+  
+        <div class="detail-item">
+          <label>Start Date:</label>
+          <span>{{ prescription.startDate | date:'mediumDate' }}</span>
+        </div>
+  
+        <div class="detail-item">
+          <label>End Date:</label>
+          <span>{{ prescription.endDate | date:'mediumDate' }}</span>
+        </div>
+  
+        <div class="detail-item notes">
+          <label>Notes:</label>
+          <span>{{ prescription.notes }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
