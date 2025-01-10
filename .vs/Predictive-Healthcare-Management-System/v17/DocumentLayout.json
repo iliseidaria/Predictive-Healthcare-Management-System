@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\repositories\\prescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\prescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,20 +23,12 @@
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\prescriptioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\application\\use cases\\queryhandlers\\getprescriptionsbypatientidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getprescriptionsbypatientidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\application\\use cases\\queries\\getprescriptionsbypatientidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getprescriptionsbypatientidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\repositories\\prescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\prescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\facultate\\anul3\\.net\\gitversion\\predictive-healthcare-management-system\\domain\\repositories\\iprescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -377,16 +377,17 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PrescriptionController.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\PrescriptionController.cs",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\PrescriptionController.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\PrescriptionController.cs",
               "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\PrescriptionController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAWwC8AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAwwFcAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T16:23:01.013Z",
-              "IsPinned": true
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -440,32 +441,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PrescriptionDto.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PrescriptionDto.cs",
-              "RelativeDocumentMoniker": "Application\\DTOs\\PrescriptionDto.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PrescriptionDto.cs",
-              "RelativeToolTip": "Application\\DTOs\\PrescriptionDto.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T12:18:48.782Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Prescription.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Prescription.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Prescription.cs",
               "RelativeToolTip": "Domain\\Entities\\Prescription.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAUAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAuwAoAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T06:36:57.269Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
+              "Title": "PrescriptionRepository.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T11:13:48.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Program.cs",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Program.cs",
@@ -477,7 +479,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
+              "Title": "PrescriptionDto.cs",
+              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PrescriptionDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\PrescriptionDto.cs",
+              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PrescriptionDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\PrescriptionDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T12:18:48.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "GetPrescriptionsByPatientIdQueryHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
@@ -489,7 +503,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "GetPrescriptionsByPatientIdQuery.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetPrescriptionsByPatientIdQuery.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetPrescriptionsByPatientIdQuery.cs",
@@ -498,18 +512,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-10T12:54:06.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PrescriptionRepository.cs",
-              "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
-              "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitVersion\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
-              "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\PrescriptionRepository.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T11:13:48.731Z"
             },
             {
               "$type": "Document",

@@ -1,5 +1,6 @@
 <div class="container">
     <button class="back-button" (click)="goBack()">← Back</button>
+    <button class="create-button" [routerLink]="['/create-prescription']">+ Create Prescription</button>
     <h2>All Prescriptions</h2>
   
     <div *ngIf="loading" class="loading">Loading prescriptions...</div>

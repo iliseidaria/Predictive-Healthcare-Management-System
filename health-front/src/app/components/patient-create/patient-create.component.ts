@@ -1,13 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { PatientService } from '../../services/patient/patient.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 import { NavigationService } from '../../services/navigation/navigation.service';
-import { provideHttpClient, withFetch } from '@angular/common/http';
 
-function toUTC(date: string): string {
+export function toUTC(date: string): string {
   const dateObj = new Date(date);
   if (isNaN(dateObj.getTime())) {
     console.error('Invalid Date:', date);

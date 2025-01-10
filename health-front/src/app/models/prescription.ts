@@ -4,8 +4,8 @@ export interface Prescription {
     medicationName: string;
     dosage: string;
     frequency: string;
-    startDate: Date;
-    endDate: Date;
+    startDate: string;
+    endDate: string;
     notes: string;
 }
 

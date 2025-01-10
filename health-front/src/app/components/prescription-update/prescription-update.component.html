@@ -1,0 +1,31 @@
+<div class="container">
+    <header>
+      <button class="back-button" (click)="goBack()">← Back</button>
+      <h1>Update Prescription</h1>
+    </header>
+  
+    <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()">
+      <label for="patientId">Patient ID</label>
+      <input id="patientId" formControlName="patientId" required />
+  
+      <label for="medicationName">Medication Name</label>
+      <input id="medicationName" formControlName="medicationName" required />
+  
+      <label for="dosage">Dosage</label>
+      <input id="dosage" formControlName="dosage" required />
+  
+      <label for="frequency">Frequency</label>
+      <input id="frequency" formControlName="frequency" required />
+  
+      <label for="startDate">Start Date</label>
+      <input id="startDate" type="date" formControlName="startDate" required />
+  
+      <label for="endDate">End Date</label>
+      <input id="endDate" type="date" formControlName="endDate" required />
+  
+      <label for="notes">Notes</label>
+      <input id="notes" formControlName="notes" />
+  
+      <button type="submit" [disabled]="!prescriptionForm.valid">Update Prescription</button>
+    </form>
+  </div>

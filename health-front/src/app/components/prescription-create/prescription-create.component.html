@@ -1,0 +1,64 @@
+<div class="prescription-form">
+    <button class="back-button" (click)="goBack()">← Back</button>
+    <h2>Create New Prescription</h2>
+  
+    <form [formGroup]="prescriptionForm" (ngSubmit)="onSubmit()">
+        <!-- <div class="form-group">
+            <label for="patientId">Patient *</label>
+            <select 
+              id="patientId" 
+              formControlName="patientId"
+              (change)="onPatientSelect($event)"
+              required>
+              <option value="">Select a patient</option>
+              <option *ngFor="let patient of patients" [value]="patient.id">
+                {{patient.firstName}} {{patient.lastName}}
+              </option>
+            </select>
+          </div> -->
+          <div class="form-group">
+            <label for="patientId">Patient ID</label>
+            <input 
+              id="patientId" 
+              type="text" 
+              formControlName="patientId"
+              required>
+          </div>
+  
+      <div class="form-group">
+        <label for="medicationName">Medication Name</label>
+        <input id="medicationName" type="text" formControlName="medicationName">
+      </div>
+  
+      <div class="form-group">
+        <label for="dosage">Dosage</label>
+        <input id="dosage" type="text" formControlName="dosage">
+      </div>
+  
+      <div class="form-group">
+        <label for="frequency">Frequency</label>
+        <input id="frequency" type="text" formControlName="frequency">
+      </div>
+  
+      <div class="form-group">
+        <label for="startDate">Start Date</label>
+        <input id="startDate" type="date" formControlName="startDate">
+      </div>
+  
+      <div class="form-group">
+        <label for="endDate">End Date</label>
+        <input id="endDate" type="date" formControlName="endDate">
+      </div>
+  
+      <div class="form-group">
+        <label for="notes">Notes (Optional)</label>
+        <textarea id="notes" formControlName="notes"></textarea>
+      </div>
+  
+      <div class="form-actions">
+        <button type="submit" [disabled]="!prescriptionForm.valid || loading">Create Prescription</button>
+      </div>
+  
+      <div *ngIf="error" class="error">{{error}}</div>
+    </form>
+  </div>
