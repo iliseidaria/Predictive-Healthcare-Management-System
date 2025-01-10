@@ -68,7 +68,7 @@ namespace Infrastructure.Persistence
 
               // Configure one-to-many relationship with Prescriptions
               entity.HasMany(e => e.Prescriptions)
-                    .WithOne()
+                    .WithOne(p => p.Patient)
                     .HasForeignKey(p => p.PatientId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
@@ -85,7 +85,9 @@ namespace Infrastructure.Persistence
                 entity.Property(e => e.Date).IsRequired();
                 entity.Property(e => e.Diagnosis).IsRequired().HasMaxLength(500);
                 entity.Property(e => e.Notes).HasMaxLength(1000);
-                entity.HasMany(e => e.Prescriptions).WithOne().HasForeignKey(p => p.PrescriptionId);
+                //entity.HasMany(e => e.Prescriptions)
+                //    .WithOne()
+                //    .OnDelete(DeleteBehavior.Cascade);
             });
 
             modelBuilder.Entity<Appointment>(entity =>
@@ -113,28 +115,29 @@ namespace Infrastructure.Persistence
                     .HasForeignKey(e => e.ProviderId)
                     .OnDelete(DeleteBehavior.Cascade);
             });
-      modelBuilder.Entity<Prescription>(entity =>
-      {
-        entity.ToTable("prescriptions");
-        entity.HasKey(e => e.PrescriptionId);
-        entity.Property(e => e.PrescriptionId)
-            .HasColumnType("uuid")
-            .HasDefaultValueSql("uuid_generate_v4()")
-            .ValueGeneratedOnAdd();
-        entity.Property(e => e.PatientId).IsRequired();
-        entity.Property(e => e.MedicationName).IsRequired().HasMaxLength(100);
-        entity.Property(e => e.Dosage).IsRequired().HasMaxLength(100);
-        entity.Property(e => e.Frequency).IsRequired().HasMaxLength(100);
-        entity.Property(e => e.StartDate).IsRequired();
-        entity.Property(e => e.EndDate).IsRequired();
-        entity.Property(e => e.Notes).HasMaxLength(1000);
+            modelBuilder.Entity<Prescription>(entity =>
+            {
+              entity.ToTable("prescriptions");
+              entity.HasKey(e => e.PrescriptionId);
+              entity.Property(e => e.PrescriptionId)
+                  .HasColumnType("uuid")
+                  .HasDefaultValueSql("uuid_generate_v4()")
+                  .ValueGeneratedOnAdd();
+              entity.Property(e => e.PatientId).IsRequired();
+              entity.Property(e => e.MedicationName).IsRequired().HasMaxLength(100);
+              entity.Property(e => e.Dosage).IsRequired().HasMaxLength(100);
+              entity.Property(e => e.Frequency).IsRequired().HasMaxLength(100);
+              entity.Property(e => e.StartDate).IsRequired().HasColumnType("timestamp with time zone");
+              entity.Property(e => e.EndDate).IsRequired().HasColumnType("timestamp with time zone");
+              entity.Property(e => e.Notes).HasMaxLength(1000);
 
-        // Configure foreign key relationship with Patient
-        entity.HasOne<Patient>()
-            .WithMany(p => p.Prescriptions)
-            .HasForeignKey(e => e.PatientId)
-            .OnDelete(DeleteBehavior.Cascade);
-      });
+              // Configure foreign key relationship with Patient
+              entity.HasOne(p => p.Patient)
+                  .WithMany(p => p.Prescriptions)
+                  .HasForeignKey(e => e.PatientId)
+                  .OnDelete(DeleteBehavior.Cascade);
+            });
+      base.OnModelCreating(modelBuilder);
     }
     }
 }

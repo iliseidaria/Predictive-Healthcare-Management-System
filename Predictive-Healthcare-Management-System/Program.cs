@@ -120,7 +120,7 @@ builder.Services.AddAuthorization(options =>
 
 // Register MediatR and Validators
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
-builder.Services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>(); //teoretic aici da call la toti restul validatorilor
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 var app = builder.Build();

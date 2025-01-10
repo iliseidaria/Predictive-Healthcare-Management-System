@@ -39,23 +39,7 @@ namespace Infrastructure.Repositories
 
     public async Task<Prescription> GetPrescriptionByIdAsync(Guid prescriptionId)
     {
-      var prescription = await context.Prescriptions.FindAsync(prescriptionId);
-      if (prescription == null)
-      {
-        return null;
-      }
-
-      return new Prescription
-      {
-        PrescriptionId = prescription.PrescriptionId,
-        PatientId = prescription.PatientId,
-        MedicationName = prescription.MedicationName,
-        Dosage = prescription.Dosage,
-        Frequency = prescription.Frequency,
-        StartDate = prescription.StartDate,
-        EndDate = prescription.EndDate,
-        Notes = prescription.Notes
-      };
+      return await context.Prescriptions.FindAsync(prescriptionId);
     }
 
     public async Task<bool> UpdateAsync(Prescription prescriptionDto)
@@ -113,9 +97,9 @@ namespace Infrastructure.Repositories
     {
       context.Entry(prescription).State = EntityState.Detached;
     }
-        public async Task<List<Prescription>> GetAllPrescriptionsAsync()
-        {
-            return await context.Prescriptions.ToListAsync();
-        }
+    public async Task<List<Prescription>> GetAllPrescriptionsAsync() //fara paginare
+    {
+       return await context.Prescriptions.ToListAsync();
+    }
   }
 }

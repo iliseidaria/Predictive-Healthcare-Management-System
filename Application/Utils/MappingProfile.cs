@@ -25,9 +25,18 @@ namespace Application.Utils
 
             //Prescription mappings
             CreateMap<Prescription, PrescriptionDto>().ReverseMap();
+            CreateMap<AddPrescriptionCommand, Prescription>().ReverseMap();
+            CreateMap<AddPrescriptionCommand, Prescription>()
+                  .ForMember(dest => dest.StartDate, opt =>
+                    opt.MapFrom(src => DateTime.SpecifyKind(src.StartDate, DateTimeKind.Utc))
+                  )
+                  .ForMember(dest => dest.EndDate, opt =>
+                    opt.MapFrom(src => DateTime.SpecifyKind(src.EndDate, DateTimeKind.Utc))
+                  );
+            CreateMap<UpdatePrescriptionCommand, Prescription>().ReverseMap();
 
-            // Appointment mappings
-            CreateMap<Appointment, AppointmentDto>().ReverseMap();
+      // Appointment mappings
+      CreateMap<Appointment, AppointmentDto>().ReverseMap();
             CreateMap<CreateAppointmentCommand, Appointment>().ReverseMap();
             CreateMap<UpdateAppointmentCommand, Appointment>().ReverseMap();
 

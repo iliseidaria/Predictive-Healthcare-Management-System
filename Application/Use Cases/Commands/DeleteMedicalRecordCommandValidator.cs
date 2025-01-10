@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 
 namespace Application.Use_Cases.Commands
 {
@@ -8,7 +8,7 @@ namespace Application.Use_Cases.Commands
         {
             RuleFor(x => x.Id)
                 .NotEmpty()
-                .WithMessage("Patient ID must not be empty.");
+                .WithMessage("Medical Record ID must not be empty.");
         }
     }
 }

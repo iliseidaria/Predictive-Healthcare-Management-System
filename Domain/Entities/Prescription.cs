@@ -11,5 +11,8 @@ namespace Domain.Entities
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public string Notes { get; set; }
+
+    // Navigation property
+    public Patient Patient { get; set; }
   }
 }

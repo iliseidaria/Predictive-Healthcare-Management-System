@@ -21,10 +21,27 @@ namespace Predictive_Healthcare_Management_System.Controllers
         // GET: api/v1/Prescription
         [HttpGet]
         [Authorize(Policy = "RequireAdminOrDoctorRole")]
-        public async Task<IActionResult> GetAllPrescriptions()
+        public async Task<IActionResult> GetAllPrescriptions([FromQuery] int page = 1, [FromQuery] int size = 10)
         {
-            var prescriptions = await _mediator.Send(new GetPrescriptionsQuery());
-            return Ok(prescriptions);
+            var (result, totalCount) = await _mediator.Send(new GetPrescriptionsQuery
+            {
+              Page = page,
+              Size = size
+            });
+
+            if (result == null || !result.Any())
+            {
+              Console.WriteLine("Authorization failed or no prescriptions found");
+              return NotFound("No prescriptions found.");
+            }
+
+            return Ok(new
+            {
+              items = result,
+              totalCount = totalCount,
+              currentPage = page,
+              pageSize = size
+            });
         }
 
         // GET: api/v1/Prescription/{id}
@@ -41,19 +58,12 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
         // POST: api/v1/Prescription
         [HttpPost]
+        [Authorize(Policy = "RequireDoctorRole")]
         public async Task<IActionResult> AddPrescription(AddPrescriptionCommand command)
         {
           if (!ModelState.IsValid)
           {
-            Console.WriteLine("Model state is invalid:");
-            foreach (var modelState in ModelState.Values)
-            {
-              foreach (var error in modelState.Errors)
-              {
-                Console.WriteLine($"Error: {error.ErrorMessage}");
-              }
-            }
-            return BadRequest(ModelState);  // Returnează eroarea exactă
+            return BadRequest(ModelState);
           }
 
           var prescriptionId = await _mediator.Send(command);
@@ -63,11 +73,17 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
         // PUT: api/v1/Prescription/{id}
         [HttpPut("{id}")]
+        [Authorize(Policy = "RequireDoctorRole")]
         public async Task<IActionResult> UpdatePrescription(Guid id, [FromBody] UpdatePrescriptionCommand command)
         {
           if (id != command.PrescriptionId)
           {
             return BadRequest("Prescription ID in the URL does not match the request body.");
+          }
+
+          if (!ModelState.IsValid)
+          {
+            return BadRequest(ModelState);
           }
 
           var prescription = await _mediator.Send(new GetPrescriptionByIdQuery(id));
@@ -82,6 +98,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
         // DELETE: api/v1/Prescription/{id}
         [HttpDelete("{id}")]
+        [Authorize(Policy = "RequireDoctorRole")]
         public async Task<IActionResult> DeletePrescription(Guid id)
         {
             var prescription = await _mediator.Send(new GetPrescriptionByIdQuery(id));
