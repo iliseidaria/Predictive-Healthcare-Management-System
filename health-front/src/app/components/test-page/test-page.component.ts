@@ -15,7 +15,7 @@ import { UserService } from '../../services/user/user.service';
 @Component({
   selector: 'app-test-page',
   templateUrl: './test-page.component.html',
-  styleUrls: ['./css/panel-style.css','./css/test-page.component.css', './css/grid-style.css', './css/appointments-table.css'],
+  styleUrls: ['./css/panel-style.css','./css/test-page.component.css', './css/grid-style.css', './css/appointments-table.css', './css/health-panel.css'],
   standalone: true,
   imports: [CommonModule, RouterLink]
 })
@@ -149,5 +149,21 @@ export class TestPageComponent implements OnInit, OnDestroy {
       alert('You must be logged in to view your profile.');
       this.router.navigate(['/login']);
     }
+  }
+
+  viewMedicalHistory(): void {
+    this.router.navigate(['/medical-history']);
+  }
+
+  viewPrescriptions(): void {
+    this.router.navigate(['/prescriptions']);
+  }
+
+  viewHealthRisks(): void {
+    this.router.navigate(['/health-risks']);
+  }
+
+  searchDoctors(): void {
+    this.router.navigate(['/search-doctors']);
   }
 }

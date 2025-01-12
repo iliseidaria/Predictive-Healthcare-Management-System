@@ -26,14 +26,14 @@
 .panel button {
   align-self: center;
   padding: 10px 15px;
-  margin: 10px;
-  font-size: 16px;
-  color: #2E472C;
-  background-color: #E4F0D0;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s;
+  margin: 10px;
+  font-size: 16px;
+  color: #2E472C;
+  background-color: #E4F0D0;
 }
 
 .panel button:hover {

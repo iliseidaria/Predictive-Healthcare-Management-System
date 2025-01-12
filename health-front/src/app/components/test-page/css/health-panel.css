@@ -1,0 +1,75 @@
+.health-panel {
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px; /* Inner padding */
+  margin:40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+  gap: 15px; /* Spacing between elements */
+}
+.health-panel-title {
+  font-size: 24px;
+  color: #1C2B1B;
+  margin: 0;
+  text-align: left; /* Ensure the title aligns to the left */
+}
+
+.health-panel-description {
+  font-size: 16px;
+  color: #1C2B1B;
+  margin: 10px 0;
+  text-align: left; /* Ensure the description aligns to the left */
+}
+.health-panel h3 {
+  font-size: 24px;
+  text-align: left;
+  color: #1C2B1B;
+  margin: 0;
+}
+
+.health-panel p {
+  font-weight: normal;
+  font-size: 16px;
+  color: #1C2B1B;
+  margin: 0 0 10px 0;
+}
+.wide-button {
+  background-color: #1C2B1B; /* Blue background */
+  color: white; /* White text */
+  padding: 15px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center; /* Center-align text inside the button */
+  width: 100%; /* Make the button span full width of the container */
+  transition: background-color 0.3s;
+}
+
+.wide-button:hover {
+  background-color: #2E472C; /* Darker blue on hover */
+}
+
+.health-panel .actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Spacing between buttons */
+  width: 100%; /* Ensure buttons span the full width */
+}
+
+.health-panel button {
+  background-color: #1C2B1B; /* Blue background */
+  color: white; /* White text */
+  font-size: 16px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.health-panel button:hover {
+  background-color: #2E472C; /* Darker blue on hover */
+}
