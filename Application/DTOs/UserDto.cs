@@ -6,7 +6,7 @@ namespace Application.DTOs
     public required string Username { get; set; }
     public required string Email { get; set; }
     public required string Role { get; set; }
-    public required string UserType { get; set; }
+    //public required string UserType { get; set; }
     public string? FirstName { get; set; }
     public string? LastName { get; set; }
     public DateTime? DateOfBirth { get; set; }

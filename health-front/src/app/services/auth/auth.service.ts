@@ -42,6 +42,10 @@ export class AuthService implements OnDestroy {
     return this.http.post(`${this.apiUrl}/login`, credentials, { headers: this.getAuthHeaders() });
   }
 
+  validateDoctorId(doctorId: string): Observable<boolean> {
+    return this.http.get<boolean>(`${this.apiUrl}/validate-doctor/${doctorId}`);
+  }
+
   register(user: {
     username: string;
     email: string;

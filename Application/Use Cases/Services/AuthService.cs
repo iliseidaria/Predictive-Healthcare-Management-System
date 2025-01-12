@@ -6,7 +6,6 @@ using Application.Utils;
 using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.IdentityModel.Tokens;
-using Org.BouncyCastle.Crypto.Generators;
 
 public class AuthService
 {
@@ -35,17 +34,15 @@ public class AuthService
     {
       Username = registerDto.Username,
       Email = registerDto.Email,
-      PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerDto.Password)
-      //IsEmailVerified = false
+      PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerDto.Password),
+      Role = registerDto.Role
     };
 
     _context.Users.Add(user);
     await _context.SaveChangesAsync();
 
-    //am putea adauga email verification cu un nou entity: emailVerification
-
     return "User registered successfully";
- }
+  }
 
   public async Task<string> Login(LoginDto loginDto)
   {

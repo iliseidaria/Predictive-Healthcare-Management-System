@@ -66,16 +66,37 @@ namespace Predictive_Healthcare_Management_System.Controllers
         return StatusCode(500, new { Error = ex.Message });
       }
     }
-    [HttpGet("users/{id}")]
-    public async Task<ActionResult<UserDto>> GetById(Guid id)
+
+    [HttpGet("validate-doctor/{doctorId}")]
+    public async Task<bool> CheckDoctorIdExists(string doctorId)
     {
-      var result = await _mediator.Send(new GetUserByIdQuery { Id = id });
-      if (result == null)
-      {
-        throw new UserNotFound(); // Use centralized error handling
-      }
-      return Ok(result);
+      var query = new GetDoctorByIdQuery { DoctorId = doctorId };
+      var result = await _mediator.Send(query);
+      return result;
     }
+
+    [HttpGet("doctors")]
+    public async Task<IActionResult> GetAllDoctors(Guid id)
+    {
+      var prescriptions = await _mediator.Send(new GetPrescriptionsByPatientIdQuery { PatientId = id });
+      if (prescriptions == null || !prescriptions.Any())
+      {
+        return NotFound("No prescriptions found for the specified patient.");
+      }
+      return Ok(prescriptions);
+    }
+
+    // de pus in controllerul cu pacienti cred
+    //[HttpGet("users/{id}")]
+    //public async Task<ActionResult<UserDto>> GetById(Guid id)
+    //{
+    //  var result = await _mediator.Send(new GetUserByIdQuery { Id = id });
+    //  if (result == null)
+    //  {
+    //    throw new UserNotFound(); // Use centralized error handling
+    //  }
+    //  return Ok(result);
+    //}
 
     [HttpPost("logout")]
     [Authorize]

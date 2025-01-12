@@ -15,6 +15,7 @@ namespace Infrastructure.Persistence
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Prescription> Prescriptions { get; set; }
+        public DbSet<DoctorId> DoctorIds { get; set; }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
       optionsBuilder.ConfigureWarnings(warnings => warnings.Ignore(RelationalEventId.PendingModelChangesWarning));

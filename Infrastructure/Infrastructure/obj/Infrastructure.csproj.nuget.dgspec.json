@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {}
+    "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "D:\\FII\\dotNet\\finally\\Domain\\Domain.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\finally\\Domain\\Domain.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\FII\\dotNet\\finally\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\finally\\Domain\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,20 +69,20 @@
         }
       }
     },
-    "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
+    "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\.adia\\.nuget\\packages\\",
-        "outputPath": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\obj\\",
+        "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Andreea\\.nuget\\packages\\",
+        "outputPath": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\.adia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -97,8 +97,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "D:\\FII\\dotNet\\finally\\Domain\\Domain.csproj": {
-                "projectPath": "D:\\FII\\dotNet\\finally\\Domain\\Domain.csproj"
+              "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj": {
+                "projectPath": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj"
               }
             }
           }

@@ -378,19 +378,18 @@
         }
       }
     },
-    "/api/v1/Auth/users/{id}": {
+    "/api/v1/Auth/validate-doctor/{doctorId}": {
       "get": {
         "tags": [
           "Auth"
         ],
         "parameters": [
           {
-            "name": "id",
+            "name": "doctorId",
             "in": "path",
             "required": true,
             "schema": {
-              "type": "string",
-              "format": "uuid"
+              "type": "string"
             }
           }
         ],
@@ -400,20 +399,42 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDto"
+                  "type": "boolean"
                 }
               },
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDto"
+                  "type": "boolean"
                 }
               },
               "text/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/UserDto"
+                  "type": "boolean"
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/api/v1/Auth/doctors": {
+      "get": {
+        "tags": [
+          "Auth"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "format": "uuid"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -1040,6 +1061,10 @@
           "password": {
             "type": "string",
             "nullable": true
+          },
+          "role": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -1225,8 +1250,7 @@
         "required": [
           "email",
           "role",
-          "username",
-          "userType"
+          "username"
         ],
         "type": "object",
         "properties": {
@@ -1243,10 +1267,6 @@
             "nullable": true
           },
           "role": {
-            "type": "string",
-            "nullable": true
-          },
-          "userType": {
             "type": "string",
             "nullable": true
           },

@@ -112,3 +112,44 @@ h2 {
     padding: 10px;
   }
 }
+
+
+/* ...existing code... */
+
+.container {
+  max-width: 800px; /* Increased width for grid layout */
+  width: 90%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.left-column, .right-column {
+  padding: 20px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .container {
+    max-width: 400px;
+  }
+}
+
+/* ...existing code... */

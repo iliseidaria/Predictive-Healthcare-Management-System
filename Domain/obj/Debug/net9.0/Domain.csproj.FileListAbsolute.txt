@@ -70,3 +70,15 @@ D:\FII\dotNet\finally\Domain\obj\Debug\net9.0\Domain.dll
 D:\FII\dotNet\finally\Domain\obj\Debug\net9.0\refint\Domain.dll
 D:\FII\dotNet\finally\Domain\obj\Debug\net9.0\Domain.pdb
 D:\FII\dotNet\finally\Domain\obj\Debug\net9.0\ref\Domain.dll
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\bin\Debug\net9.0\Domain.deps.json
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\bin\Debug\net9.0\Domain.dll
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\bin\Debug\net9.0\Domain.pdb
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.AssemblyInfoInputs.cache
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.AssemblyInfo.cs
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.csproj.CoreCompileInputs.cache
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.sourcelink.json
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.dll
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\refint\Domain.dll
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\Domain.pdb
+M:\FACULTATE\ANUL3\.net\gitActual\Predictive-Healthcare-Management-System\Domain\obj\Debug\net9.0\ref\Domain.dll
