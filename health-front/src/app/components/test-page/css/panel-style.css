@@ -4,7 +4,8 @@
   background-color: #2E472C; /* Light green background */
  /* border: 2px solid #4CAF50;  Green border */
   border-radius: 20px; /* Rounded corners */
-  padding: 20px; /* Inner padding */
+  padding: 10px; /* Inner padding */
+  margin:40px;
   display: flex;
   flex-direction: column; /* Align content vertically */
   justify-content: flex-start; /* Start content at the top */
@@ -25,6 +26,7 @@
 .panel button {
   align-self: center;
   padding: 10px 15px;
+  margin: 10px;
   font-size: 16px;
   color: #2E472C;
   background-color: #E4F0D0;

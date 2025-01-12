@@ -2,31 +2,33 @@
   width: 100%;
   border-collapse: collapse;
   margin: 10px 0;
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden;
 }
 
 .appointments-table th,
 .appointments-table td {
-  border: 1px solid #ddd;
+  font-weight: normal;
   padding: 8px;
   text-align: left;
 }
 
 .appointments-table th {
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
+  color: #E4F0D0;
+  font-weight: normal;
 }
 
 .appointments-table td {
-  color: #424242;
+  color: #FFFCF7;
+  font-weight: normal;
 }
 
 .appointments-table tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #1C2B1B;
 }
 
-.appointments-table tr:hover {
-  background-color: #ddd;
+.appointments-table tbody:hover {
+  background-color: #1C2B1B;
 }
 
 .panel p {
@@ -34,4 +36,13 @@
   color: #FFFCF7;
   font-weight: normal;
   margin: 10px 0;
+}
+
+.appointment-link {
+  color: #FFFCF7; /* Green color for links */
+  text-decoration: none; /* Remove underline */
+}
+
+.appointment-link:hover {
+  text-decoration: none; /* Add underline on hover */
 }

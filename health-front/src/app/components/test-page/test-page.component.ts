@@ -4,17 +4,20 @@ import { AuthService } from '../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
 import { forkJoin } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import  {RouterModule} from '@angular/router';
 import { AppointmentService } from '../../services/appointment/appointment.service';
 import { NavigationService } from '../../services/navigation/navigation.service';
 import { Appointment, AppointmentStatus } from '../../models/appointment';
-import { PatientService } from '../../services/patient/patient.service';
+import {RouterLink} from '@angular/router';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-test-page',
   templateUrl: './test-page.component.html',
   styleUrls: ['./css/panel-style.css','./css/test-page.component.css', './css/grid-style.css', './css/appointments-table.css'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule, RouterLink]
 })
 export class TestPageComponent implements OnInit, OnDestroy {
   private tokenCheckSubscription?: Subscription;
@@ -24,7 +27,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
   upcomingAppointments: any[] = []; // Filtered upcoming appointments
   error: string | null = null;
   loading = false;
-  constructor(private router: Router, public authService: AuthService, private appointmentService: AppointmentService, private patientService: PatientService) {}
+  constructor(private router: Router, public authService: AuthService, private appointmentService: AppointmentService, private patientService: UserService) {}
 
 
   ngOnInit() {
@@ -43,21 +46,33 @@ export class TestPageComponent implements OnInit, OnDestroy {
     });
   }
   loadAppointments(): void {
-    if (this.authService.validateToken() ) {
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
       this.loading = true;
+
+      // Fetch appointments
       this.appointmentService.getAppointments(1, 10).subscribe({
         next: (appointments) => {
-          const patientRequests = appointments.map((appointment) =>
-            this.patientService.getPatientById(appointment.patientId, {
+          // Fetch user details for patientId and providerId in each appointment
+          const userRequests = appointments.flatMap((appointment) => [
+            this.patientService.getUserById(appointment.patientId, {
+              headers: this.authService.getAuthHeaders()
+            }),
+            this.patientService.getUserById(appointment.providerId, {
               headers: this.authService.getAuthHeaders()
             })
-          );
+          ]);
 
-          forkJoin(patientRequests).subscribe({
-            next: (patients) => {
-              this.appointments = appointments.map((appointment, index) => ({
+          forkJoin(userRequests).subscribe({
+            next: (users) => {
+              // Process the users to map patientId and providerId to their names
+              const userMap = new Map(
+                users.map((user: any) => [user.id, `${user.firstName} ${user.lastName}`])
+              );
+
+              this.appointments = appointments.map((appointment) => ({
                 ...appointment,
-                patientName: `${patients[index].firstName} ${patients[index].lastName}`
+                patientName: userMap.get(appointment.patientId) || 'Unknown Patient',
+                doctorName: userMap.get(appointment.providerId) || 'Unknown Doctor'
               }));
 
               // Sort and filter for upcoming appointments
@@ -70,8 +85,8 @@ export class TestPageComponent implements OnInit, OnDestroy {
               this.loading = false;
             },
             error: (error) => {
-              console.error('Error loading patient details:', error);
-              this.error = 'Failed to load patient details';
+              console.error('Error loading user details:', error);
+              this.error = 'Failed to load user details';
               this.loading = false;
             }
           });

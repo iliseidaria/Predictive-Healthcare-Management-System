@@ -34,9 +34,21 @@
       </thead>
       <tbody>
       <tr *ngFor="let appointment of upcomingAppointments">
-        <td>{{ appointment.appointmentDate | date: 'dd/MM/yyyy' }}</td>
-        <td>{{ appointment.doctorName }}</td>
-        <td>{{ appointment.reason }}</td>
+        <td>
+          <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+            {{ appointment.appointmentDate | date: 'dd/MM/yyyy' }}
+          </a>
+        </td>
+        <td>
+          <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+            {{ appointment.doctorName }}
+          </a>
+        </td>
+        <td>
+          <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+            {{ appointment.reason }}
+          </a>
+        </td>
       </tr>
       </tbody>
     </table>
@@ -46,8 +58,8 @@
   <ng-template #noAppointments>
     <p>No upcoming appointments.</p>
   </ng-template>
-
-  <button>See more options</button>
+  <a [routerLink]="['/get-all-appointments']" class="appointment-link">
+  <button>See more options</button></a>
   </div>
 
   <!-- Remaining grid items -->

@@ -8,7 +8,7 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root',
 })
 export class PatientService {
-  private baseUrl = environment.apiUrl + '/api/v1/Patients';
+  private baseUrl = environment.apiUrl + '/api/v1/Auth/users';
 
   constructor(private http: HttpClient) {
   }
