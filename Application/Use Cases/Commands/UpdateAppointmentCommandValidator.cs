@@ -1,19 +1,19 @@
-﻿using FluentValidation;
+using FluentValidation;
 using System;
 
 namespace Application.Use_Cases.Commands
 {
     public class UpdateAppointmentCommandValidator : AbstractValidator<UpdateAppointmentCommand>
     {
-        private readonly IPatientRepository _patientRepository;
+        private readonly IUserRepository _patientRepository;
 
         // Checks if the patient exists in the database
         private bool PatientExists(Guid patientId)
         {
-            return _patientRepository.PatientExistsAsync(patientId).GetAwaiter().GetResult();
+            return _patientRepository.UserExistsAsync(patientId).GetAwaiter().GetResult();
         }
 
-        public UpdateAppointmentCommandValidator(IPatientRepository patientRepository)
+        public UpdateAppointmentCommandValidator(IUserRepository patientRepository)
         {
             _patientRepository = patientRepository;
 

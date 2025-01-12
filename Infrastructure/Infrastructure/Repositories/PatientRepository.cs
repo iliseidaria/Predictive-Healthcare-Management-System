@@ -4,69 +4,69 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure.Repositories
 {
-  public class PatientRepository : IPatientRepository
+  public class UserRepository : IUserRepository
   {
     private readonly ApplicationDbContext context;
 
-    public PatientRepository(ApplicationDbContext context)
+    public UserRepository(ApplicationDbContext context)
     {
       this.context = context;
     }
-    public async Task<int> GetTotalPatientsCountAsync()
+    public async Task<int> GetTotalUsersCountAsync()
     {
-      return await context.Patients.CountAsync();
+      return await context.Users.CountAsync();
     }
 
-    public async Task<Guid> AddPatientAsync(Patient patient)
+    public async Task<Guid> AddUserAsync(User patient)
     {
-      await context.Patients.AddAsync(patient);
+      await context.Users.AddAsync(patient);
       await context.SaveChangesAsync();
-      return patient.PatientId;
+      return patient.Id;
     }
 
-    public async Task<Guid> DeletePatientAsync(Guid id)
+    public async Task<Guid> DeleteUserAsync(Guid id)
     {
-      var patient = await context.Patients.FirstOrDefaultAsync(x => x.PatientId == id);
+      var patient = await context.Users.FirstOrDefaultAsync(x => x.Id == id);
       if (patient != null)
       {
-        context.Patients.Remove(patient);
+        context.Users.Remove(patient);
         await context.SaveChangesAsync();
         return id;
       }
       return Guid.Empty;
     }
 
-    public async Task<Patient> GetPatientByIdAsync(Guid id)
+    public async Task<User> GetUserByIdAsync(Guid id)
     {
-      return await context.Patients.FindAsync(id);
+      return await context.Users.FindAsync(id);
     }
 
-    public async Task<IEnumerable<Patient>> GetPatientsAsync()
+    public async Task<IEnumerable<User>> GetPatientsAsync()
     {
-      return await context.Patients.ToListAsync();
+      return await context.Users.ToListAsync();
     }
 
-    public async Task<List<Patient>> GetAllPatientsAsync(int page, int size)
+    public async Task<List<User>> GetAllUsersAsync(int page, int size)
     {
-      return await context.Patients
-        .OrderBy(p => p.PatientId)
+      return await context.Users
+        .OrderBy(p => p.Id)
         .Skip((page - 1) * size)
         .Take(size)
         .ToListAsync();
     }
 
-    public async Task<bool> UpdateAsync(Patient patient)
+    public async Task<bool> UpdateAsync(User patient)
     {
       context.Entry(patient).State = EntityState.Modified;
       return await context.SaveChangesAsync() > 0;
     }
-    public void Detach(Patient patient)
+    public void Detach(User patient)
     {
       context.Entry(patient).State = EntityState.Detached;
     }
-    public async Task<bool> PatientExistsAsync(Guid patientId)
+    public async Task<bool> UserExistsAsync(Guid patientId)
     {
-      return await context.Patients.AnyAsync(p => p.PatientId == patientId);
+      return await context.Users.AnyAsync(p => p.Id == patientId);
     }
   }
 }

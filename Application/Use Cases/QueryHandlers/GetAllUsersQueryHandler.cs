@@ -26,7 +26,8 @@ namespace Application.Handlers
             Id = u.Id,
             Username = u.Username,
             Email = u.Email,
-            Role = u.Role
+            Role = u.Role,
+            UserType =u.UserType
           })
           .ToListAsync(cancellationToken);
 

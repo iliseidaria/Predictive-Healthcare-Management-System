@@ -1,9 +1,9 @@
-﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Commands;
 using FluentValidation; 
 
 namespace Application.Use_Cases.CommandHandlers
 {
-    public class CreatePatientCommandValidator : AbstractValidator<CreatePatientCommand>
+    public class CreatePatientCommandValidator : AbstractValidator<CreateUserCommand>
     {
         public CreatePatientCommandValidator()
         {

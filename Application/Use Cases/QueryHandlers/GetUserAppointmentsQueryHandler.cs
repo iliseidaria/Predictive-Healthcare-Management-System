@@ -18,17 +18,17 @@ namespace Application.Handlers
     public async Task<GetUserAppointmentsResponse> Handle(GetUserAppointmentsQuery request, CancellationToken cancellationToken)
     {
       var totalAppointments = await _context.Appointments
-          .Where(a => a.PatientId == request.UserId)
+          .Where(a => a.PatientID == request.UserId)
           .CountAsync(cancellationToken);
 
       var appointments = await _context.Appointments
-          .Where(a => a.PatientId == request.UserId)
+          .Where(a => a.PatientID == request.UserId)
           .Skip((request.Page - 1) * request.Size)
           .Take(request.Size)
           .Select(a => new AppointmentDto
           {
             AppointmentId = a.AppointmentId,
-            PatientId = a.PatientId,
+            PatientId = a.PatientID,
             ProviderId = a.ProviderId,
             AppointmentDate = a.AppointmentDate,
             Reason = a.Reason,

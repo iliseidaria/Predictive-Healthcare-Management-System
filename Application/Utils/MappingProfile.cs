@@ -9,17 +9,26 @@ namespace Application.Utils
     {
         public MappingProfile()
         {
-            // Patient mappings
-            CreateMap<Patient, PatientDto>().ReverseMap();
-            CreateMap<CreatePatientCommand, Patient>().ReverseMap();
-            CreateMap<CreatePatientCommand, Patient>()
-                  .ForMember(dest => dest.DateOfBirth, opt =>
-                    opt.MapFrom(src => DateTime.SpecifyKind(src.DateOfBirth, DateTimeKind.Utc))
-                  );
-            CreateMap<UpdatePatientCommand, Patient>().ReverseMap();
+      // Patient mappings
+      /*
+      CreateMap<Patient, PatientDto>().ReverseMap();
+      CreateMap<CreatePatientCommand, Patient>().ReverseMap();
+      CreateMap<CreatePatientCommand, Patient>()
+            .ForMember(dest => dest.DateOfBirth, opt =>
+              opt.MapFrom(src => DateTime.SpecifyKind(src.DateOfBirth, DateTimeKind.Utc))
+            );
+      CreateMap<UpdatePatientCommand, Patient>().ReverseMap();*/
+      //User mappings
+      CreateMap<User, UserDto>().ReverseMap();
+     // CreateMap<, Patient>().ReverseMap();
+      CreateMap<CreateUserCommand, User>()
+            .ForMember(dest => dest.DateOfBirth, opt =>
+              opt.MapFrom(src => DateTime.SpecifyKind(src.DateOfBirth, DateTimeKind.Utc))
+            );
+      CreateMap<UpdatePatientCommand, User>().ReverseMap();
 
-            // MedicalRecord mappings
-            CreateMap<MedicalRecord, MedicalRecordDto>().ReverseMap();
+      // MedicalRecord mappings
+      CreateMap<MedicalRecord, MedicalRecordDto>().ReverseMap();
             CreateMap<CreateMedicalRecordCommand, MedicalRecord>().ReverseMap();
             CreateMap<UpdateMedicalRecordCommand, MedicalRecord>().ReverseMap();
 

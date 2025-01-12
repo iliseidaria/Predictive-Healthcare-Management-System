@@ -14,7 +14,7 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.AlterDatabase()
                 .Annotation("Npgsql:PostgresExtension:uuid-ossp", ",,");
-
+          /*
             migrationBuilder.CreateTable(
                 name: "patients",
                 columns: table => new
@@ -32,6 +32,7 @@ namespace Infrastructure.Migrations
                 {
                     table.PrimaryKey("PK_patients", x => x.PatientId);
                 });
+          */
 
             migrationBuilder.CreateTable(
                 name: "Users",
@@ -40,7 +41,15 @@ namespace Infrastructure.Migrations
                     Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "uuid_generate_v4()"),
                     Username = table.Column<string>(type: "text", nullable: false),
                     PasswordHash = table.Column<string>(type: "text", nullable: false),
-                    Role = table.Column<string>(type: "text", nullable: false)
+                    Role = table.Column<string>(type: "text", nullable: false),
+                    UserType = table.Column<string>(type: "text", nullable: false),
+                    FirstName = table.Column<string>(type: "text", nullable: true),
+                    LastName = table.Column<string>(type: "text", nullable: true),
+                    DateOfBirth = table.Column<DateTime>(type: "date", nullable: true),
+                    Gender = table.Column<string>(type: "text", nullable: true),
+                    ContactInformation = table.Column<string>(type: "text", nullable: true),
+                    Address = table.Column<string>(type: "text", nullable: true),
+                    PhotoPath = table.Column<string>(type: "text", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -139,8 +148,8 @@ namespace Infrastructure.Migrations
             migrationBuilder.DropTable(
                 name: "medical_records");
 
-            migrationBuilder.DropTable(
-                name: "patients");
+           // migrationBuilder.DropTable(
+            //    name: "patients");
         }
     }
 }

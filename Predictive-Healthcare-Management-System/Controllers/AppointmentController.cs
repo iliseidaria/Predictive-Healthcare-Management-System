@@ -30,7 +30,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<PatientDto>> GetById(Guid id)
+        public async Task<ActionResult<UserDto>> GetById(Guid id)
         {
             var result = await _mediator.Send(new GetAppointmentByIdQuery { Id = id });
             if (result == null)

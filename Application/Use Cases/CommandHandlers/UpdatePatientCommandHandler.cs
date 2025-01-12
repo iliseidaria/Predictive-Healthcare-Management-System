@@ -1,4 +1,4 @@
-﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Commands;
 using AutoMapper;
 using Domain.Entities;
 using MediatR;
@@ -7,10 +7,10 @@ namespace Application.CommandHandlers
 {
     public class UpdatePatientCommandHandler : IRequestHandler<UpdatePatientCommand, Unit>
     {
-        private readonly IPatientRepository repository;
+        private readonly IUserRepository repository;
         private readonly IMapper mapper;
 
-        public UpdatePatientCommandHandler(IPatientRepository repository, IMapper mapper)
+        public UpdatePatientCommandHandler(IUserRepository repository, IMapper mapper)
         {
             this.repository = repository;
             this.mapper = mapper;
@@ -19,7 +19,7 @@ namespace Application.CommandHandlers
         public async Task<Unit> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
         {
             // Check if the patient exists
-            var existingPatient = await repository.GetPatientByIdAsync(request.PatientId);
+            var existingPatient = await repository.GetUserByIdAsync(request.PatientId);
             if (existingPatient == null)
             {
                 throw new KeyNotFoundException("Patient not found");
@@ -27,7 +27,7 @@ namespace Application.CommandHandlers
 
             repository.Detach(existingPatient);
 
-            var patient = mapper.Map<Patient>(request);
+            var patient = mapper.Map<User>(request);
             await repository.UpdateAsync(patient);
 
             return Unit.Value;

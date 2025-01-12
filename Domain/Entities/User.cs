@@ -17,7 +17,21 @@ namespace Domain.Entities
 
     [Required]
     public string PasswordHash { get; set; } = string.Empty;
+    [Required]
+    public string Role { get; set; } = "User";
+    [Required]
+    public string UserType { get; set; } = "Doctor";
+    /**/
+    public string? FirstName { get; set; }
+    public string? LastName { get; set; }
+    public DateTime? DateOfBirth { get; set; }
+    public string? Gender { get; set; }
+    public string? ContactInformation { get; set; }
+    public string? Address { get; set; }
+    public string? PhotoPath { get; set; }
 
-    public string Role { get; set; } = "Doctor";
+    public MedicalRecord? MedicalHistory { get; set; }
+    public List<Appointment>? Appointments { get; set; } = new List<Appointment>();
+    public List<Prescription>? Prescriptions { get; set; } = new List<Prescription>();
   }
 }

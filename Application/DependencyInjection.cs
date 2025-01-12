@@ -14,7 +14,7 @@ namespace Application
         {
             services.AddAutoMapper(typeof(MappingProfile));
             services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(Assembly.GetExecutingAssembly()));
-            services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>();
+            //services.AddValidatorsFromAssemblyContaining<CreatePatientCommandValidator>();
             //services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly); //nuj daca i corect asa
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
             //services.AddTransient<IMedicalRecordRepository, MedicalRecordRepository>();

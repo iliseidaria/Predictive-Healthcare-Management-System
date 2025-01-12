@@ -1,4 +1,4 @@
-﻿using Application.Use_Cases.Commands;
+using Application.Use_Cases.Commands;
 using AutoMapper;
 using Domain.Entities;
 using Infrastructure.Repositories;
@@ -9,10 +9,10 @@ namespace Application.Use_Cases.CommandHandlers
     public class CreateAppointmentCommandHandler : IRequestHandler<CreateAppointmentCommand, Guid>
     {
         private readonly IAppointmentRepository _appointmentRepository;
-        private readonly IPatientRepository _patientRepository;
+        private readonly IUserRepository _patientRepository;
         private readonly IMapper _mapper;
 
-        public CreateAppointmentCommandHandler(IAppointmentRepository appointmentRepository, IPatientRepository patientRepository, IMapper mapper)
+        public CreateAppointmentCommandHandler(IAppointmentRepository appointmentRepository, IUserRepository patientRepository, IMapper mapper)
         {
             _appointmentRepository = appointmentRepository;
             _patientRepository = patientRepository;
@@ -21,7 +21,7 @@ namespace Application.Use_Cases.CommandHandlers
 
         public async Task<Guid> Handle(CreateAppointmentCommand request, CancellationToken cancellationToken)
         {
-            var patient = await _patientRepository.GetPatientByIdAsync(request.PatientId);
+            var patient = await _patientRepository.GetUserByIdAsync(request.PatientId);
             if (patient == null)
             {
                 throw new Exception("Patient not found");

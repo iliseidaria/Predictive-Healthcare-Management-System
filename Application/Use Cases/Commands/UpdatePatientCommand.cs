@@ -3,6 +3,12 @@ using MediatR;
 
 namespace Application.Use_Cases.Commands
 {
+  public enum Gender
+  {
+    Male,
+    Female,
+    Other
+  }
   public class UpdatePatientCommand : IRequest<Unit>
   {
     public Guid PatientId { get; set; }

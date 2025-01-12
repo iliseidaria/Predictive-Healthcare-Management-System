@@ -13,6 +13,6 @@ namespace Domain.Entities
         public string Notes { get; set; }
 
     // Navigation property
-    public Patient Patient { get; set; }
+    public User Patient { get; set; }
   }
 }

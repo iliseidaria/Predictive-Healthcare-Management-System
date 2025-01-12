@@ -115,7 +115,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Application.DTOs.PatientDto",
+        "Type": "Application.DTOs.UserDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -337,106 +337,6 @@
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
-    "Method": "GetAll",
-    "RelativePath": "api/v1/Patients",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "size",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
-    "Method": "Create",
-    "RelativePath": "api/v1/Patients",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "command",
-        "Type": "Application.Use_Cases.Commands.CreatePatientCommand",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
-    "Method": "GetById",
-    "RelativePath": "api/v1/Patients/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "Application.DTOs.PatientDto",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
-    "Method": "Delete",
-    "RelativePath": "api/v1/Patients/{id}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PatientsController",
-    "Method": "Update",
-    "RelativePath": "api/v1/Patients/{id}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": true
-      },
-      {
-        "Name": "command",
-        "Type": "Application.Use_Cases.Commands.UpdatePatientCommand",
-        "IsRequired": true
-      }
-    ],
     "ReturnTypes": []
   },
   {

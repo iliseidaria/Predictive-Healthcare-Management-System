@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +9,12 @@ namespace Application.Use_Cases.Commands
 {
     public class UpdateMedicalRecordCommandValidator : AbstractValidator<UpdateMedicalRecordCommand>
     {
-        private readonly IPatientRepository _patientRepository;
+        private readonly IUserRepository _patientRepository;
         private bool PatientExists(Guid patientId)
         {
-            return _patientRepository.PatientExistsAsync(patientId).GetAwaiter().GetResult();
+            return _patientRepository.UserExistsAsync(patientId).GetAwaiter().GetResult();
         }
-        public UpdateMedicalRecordCommandValidator(IPatientRepository patientRepository) {
+        public UpdateMedicalRecordCommandValidator(IUserRepository patientRepository) {
             _patientRepository = patientRepository;
 
             RuleFor(x => x.RecordId)
