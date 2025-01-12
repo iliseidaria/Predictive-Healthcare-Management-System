@@ -13,14 +13,14 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.DropForeignKey(
                 name: "FK_Prescription_medical_records_PrescriptionId",
-                table: "Prescription");
+                table: "prescriptions");
 
             migrationBuilder.DropPrimaryKey(
                 name: "PK_Prescription",
-                table: "Prescription");
+                table: "prescriptions");
 
             migrationBuilder.RenameTable(
-                name: "Prescription",
+                name: "prescriptions",
                 newName: "prescriptions");
 
             migrationBuilder.AlterColumn<string>(
@@ -97,8 +97,8 @@ namespace Infrastructure.Migrations
                 name: "FK_prescriptions_patients_PatientId",
                 table: "prescriptions",
                 column: "PatientId",
-                principalTable: "patients",
-                principalColumn: "PatientId",
+                principalTable: "users",
+                principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
         }
 
@@ -127,11 +127,11 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.RenameTable(
                 name: "prescriptions",
-                newName: "Prescription");
+                newName: "prescriptions");
 
             migrationBuilder.AlterColumn<string>(
                 name: "Notes",
-                table: "Prescription",
+                table: "prescriptions",
                 type: "text",
                 nullable: false,
                 oldClrType: typeof(string),
@@ -140,7 +140,7 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "MedicationName",
-                table: "Prescription",
+                table: "prescriptions",
                 type: "text",
                 nullable: false,
                 oldClrType: typeof(string),
@@ -149,7 +149,7 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "Frequency",
-                table: "Prescription",
+                table: "prescriptions",
                 type: "text",
                 nullable: false,
                 oldClrType: typeof(string),
@@ -158,7 +158,7 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.AlterColumn<string>(
                 name: "Dosage",
-                table: "Prescription",
+                table: "prescriptions",
                 type: "text",
                 nullable: false,
                 oldClrType: typeof(string),
@@ -167,7 +167,7 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.AlterColumn<Guid>(
                 name: "PrescriptionId",
-                table: "Prescription",
+                table: "prescriptions",
                 type: "uuid",
                 nullable: false,
                 oldClrType: typeof(Guid),
@@ -176,12 +176,12 @@ namespace Infrastructure.Migrations
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Prescription",
-                table: "Prescription",
+                table: "prescriptions",
                 column: "PrescriptionId");
 
             migrationBuilder.AddForeignKey(
                 name: "FK_Prescription_medical_records_PrescriptionId",
-                table: "Prescription",
+                table: "prescriptions",
                 column: "PrescriptionId",
                 principalTable: "medical_records",
                 principalColumn: "RecordId",

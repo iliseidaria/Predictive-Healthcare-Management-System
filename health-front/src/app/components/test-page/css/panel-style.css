@@ -1,0 +1,39 @@
+.panel {
+  grid-column: 1 / span 3; /* First 3 columns */
+  grid-row: 3 / span 5; /* From 3rd row, spanning 5 rows */
+  background-color: #2E472C; /* Light green background */
+ /* border: 2px solid #4CAF50;  Green border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  display: flex;
+  flex-direction: column; /* Align content vertically */
+  justify-content: flex-start; /* Start content at the top */
+}
+
+.panel h3 {
+  margin: 10px;
+  font-size: 24px;
+  color: #FFFCF7; /* Darker green for text */
+}
+
+.panel p {
+  font-size: 16px;
+  color: #424242; /* Neutral gray for text */
+  margin: 10px 0;
+}
+
+.panel button {
+  align-self: center;
+  padding: 10px 15px;
+  font-size: 16px;
+  color: #2E472C;
+  background-color: #E4F0D0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.panel button:hover {
+  background-color: #C2D8B9; /* Darker green on hover */
+}

@@ -1,4 +1,4 @@
-<button (click)="logout()">Logout</button>
+<!--<button (click)="logout()">Logout</button>
 <button (click)="loadProfile()">Profile</button>
 <div class="container">
   <h1>Healthy</h1>
@@ -10,4 +10,48 @@
     <button *ngIf="userRole === 'Admin'" (click)="navigateTo('get-all-users')">Users Management</button>
     <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-prescriptions')">See all Prescriptions</button>
   </nav>
+</div>
+-->
+<div class="grid-container">
+  <!-- Title and Subtitle in the first row -->
+  <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
+    <span style="white-space: pre-line">
+    <h2>HealthSafe</h2>
+    <h3>Healthcare services platform</h3>
+    </span>
+  </div>
+
+  <div class="grid-item panel" style="grid-column: 1 / span 3; grid-row: 3 / span 5;">
+    <h3>Upcoming appointments</h3>
+    <div *ngIf="upcomingAppointments.length > 0; else noAppointments">
+    <table class="appointments-table">
+      <thead>
+      <tr>
+        <th>Date</th>
+        <th>Doctor</th>
+        <th>Reason</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let appointment of upcomingAppointments">
+        <td>{{ appointment.appointmentDate | date: 'dd/MM/yyyy' }}</td>
+        <td>{{ appointment.doctorName }}</td>
+        <td>{{ appointment.reason }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Appointments Message -->
+  <ng-template #noAppointments>
+    <p>No upcoming appointments.</p>
+  </ng-template>
+
+  <button>See more options</button>
+  </div>
+
+  <!-- Remaining grid items -->
+  <div class="grid-item" *ngFor="let item of gridItems; index as i">
+    {{ item }}
+  </div>
 </div>

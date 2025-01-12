@@ -14,28 +14,8 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.AlterDatabase()
                 .Annotation("Npgsql:PostgresExtension:uuid-ossp", ",,");
-          /*
             migrationBuilder.CreateTable(
-                name: "patients",
-                columns: table => new
-                {
-                    PatientId = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "uuid_generate_v4()"),
-                    FirstName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    LastName = table.Column<string>(type: "character varying(100)", maxLength: 100, nullable: false),
-                    DateOfBirth = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
-                    Gender = table.Column<int>(type: "integer", nullable: false),
-                    ContactInformation = table.Column<string>(type: "character varying(200)", maxLength: 200, nullable: false),
-                    Address = table.Column<string>(type: "character varying(300)", maxLength: 300, nullable: false),
-                    PhotoPath = table.Column<string>(type: "text", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_patients", x => x.PatientId);
-                });
-          */
-
-            migrationBuilder.CreateTable(
-                name: "Users",
+                name: "users",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false, defaultValueSql: "uuid_generate_v4()"),
@@ -73,8 +53,8 @@ namespace Infrastructure.Migrations
                     table.ForeignKey(
                         name: "FK_appointments_patients_PatientId",
                         column: x => x.PatientId,
-                        principalTable: "patients",
-                        principalColumn: "PatientId",
+                        principalTable: "users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -94,13 +74,13 @@ namespace Infrastructure.Migrations
                     table.ForeignKey(
                         name: "FK_medical_records_patients_PatientId",
                         column: x => x.PatientId,
-                        principalTable: "patients",
-                        principalColumn: "PatientId",
+                        principalTable: "users",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Prescription",
+                name: "prescriptions",
                 columns: table => new
                 {
                     PrescriptionId = table.Column<Guid>(type: "uuid", nullable: false),
@@ -140,16 +120,14 @@ namespace Infrastructure.Migrations
                 name: "appointments");
 
             migrationBuilder.DropTable(
-                name: "Prescription");
+                name: "prescriptions");
 
             migrationBuilder.DropTable(
-                name: "Users");
+                name: "users");
 
             migrationBuilder.DropTable(
                 name: "medical_records");
 
-           // migrationBuilder.DropTable(
-            //    name: "patients");
         }
     }
 }

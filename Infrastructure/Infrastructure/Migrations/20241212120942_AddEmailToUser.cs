@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -12,7 +12,7 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.AddColumn<string>(
                 name: "Email",
-                table: "Users",
+                table: "users",
                 type: "text",
                 nullable: false,
                 defaultValue: "");
@@ -23,7 +23,7 @@ namespace Infrastructure.Migrations
         {
             migrationBuilder.DropColumn(
                 name: "Email",
-                table: "Users");
+                table: "users");
         }
     }
 }

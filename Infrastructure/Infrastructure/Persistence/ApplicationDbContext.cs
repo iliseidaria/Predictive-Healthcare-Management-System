@@ -11,7 +11,6 @@ namespace Infrastructure.Persistence
         {
         }
 
-        //public DbSet<Patient> Patients { get; set; }
         public DbSet<MedicalRecord> MedicalRecords { get; set; }
         public DbSet<Appointment> Appointments { get; set; }
         public DbSet<User> Users { get; set; }
@@ -52,7 +51,7 @@ namespace Infrastructure.Persistence
               // Configure one-to-many relationship with Appointments
               entity.HasMany(e => e.Appointments)
                   .WithOne()
-                  .HasForeignKey(a => a.PatientID)
+                  .HasForeignKey(a => a.PatientId)
                   .OnDelete(DeleteBehavior.Cascade);
 
               // Configure one-to-many relationship with Prescriptions
@@ -62,41 +61,8 @@ namespace Infrastructure.Persistence
                     .OnDelete(DeleteBehavior.Cascade);
             });
 
-      /*modelBuilder.Entity<Patient>(entity =>
-      {
-          entity.ToTable("patients");
-          entity.HasKey(e => e.PatientId);
-          entity.Property(e => e.PatientId)
-              .HasColumnType("uuid")
-              .HasDefaultValueSql("uuid_generate_v4()")
-              .ValueGeneratedOnAdd();
-          entity.Property(e => e.FirstName).IsRequired().HasMaxLength(100);
-          entity.Property(e => e.LastName).IsRequired().HasMaxLength(100);
-          entity.Property(e => e.DateOfBirth).IsRequired().HasColumnType("timestamp with time zone");
-          entity.Property(e => e.Gender).IsRequired();
-          entity.Property(e => e.ContactInformation).IsRequired().HasMaxLength(200);
-          entity.Property(e => e.Address).IsRequired().HasMaxLength(300);
 
-          // Configure one-to-one relationship with MedicalRecord
-          entity.HasOne(e => e.MedicalHistory)
-              .WithOne()
-              .HasForeignKey<MedicalRecord>(mr => mr.PatientId)
-              .OnDelete(DeleteBehavior.Cascade);
-
-          // Configure one-to-many relationship with Appointments
-          entity.HasMany(e => e.Appointments)
-              .WithOne()
-              .HasForeignKey(a => a.PatientId)
-              .OnDelete(DeleteBehavior.Cascade);
-
-        // Configure one-to-many relationship with Prescriptions
-        entity.HasMany(e => e.Prescriptions)
-              .WithOne(p => p.Patient)
-              .HasForeignKey(p => p.PatientId)
-              .OnDelete(DeleteBehavior.Cascade);
-      });*/
-
-      modelBuilder.Entity<MedicalRecord>(entity =>
+          modelBuilder.Entity<MedicalRecord>(entity =>
             {
                 entity.ToTable("medical_records");
                 entity.HasKey(e => e.RecordId);
@@ -121,7 +87,7 @@ namespace Infrastructure.Persistence
                     .HasColumnType("uuid")
                     .HasDefaultValueSql("uuid_generate_v4()")
                     .ValueGeneratedOnAdd();
-                entity.Property(e => e.PatientID).IsRequired();
+                entity.Property(e => e.PatientId).IsRequired();
                 entity.Property(e => e.ProviderId).IsRequired();
                 entity.Property(e => e.AppointmentDate).IsRequired();
                 entity.Property(e => e.Reason).HasMaxLength(1000);
@@ -130,7 +96,7 @@ namespace Infrastructure.Persistence
                 // Configure foreign keys
                 entity.HasOne<User>()
                     .WithMany(p => p.Appointments)
-                    .HasForeignKey(e => e.PatientID)
+                    .HasForeignKey(e => e.PatientId)
                     .OnDelete(DeleteBehavior.Cascade);
 
                 entity.HasOne<User>()

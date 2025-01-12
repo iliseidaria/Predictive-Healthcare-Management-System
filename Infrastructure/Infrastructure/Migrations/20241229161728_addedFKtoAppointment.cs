@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -41,7 +41,15 @@ namespace Infrastructure.Migrations
                 principalTable: "users",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
-        }
+
+      migrationBuilder.AddForeignKey(
+          name: "FK_appointments_users_PatientId",
+          table: "appointments",
+          column: "PatientId",
+          principalTable: "users",
+          principalColumn: "Id",
+          onDelete: ReferentialAction.Cascade);
+    }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Application.DTOs;
 using Microsoft.AspNetCore.Authorization;
+using Application.Use_Cases.Queries;
+using MediatR;
 
 namespace Predictive_Healthcare_Management_System.Controllers
 {
@@ -9,10 +11,12 @@ namespace Predictive_Healthcare_Management_System.Controllers
   public class AuthController : ControllerBase
   {
     private readonly AuthService _authService;
+    private readonly IMediator _mediator;
 
-    public AuthController(AuthService authService)
+    public AuthController(AuthService authService, IMediator mediator)
     {
       _authService = authService;
+      _mediator = mediator;
     }
 
     [HttpPost("register")]
@@ -61,6 +65,16 @@ namespace Predictive_Healthcare_Management_System.Controllers
       {
         return StatusCode(500, new { Error = ex.Message });
       }
+    }
+    [HttpGet("users/{id}")]
+    public async Task<ActionResult<UserDto>> GetById(Guid id)
+    {
+      var result = await _mediator.Send(new GetUserByIdQuery { Id = id });
+      if (result == null)
+      {
+        throw new UserNotFound(); // Use centralized error handling
+      }
+      return Ok(result);
     }
 
     [HttpPost("logout")]

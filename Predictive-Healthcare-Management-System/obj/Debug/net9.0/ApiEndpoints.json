@@ -241,6 +241,32 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "GetById",
+    "RelativePath": "api/v1/Auth/users/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Application.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.MedicalRecordController",
     "Method": "Create",
     "RelativePath": "api/v1/MedicalRecord",
