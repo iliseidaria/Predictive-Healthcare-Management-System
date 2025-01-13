@@ -22,9 +22,23 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  private determineRedirect() {
+    const userRole = this.authService.getCurrentUser()?.role;
+    switch(userRole) {
+      case 'doctor':
+        this.router.navigate(['/doctor']);
+        break;
+      case 'Admin':
+        this.router.navigate(['/admin']);
+        break;
+      default:
+        this.router.navigate(['/test-page']);
+    }
+  }
+
   ngOnInit() {
     if (this.authService.validateToken()) {
-      this.router.navigate(['/test-page']);
+      this.determineRedirect();
     }
   }
 
@@ -34,8 +48,8 @@ export class LoginComponent implements OnInit {
       this.authService.login(credentials).subscribe({
         next: (response: any) => {
           if (response.token) {
-            localStorage.setItem('token', response.token); // Save token
-            this.router.navigate(['/test-page']); // Redirect
+            localStorage.setItem('token', response.token);
+            this.determineRedirect();
           } else {
             alert('Invalid credentials');
           }

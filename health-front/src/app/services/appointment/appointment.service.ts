@@ -77,6 +77,28 @@ export class AppointmentService {
     );
   }
 
+  // Add after getUserAppointments method
+// getDoctorAppointments(doctorId: string, page: number, size: number, options?: { headers?: HttpHeaders }): Observable<any> {
+//   const params = new HttpParams()
+//     .set('pageNumber', page.toString())
+//     .set('pageSize', size.toString());
+
+//   return this.http.get<any>(
+//     `${this.apiUrl}/doctor/${doctorId}`,
+//     { 
+//       params,
+//       headers: this.authService.getAuthHeaders(),
+//       ...options 
+//     }
+//   ).pipe(
+//     tap(response => console.log('Doctor Appointments Response:', response)),
+//     catchError(error => {
+//       console.error('Error fetching doctor appointments:', error);
+//       throw error;
+//     })
+//   );
+// }
+
   // getAppointments(page: number, pageSize: number): Observable<PaginatedResponse> {
   //   const params = { page: page.toString(), pageSize: pageSize.toString() };
   //   return this.http.get<PaginatedResponse>(this.apiUrl, {

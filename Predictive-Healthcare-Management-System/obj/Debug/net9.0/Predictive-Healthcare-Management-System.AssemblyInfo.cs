@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Predictive-Healthcare-Management-System")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a89bbbd556971af6878ef21edbf0fe5ddb0e21e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9023ce765d7f8e296d51444226de71fab1c7599")]
 [assembly: System.Reflection.AssemblyProductAttribute("Predictive-Healthcare-Management-System")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Predictive-Healthcare-Management-System")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

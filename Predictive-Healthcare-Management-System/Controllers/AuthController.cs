@@ -3,11 +3,14 @@ using Application.DTOs;
 using Microsoft.AspNetCore.Authorization;
 using Application.Use_Cases.Queries;
 using MediatR;
+using Application.Queries;
+using Application.Use_Cases.Commands;
 
 namespace Predictive_Healthcare_Management_System.Controllers
 {
   [Route("api/v1/[controller]")]
   [ApiController]
+  [Authorize]
   public class AuthController : ControllerBase
   {
     private readonly AuthService _authService;
@@ -20,6 +23,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
     }
 
     [HttpPost("register")]
+    [AllowAnonymous]
     public async Task<IActionResult> Register([FromBody] RegisterDto registerDto)
     {
       if (!ModelState.IsValid)
@@ -44,6 +48,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
 
 
     [HttpPost("login")]
+    [AllowAnonymous]
     public async Task<IActionResult> Login([FromBody] LoginDto loginDto)
     {
       if (!ModelState.IsValid)
@@ -68,6 +73,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
     }
 
     [HttpGet("validate-doctor/{doctorId}")]
+    [AllowAnonymous]
     public async Task<bool> CheckDoctorIdExists(string doctorId)
     {
       var query = new GetDoctorByIdQuery { DoctorId = doctorId };
@@ -86,17 +92,59 @@ namespace Predictive_Healthcare_Management_System.Controllers
       return Ok(prescriptions);
     }
 
-    // de pus in controllerul cu pacienti cred
-    //[HttpGet("users/{id}")]
-    //public async Task<ActionResult<UserDto>> GetById(Guid id)
-    //{
-    //  var result = await _mediator.Send(new GetUserByIdQuery { Id = id });
-    //  if (result == null)
-    //  {
-    //    throw new UserNotFound(); // Use centralized error handling
-    //  }
-    //  return Ok(result);
-    //}
+    // GET: /api/v1/Auth/users
+    [HttpGet("users")]
+    [Authorize(Policy = "RequireAdminOrDoctorRole")]
+        public async Task<IActionResult> GetAllUsers([FromQuery] int page = 1, [FromQuery] int size = 10)
+        {
+            var query = new GetAllUsersQuery
+            {
+                Page = page,
+                Size = size
+            };
+
+            var (result, totalCount) = await _mediator.Send(query);
+
+            if (result == null || !result.Any())
+            {
+                Console.WriteLine("Authorization failed or no patients found");
+                return NotFound("No patients found.");
+            }
+
+            return Ok(new
+            {
+                items = result,
+                totalCount = totalCount,
+                currentPage = page,
+                pageSize = size
+            });
+        }
+
+
+    [HttpGet("user/{id}")]
+    [AllowAnonymous]
+    public async Task<ActionResult<UserDto>> GetUserById(Guid id)
+    {
+      var patient = await _mediator.Send(new GetUserByIdQuery { Id = id });
+      if (patient == null)
+      {
+        throw new NotFoundException(); // Use centralized error handling
+      }
+      return Ok(patient);
+    }
+
+    [HttpDelete("users/{id}")]
+    [Authorize(Policy = "RequireAdminOrDoctorRole")]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+      var patient = await _mediator.Send(new GetUserByIdQuery { Id = id });
+      if (patient == null)
+      {
+        throw new NotFoundException();
+      }
+      await _mediator.Send(new DeletePatientCommand { Id = id });
+      return NoContent();
+    }
 
     [HttpPost("logout")]
     [Authorize]

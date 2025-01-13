@@ -29,13 +29,13 @@ namespace Predictive_Healthcare_Management_System.Controllers
     //  var users = await _context.Users.ToListAsync();
     //  return Ok(users);
     //}
-    [HttpGet("users")]
-    public async Task<IActionResult> GetAllUsers([FromQuery] int page = 1, [FromQuery] int size = 10)
-    {
-      var query = new GetAllUsersQuery(page, size);
-      var response = await _mediator.Send(query);
-      return Ok(response);
-    }
+    //[HttpGet("users")]
+    //public async Task<IActionResult> GetAllUsers([FromQuery] int page = 1, [FromQuery] int size = 10)
+    //{
+    //  var query = new GetAllUsersQuery(page, size);
+    //  var response = await _mediator.Send(query);
+    //  return Ok(response);
+    //}
 
     // GET: api/v1/Admin/users/{id}
     [HttpGet("users/{id}")]

@@ -44,7 +44,7 @@ export class PatientCreateComponent {
   });}
 
   onSubmit() {
-    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'patient') {
       if (this.patientForm.valid) {
         const formData = {
           ...this.patientForm.value,

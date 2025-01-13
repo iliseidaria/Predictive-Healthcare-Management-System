@@ -109,13 +109,13 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("RequireAdminRole", policy =>
             policy.RequireRole("Admin"));
     options.AddPolicy("RequireDoctorRole", policy =>
-            policy.RequireRole("Doctor"));
+            policy.RequireRole("doctor"));
     options.AddPolicy("RequirePatientRole", policy =>
-            policy.RequireRole("Patient"));
+            policy.RequireRole("patient"));
     options.AddPolicy("RequireAdminOrDoctorRole", policy =>
-            policy.RequireRole("Admin", "Doctor"));
+            policy.RequireRole("Admin", "doctor"));
     options.AddPolicy("RequireAdminOrPatientRole", policy =>
-            policy.RequireRole("Admin", "Patient"));
+            policy.RequireRole("Admin", "patient"));
 });
 
 // Register MediatR and Validators

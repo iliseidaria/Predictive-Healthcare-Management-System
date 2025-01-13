@@ -22,6 +22,8 @@ export class PatientGetAllComponent implements OnInit {
   size = 10;
   totalCount = 0;
   userRole: string = '';
+  error: string | null = null;
+  user: any[] = [];
   private navigationService = inject(NavigationService);
 
   constructor(private patientService: PatientService, private authService: AuthService) {}
@@ -36,20 +38,34 @@ export class PatientGetAllComponent implements OnInit {
   }
 
   loadPatients() {
-    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
-      const headers = this.authService.getAuthHeaders();
-      this.patientService.getAllPatients(this.page, this.size, { headers }).subscribe({
-        next: (data) => {
-          console.log('Received data:', data);
-          this.patients = data.items || [];
-          this.totalCount = data.totalCount || 0;
-        },
-        error: (err) => console.error(err),
-      });
+    if (!this.authService.validateToken() || this.authService.getCurrentUser().role === 'patient') {
+      return;
     }
+  
+    const headers = this.authService.getAuthHeaders();
+    
+    // First get all users with role 'patient'
+    this.patientService.getAllPatients(this.page, this.size, { headers }).subscribe({
+      next: (data) => {
+        // Filter users with role 'patient'
+        const patientUsers = data.items.filter((user: any) => user.role === 'patient');
+        
+        console.log('Filtered patient data:', patientUsers);
+        this.patients = patientUsers;
+        this.totalCount = patientUsers.length;
+      },
+      error: (err) => {
+        console.error('Error loading patients:', err);
+        this.error = 'Failed to load patients';
+      }
+    });
   }
 
   deletePatient(id: string) {
+    if (!id) {
+      console.error('No patient ID provided');
+      return;
+    }
     if (confirm('Are you sure you want to delete this patient?')) {
       const headers = this.authService.getAuthHeaders();
       this.patientService.deletePatient(id, { headers }).subscribe({

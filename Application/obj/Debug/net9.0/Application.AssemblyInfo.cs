@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e67a7699185b3f949adf0a7c159333f687c4b3cb")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cc0e648a177af640631f9abb267cc4a5ed0b5206")]
->>>>>>> 3a89bbb (Began medical records, fixed header)
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c9023ce765d7f8e296d51444226de71fab1c7599")]
 [assembly: System.Reflection.AssemblyProductAttribute("Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

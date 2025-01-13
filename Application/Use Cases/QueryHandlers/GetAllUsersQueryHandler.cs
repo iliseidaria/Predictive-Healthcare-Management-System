@@ -1,38 +1,32 @@
-using Application.Queries;
 using Application.DTOs;
-using Infrastructure.Persistence;
+using Application.Queries;
+using AutoMapper;
 using MediatR;
-using Microsoft.EntityFrameworkCore;
 
-namespace Application.Handlers
+namespace Application.Use_Cases.QueryHandlers
 {
-  public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, GetAllUsersResponse>
+  public class GetAllUsersQueryHandler : IRequestHandler<GetAllUsersQuery, (List<UserDto> Patients, int TotalCount)>
   {
-    private readonly ApplicationDbContext _context;
+    private readonly IUserRepository repository;
+    private readonly IMapper mapper;
 
-    public GetAllUsersQueryHandler(ApplicationDbContext context)
+    public GetAllUsersQueryHandler(IUserRepository repository, IMapper mapper)
     {
-      _context = context;
+      this.repository = repository;
+      this.mapper = mapper;
     }
 
-    public async Task<GetAllUsersResponse> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
+    public async Task<(List<UserDto> Patients, int TotalCount)> Handle(GetAllUsersQuery request, CancellationToken cancellationToken)
     {
-      var totalUsers = await _context.Users.CountAsync(cancellationToken);
-      var users = await _context.Users
-          .Skip((request.Page - 1) * request.Size)
-          .Take(request.Size)
-          .Select(u => new UserDto
-          {
-            Id = u.Id,
-            Username = u.Username,
-            Email = u.Email,
-            Role = u.Role,
-            //UserType =u.UserType
-          })
-          .ToListAsync(cancellationToken);
+      var totalPatients = await repository.GetTotalUsersCountAsync(); // Adaugă o metodă pentru a obține totalul
 
-      return new GetAllUsersResponse(totalUsers, users);
+      var patients = await repository.GetAllUsersAsync(request.Page, request.Size);
+
+      var mappedPatients = mapper.Map<List<UserDto>>(patients);
+
+      return (mappedPatients, totalPatients);
     }
+
   }
-}
 
+}

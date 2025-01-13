@@ -1,0 +1,56 @@
+<div class="grid-container">
+    <div class="grid-item profile-button" style="grid-column: 5; grid-row: 1;">
+      <app-view-profile-button></app-view-profile-button>
+    </div>
+    <div class="grid-item logout-button" style="grid-column: 6; grid-row: 1;">
+      <app-logout-button></app-logout-button>
+    </div>
+  
+    <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
+      <h2>HealthSafe</h2>
+      <h3>Doctor Dashboard</h3>
+    </div>
+  
+    <!-- Upcoming Appointments Panel -->
+    <div class="grid-item panel" style="grid-column: 1 / span 3; grid-row: 3 / span 5;">
+      <h3>Today's Appointments</h3>
+      <div *ngIf="upcomingAppointments.length > 0; else noAppointments">
+        <table class="appointments-table">
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Patient</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let appointment of upcomingAppointments">
+              <td>
+                <a [routerLink]="['/appointment-detail', appointment.appointmentId]">
+                  {{appointment.appointmentDate | date:'shortTime'}}
+                </a>
+              </td>
+              <td>{{appointment.patientName}}</td>
+              <td>{{appointment.reason}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <ng-template #noAppointments>
+        <p>No upcoming appointments.</p>
+      </ng-template>
+      <button (click)="navigateToAppointments()">View All Appointments</button>
+    </div>
+  
+    <!-- Doctor Actions Panel -->
+    <div class="grid-item health-panel" style="grid-column: 4 / span 3; grid-row: 3 / span 5;">
+      <h3 class="panel-title">Doctor Panel</h3>
+      <p class="panel-description">Manage your patients and medical records:</p>
+      <div class="actions">
+        <button class="wide-button" (click)="navigateToPatients()">View All Patients</button>
+        <button class="wide-button" (click)="navigateToPrescriptions()">Manage Prescriptions</button>
+        <button class="wide-button" (click)="navigateToMedicalRecords()">Access Medical Records</button>
+        <button class="wide-button" (click)="navigateToAppointments()">Manage Appointments</button>
+      </div>
+    </div>
+  </div>

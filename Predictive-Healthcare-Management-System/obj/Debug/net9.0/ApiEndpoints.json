@@ -1,27 +1,6 @@
 [
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AdminController",
-    "Method": "GetAllUsers",
-    "RelativePath": "api/v1/Admin/users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "size",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AdminController",
     "Method": "GetUserById",
     "RelativePath": "api/v1/Admin/users/{id}",
     "HttpMethod": "GET",
@@ -251,6 +230,69 @@
       {
         "Name": "registerDto",
         "Type": "Application.DTOs.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "GetUserById",
+    "RelativePath": "api/v1/Auth/user/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Application.DTOs.UserDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/v1/Auth/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "Delete",
+    "RelativePath": "api/v1/Auth/users/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
         "IsRequired": true
       }
     ],

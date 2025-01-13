@@ -15,10 +15,11 @@ export class PatientService {
 
   getAllPatients(page: number, size: number, options?: { headers?: HttpHeaders }): Observable<any> {
     const params = new HttpParams()
-      .set('page', page.toString())
-      .set('size', size.toString());
-
-    return this.http.get(this.baseUrl, { params, ...options });
+      .set('pageNumber', page.toString())
+      .set('pageSize', size.toString())
+      .set('role', 'patient'); // Add role filter parameter
+  
+    return this.http.get<any>(`${this.baseUrl}`, { params, ...options });
   }
 
   getPatientById(id: string, options?: { headers?: HttpHeaders }): Observable<any> {

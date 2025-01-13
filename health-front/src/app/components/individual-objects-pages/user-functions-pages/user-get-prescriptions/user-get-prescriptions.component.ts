@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
-import { PrescriptionService } from '../../services/prescription/prescription.service';
-import { AuthService } from '../../services/auth/auth.service';
-import { NavigationService } from '../../services/navigation/navigation.service';
-import { Prescription } from '../../models/prescription';
+import { PrescriptionService } from '../../../../services/prescription/prescription.service';
+import { AuthService } from '../../../../services/auth/auth.service';
+import { NavigationService } from '../../../../services/navigation/navigation.service';
+import { Prescription } from '../../../../models/prescription';
 import { FormsModule } from '@angular/forms';
 
 @Component({
