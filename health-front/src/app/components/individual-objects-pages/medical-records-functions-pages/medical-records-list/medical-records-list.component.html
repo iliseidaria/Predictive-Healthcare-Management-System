@@ -1,0 +1,41 @@
+<div class="grid-container">
+  <!-- Profile and Logout Buttons -->
+  <div class="grid-item profile-button" style="grid-column: 5; grid-row: 1;">
+    <app-view-profile-button></app-view-profile-button>
+  </div>
+  <div class="grid-item logout-button" style="grid-column: 6; grid-row: 1;">
+    <app-logout-button></app-logout-button>
+  </div>
+
+  <!-- Title and Subtitle in the first row -->
+  <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
+    <span style="white-space: pre-line">
+      <h2>HealthSafe</h2>
+      <h3>Healthcare services platform</h3>
+    </span>
+  </div>
+
+  <!-- Loader or Error Messages -->
+  <div *ngIf="loading" class="grid-item loader" style="grid-column: 1 / span 6;">Loading...</div>
+  <div *ngIf="error" class="grid-item error" style="grid-column: 1 / span 6;">{{ error }}</div>
+
+  <!-- Medical Records -->
+  <div class="grid-header" style="grid-column: 1 / span 6; grid-row: 3;">
+    <div style="grid-column: 1 / span 2; grid-row-start: 2">Date</div>
+    <div style="grid-column: 3 / span 2; grid-row-start: 2">Diagnosis</div>
+    <div style="grid-column: 5 / span 2; grid-row-start: 2">Actions</div>
+  </div>
+
+  <div *ngIf="!loading && !error" class="records-grid" style="grid-column: 1 / span 6; grid-row: 4;">
+    <div *ngFor="let record of medicalRecords" class="grid-row">
+      <div style="grid-column: 1 / span 2;">{{ record.date }}</div>
+      <div style="grid-column: 3 / span 2;">{{ record.diagnosis }}</div>
+      <div style="grid-column: 5 / span 1;">
+        <a [routerLink]="['/medical-records', record.recordId, 'edit']">Edit</a>
+      </div>
+       <div style="grid-column: 6/ span 1">
+         <button (click)="deleteRecord(record.recordId)" >Delete</button>
+       </div>
+    </div>
+  </div>
+</div>

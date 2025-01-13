@@ -154,7 +154,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
   }
 
   viewMedicalHistory(): void {
-    this.router.navigate(['/medical-history']);
+    this.router.navigate(['/medical-records']);
   }
 
   viewPrescriptions(): void {

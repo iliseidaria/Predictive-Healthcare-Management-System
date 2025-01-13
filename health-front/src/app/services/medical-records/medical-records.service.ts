@@ -35,6 +35,8 @@ export class MedicalRecordsService {
     page: number,
     size: number
   ): Observable<MedicalRecord[]> {
+    console.log(page.toString());
+    console.log(userId.toString());
     const params = new HttpParams()
       .set('page', (page - 1).toString()) // Backend expects 0-based page indexing
       .set('size', size.toString());

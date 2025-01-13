@@ -24,7 +24,7 @@ export class MedicalRecordsComponent implements OnInit {
   size = 5; // Number of records per page
   hasNextPage = true;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, ) {
   }
 
   ngOnInit(): void {
@@ -59,11 +59,9 @@ export class MedicalRecordsComponent implements OnInit {
   }
 
   editRecord(recordId: string): void {
-    editRecord(recordId: string): void {
       console.log('Edit record:', recordId);
       // Navigate to the record edit page
-      this.router.navigate(['/medical-record/edit', recordId]);
-    }
+      this.router.navigate(['/medical-record/', recordId]);
   }
 
   prevPage(): void {

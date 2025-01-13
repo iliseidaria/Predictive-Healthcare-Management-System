@@ -19,7 +19,13 @@ import { PrescriptionGetAllComponent } from './components/individual-objects-pag
 import { PrescriptionDetailComponent } from './components/individual-objects-pages/prescription-functions-pages/prescription-detail/prescription-detail.component';
 import { PrescriptionCreateComponent } from './components/individual-objects-pages/prescription-functions-pages/prescription-create/prescription-create.component';
 import { PrescriptionUpdateComponent } from './components/individual-objects-pages/prescription-functions-pages/prescription-update/prescription-update.component';
-import {MedicalRecordsComponent} from './components/individual-objects-pages/appointment-functions-pages/appointment-get-all/appointment-get-all.component';
+import {MedicalRecordsListComponent} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-list/medical-records-list.component';
+import {
+  MedicalRecordDeleteComponent
+} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-delete/medical-records-delete.component';
+import {
+  MedicalRecordEditComponent
+} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-edit/medical-records-edit.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -38,9 +44,11 @@ export const routes: Routes = [
   { path: 'update-user/:id', component: UserUpdateComponent, canActivate: [AuthGuard] },
   { path: 'get-user-appointments', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
   { path: 'get-all-prescriptions', component: PrescriptionGetAllComponent, canActivate: [AuthGuard] },
-  { path: 'get-user-prescriptions', component: UserGetPrescriptionsComponent, canActivate: [AuthGuard] },
+  //{ path: 'get-user-prescriptions', component: UserGetPrescriptionsComponent, canActivate: [AuthGuard] },
   { path: 'create-prescription', component: PrescriptionCreateComponent, canActivate: [AuthGuard] },
   { path: 'update-prescription/:id', component: PrescriptionUpdateComponent, canActivate: [AuthGuard] },
   { path: 'prescription-detail/:id', component: PrescriptionDetailComponent, canActivate: [AuthGuard] },
-  {path:'medical-records/:id', component:MedicalRecordsComponent, canActivate:[AuthGuard]},
+  { path: 'medical-records', component: MedicalRecordsListComponent, canActivate: [AuthGuard]  },
+  { path: 'medical-records/:id/edit', component: MedicalRecordEditComponent, canActivate: [AuthGuard]  },
+  { path: 'medical-records/:id/delete', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },
 ];

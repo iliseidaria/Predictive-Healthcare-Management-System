@@ -51,41 +51,6 @@ nav {
     width: 100%;
 }
 
-button {
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    background-color: rgba(255, 51, 153, 0.8);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 250px; /* Adjust the width of buttons */
-    text-align: center;
-}
-
-button:hover {
-    background-color: rgba(242, 194, 218, 0.8);
-    font-weight: 600;
-}
-
-.back-button {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    padding: 8px 16px;
-    background-color: #0056b3;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
-  }
-
-  .back-button:hover {
-    background-color: #003d80;
-  }
 
 @media screen and (max-width: 768px) {
     .container {

@@ -1,0 +1,131 @@
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for extra small screens */
+  }
+}
+
+/* Main Grid Container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 equal columns */
+  grid-template-rows: repeat(8, auto); /* 8 rows */
+  gap: 10px;
+  padding: 20px;
+  font-family: Poppins, sans-serif;
+}
+.grid-header {
+  font-weight: normal;
+  font-size: 30px;
+  grid-column: 1 / span 6; /* Full width of the grid */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Align with records */
+  margin-top: 20px;
+  background-color: white;
+  margin-bottom: 10px;
+  border: none; /* Border around the entire header */
+  border-radius: 30px; /* Rounded corners */
+  text-align: center; /* Center text within cells */
+  padding: 1rem;
+}
+
+.grid-header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Medical Records Container */
+.records-grid {
+  grid-column: 1 / span 6; /* Full width of the grid */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Align with header */
+  gap: 0.5rem;
+}
+
+/* Individual Record Rows */
+.grid-row {
+  font-weight: bolder;
+  grid-column: 1 / span 6; /* Full width of the grid */
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* Align with header and other rows */
+  padding: 1rem;
+  margin-top: 10px; /* Space between rows */
+  background-color: #ffffff;
+  border: 5px solid #2E472C; /* Border around each row */
+  border-radius: 40px; /* Rounded corners */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+/* Individual Cell Styling */
+.grid-row div {
+  display: flex;
+  justify-content: center; /* Center actions horizontally */
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+}
+
+/* Last Column (Actions) Styling */
+.grid-row div:last-child {
+  display: flex;
+  justify-content: center; /* Center actions horizontally */
+  align-items: center; /* Center actions vertically */
+  gap: 0.5rem;
+}
+
+/* Buttons */
+button {
+  background-color: #F15D90; /* Pink button for Delete */
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+}
+
+button:hover {
+  background-color: #ff4f9b; /* Darker pink on hover */
+}
+
+/* Links */
+a {
+  background-color: #2E472C; /* Pink button for Delete */
+  color: white;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Title Styling */
+.title h2 {
+  font-size: 48px;
+  color: #1C2B1B;
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.title h3 {
+  font-size: 16px;
+  color: #1C2B1B;
+  margin: 10px 0;
+  text-align: center;
+}
