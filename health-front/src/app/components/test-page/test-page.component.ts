@@ -156,7 +156,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
   }
 
   viewPrescriptions(): void {
-    this.router.navigate(['/prescriptions']);
+    this.router.navigate(['/get-user-prescriptions']);
   }
 
   viewHealthRisks(): void {
