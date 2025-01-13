@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../../../environments/environment';
-import {MedicalRecordsService} from '../../../../services/medical-records/medical-records.service';
+import { MedicalRecordsService } from '../../../../services/medical-records/medical-records.service';
+import { Router } from '@angular/router';
 
 interface MedicalRecord {
   recordId: string;
@@ -13,8 +14,8 @@ interface MedicalRecord {
 
 @Component({
   selector: 'app-medical-records',
-  templateUrl: './medical-records.component.html',
-  styleUrls: ['./medical-records.component.css'],
+  templateUrl: './medical-records-display.component.html',
+  styleUrls: ['./medical-records-display.component.css'],
   standalone: true
 })
 export class MedicalRecordsComponent implements OnInit {
@@ -24,7 +25,8 @@ export class MedicalRecordsComponent implements OnInit {
   size = 5; // Number of records per page
   hasNextPage = true;
 
-  constructor(private http: HttpClient, ) {
+  constructor(private http: HttpClient, medicalRecordsService: MedicalRecordsService, private router: Router) {
+    this.medicalRecordsService = medicalRecordsService;
   }
 
   ngOnInit(): void {
@@ -38,7 +40,7 @@ export class MedicalRecordsComponent implements OnInit {
         `${environment.apiUrl}/api/v1/MedicalRecord/user/${userId}`,
         { params: { page: this.page.toString(), size: this.size.toString() } }
       )
-      .subscribe((records) => {
+      .subscribe((records: MedicalRecord[]) => {
         this.medicalRecords = records;
         this.hasNextPage = records.length === this.size;
       });
@@ -47,21 +49,21 @@ export class MedicalRecordsComponent implements OnInit {
   viewRecord(recordId: string): void {
     console.log('View record:', recordId);
     // Fetch the medical record by ID and navigate to its details page
-    this.medicalRecordsService.getMedicalRecordById(recordId).subscribe(
-      (record) => {
+    this.medicalRecordsService.getMedicalRecordById(recordId).subscribe({
+      next: (record: MedicalRecord) => {
         console.log('Fetched Record:', record);
         this.router.navigate(['/medical-record', recordId]);
       },
-      (error) => {
+      error: (error: any) => {
         console.error('Error fetching record:', error);
       }
-    );
+    });
   }
 
   editRecord(recordId: string): void {
-      console.log('Edit record:', recordId);
-      // Navigate to the record edit page
-      this.router.navigate(['/medical-record/', recordId]);
+    console.log('Edit record:', recordId);
+    // Navigate to the record edit page
+    this.router.navigate(['/medical-record/', recordId]);
   }
 
   prevPage(): void {

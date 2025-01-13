@@ -14,7 +14,9 @@ describe('UserService', () => {
     id: '123',
     username: 'testUser',
     email: 'test@example.com',
-    role: UserRole.Doctor
+    role: UserRole.Doctor,
+    firstName: 'Test',
+    lastName: 'User'
   };
 
   beforeEach(() => {
@@ -159,7 +161,7 @@ describe('UserService', () => {
   describe('Header Management', () => {
     it('should include auth headers in all requests', () => {
       const headers = new HttpHeaders().set('Authorization', 'Bearer test-token');
-      
+
       service.getAllUsers(1, 10, { headers }).subscribe();
       service.getUserById(mockUser.id, { headers }).subscribe();
       service.updateUser(mockUser.id, { username: 'test' }, { headers }).subscribe();

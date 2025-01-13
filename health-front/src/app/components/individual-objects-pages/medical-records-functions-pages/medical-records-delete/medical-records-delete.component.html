@@ -2,9 +2,9 @@
 
 <div *ngIf="record">
   <h2>Delete Medical Record</h2>
-  <p>Are you sure you want to delete the record dated {{ record.date }}?</p>
-  <p><strong>Diagnosis:</strong> {{ record.diagnosis }}</p>
-  <p><strong>Notes:</strong> {{ record.notes }}</p>
+  <p>Are you sure you want to delete the record dated {{ record?.date }}?</p>
+  <p><strong>Diagnosis:</strong> {{ record?.diagnosis }}</p>
+  <p><strong>Notes:</strong> {{ record?.notes }}</p>
 
   <button (click)="confirmDelete()">Confirm</button>
   <button (click)="cancel()">Cancel</button>

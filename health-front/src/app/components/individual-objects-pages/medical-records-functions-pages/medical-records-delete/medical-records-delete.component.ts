@@ -4,7 +4,7 @@ import { MedicalRecordsService, MedicalRecord } from '../../../../services/medic
 
 @Component({
   selector: 'app-medical-record-delete',
-  templateUrl: './medical-record-delete.component.html',
+  templateUrl: './medical-records-delete.component.html',
   standalone: true,
   imports: [RouterLink],
 })
