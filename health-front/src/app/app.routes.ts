@@ -20,6 +20,7 @@ import { PrescriptionDetailComponent } from './components/individual-objects-pag
 import { PrescriptionCreateComponent } from './components/individual-objects-pages/prescription-functions-pages/prescription-create/prescription-create.component';
 import { PrescriptionUpdateComponent } from './components/individual-objects-pages/prescription-functions-pages/prescription-update/prescription-update.component';
 import {MedicalRecordsListComponent} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-list/medical-records-list.component';
+import {PrescriptionForUserComponent} from './components/individual-objects-pages/prescription-functions-pages/prescription-for-user/prescription-for-user.component';
 import {
   MedicalRecordDeleteComponent
 } from './components/individual-objects-pages/medical-records-functions-pages/medical-records-delete/medical-records-delete.component';
@@ -47,10 +48,11 @@ export const routes: Routes = [
   { path: 'update-user/:id', component: UserUpdateComponent, canActivate: [AuthGuard] },
   { path: 'get-user-appointments', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
   { path: 'get-all-prescriptions', component: PrescriptionGetAllComponent, canActivate: [AuthGuard] },
+  {path: 'prescriptions/my',component:PrescriptionForUserComponent, canActivate:[AuthGuard]},
   // { path: 'get-user-prescriptions', component: UserGetPrescriptionsComponent, canActivate: [AuthGuard] },
   { path: 'create-prescription', component: PrescriptionCreateComponent, canActivate: [AuthGuard] },
   { path: 'update-prescription/:id', component: PrescriptionUpdateComponent, canActivate: [AuthGuard] },
-  { path: 'prescription-detail/:id', component: PrescriptionDetailComponent, canActivate: [AuthGuard] },
+  { path: 'prescriptions/prescription-detail/:id', component: PrescriptionDetailComponent, canActivate: [AuthGuard] },
   { path: 'medical-records', component: MedicalRecordsListComponent, canActivate: [AuthGuard]  },
   { path: 'medical-records/edit/:id', component: MedicalRecordEditComponent, canActivate: [AuthGuard]  },
   { path: 'medical-records/delete/:id', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },

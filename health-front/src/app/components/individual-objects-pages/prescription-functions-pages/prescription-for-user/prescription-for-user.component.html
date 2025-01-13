@@ -1,0 +1,40 @@
+<div class="container">
+  <button class="back-button" (click)="goBack()">← Back</button>
+  <h2>All Prescriptions</h2>
+
+  <div *ngIf="loading" class="loading">Loading prescriptions...</div>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <table *ngIf="!loading && !error && prescriptions.length > 0">
+    <thead>
+    <tr>
+      <th>Medication</th>
+      <th>Patient Name</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let prescription of prescriptions">
+      <td>{{ prescription.medicationName }}</td>
+      <td>{{ prescription.patientName || 'Loading...' }}</td>
+      <td>{{ prescription.startDate | date }}</td>
+      <td>{{ prescription.endDate | date }}</td>
+      <td class="actions">
+        <a [routerLink]="['/prescription-detail', prescription.prescriptionId]">Details</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="!loading && prescriptions.length === 0" class="no-data">
+    No prescriptions found.
+  </div>
+
+  <div class="pagination" *ngIf="totalCount > 0">
+    <button [disabled]="page === 1" (click)="previousPage()">Previous</button>
+    <span>Page {{ page }}</span>
+    <button [disabled]="isLastPage()" (click)="nextPage()">Next</button>
+  </div>
+</div>
