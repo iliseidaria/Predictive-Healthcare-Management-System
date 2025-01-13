@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PatientUpdateComponent } from './patient-update.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { PatientService } from '../../../services/patient/patient.service';
-import { AuthService } from '../../../services/auth/auth.service';
-import { NavigationService } from '../../../services/navigation/navigation.service';
+import { PatientService } from '../../../../services/patient/patient.service';
+import { AuthService } from '../../../../services/auth/auth.service';
+import { NavigationService } from '../../../../services/navigation/navigation.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { of } from 'rxjs';
+import { provideRouter } from '@angular/router';
 
 describe('PatientUpdateComponent', () => {
   let component: PatientUpdateComponent;
@@ -26,12 +26,12 @@ describe('PatientUpdateComponent', () => {
 
     await TestBed.configureTestingModule({
       imports: [
-        ReactiveFormsModule,
-        RouterTestingModule
+        ReactiveFormsModule
       ],
       providers: [
         FormBuilder,
         provideHttpClient(withFetch()),
+        provideRouter([]),
         { provide: PatientService, useValue: mockPatientService },
         { provide: AuthService, useValue: mockAuthService },
         { provide: NavigationService, useValue: mockNavigationService }

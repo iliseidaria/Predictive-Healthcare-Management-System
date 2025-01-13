@@ -15,12 +15,16 @@ describe('User Model', () => {
         id: '1',
         username: 'test',
         email: 'test@test.com',
-        role: UserRole.Admin
+        role: UserRole.Admin,
+        firstName: 'Test',
+        lastName: 'User'
       };
       expect(user.id).toBeDefined();
       expect(user.username).toBeDefined();
       expect(user.email).toBeDefined();
       expect(user.role).toBeDefined();
+      expect(user.firstName).toBeDefined();
+      expect(user.lastName).toBeDefined();
     });
   });
 });

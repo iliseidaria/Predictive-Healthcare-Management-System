@@ -1,13 +1,14 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PatientCreateComponent } from './patient-create.component';
 import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { PatientService } from '../../../services/patient/patient.service';
-import { AuthService } from '../../../services/auth/auth.service';
-import { NavigationService } from '../../../services/navigation/navigation.service';
+import { PatientService } from '../../../../services/patient/patient.service';
+import { AuthService } from '../../../../services/auth/auth.service';
+import { NavigationService } from '../../../../services/navigation/navigation.service';
 import { Router } from '@angular/router';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { of } from 'rxjs';
+import { provideRouter } from '@angular/router';
 
 describe('PatientCreateComponent', () => {
   let component: PatientCreateComponent;
@@ -32,6 +33,7 @@ describe('PatientCreateComponent', () => {
       providers: [
         FormBuilder,
         provideHttpClient(withFetch()),
+        provideRouter([]),
         { provide: PatientService, useValue: mockPatientService },
         { provide: AuthService, useValue: mockAuthService },
         { provide: NavigationService, useValue: mockNavigationService },

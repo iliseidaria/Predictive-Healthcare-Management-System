@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PatientGetAllComponent } from './patient-get-all.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { PatientService } from '../../../services/patient/patient.service';
-import { AuthService } from '../../../services/auth/auth.service';
-import { NavigationService } from '../../../services/navigation/navigation.service';
+import { PatientService } from '../../../../services/patient/patient.service';
+import { AuthService } from '../../../../services/auth/auth.service';
+import { NavigationService } from '../../../../services/navigation/navigation.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 import { of } from 'rxjs';
+import { provideRouter } from '@angular/router';
 
 describe('PatientGetAllComponent', () => {
   let component: PatientGetAllComponent;
@@ -27,11 +27,9 @@ describe('PatientGetAllComponent', () => {
     mockPatientService.getAllPatients.and.returnValue(of({ items: [], totalCount: 0 }));
 
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
       providers: [
         provideHttpClient(withFetch()),
+        provideRouter([]),
         { provide: PatientService, useValue: mockPatientService },
         { provide: AuthService, useValue: mockAuthService },
         { provide: NavigationService, useValue: mockNavigationService }
@@ -47,3 +45,4 @@ describe('PatientGetAllComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

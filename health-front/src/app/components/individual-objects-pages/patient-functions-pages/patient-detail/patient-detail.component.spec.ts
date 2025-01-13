@@ -1,11 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { PatientDetailComponent } from './patient-detail.component';
-import { RouterTestingModule } from '@angular/router/testing';
-import { PatientService } from '../../../services/patient/patient.service';
-import { AuthService } from '../../../services/auth/auth.service';
-import { NavigationService } from '../../../services/navigation/navigation.service';
-import { HttpClient } from '@angular/common/http';
+import { PatientService } from '../../../../services/patient/patient.service';
+import { AuthService } from '../../../../services/auth/auth.service';
+import { NavigationService } from '../../../../services/navigation/navigation.service';
 import { provideHttpClient, withFetch } from '@angular/common/http';
+import { provideRouter } from '@angular/router';
 
 describe('PatientDetailComponent', () => {
   let component: PatientDetailComponent;
@@ -20,11 +19,9 @@ describe('PatientDetailComponent', () => {
     mockNavigationService = jasmine.createSpyObj('NavigationService', ['goBack']);
 
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
       providers: [
         provideHttpClient(withFetch()),
+        provideRouter([]),
         { provide: PatientService, useValue: mockPatientService },
         { provide: AuthService, useValue: mockAuthService },
         { provide: NavigationService, useValue: mockNavigationService }
@@ -40,3 +37,4 @@ describe('PatientDetailComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

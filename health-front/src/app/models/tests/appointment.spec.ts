@@ -15,7 +15,7 @@ describe('Appointment Models', () => {
   });
 
   describe('Appointment Interface', () => {
-    it('should create appointment with required properties', () => {
+    it('should create an appointment with required properties', () => {
       const appointment: Appointment = {
         patientId: '123',
         providerId: '456',
