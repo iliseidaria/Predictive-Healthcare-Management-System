@@ -106,7 +106,7 @@ export class DoctorComponent implements OnInit {
   }
 
   navigateToAppointments(): void {
-    this.router.navigate(['/get-user-appointments']);
+    this.router.navigate(['/get-all-appointments']);
   }
 
   navigateToPrescriptions(): void {

@@ -1,11 +1,6 @@
 <div class="container">
   <button class="back-button" (click)="goBack()">← Back</button>
-    <h2>Patients</h2>
-    
-    <div class="actions">
-      <a class="create-btn" routerLink="/create-patient">Create New Patient</a>
-    </div>
-
+    <h2>PATIENTS</h2>
   <table>
     <thead>
       <tr>
@@ -13,7 +8,6 @@
         <th>First Name</th>
         <th>Last Name</th>
         <th>Date of Birth</th>
-        <!-- <th>Address</th> -->
         <th>Actions</th>
       </tr>
     </thead>
@@ -23,11 +17,10 @@
         <td>{{ patient.firstName || 'No information' }}</td>
       <td>{{ patient.lastName || 'No information' }}</td>
       <td>{{ patient.dateOfBirth ? (patient.dateOfBirth | date: 'mediumDate') : 'No information' }}</td>
-      <!-- <td>{{ patient.address || 'No information' }}</td> -->
       <td>
         <button (click)="deletePatient(patient.id)">Delete</button>
         <a [routerLink]="['/patient-detail', patient.id]">Details</a>
-        <a *ngIf="userRole !== 'doctor'" [routerLink]="['/update-patient', patient.id]">Update</a>
+        <a [routerLink]="['/update-patient', patient.id]">Edit</a>
       </td>
       </tr>
     </tbody>

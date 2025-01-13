@@ -44,9 +44,16 @@ export class PatientUpdateComponent implements OnInit {
       next: (patient) => {
         // Ensure dateOfBirth is a Date object when setting the form value
         if (patient.dateOfBirth) {
-          patient.dateOfBirth = new Date(patient.dateOfBirth); // Convert to Date object
+          patient.dateOfBirth = this.formatDate(patient.dateOfBirth);
         }
-        patient.gender= parseInt(patient.gender, 10)
+        const genderMap: { [key: string]: number } = {
+          'Male': 0,
+          'Female': 1,
+          'Other': 2
+        };
+        
+        patient.gender = genderMap[patient.gender] || 0;
+        
         this.patientForm.patchValue(patient);
         console.log('Loaded Patient:', patient);
       },
@@ -55,32 +62,62 @@ export class PatientUpdateComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Doctor') {
-      this.patientId = this.route.snapshot.paramMap.get('id')!;
-      const headers = this.authService.getAuthHeaders();
-      const formValue = this.patientForm.value;
-      formValue.gender=parseInt(formValue.gender, 10);
+    if (this.authService.validateToken()) {
+      if (this.patientForm.valid) {
+        this.patientId = this.route.snapshot.paramMap.get('id')!;
+        const headers = this.authService.getAuthHeaders();
+        const formValue = this.patientForm.value;
+        
+        // Format the data
+        const patientData = {
+          patientId: this.patientId,
+          firstName: formValue.firstName,
+          lastName: formValue.lastName,
+          dateOfBirth: formValue.dateOfBirth instanceof Date 
+            ? formValue.dateOfBirth.toISOString() 
+            : new Date(formValue.dateOfBirth).toISOString(),
+          gender: parseInt(formValue.gender, 10),
+          contactInformation: formValue.contactInformation,
+          address: formValue.address,
+          photoPath: formValue.photoPath || '', // Provide empty string if null
+          // Include these if needed by backend
+          username: formValue.username,
+          email: formValue.email,
+          role: formValue.role
+        };
 
-      // Ensure the dateOfBirth is a Date object before sending to the backend
-      if (formValue.dateOfBirth instanceof Date) {
-        // Convert date to UTC if it's not already
-        formValue.dateOfBirth = new Date(formValue.dateOfBirth.toISOString()); // Convert to UTC
+        console.log('Request body ID:', patientData.patientId);
+        console.log('url ID:', this.patientId);
+  
+        // Call service with both patientData and headers
+        this.patientService.updatePatient(this.patientId, patientData, { headers }).subscribe({
+          next: () => {
+            alert('Patient updated successfully!');
+            this.router.navigate(['/get-all-patients']);
+          },
+          error: (err) => {
+            console.error('Error updating patient:', err);
+            alert('Failed to update patient. Please check all required fields.');
+          }
+        });
+      } else {
+        alert('Please fill in all required fields');
       }
-      else if (typeof formValue.dateOfBirth === 'string') {
-        formValue.dateOfBirth = new Date(formValue.dateOfBirth); // Convert to Date object
-        formValue.dateOfBirth = new Date(formValue.dateOfBirth.toISOString()); // Convert to UTC
-      }
-      this.patientService.updatePatient(this.patientId, { headers }).subscribe({
-        next: (patient) => {
-          patient.dateOfBirth = this.formatDate(patient.dateOfBirth);
-          this.patientForm.patchValue(patient);
-          console.log('Loaded Patient:', patient);
-        },
-        error: (err) => console.error('Error loading patient:', err),
-      });
     } else {
       console.error('Unauthorized or insufficient permissions');
-      // this.router.navigateByUrl('/unauthorized');
+    }
+  }
+
+  processPhoto(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.patientForm.patchValue({
+          photoPath: e.target.result
+        });
+      };
+      reader.readAsDataURL(file);
     }
   }
 
@@ -95,20 +132,4 @@ export class PatientUpdateComponent implements OnInit {
   goBack(): void {
     this.navigationService.goBack();
   }
-
-  // onSubmit() {
-  //   if (this.authService.isAuthenticated() && this.authService.getUserRole() !== 'Patient') {
-  //     if (this.patientForm.valid) {
-  //       const headers = this.authService.getAuthHeaders();
-  //       this.patientService.updatePatient(this.patientId, this.patientForm.value, { headers }).subscribe({
-  //         next: () => alert('Patient updated successfully!'),
-  //         error: (err) => console.error('Error updating patient:', err),
-  //       });
-  //     } else {
-  //       console.error('Form is invalid:', this.patientForm);
-  //     }
-  //   } else {
-  //     console.error('Unauthorized or insufficient permissions');
-  //   }
-  // }
 }

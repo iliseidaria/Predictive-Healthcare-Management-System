@@ -1,24 +1,32 @@
 <header>
   <button class="back-button" (click)="goBack()">← Back</button>
-  <h1>Patient Details</h1>
+  <h2>PATIENT DETAILS</h2>
 </header>
 
 <div *ngIf="patient">
   <div class="patient-card">
-    <h2>{{ patient.firstName }} {{ patient.lastName }}</h2>
+    <h2>{{ patient.firstName }} {{ patient.lastName || 'No information' }}</h2>
 
     <ul class="patient-info">
-      <li><strong>Patient ID:</strong> {{ patient.patientId }}</li>
-      <li><strong>Age:</strong> {{ calculateAge(patient.dateOfBirth) }}</li>
-      <li><strong>Date of Birth:</strong> {{ patient.dateOfBirth | date: 'mediumDate' }}</li>
-      <li><strong>Gender:</strong> {{ getGender(patient.gender) }}</li>
-      <li><strong>Address:</strong> {{ patient.address }}</li>
-      <li><strong>Contact Information:</strong> {{ patient.contactInformation }}</li>
-      <li *ngIf="patient.photoPath">
+      <li><strong>Age:</strong> {{ patient.dateOfBirth ? calculateAge(patient.dateOfBirth) : 'No information' }}</li>
+      <li><strong>Date of Birth:</strong> {{ patient.dateOfBirth ? (patient.dateOfBirth | date: 'mediumDate') : 'No information' }}</li>
+      <li><strong>Gender:</strong> {{ patient.gender || 'No information' }}</li>
+      <li><strong>Address:</strong> {{ patient.address || 'No information' }}</li>
+      <li><strong>Email:</strong> {{ patient.email || 'No information' }}</li>
+      <li><strong>Contact Information:</strong> {{ patient.contactInformation || 'No information' }}</li>
+      <li *ngIf="patient.photoPath" class="photo-container">
         <strong>Photo:</strong>
-        <img [src]="patient.photoPath" alt="Patient Photo" />
+        <img [src]="patient.photoPath" alt="Patient Photo" (click)="showFullImage()" />
       </li>
       <li>
+
+            <!-- Photo Modal -->
+      <div class="modal" *ngIf="isModalOpen" (click)="closeModal()">
+        <div class="modal-content">
+          <img [src]="patient.photoPath" alt="Patient Photo Full Size" />
+          <span class="close-button">&times;</span>
+        </div>
+      </div>
         <strong>Predicted diagnosis for patient:</strong>
         <span *ngIf="predictions; else loading">{{ formatPredictions(predictions) }}</span>
         <ng-template #loading>Loading predictions...</ng-template>

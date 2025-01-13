@@ -121,7 +121,7 @@ namespace Predictive_Healthcare_Management_System.Controllers
         }
 
 
-    [HttpGet("user/{id}")]
+    [HttpGet("users/{id}")]
     [AllowAnonymous]
     public async Task<ActionResult<UserDto>> GetUserById(Guid id)
     {
@@ -144,6 +144,25 @@ namespace Predictive_Healthcare_Management_System.Controllers
       }
       await _mediator.Send(new DeletePatientCommand { Id = id });
       return NoContent();
+    }
+
+    [HttpPut("users/{id}")]
+    [AllowAnonymous]
+    public async Task<IActionResult> Update(Guid id, [FromBody] UpdatePatientCommand command)
+    {
+      if (id != command.PatientId)
+      {
+        return BadRequest("Patient ID in the URL does not match the request body.");
+      }
+
+      var patient = await _mediator.Send(new GetUserByIdQuery { Id = id });
+      if (patient == null)
+      {
+        return NotFound("Patient not found.");
+      }
+
+      await _mediator.Send(command);
+      return NoContent(); // Return status 204
     }
 
     [HttpPost("logout")]

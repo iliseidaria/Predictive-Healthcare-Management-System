@@ -25,8 +25,17 @@
     <label for="address">Address</label>
     <input id="address" formControlName="address" />
 
-    <label for="photoPath">Photo Path (Optional)</label>
-    <input id="photoPath" formControlName="photoPath" />
+    <label for="photoPath">Photo (Optional)</label>
+    <div class="photo-container">
+      <img *ngIf="patientForm.get('photoPath')?.value" [src]="patientForm.get('photoPath')?.value" alt="Patient Photo" />
+      <div *ngIf="!patientForm.get('photoPath')?.value" class="no-photo">No photo available</div>
+      <input 
+        type="file" 
+        accept="image/*" 
+        (change)="processPhoto($event)"
+        id="photoUpload"
+      >
+    </div>
 
     <button type="submit" [disabled]="!patientForm.valid">Update Patient</button>
   </form>

@@ -50,7 +50,7 @@ table {
 }
 
 thead {
-  background-color: #007bff; /* Primary blue header */
+  background-color: #2e472c; /* Primary blue header */
 }
 
 th {
@@ -118,7 +118,7 @@ td a:hover {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color: #007bff; /* Same as header */
+  background-color: #2e472c; /* Same as header */
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -127,7 +127,7 @@ td a:hover {
 }
 
 .pagination button:hover {
-  background-color: #0056b3; /* Darker blue */
+  background-color: #1c2b1b; /* Darker blue */
 }
 
 .pagination button:disabled {
@@ -140,7 +140,7 @@ td a:hover {
   top: 20px;
   left: 20px;
   padding: 8px 16px;
-  background-color: #0056b3;
+  background-color: #1c2b1b;
   color: white;
   border: none;
   border-radius: 4px;
@@ -150,7 +150,7 @@ td a:hover {
 }
 
 .back-button:hover {
-  background-color: #003d80;
+  background-color: #2e472c;
 }
 
 .actions {
@@ -172,34 +172,90 @@ td a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .container {
+    padding: 15px;
+    width: 95%;
+  }
+}
+
+@media (max-width: 992px) {
   table {
-    width: 90%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
   }
 
-  th, td {
+  td button,
+  td a {
+    padding: 6px 10px;
     font-size: 0.8rem;
+    margin: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
     padding: 10px;
   }
 
-  .pagination button {
+  h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+  }
+
+  table {
+    margin: 10px 0;
     font-size: 0.9rem;
-    padding: 8px 15px;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  td {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .back-button {
+    position: static;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+
+  td:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  td button,
+  td a {
+    width: 100%;
+    text-align: center;
+    margin: 2px 0;
   }
 }
 
 @media (max-width: 480px) {
-  table {
-    width: 100%;
+  h2 {
+    font-size: 1.2rem;
   }
 
-  th, td {
-    font-size: 0.7rem;
-    padding: 8px;
+  .pagination {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .pagination button {
-    font-size: 0.8rem;
-    padding: 6px 10px;
+    width: 100%;
+    max-width: 200px;
+  }
+
+  td {
+    max-width: 100px;
   }
 }

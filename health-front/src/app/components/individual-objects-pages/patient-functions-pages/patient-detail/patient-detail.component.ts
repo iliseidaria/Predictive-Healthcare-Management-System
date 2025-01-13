@@ -17,13 +17,14 @@ import { NavigationService } from '../../../../services/navigation/navigation.se
 export class PatientDetailComponent implements OnInit {
   patient: any;
   predictions: Record<string, number> | null = null;
+  isModalOpen: boolean = false;
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private patientService: PatientService,
     private navigationService: NavigationService,
-    private authService: AuthService,
+    public authService: AuthService,
     private http: HttpClient
   ) {}
 
@@ -90,6 +91,13 @@ export class PatientDetailComponent implements OnInit {
     });
   }
 
+  showFullImage(): void {
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
+  }
 
   calculateAge(dateOfBirth: string): number {
     const birthDate = new Date(dateOfBirth);
@@ -103,10 +111,6 @@ export class PatientDetailComponent implements OnInit {
     return age;
   }
 
-  getGender(gender: number): string {
-    return gender === 0 ? 'Male' : gender === 1 ? 'Female' : 'Other';
-  }
-
   formatPredictions(predictions: Record<string, number>): string {
     return Object.entries(predictions)
       .filter(([_, likelihood]) => likelihood > 0.04)
@@ -116,5 +120,16 @@ export class PatientDetailComponent implements OnInit {
 
   goBack(): void {
     this.navigationService.goBack();
+  }
+
+  processPhoto(event: any): void {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.patient.photoPath = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
   }
 }

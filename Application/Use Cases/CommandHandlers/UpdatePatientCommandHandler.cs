@@ -16,21 +16,43 @@ namespace Application.CommandHandlers
             this.mapper = mapper;
         }
 
-        public async Task<Unit> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
-        {
-            // Check if the patient exists
-            var existingPatient = await repository.GetUserByIdAsync(request.PatientId);
-            if (existingPatient == null)
-            {
-                throw new KeyNotFoundException("Patient not found");
-            }
+    //  public async Task<Unit> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
+    //  {
+    //      // Check if the patient exists
+    //      var existingPatient = await repository.GetUserByIdAsync(request.PatientId);
+    //      if (existingPatient == null)
+    //      {
+    //          throw new KeyNotFoundException("Patient not found");
+    //      }
 
-            repository.Detach(existingPatient);
+    //repository.Detach(existingPatient);
 
-            var patient = mapper.Map<User>(request);
-            await repository.UpdateAsync(patient);
+    //var patient = mapper.Map<User>(request);
+    //      await repository.UpdateAsync(patient);
 
-            return Unit.Value;
-        }
+    //      return Unit.Value;
+    //  }
+    public async Task<Unit> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
+    {
+      var existingPatient = await repository.GetUserByIdAsync(request.PatientId);
+      if (existingPatient == null)
+      {
+        throw new KeyNotFoundException("Patient not found");
+      }
+
+      // Update only modified properties
+      existingPatient.FirstName = request.FirstName;
+      existingPatient.LastName = request.LastName;
+      existingPatient.DateOfBirth = request.DateOfBirth;
+      existingPatient.Gender = request.Gender.ToString();
+      existingPatient.ContactInformation = request.ContactInformation;
+      existingPatient.Address = request.Address;
+      existingPatient.PhotoPath = request.PhotoPath;
+
+      // Update using existing entity
+      await repository.UpdateAsync(existingPatient);
+
+      return Unit.Value;
     }
+  }
 }

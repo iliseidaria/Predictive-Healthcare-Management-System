@@ -57,6 +57,7 @@ namespace Infrastructure.Repositories
 
     public async Task<bool> UpdateAsync(User patient)
     {
+      //context.Users.Attach(patient);
       context.Entry(patient).State = EntityState.Modified;
       return await context.SaveChangesAsync() > 0;
     }

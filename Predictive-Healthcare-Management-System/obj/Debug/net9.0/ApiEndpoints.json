@@ -237,8 +237,29 @@
   },
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/v1/Auth/users",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
     "Method": "GetUserById",
-    "RelativePath": "api/v1/Auth/user/{id}",
+    "RelativePath": "api/v1/Auth/users/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -263,27 +284,6 @@
   },
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
-    "Method": "GetAllUsers",
-    "RelativePath": "api/v1/Auth/users",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "page",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "size",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
     "Method": "Delete",
     "RelativePath": "api/v1/Auth/users/{id}",
     "HttpMethod": "DELETE",
@@ -293,6 +293,27 @@
       {
         "Name": "id",
         "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "Update",
+    "RelativePath": "api/v1/Auth/users/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "Application.Use_Cases.Commands.UpdatePatientCommand",
         "IsRequired": true
       }
     ],

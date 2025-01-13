@@ -15,11 +15,12 @@ body {
   padding: 20px;
 }
 
-h1 {
+h2 {
   font-size: 2rem;
   margin-bottom: 20px;
+  margin-top: 20px;
   text-align: center;
-  color: #007bff; /* Primary blue */
+  color: #2e472c;
 }
 
 .patient-card {
@@ -34,7 +35,7 @@ h1 {
 .patient-card h2 {
   font-size: 1.5rem;
   margin-bottom: 15px;
-  color: #343a40; /* Dark gray */
+  color: #405439; /* Dark gray */
   text-align: center;
 }
 
@@ -50,7 +51,7 @@ h1 {
 }
 
 .patient-info strong {
-  color: #007bff; /* Highlighted text in blue */
+  color: #77936c;
 }
 
 .patient-info img {
@@ -67,7 +68,7 @@ h1 {
   top: 20px;
   left: 20px;
   padding: 8px 16px;
-  background-color: #0056b3;
+  background-color: #2e472c;
   color: white;
   border: none;
   border-radius: 4px;
@@ -77,38 +78,185 @@ h1 {
 }
 
 .back-button:hover {
-  background-color: #003d80;
+  background-color: #1c2b1b;
+}
+
+.patient-info li img {
+  display: block;
+  max-width: 200px;
+  max-height: 200px;
+  width: auto;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.patient-info li img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.photo-container {
+  text-align: center;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.photo-container strong {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  color: white;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.photo-container img {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.photo-container img:hover {
+  transform: scale(1.05);
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .modal-content img {
+    max-width: 95vw;
+    max-height: 95vh;
+  }
+
+  .patient-card {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 768px) {
   .patient-card {
     padding: 15px;
+    margin: 10px;
+    width: 95%;
   }
 
-  h1 {
-    font-size: 1.8rem;
-  }
-
-  .patient-card h2 {
-    font-size: 1.3rem;
+  h2 {
+    font-size: 1.5rem;
+    margin: 15px 0;
   }
 
   .patient-info li {
     font-size: 0.95rem;
+    padding: 8px 0;
+  }
+
+  .photo-container img {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+
+  .close-button {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  .back-button {
+    position: static;
+    margin: 10px;
+    width: calc(100% - 20px);
   }
 }
 
 @media (max-width: 480px) {
-  h1 {
-    font-size: 1.5rem;
+  .patient-card {
+    padding: 10px;
+    margin: 5px;
   }
 
-  .patient-card h2 {
+  h2 {
     font-size: 1.2rem;
   }
 
   .patient-info li {
     font-size: 0.9rem;
+    padding: 6px 0;
+  }
+
+  .photo-container img {
+    max-width: 120px;
+    max-height: 120px;
+  }
+
+  .modal-content img {
+    border-radius: 4px;
+  }
+
+  .close-button {
+    font-size: 20px;
+  }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+  .modal-content img {
+    max-height: 80vh;
   }
 }
