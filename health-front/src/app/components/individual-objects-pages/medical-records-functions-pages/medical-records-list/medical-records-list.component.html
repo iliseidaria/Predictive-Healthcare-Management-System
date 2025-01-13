@@ -31,7 +31,7 @@
       <div style="grid-column: 1 / span 2;">{{ record.date }}</div>
       <div style="grid-column: 3 / span 2;">{{ record.diagnosis }}</div>
       <div style="grid-column: 5 / span 1;">
-        <a [routerLink]="['/medical-records/edit', record.recordId]">Edit</a>
+        <a [routerLink]="['/medical-records/view', record.recordId]">View</a>
       </div>
        <div style="grid-column: 6/ span 1">
          <button (click)="deleteRecord(record.recordId)" >Delete</button>

@@ -28,6 +28,7 @@ import {
 } from './components/individual-objects-pages/medical-records-functions-pages/medical-records-edit/medical-records-edit.component';
 import { UserGetPrescriptionsComponent } from './components/individual-objects-pages/user-functions-pages/user-get-prescriptions/user-get-prescriptions.component';
 import { DoctorComponent } from './components/home/doctor/doctor.component';
+import {MedicalRecordViewComponent} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-view/medical-records-view.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -53,5 +54,6 @@ export const routes: Routes = [
   { path: 'medical-records', component: MedicalRecordsListComponent, canActivate: [AuthGuard]  },
   { path: 'medical-records/edit/:id', component: MedicalRecordEditComponent, canActivate: [AuthGuard]  },
   { path: 'medical-records/delete/:id', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },
+  { path: 'medical-records/view/:id', component: MedicalRecordViewComponent, canActivate: [AuthGuard]  },
   { path: 'doctor', component: DoctorComponent, canActivate: [AuthGuard] },
 ];

@@ -10,7 +10,7 @@ import {ViewProfileButtonComponent} from '../../../buttons/view-profile-button/v
   templateUrl: './medical-records-edit.component.html',
   standalone: true,
   imports: [RouterLink, CommonModule, FormsModule, LogoutButtonComponent, ViewProfileButtonComponent],
-  styleUrls: ['medical-records-edit.component.css','../../../home/test-page/css/test-page.component.css'],
+  styleUrls: ['../medical-records-css/medical-records-styles.css','../../../home/test-page/css/test-page.component.css'],
 })
 export class MedicalRecordEditComponent {
   record: Partial<Omit<MedicalRecord, 'recordId' | 'patientId'>> = {
@@ -66,6 +66,9 @@ export class MedicalRecordEditComponent {
     }
   }
 
+  backToList(): void {
+    this.router.navigate(['/medical-records']);
+  }
   cancelEdit(): void {
     this.router.navigate(['/medical-records']);
   }

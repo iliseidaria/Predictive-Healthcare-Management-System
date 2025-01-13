@@ -8,11 +8,12 @@
   </div>
 
   <!-- Title -->
-  <!-- Title -->
   <<div class="grid-row" style="grid-column: 1 / span 6; grid-row: 2; display: flex; gap: 1rem;">
   <button type="button" class="cancel-button" (click)="backToList()">Back to List</button>
-  <h2 class="section-title" style="display: flex; width: 65%; font-size:45px; justify-content: center; align-items: center;">EDIT MEDICAL RECORD</h2>
-</div>
+  <h2 class="section-title" style="display: flex; width: 65%; font-size:45px; justify-content: center; align-items: center;">VIEW MEDICAL RECORD</h2>
+  </div>
+
+
 
   <!-- Profile and Logout Buttons -->
   <div class="grid-item profile-button" style="grid-column: 5; grid-row: 1;">
@@ -22,22 +23,13 @@
     <app-logout-button></app-logout-button>
   </div>
 
-  <!-- Editable Form -->
-  <form
-    class="records-grid"
-    style="grid-column: 1 / span 6; grid-row: 5;"
-    (ngSubmit)="saveRecord()"
-  >
+  <!-- View Form -->
+  <div class="records-grid" style="grid-column: 1 / span 6; grid-row: 3;">
     <!-- Date -->
     <div class="grid-row">
       <div class="field-title" style="grid-column: 1 / span 1;">Date</div>
       <div class="field-value" style="grid-column: 1 / span 2;">
-        <input
-          type="datetime-local"
-          [(ngModel)]="record.date"
-          name="date"
-          required
-        />
+        {{ record.date | date: 'short' }}
       </div>
     </div>
 
@@ -45,12 +37,7 @@
     <div class="grid-row">
       <div class="field-title" style="grid-column: 1 / span 2;">Diagnosis</div>
       <div class="field-value" style="grid-column: 1 / span 2;">
-        <input
-          type="text"
-          [(ngModel)]="record.diagnosis"
-          name="diagnosis"
-          required
-        />
+        {{ record.diagnosis }}
       </div>
     </div>
 
@@ -58,12 +45,9 @@
     <div class="grid-row">
       <div class="field-title" style="grid-column: 1 / span 6;">Prescriptions</div>
       <div class="field-value" style="grid-column: 1 / span 6;">
-        <textarea
-          [(ngModel)]="record.prescriptions"
-          name="prescriptions"
-          rows="3"
-          placeholder="Enter prescriptions, separated by commas"
-        ></textarea>
+        <ul>
+          <li *ngFor="let prescription of record.prescriptions">{{ prescription }}</li>
+        </ul>
       </div>
     </div>
 
@@ -71,21 +55,10 @@
     <div class="grid-row">
       <div class="field-title" style="grid-column: 1 / span 6;">Notes</div>
       <div class="field-value" style="grid-column: 1 / span 6;">
-        <textarea
-          [(ngModel)]="record.notes"
-          name="notes"
-          rows="4"
-          placeholder="Enter additional notes"
-        ></textarea>
+        {{ record.notes }}
       </div>
     </div>
 
-    <!-- Action Buttons -->
-    <div class="grid-row">
-      <div style="grid-column: 1 / span 6;">
-      <button type="submit" class="save-button" style="display: flex; justify-content: center; align-content: center; width:40%">Save</button>
-      <button type="button" class="cancel-button" (click)="cancelEdit()"style="display: flex; justify-content: center; align-content: center;width: 40%">Cancel</button>
-    </div>
-    </div>
-  </form>
+
+  </div>
 </div>

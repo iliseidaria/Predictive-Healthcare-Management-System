@@ -10,7 +10,7 @@ import { LogoutButtonComponent } from '../../../buttons/logout-button/logout-but
   selector: 'app-medical-records-list',
   templateUrl: './medical-records-list.component.html',
   standalone: true,
-  styleUrls: ['medical-records-list.component.css', '../../../home/test-page/css/test-page.component.css'],
+  styleUrls: ['../medical-records-css/medical-records-list.component.css', '../../../home/test-page/css/test-page.component.css'],
   imports: [RouterLink, CommonModule, ViewProfileButtonComponent, LogoutButtonComponent],
 })
 export class MedicalRecordsListComponent implements OnInit {
