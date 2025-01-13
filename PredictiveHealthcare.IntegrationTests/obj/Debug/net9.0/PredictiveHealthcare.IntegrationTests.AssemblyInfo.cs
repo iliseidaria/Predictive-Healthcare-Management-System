@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PredictiveHealthcare.IntegrationTests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5ba07964d8345ff8cf48580905ac1a8016ffea9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3a89bbbd556971af6878ef21edbf0fe5ddb0e21e")]
 [assembly: System.Reflection.AssemblyProductAttribute("PredictiveHealthcare.IntegrationTests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PredictiveHealthcare.IntegrationTests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
