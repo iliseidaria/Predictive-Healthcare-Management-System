@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { UserService } from '../../../../services/user/user.service';
 import { AuthService } from '../../../../services/auth/auth.service';
 import { NavigationService } from '../../../../services/navigation/navigation.service';
 import { UserRole } from '../../../../models/user';
+import { PatientService } from '../../../../services/patient/patient.service';
 
 @Component({
   selector: 'app-user-update',
@@ -22,7 +22,7 @@ export class UserUpdateComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private userService: UserService,
+    private patientService: PatientService,
     private authService: AuthService,
     private route: ActivatedRoute,
     private router: Router,
@@ -37,7 +37,7 @@ export class UserUpdateComponent implements OnInit {
 
   ngOnInit(): void {
     this.userId = this.route.snapshot.paramMap.get('id')!;
-    this.userService.getUserById(this.userId, {
+    this.patientService.getPatientById(this.userId, {
       headers: this.authService.getAuthHeaders()
     }).subscribe({
       next: (user) => {
@@ -51,7 +51,7 @@ export class UserUpdateComponent implements OnInit {
 
   onSubmit(): void {
     if (this.userForm.valid) {
-      this.userService.updateUser(this.userId, this.userForm.value, {
+      this.patientService.updatePatient(this.userId, this.userForm.value, {
         headers: this.authService.getAuthHeaders()
       }).subscribe({
         next: () => {

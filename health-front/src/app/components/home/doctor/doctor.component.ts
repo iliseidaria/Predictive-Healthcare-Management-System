@@ -25,7 +25,7 @@ export class DoctorComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private authService: AuthService,
+    public authService: AuthService,
     private appointmentService: AppointmentService,
     private userService: UserService
   ) {}
@@ -115,5 +115,8 @@ export class DoctorComponent implements OnInit {
 
   navigateToMedicalRecords(): void {
     this.router.navigate(['/medical-records']);
+  }
+  navigateToUsers(): void {
+    this.router.navigate(['/get-all-users']);
   }
 }

@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpParams, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { catchError, tap } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
+import { UsersResponse } from '../../models/user';
 @Injectable({
   providedIn: 'root',
 })
@@ -20,6 +21,24 @@ export class PatientService {
       .set('role', 'patient'); // Add role filter parameter
   
     return this.http.get<any>(`${this.baseUrl}`, { params, ...options });
+  }
+
+  getAllUsers(page: number, size: number, options?: { headers?: HttpHeaders }): Observable<UsersResponse> {
+    const params = new HttpParams()
+      .set('pageNumber', page.toString())
+      .set('pageSize', size.toString());
+      
+    console.log('Requesting users with params:', { page, size });
+    console.log('Headers:', options?.headers);
+    
+    return this.http.get<UsersResponse>(`${this.baseUrl}`, { params, ...options })
+      .pipe(
+        tap(response => console.log('Service response:', response)),
+        catchError(error => {
+          console.error('Service error:', error);
+          throw error;
+        })
+      );
   }
 
   getPatientById(id: string, options?: { headers?: HttpHeaders }): Observable<any> {

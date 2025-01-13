@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updatepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\application\\use cases\\commands\\updatepatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatepatientcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatepatientcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -352,13 +352,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "AuthController.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
               "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAIoAAAAAAAAAAAAQwJgAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAFwAAAAAAAAAAAAuwGEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-13T13:30:37.438Z",
               "IsPinned": true,
@@ -394,7 +394,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UpdatePatientCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePatientCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePatientCommandValidator.cs",
@@ -413,14 +413,14 @@
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
               "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAiwC4AAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAiwDYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T10:48:18.976Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "UserRepository.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Repositories\\UserRepository.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Repositories\\UserRepository.cs",
@@ -428,12 +428,11 @@
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Repositories\\UserRepository.cs",
               "ViewState": "AgIAACoAAAAAAAAAAAAowDwAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T13:42:27.046Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T13:42:27.046Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "UpdatePatientCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
@@ -441,8 +440,7 @@
               "RelativeToolTip": "Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAmwA0AAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T10:51:23.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T10:51:23.453Z"
             },
             {
               "$type": "Document",
@@ -454,8 +452,7 @@
               "RelativeToolTip": "Application\\DTOs\\UserDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:12:22.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T13:12:22.069Z"
             },
             {
               "$type": "Document",
@@ -467,8 +464,7 @@
               "RelativeToolTip": "Domain\\Entities\\User.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAQwBMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T10:07:58.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-09T10:07:58.733Z"
             },
             {
               "$type": "Document",
@@ -480,8 +476,7 @@
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAA8wCIAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-10T11:20:14.787Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-10T11:20:14.787Z"
             },
             {
               "$type": "Document",

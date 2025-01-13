@@ -51,6 +51,12 @@
         <button class="wide-button" (click)="navigateToPrescriptions()">Manage Prescriptions</button>
         <button class="wide-button" (click)="navigateToMedicalRecords()">Access Medical Records</button>
         <button class="wide-button" (click)="navigateToAppointments()">Manage Appointments</button>
+        <button 
+            *ngIf="authService.getCurrentUser()?.role === 'Admin'"
+            class="wide-button" 
+            (click)="navigateToUsers()">
+            Manage Users
+        </button>
       </div>
     </div>
   </div>

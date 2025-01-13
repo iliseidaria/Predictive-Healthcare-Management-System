@@ -5,6 +5,7 @@ import { UserService } from '../../../../services/user/user.service';
 import { User, UserRole, UsersResponse } from '../../../../models/user';
 import { AuthService } from '../../../../services/auth/auth.service';
 import { NavigationService } from '../../../../services/navigation/navigation.service';
+import { PatientService } from '../../../../services/patient/patient.service';
 
 @Component({
   selector: 'app-users-get-all',
@@ -24,7 +25,7 @@ export class UsersGetAllComponent implements OnInit {
   private navigationService = inject(NavigationService);
 
   constructor(
-    private userService: UserService,
+    private patientService: PatientService,
     private authService: AuthService
   ) {}
 
@@ -34,22 +35,30 @@ export class UsersGetAllComponent implements OnInit {
 
   loadUsers(): void {
     this.loading = true;
-    this.userService.getAllUsers(this.page, this.size, {
+    console.log('Loading users...');
+    
+    this.patientService.getAllUsers(this.page, this.size, {
       headers: this.authService.getAuthHeaders()
     }).subscribe({
       next: (response: UsersResponse) => {
-        this.users = response.users;
-        this.totalCount = response.totalUsers;
+        console.log('API Response:', response);
+        if (response && response.items) {
+          this.users = response.items;
+          this.totalCount = response.totalCount;
+          console.log('Loaded users:', this.users);
+        } else {
+          console.error('Invalid response format:', response);
+          this.error = 'Invalid response format';
+        }
         this.loading = false;
       },
       error: (error) => {
+        console.error('Error loading users:', error);
         this.error = 'Failed to load users';
         this.loading = false;
-        console.error('Error:', error);
       }
     });
-  }
-
+}
   isLastPage(): boolean {
     return (this.page * this.size) >= this.totalCount;
   }
@@ -62,7 +71,7 @@ export class UsersGetAllComponent implements OnInit {
     this.loading = true;
     this.error = null;
 
-    this.userService.deleteUser(userId, {
+    this.patientService.deletePatient(userId, {
       headers: this.authService.getAuthHeaders()
     }).subscribe({
       next: () => {
