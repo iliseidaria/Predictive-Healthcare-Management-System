@@ -3,7 +3,95 @@
   "WorkspaceRootPath": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\application\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queryhandlers\\getmedicalrecordbyuseridqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getmedicalrecordbyuseridqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|d:\\fii\\dotnet\\finally\\predictive-healthcare-management-system\\controllers\\medicalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\medicalrecordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queryhandlers\\getprescriptionsbypatientidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getprescriptionsbypatientidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\repositories\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\iusersrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queries\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getuserbyidquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queryhandlers\\getappointmentbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getappointmentbyidqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\createappointmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\createappointmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\20250109171715_prescriptiontableupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20250109171715_prescriptiontableupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\20241229161728_addedfktoappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241229161728_addedfktoappointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\20241209195231_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241209195231_users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\20241209174143_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241209174143_addusertable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\applicationdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\20241212120942_addemailtouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241212120942_addemailtouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\migrations\\20241212124315_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\migrations\\20241212124315_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\updateappointmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updateappointmentcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queryhandlers\\getuserappointmentsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getuserappointmentsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\utils\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\utils\\validationbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\prescription.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\appointmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -11,6 +99,7 @@
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\iappointmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -25,6 +114,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 3a89bbb (Began medical records, fixed header)
     },
     {
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\application\\use cases\\queryhandlers\\getallusersqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,6 +136,7 @@
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\application\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -53,12 +147,129 @@
     {
       "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\infrastructure\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\updatemedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updatemedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\updateappointmentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updateappointmentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\deletepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\deletepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\createusercommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\updatepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updatepatientcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\updatemedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updatemedicalrecordcommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createusercommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|d:\\fii\\dotnet\\finally\\predictive-healthcare-management-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\repositories\\ipredictionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\ipredictionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\repositories\\iprescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\repositories\\iprescriptionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\addprescriptioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\addprescriptioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\dtos\\prescriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\prescriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\dtos\\medicalrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\medicalrecorddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|d:\\fii\\dotnet\\finally\\domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919A7E92-0DDC-43F2-A6E2-BC452EC7FDA6}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\medicalrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|d:\\fii\\dotnet\\finally\\predictive-healthcare-management-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queryhandlers\\getprescriptionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getprescriptionsqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\addprescriptioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\addprescriptioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\updateprescriptioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updateprescriptioncommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\updateprescriptioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\updateprescriptioncommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\createappointmentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createappointmentcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\createmedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createmedicalrecordcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commandhandlers\\updateprescriptioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commandhandlers\\updateprescriptioncommandhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\commands\\createappointmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\commands\\createappointmentcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|d:\\fii\\dotnet\\finally\\infrastructure\\infrastructure\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DA180BD-FEE2-413C-B1D8-3DF0086FD0C3}|Infrastructure\\Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\infrastructure\\dataseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\utils\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\utils\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\dtos\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queries\\getallusersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queries\\getallusersresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 3a89bbb (Began medical records, fixed header)
     },
     {
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\predictive-healthcare-management-system\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0AC8458E-A6E8-4140-A788-731CCFF0A8A4}|Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj|solutionrelative:predictive-healthcare-management-system\\controllers\\appointmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -324,6 +535,17 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{7154142F-D28C-4C53-88A0-A425BD857CE9}|PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj|m:\\facultate\\anul3\\.net\\gitactual\\predictive-healthcare-management-system\\predictivehealthcare.application.unittests\\predictivehealthcare.application.unittests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+=======
+      "AbsoluteMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|d:\\fii\\dotnet\\finally\\application\\use cases\\queryhandlers\\getappointmentqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F40179FE-B9BC-482D-AC45-A127DFDB77A3}|Application\\Application.csproj|solutionrelative:application\\use cases\\queryhandlers\\getappointmentqueryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{73A3E41A-DBF7-4BA8-8D62-CC120A812300}|PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj|d:\\fii\\dotnet\\finally\\predictivehealthcare.integrationtests\\xunit.runner.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{73A3E41A-DBF7-4BA8-8D62-CC120A812300}|PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj|solutionrelative:predictivehealthcare.integrationtests\\xunit.runner.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7154142F-D28C-4C53-88A0-A425BD857CE9}|PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj|d:\\fii\\dotnet\\finally\\predictivehealthcare.application.unittests\\predictivehealthcare.application.unittests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
       "RelativeMoniker": "D:0:0:{7154142F-D28C-4C53-88A0-A425BD857CE9}|PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj|solutionrelative:predictivehealthcare.application.unittests\\predictivehealthcare.application.unittests.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
@@ -389,6 +611,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 272,
+<<<<<<< HEAD
           "SelectedChildIndex": 18,
           "Children": [
             {
@@ -494,6 +717,53 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T13:12:22.069Z",
               "IsPinned": true
+=======
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GetMedicalRecordByUserIdQueryHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByUserIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByUserIdQueryHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByUserIdQueryHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetMedicalRecordByUserIdQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T00:00:51.385Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MedicalRecordController.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwCsAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T00:15:36.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GetPrescriptionsByPatientIdQueryHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-13T00:15:26.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+>>>>>>> 3a89bbb (Began medical records, fixed header)
             },
             {
               "$type": "Bookmark",
@@ -516,6 +786,7 @@
               "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
             },
             {
+<<<<<<< HEAD
               "$type": "Bookmark",
               "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
             },
@@ -530,11 +801,208 @@
               "ViewState": "AgIAAAsAAAAAAAAAAADgvxYAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T06:36:57.485Z",
+=======
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUsersRepository.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Domain\\Repositories\\IUsersRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Repositories\\IUsersRepository.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Domain\\Repositories\\IUsersRepository.cs",
+              "RelativeToolTip": "Domain\\Repositories\\IUsersRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T10:34:12.341Z",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+<<<<<<< HEAD
+=======
+              "Title": "GetUserByIdQuery.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetUserByIdQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetUserByIdQuery.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetUserByIdQuery.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetUserByIdQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T20:12:11.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GetAppointmentByIdQueryHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetAppointmentByIdQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetAppointmentByIdQueryHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetAppointmentByIdQueryHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetAppointmentByIdQueryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateAppointmentCommandHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\CommandHandlers\\CreateAppointmentCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\CreateAppointmentCommandHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\CommandHandlers\\CreateAppointmentCommandHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\CreateAppointmentCommandHandler.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIAwwBoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T13:08:18.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "20250109171715_prescriptionTableUpdate.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20250109171715_prescriptionTableUpdate.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20250109171715_prescriptionTableUpdate.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20250109171715_prescriptionTableUpdate.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20250109171715_prescriptionTableUpdate.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAuwF8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T11:36:31.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20241229161728_addedFKtoAppointment.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241229161728_addedFKtoAppointment.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241229161728_addedFKtoAppointment.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241229161728_addedFKtoAppointment.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20241229161728_addedFKtoAppointment.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAYwAoAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T12:32:11.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20241209195231_Users.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T12:27:56.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20241209174143_AddUserTable.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T12:27:54.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAqwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-10T11:20:14.787Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ApplicationDbContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\ApplicationDbContextModelSnapshot.cs",
+              "ViewState": "AgIAABABAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T09:00:27.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20241212120942_AddEmailToUser.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241212120942_AddEmailToUser.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241212120942_AddEmailToUser.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241212120942_AddEmailToUser.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20241212120942_AddEmailToUser.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwBkAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T19:45:23.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20241212124315_InitialCreate.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241212124315_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20241212124315_InitialCreate.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\Migrations\\20241212124315_InitialCreate.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20241212124315_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T09:00:13.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswCEAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T10:07:58.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Domain\\Entities\\Appointment.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Appointment.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Domain\\Entities\\Appointment.cs",
+              "RelativeToolTip": "Domain\\Entities\\Appointment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateAppointmentCommandHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\CommandHandlers\\UpdateAppointmentCommandHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdateAppointmentCommandHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\CommandHandlers\\UpdateAppointmentCommandHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\CommandHandlers\\UpdateAppointmentCommandHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T19:28:34.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "GetUserAppointmentsQueryHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetUserAppointmentsQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetUserAppointmentsQueryHandler.cs",
@@ -547,6 +1015,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 2,
               "Title": "Appointment.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
@@ -554,12 +1023,22 @@
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Entities\\Appointment.cs",
               "RelativeToolTip": "Domain\\Entities\\Appointment.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAwAwAAAAZAAAAAAAAAA==",
+=======
+              "DocumentIndex": 19,
+              "Title": "ValidationBehaviour.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Utils\\ValidationBehaviour.cs",
+              "RelativeDocumentMoniker": "Application\\Utils\\ValidationBehaviour.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Utils\\ValidationBehaviour.cs",
+              "RelativeToolTip": "Application\\Utils\\ValidationBehaviour.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAD4vxoAAAAMAAAAAAAAAA==",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T06:36:57.444Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "IAppointmentRepository.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
@@ -567,13 +1046,26 @@
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IAppointmentRepository.cs",
               "RelativeToolTip": "Domain\\Repositories\\IAppointmentRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAgAAAAAAAAAA==",
+=======
+              "DocumentIndex": 20,
+              "Title": "Prescription.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Domain\\Entities\\Prescription.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Prescription.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Domain\\Entities\\Prescription.cs",
+              "RelativeToolTip": "Domain\\Entities\\Prescription.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAAwA8AAAAlAAAAAAAAAA==",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T22:10:25.371Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 0,
+=======
+              "DocumentIndex": 21,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "AppointmentDTO.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\DTOs\\AppointmentDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\AppointmentDTO.cs",
@@ -586,6 +1078,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 97,
               "Title": "20250112232456_doctorIDs.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20250112232456_doctorIDs.cs",
@@ -593,6 +1086,15 @@
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20250112232456_doctorIDs.cs",
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20250112232456_doctorIDs.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAcwBIAAAASAAAAAAAAAA==",
+=======
+              "DocumentIndex": 22,
+              "Title": "GetUserAppointmentsResponse.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetUserAppointmentsResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetUserAppointmentsResponse.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetUserAppointmentsResponse.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetUserAppointmentsResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAkAAABVAAAAAAAAAA==",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-12T23:24:56.326Z"
             },
@@ -766,6 +1268,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 27,
               "Title": "CreateAppointmentCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\CreateAppointmentCommandHandler.cs",
@@ -809,11 +1312,21 @@
               "ToolTip": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
               "RelativeToolTip": "Infrastructure\\Infrastructure\\Migrations\\20241209195231_Users.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+=======
+              "DocumentIndex": 23,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\DTOs\\UserDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UserDto.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\DTOs\\UserDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\UserDto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA7wA4AAAASAAAAAAAAAA==",
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-09T12:27:56.957Z"
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 31,
               "Title": "20241209174143_AddUserTable.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20241209174143_AddUserTable.cs",
@@ -959,6 +1472,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 43,
+=======
+              "DocumentIndex": 24,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "20250110121748_somethingIsWrong.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20250110121748_somethingIsWrong.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\Migrations\\20250110121748_somethingIsWrong.cs",
@@ -970,7 +1486,35 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 44,
+=======
+              "DocumentIndex": 25,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Services\\UserService.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Services\\UserService.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Services\\UserService.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwAcAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Services\\AuthService.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Services\\AuthService.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Services\\AuthService.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Services\\AuthService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwDEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.422Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "LoginDto.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\DTOs\\LoginDto.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\LoginDto.cs",
@@ -982,7 +1526,23 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 45,
+=======
+              "DocumentIndex": 28,
+              "Title": "GetAllUsersQueryHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetAllUsersQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetAllUsersQueryHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetAllUsersQueryHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetAllUsersQueryHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAlwBwAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.38Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreatePatientCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreatePatientCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreatePatientCommandValidator.cs",
@@ -994,7 +1554,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 47,
+=======
+              "DocumentIndex": 31,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdatePatientCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePatientCommand.cs",
@@ -1006,7 +1570,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 48,
+=======
+              "DocumentIndex": 32,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdateMedicalRecordCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdateMedicalRecordCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdateMedicalRecordCommandValidator.cs",
@@ -1018,7 +1586,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 49,
+=======
+              "DocumentIndex": 33,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\DependencyInjection.cs",
@@ -1030,7 +1602,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 46,
+=======
+              "DocumentIndex": 30,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "MappingProfile.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Utils\\MappingProfile.cs",
               "RelativeDocumentMoniker": "Application\\Utils\\MappingProfile.cs",
@@ -1042,7 +1618,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 51,
+=======
+              "DocumentIndex": 35,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "DeletePatientCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\DeletePatientCommandHandler.cs",
@@ -1054,7 +1634,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 50,
+=======
+              "DocumentIndex": 34,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdateAppointmentCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdateAppointmentCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdateAppointmentCommandValidator.cs",
@@ -1066,7 +1650,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 53,
+=======
+              "DocumentIndex": 37,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdatePatientCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdatePatientCommandHandler.cs",
@@ -1078,7 +1666,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 52,
+=======
+              "DocumentIndex": 36,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateUserCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\CreateUserCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\CreateUserCommandHandler.cs",
@@ -1090,7 +1682,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 54,
+=======
+              "DocumentIndex": 38,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdateMedicalRecordCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdateMedicalRecordCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdateMedicalRecordCommandHandler.cs",
@@ -1102,7 +1698,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 55,
+=======
+              "DocumentIndex": 39,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateUserCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateUserCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateUserCommand.cs",
@@ -1114,6 +1714,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 56,
               "Title": "MedicalRecordController.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Controllers\\MedicalRecordController.cs",
@@ -1139,6 +1740,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 58,
+=======
+              "DocumentIndex": 40,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Predictive-Healthcare-Management-System\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Predictive-Healthcare-Management-System\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAkwE0AAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "IPredictionRepository.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPredictionRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Repositories\\IPredictionRepository.cs",
@@ -1150,7 +1766,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 59,
+=======
+              "DocumentIndex": 42,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "IPrescriptionRepository.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Repositories\\IPrescriptionRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Repositories\\IPrescriptionRepository.cs",
@@ -1162,7 +1782,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 61,
+=======
+              "DocumentIndex": 44,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "PrescriptionDTO.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\DTOs\\PrescriptionDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\PrescriptionDTO.cs",
@@ -1174,7 +1798,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 63,
+=======
+              "DocumentIndex": 46,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "DependencyInjection.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\DependencyInjection.cs",
               "RelativeDocumentMoniker": "Application\\DependencyInjection.cs",
@@ -1186,7 +1814,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 62,
+=======
+              "DocumentIndex": 45,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "MedicalRecordDTO.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\DTOs\\MedicalRecordDTO.cs",
               "RelativeDocumentMoniker": "Application\\DTOs\\MedicalRecordDTO.cs",
@@ -1198,7 +1830,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 60,
+=======
+              "DocumentIndex": 43,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "AddPrescriptionCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\AddPrescriptionCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\AddPrescriptionCommandHandler.cs",
@@ -1210,7 +1846,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 64,
+=======
+              "DocumentIndex": 47,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "MedicalRecord.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Entities\\MedicalRecord.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\MedicalRecord.cs",
@@ -1222,6 +1862,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 65,
               "Title": "GetPrescriptionsByPatientIdQueryHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPrescriptionsByPatientIdQueryHandler.cs",
@@ -1247,6 +1888,21 @@
             {
               "$type": "Document",
               "DocumentIndex": 67,
+=======
+              "DocumentIndex": 48,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Predictive-Healthcare-Management-System\\appsettings.json",
+              "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\appsettings.json",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Predictive-Healthcare-Management-System\\appsettings.json",
+              "RelativeToolTip": "Predictive-Healthcare-Management-System\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBewAIAAAB2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-09T06:36:57.679Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "GetPrescriptionsQueryHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\QueryHandlers\\GetPrescriptionsQueryHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetPrescriptionsQueryHandler.cs",
@@ -1258,6 +1914,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 68,
               "Title": "GetPrescriptionsQuery.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetPrescriptionsQuery.cs",
@@ -1271,6 +1928,9 @@
             {
               "$type": "Document",
               "DocumentIndex": 69,
+=======
+              "DocumentIndex": 50,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "AddPrescriptionCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\AddPrescriptionCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\AddPrescriptionCommandValidator.cs",
@@ -1282,7 +1942,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 70,
+=======
+              "DocumentIndex": 51,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdatePrescriptionCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePrescriptionCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePrescriptionCommandValidator.cs",
@@ -1294,7 +1958,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 71,
+=======
+              "DocumentIndex": 52,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdatePrescriptionCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\UpdatePrescriptionCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\UpdatePrescriptionCommand.cs",
@@ -1306,7 +1974,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 74,
+=======
+              "DocumentIndex": 55,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "UpdatePrescriptionCommandHandler.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\CommandHandlers\\UpdatePrescriptionCommandHandler.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\CommandHandlers\\UpdatePrescriptionCommandHandler.cs",
@@ -1318,7 +1990,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 72,
+=======
+              "DocumentIndex": 53,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateAppointmentCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateAppointmentCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateAppointmentCommandValidator.cs",
@@ -1330,7 +2006,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 73,
+=======
+              "DocumentIndex": 54,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateMedicalRecordCommandValidator.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateMedicalRecordCommandValidator.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateMedicalRecordCommandValidator.cs",
@@ -1342,7 +2022,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 75,
+=======
+              "DocumentIndex": 56,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateAppointmentCommand.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Commands\\CreateAppointmentCommand.cs",
               "RelativeDocumentMoniker": "Application\\Use Cases\\Commands\\CreateAppointmentCommand.cs",
@@ -1354,7 +2038,23 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 76,
+=======
+              "DocumentIndex": 57,
+              "Title": "DataSeeder.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\DataSeeder.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Infrastructure\\DataSeeder.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Infrastructure\\Infrastructure\\DataSeeder.cs",
+              "RelativeToolTip": "Infrastructure\\Infrastructure\\DataSeeder.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAuwBIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "JwtSettings.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Utils\\JwtSettings.cs",
               "RelativeDocumentMoniker": "Application\\Utils\\JwtSettings.cs",
@@ -1366,6 +2066,7 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 77,
               "Title": "GetMedicalRecordsQuery.cs",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Use Cases\\Queries\\GetMedicalRecordsQuery.cs",
@@ -1403,6 +2104,57 @@
             {
               "$type": "Document",
               "DocumentIndex": 82,
+=======
+              "DocumentIndex": 59,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\DTOs\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RegisterDto.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\DTOs\\RegisterDto.cs",
+              "RelativeToolTip": "Application\\DTOs\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T08:56:47.106Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "GetAllUsersResponse.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetAllUsersResponse.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetAllUsersResponse.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetAllUsersResponse.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetAllUsersResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.393Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "GetAllUsersQuery.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetAllUsersQuery.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\Queries\\GetAllUsersQuery.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\Queries\\GetAllUsersQuery.cs",
+              "RelativeToolTip": "Application\\Use Cases\\Queries\\GetAllUsersQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.403Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "GetAppointmentQueryHandler.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetAppointmentQueryHandler.cs",
+              "RelativeDocumentMoniker": "Application\\Use Cases\\QueryHandlers\\GetAppointmentQueryHandler.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\Application\\Use Cases\\QueryHandlers\\GetAppointmentQueryHandler.cs",
+              "RelativeToolTip": "Application\\Use Cases\\QueryHandlers\\GetAppointmentQueryHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAnwBYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.627Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "Application.csproj",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Application\\Application.csproj",
               "RelativeDocumentMoniker": "Application\\Application.csproj",
@@ -1414,7 +2166,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 81,
+=======
+              "DocumentIndex": 67,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "Domain.csproj",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Domain\\Domain.csproj",
               "RelativeDocumentMoniker": "Domain\\Domain.csproj",
@@ -1426,7 +2182,35 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 80,
+=======
+              "DocumentIndex": 63,
+              "Title": "xunit.runner.json",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.IntegrationTests\\xunit.runner.json",
+              "RelativeDocumentMoniker": "PredictiveHealthcare.IntegrationTests\\xunit.runner.json",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.IntegrationTests\\xunit.runner.json",
+              "RelativeToolTip": "PredictiveHealthcare.IntegrationTests\\xunit.runner.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-01-09T06:36:57.861Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "PatientsControllerIntegrationTests.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.IntegrationTests\\PatientsControllerIntegrationTests.cs",
+              "RelativeDocumentMoniker": "PredictiveHealthcare.IntegrationTests\\PatientsControllerIntegrationTests.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.IntegrationTests\\PatientsControllerIntegrationTests.cs",
+              "RelativeToolTip": "PredictiveHealthcare.IntegrationTests\\PatientsControllerIntegrationTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "PredictiveHealthcare.Application.UnitTests.csproj",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
               "RelativeDocumentMoniker": "PredictiveHealthcare.Application.UnitTests\\PredictiveHealthcare.Application.UnitTests.csproj",
@@ -1438,7 +2222,23 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 83,
+=======
+              "DocumentIndex": 66,
+              "Title": "PredictiveHealthcare.IntegrationTests.csproj",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+              "RelativeDocumentMoniker": "PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+              "RelativeToolTip": "PredictiveHealthcare.IntegrationTests\\PredictiveHealthcare.IntegrationTests.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-01-09T06:36:57.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "Predictive-Healthcare-Management-System.csproj",
               "DocumentMoniker": "M:\\FACULTATE\\ANUL3\\.net\\gitActual\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
               "RelativeDocumentMoniker": "Predictive-Healthcare-Management-System\\Predictive-Healthcare-Management-System.csproj",
@@ -1450,7 +2250,23 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 84,
+=======
+              "DocumentIndex": 70,
+              "Title": "CreateAppointmentCommandHandlerTests.cs",
+              "DocumentMoniker": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.Application.UnitTests\\CreateAppointmentCommandHandlerTests.cs",
+              "RelativeDocumentMoniker": "PredictiveHealthcare.Application.UnitTests\\CreateAppointmentCommandHandlerTests.cs",
+              "ToolTip": "D:\\FII\\dotNet\\finally\\PredictiveHealthcare.Application.UnitTests\\CreateAppointmentCommandHandlerTests.cs",
+              "RelativeToolTip": "PredictiveHealthcare.Application.UnitTests\\CreateAppointmentCommandHandlerTests.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAAwFEAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T06:36:57.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "AppointmentsControllerIntegrationTests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcareIntegrationUnitTests\\AppointmentsControllerIntegrationTests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcareIntegrationUnitTests\\AppointmentsControllerIntegrationTests.cs",
@@ -1459,7 +2275,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 87,
+=======
+              "DocumentIndex": 74,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "MedicalRecordsControllerIntegrationTests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcareIntegrationUnitTests\\MedicalRecordsControllerIntegrationTests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcareIntegrationUnitTests\\MedicalRecordsControllerIntegrationTests.cs",
@@ -1468,7 +2288,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 86,
+=======
+              "DocumentIndex": 73,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "PatientsControllerIntegrationTests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcareIntegrationUnitTests\\PatientsControllerIntegrationTests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcareIntegrationUnitTests\\PatientsControllerIntegrationTests.cs",
@@ -1477,7 +2301,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 85,
+=======
+              "DocumentIndex": 72,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "GetAppointmentByIdQueryHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetAppointmentByIdQueryHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetAppointmentByIdQueryHandler.Tests.cs",
@@ -1486,7 +2314,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 89,
+=======
+              "DocumentIndex": 76,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "GetMedicalRecordByIdQueryHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetMedicalRecordByIdQueryHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetMedicalRecordByIdQueryHandler.Tests.cs",
@@ -1495,7 +2327,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 90,
+=======
+              "DocumentIndex": 77,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateAppointmentCommandHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\CreateAppointmentCommandHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\CreateAppointmentCommandHandler.Tests.cs",
@@ -1504,7 +2340,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 91,
+=======
+              "DocumentIndex": 78,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreateMedicalRecordCommandHandler.Test.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\CreateMedicalRecordCommandHandler.Test.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\CreateMedicalRecordCommandHandler.Test.cs",
@@ -1513,7 +2353,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 92,
+=======
+              "DocumentIndex": 79,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "DeleteAppointmentCommandHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\DeleteAppointmentCommandHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\DeleteAppointmentCommandHandler.Tests.cs",
@@ -1522,7 +2366,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 93,
+=======
+              "DocumentIndex": 80,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "DeleteMedicalRecordCommandHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\DeleteMedicalRecordCommandHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\DeleteMedicalRecordCommandHandler.Tests.cs",
@@ -1531,7 +2379,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 94,
+=======
+              "DocumentIndex": 81,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "GetAppointmentQueryHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetAppointmentQueryHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetAppointmentQueryHandler.Tests.cs",
@@ -1540,7 +2392,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 95,
+=======
+              "DocumentIndex": 82,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "GetMedicalRecordsQueryHandler.Tests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetMedicalRecordsQueryHandler.Tests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\GetMedicalRecordsQueryHandler.Tests.cs",
@@ -1549,7 +2405,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 96,
+=======
+              "DocumentIndex": 83,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "CreatePatientCommandHandlerTests.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\CreatePatientCommandHandlerTests.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\PredictiveHealthcare.Application.UnitTests\\CreatePatientCommandHandlerTests.cs",
@@ -1558,7 +2418,11 @@
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 88,
+=======
+              "DocumentIndex": 75,
+>>>>>>> 3a89bbb (Began medical records, fixed header)
               "Title": "20241112120316_InitialCreate.cs",
               "DocumentMoniker": "D:\\FII-2024-2025\\.NET\\PROIECT\\ultima-versiune-git\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20241112120316_InitialCreate.cs",
               "ToolTip": "D:\\FII-2024-2025\\.NET\\PROIECT\\ultima-versiune-git\\Predictive-Healthcare-Management-System\\Infrastructure\\Infrastructure\\Migrations\\20241112120316_InitialCreate.cs",

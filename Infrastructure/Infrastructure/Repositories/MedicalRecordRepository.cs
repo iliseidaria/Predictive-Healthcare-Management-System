@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+using Domain.Entities;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -36,10 +36,10 @@ namespace Infrastructure.Repositories
             return true;
         }
 
-        public async Task<List<MedicalRecord>> GetAllByPatientIdAsync(Guid patientId)
+        public async Task<List<MedicalRecord>> GetAllByPatientIdAsync(Guid patientId, int page, int size)
         {
-            return await context.MedicalRecords.Where(mr => mr.PatientId == patientId).ToListAsync();
-        }
+            return await context.MedicalRecords.Where(mr => mr.PatientId == patientId).Skip((page - 1) * size).Take(size).ToListAsync();
+    }
 
         public async Task<MedicalRecord> GetMedicalRecordByIdAsync(Guid recordId)
         {

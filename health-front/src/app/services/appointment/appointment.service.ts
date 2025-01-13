@@ -41,13 +41,13 @@ export class AppointmentService {
 
   getAppointments(page: number, pageSize: number): Observable<Appointment[]> {
     // Backend typically expects page numbers starting from 0
-    const params = { 
+    const params = {
       pageNumber: (page - 1).toString(), // Convert to 0-based indexing
-      pageSize: pageSize.toString() 
+      pageSize: pageSize.toString()
     };
-    
+
     console.log('Requesting appointments with params:', params);
-    
+
     return this.http.get<Appointment[]>(this.apiUrl, {
       headers: this.authService.getAuthHeaders(),
       params
@@ -64,7 +64,7 @@ export class AppointmentService {
     const params = new HttpParams()
       .set('pageNumber', page.toString())
       .set('pageSize', size.toString());
-  
+
     return this.http.get<Appointment[]>(
       `${this.apiUrl}/user/${userId}`,
       { params, ...options }

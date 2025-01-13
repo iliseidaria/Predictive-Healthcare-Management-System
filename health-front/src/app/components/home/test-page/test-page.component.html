@@ -1,0 +1,88 @@
+<!--<button (click)="logout()">Logout</button>
+<button (click)="loadProfile()">Profile</button>
+<div class="container">
+  <h1>Healthy</h1>
+  <nav>
+    <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-patients')">See All Patients</button>
+    <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-appointments')">See all Appointments</button>
+    <button *ngIf="userRole === 'Patient'" (click)="navigateTo('patient-detail:id')">Your Personal Details</button>
+    <button *ngIf="userRole === 'Patient'" (click)="navigateTo('get-user-appointments')">See your Appointments</button>
+    <button *ngIf="userRole === 'Admin'" (click)="navigateTo('get-all-users')">Users Management</button>
+    <button *ngIf="userRole !== 'Patient'" (click)="navigateTo('get-all-prescriptions')">See all Prescriptions</button>
+  </nav>
+</div>
+-->
+<div class="grid-container">
+
+
+  <div class="grid-item profile-button" style="grid-column: 5; grid-row: 1;">
+    <app-view-profile-button></app-view-profile-button>
+  </div>
+  <div class="grid-item logout-button" style="grid-column: 6; grid-row: 1;">
+    <app-logout-button></app-logout-button>
+  </div>
+
+  <!-- Title and Subtitle in the first row -->
+  <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
+    <span style="white-space: pre-line">
+    <h2>HealthSafe</h2>
+    <h3>Healthcare services platform</h3>
+    </span>
+  </div>
+  <!-- Upcoming Appointments Panel -->
+  <div class="grid-item panel" style="grid-column: 1 / span 3; grid-row: 3 / span 5;">
+    <h3>Upcoming appointments</h3>
+    <div *ngIf="upcomingAppointments.length > 0; else noAppointments">
+    <table class="appointments-table">
+      <thead>
+      <tr>
+        <th>Date</th>
+        <th>Doctor</th>
+        <th>Reason</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let appointment of upcomingAppointments">
+        <td>
+          <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+            {{ appointment.appointmentDate | date: 'dd/MM/yyyy' }}
+          </a>
+        </td>
+        <td>
+          <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+            {{ appointment.doctorName }}
+          </a>
+        </td>
+        <td>
+          <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+            {{ appointment.reason }}
+          </a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- No Appointments Message -->
+  <ng-template #noAppointments>
+    <p>No upcoming appointments.</p>
+  </ng-template>
+  <a [routerLink]="['/get-user-appointments']" class="appointment-link">
+  <button>See more options</button></a>
+  </div>
+
+  <!-- Health Panel -->
+  <div class="grid-item health-panel" style="grid-column: 4 / span 3; grid-row: 3 / span 5;">
+    <h3 class="health-panel-title">Health Panel</h3>
+    <p class="health-panel-description">Manage your health records and access critical health information. Use the options below:</p>
+    <div class="actions">
+      <button class="wide-button" (click)="viewMedicalHistory()">View My Medical History</button>
+      <button class="wide-button" (click)="viewPrescriptions()">View My Prescriptions</button>
+      <button class="wide-button" (click)="viewHealthRisks()">View My Health Risks Predictions</button>
+      <button class="wide-button" (click)="searchDoctors()">Search Doctors</button>
+    </div>
+  </div>
+
+
+
+</div>

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+h2{
+  font-size: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-image: url('/assets/fundal.jpg');
+    background-size: cover; /* Ensures the image covers the whole screen */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+    background-attachment: fixed; /* Keeps the image fixed during scroll */
+    margin: 0; /* Removes any default body margins */
+    padding: 0; /* Removes any default padding */
+    height: 100vh; /* Sets the height to the full viewport height */
+    width: 100vw; /* Ensures it spans the full viewport width */
+    overflow: hidden; /* Hides any unwanted overflow */
+    color: #212529; /* Keeps the text color consistent */
+}
+
+.container {
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    background-color: rgba(255, 51, 153, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 250px; /* Adjust the width of buttons */
+    text-align: center;
+}
+
+button:hover {
+    background-color: rgba(242, 194, 218, 0.8);
+    font-weight: 600;
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+
+  .back-button:hover {
+    background-color: #003d80;
+  }
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    button {
+        width: 100%;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}

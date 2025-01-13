@@ -3,14 +3,18 @@ import { RouterModule } from '@angular/router';
 import { isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID, Inject } from '@angular/core';
 import { AuthService } from './services/auth/auth.service';
+import {HeaderComponent} from './components/header/header.component';
+import {HttpClientModule} from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, HeaderComponent, HttpClientModule],
   template: `<router-outlet></router-outlet>`,
 })
-export class AppComponent { // implements OnInit {
+export class AppComponent {
+
+  // implements OnInit {
   // constructor(
   //   @Inject(PLATFORM_ID) private platformId: Object,
   //   private authService: AuthService

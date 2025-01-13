@@ -382,6 +382,42 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.MedicalRecordController",
+    "Method": "GetByUserId",
+    "RelativePath": "api/v1/MedicalRecord/user/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Application.DTOs.MedicalRecordDto",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.PrescriptionController",
     "Method": "GetAllPrescriptions",
     "RelativePath": "api/v1/Prescription",

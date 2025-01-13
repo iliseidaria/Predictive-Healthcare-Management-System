@@ -1,0 +1,16 @@
+.profile-btn {
+   /* Orange background */
+  color: #1C2B1B; /* White text */
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 10px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: white;
+  border-color: #2E472C;
+}
+
+.profile-btn:hover {
+  color: #2E472C; /* Darker orange on hover */
+}

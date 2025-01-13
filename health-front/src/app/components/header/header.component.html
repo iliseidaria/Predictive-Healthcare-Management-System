@@ -1,0 +1,19 @@
+<div class="grid-container header">
+  <!-- Profile Button -->
+  <div class="grid-item profile-button" style="grid-column: 5; grid-row: 1;">
+    <app-view-profile-button></app-view-profile-button>
+  </div>
+
+  <!-- Logout Button (Only if Logged In) -->
+  <div class="grid-item logout-button" style="grid-column: 6; grid-row: 1;" *ngIf="isLoggedIn">
+    <app-logout-button></app-logout-button>
+  </div>
+
+  <!-- Title and Subtitle -->
+  <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
+    <span style="white-space: pre-line">
+      <h2>HealthSafe</h2>
+      <h3>Healthcare services platform</h3>
+    </span>
+  </div>
+</div>

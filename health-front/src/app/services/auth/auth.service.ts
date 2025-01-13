@@ -46,6 +46,10 @@ export class AuthService implements OnDestroy {
     return this.http.get<boolean>(`${this.apiUrl}/validate-doctor/${doctorId}`);
   }
 
+  isLoggedIn(): boolean {
+    const token = localStorage.getItem('token'); // Check if the token exists
+    return !!token; // Return true if token exists, false otherwise
+  }
   register(user: {
     username: string;
     email: string;

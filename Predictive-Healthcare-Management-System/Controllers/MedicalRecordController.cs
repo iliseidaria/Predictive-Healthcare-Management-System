@@ -35,8 +35,18 @@ namespace Predictive_Healthcare_Management_System.Controllers
             }
             return Ok(record);
         }
+        [HttpGet("user/{id}")]
+        public async Task<ActionResult<MedicalRecordDto>> GetByUserId(Guid id, [FromQuery] int page = 1, [FromQuery] int size = 10)
+        {
+          var record = await _mediator.Send(new GetMedicalRecordByUserIdQuery { Id = id, Page=page, Size=size });
+          if (record == null)
+          {
+            return NotFound();
+          }
+          return Ok(record);
+        }
 
-        [HttpGet]
+    [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var result = await _mediator.Send(new GetMedicalRecordsQuery()
