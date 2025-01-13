@@ -1,6 +1,14 @@
 <div class="grid-container">
-  <!-- Title -->
+  <!-- Title and Subtitle in the first row -->
   <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
+    <span style="white-space: pre-line">
+      <h2>HealthSafe</h2>
+      <h3>Healthcare services platform</h3>
+    </span>
+  </div>
+
+  <!-- Title -->
+  <div class="grid-item title" style="grid-column: 1 / span 3; grid-row: 3;">
     <span style="white-space: pre-line">
       <h2>Edit Medical Record</h2>
     </span>
@@ -14,50 +22,70 @@
     <app-logout-button></app-logout-button>
   </div>
 
-  <!-- Form Header -->
-  <div class="grid-header" style="grid-column: 1 / span 6; grid-row: 2;">
-    <div style="grid-column: 1 / span 2;">Field</div>
-    <div style="grid-column: 3 / span 4;">Value</div>
-  </div>
-
-  <!-- Editable Fields -->
-  <form class="records-grid" style="grid-column: 1 / span 6; grid-row: 3;" (ngSubmit)="saveRecord()">
+  <!-- Editable Form -->
+  <form
+    class="records-grid"
+    style="grid-column: 1 / span 6; grid-row: 5;"
+    (ngSubmit)="saveRecord()"
+  >
     <!-- Date -->
     <div class="grid-row">
-      <div style="grid-column: 1 / span 2;">Date</div>
-      <div style="grid-column: 3 / span 4;">
-        <input type="date" [(ngModel)]="record.date" name="date" required />
+      <div class="field-title" style="grid-column: 1 / span 1;">Date</div>
+      <div class="field-value" style="grid-column: 1 / span 2;">
+        <input
+          type="datetime-local"
+          [(ngModel)]="record.date"
+          name="date"
+          required
+        />
       </div>
     </div>
 
     <!-- Diagnosis -->
     <div class="grid-row">
-      <div style="grid-column: 1 / span 2;">Diagnosis</div>
-      <div style="grid-column: 3 / span 4;">
-        <input type="text" [(ngModel)]="record.diagnosis" name="diagnosis" required />
+      <div class="field-title" style="grid-column: 1 / span 2;">Diagnosis</div>
+      <div class="field-value" style="grid-column: 1 / span 2;">
+        <input
+          type="text"
+          [(ngModel)]="record.diagnosis"
+          name="diagnosis"
+          required
+        />
       </div>
     </div>
 
     <!-- Prescriptions -->
     <div class="grid-row">
-      <div style="grid-column: 1 / span 2;">Prescriptions</div>
-      <div style="grid-column: 3 / span 4;">
-        <textarea [(ngModel)]="record.prescriptions" name="prescriptions" rows="3" placeholder="Enter prescriptions, separated by commas"></textarea>
+      <div class="field-title" style="grid-column: 1 / span 6;">Prescriptions</div>
+      <div class="field-value" style="grid-column: 1 / span 6;">
+        <textarea
+          [(ngModel)]="record.prescriptions"
+          name="prescriptions"
+          rows="3"
+          placeholder="Enter prescriptions, separated by commas"
+        ></textarea>
       </div>
     </div>
 
     <!-- Notes -->
     <div class="grid-row">
-      <div style="grid-column: 1 / span 2;">Notes</div>
-      <div style="grid-column: 3 / span 4;">
-        <textarea [(ngModel)]="record.notes" name="notes" rows="4" placeholder="Enter additional notes"></textarea>
+      <div class="field-title" style="grid-column: 1 / span 6;">Notes</div>
+      <div class="field-value" style="grid-column: 1 / span 6;">
+        <textarea
+          [(ngModel)]="record.notes"
+          name="notes"
+          rows="4"
+          placeholder="Enter additional notes"
+        ></textarea>
       </div>
     </div>
 
     <!-- Action Buttons -->
-    <div class="grid-row" style="grid-column: 1 / span 6; grid-row: 5;">
+    <div class="grid-row">
+      <div style="grid-column: 1 / span 6;">
       <button type="submit" class="save-button">Save</button>
       <button type="button" class="cancel-button" (click)="cancelEdit()">Cancel</button>
+    </div>
     </div>
   </form>
 </div>

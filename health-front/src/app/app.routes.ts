@@ -51,7 +51,7 @@ export const routes: Routes = [
   { path: 'update-prescription/:id', component: PrescriptionUpdateComponent, canActivate: [AuthGuard] },
   { path: 'prescription-detail/:id', component: PrescriptionDetailComponent, canActivate: [AuthGuard] },
   { path: 'medical-records', component: MedicalRecordsListComponent, canActivate: [AuthGuard]  },
-  { path: 'medical-records/:id/edit', component: MedicalRecordEditComponent, canActivate: [AuthGuard]  },
-  { path: 'medical-records/:id/delete', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },
+  { path: 'medical-records/edit/:id', component: MedicalRecordEditComponent, canActivate: [AuthGuard]  },
+  { path: 'medical-records/delete/:id', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },
   { path: 'doctor', component: DoctorComponent, canActivate: [AuthGuard] },
 ];

@@ -7,60 +7,29 @@
   font-family: Poppins, sans-serif;
 }
 
-.grid-item {
-  padding: 1rem;
-  text-align: center;
-}
-
-.title h2 {
-  font-size: 36px;
-  color: #1C2B1B;
-  margin: 0;
-  text-align: center;
+/* Field Title and Value */
+.field-title {
   font-weight: bold;
-}
-
-/* Header Row */
-.grid-header {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 1rem;
-  background-color: #f5f5f5;
-  border: 2px solid #2E472C;
-  border-radius: 20px;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Record Rows */
-.records-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
-}
-
-.grid-row {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  padding: 1rem;
-  background-color: #ffffff;
-  border: 2px solid #2E472C;
-  border-radius: 20px;
-}
-
-.grid-row div {
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 2px;
+  margin-bottom: 0.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
+  align-content: flex-start;
 }
 
-.grid-row input,
-.grid-row textarea {
+.field-value {
+  text-align: center;
+}
+
+/* Inputs and Textareas */
+input, textarea {
   width: 100%;
   padding: 0.5rem;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
-  font-size: 16px;
 }
 
 /* Buttons */
@@ -68,21 +37,24 @@ button {
   background-color: #2E472C;
   color: white;
   padding: 0.75rem 1.5rem;
-  font-size: 16px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   margin: 0.5rem;
+  width: 40%;
+  font-size: 20px;
 }
-
-button.save-button:hover {
-  background-color: #1C2B1B;
+.button-bar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: flex-start;
 }
 
 button.cancel-button {
   background-color: #ff4f4f;
 }
 
-button.cancel-button:hover {
-  background-color: #cc0000;
+button:hover {
+  opacity: 0.9;
 }

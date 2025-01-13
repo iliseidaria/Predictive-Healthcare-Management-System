@@ -21,7 +21,7 @@ body {
 
 .grid-container {
     padding: 2rem;
-    height: 100vh;
+    height: 80vh;
 }
 
 .title {
@@ -136,11 +136,11 @@ button:hover {
     .grid-container {
         padding: 1rem;
     }
-    
+
     .title h2 {
         font-size: 2rem;
     }
-    
+
     .title h3 {
         font-size: 1.4rem;
     }
