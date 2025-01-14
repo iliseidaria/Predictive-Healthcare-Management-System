@@ -19,7 +19,15 @@ module.exports = function (config) {
         { type: 'text-summary' }
       ]
     },
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'coverage'],
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage'),
+      subdir: '.',
+      reporters: [
+        { type: 'html' }, // Generates an HTML report
+        { type: 'text-summary' } // Displays a summary in the console
+      ]
+    },
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,

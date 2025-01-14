@@ -28,24 +28,24 @@ describe('DoctorComponent', () => {
     // Mock methods
     mockAuthService.validateToken.and.returnValue(true);
     mockAuthService.getCurrentUser.and.returnValue({ id: '1', role: 'Doctor' });
-    mockAppointmentService.getAppointments.and.returnValue(of([
-      {
-        appointmentId: '1',
-        patientId: '123',
-        providerId: '456',
-        appointmentDate: new Date('2023-01-10T10:00:00Z'), // Use a Date object
-        status: 0,
-        reason: 'Checkup',
-      } as Appointment,
-      {
-        appointmentId: '2',
-        patientId: '124',
-        providerId: '457',
-        appointmentDate: new Date('2023-01-15T10:00:00Z'), // Use a Date object
-        status: 0,
-        reason: 'Consultation',
-      } as Appointment,
-    ]));
+   mockAppointmentService.getAppointments.and.returnValue(of([
+  {
+    appointmentId: '1',
+    patientId: '123',
+    providerId: '456',
+    appointmentDate: new Date('2023-01-10T10:00:00Z'), // Use a Date object
+    status: 0,
+    reason: 'Checkup',
+  } as Appointment,
+  {
+    appointmentId: '2',
+    patientId: '124',
+    providerId: '457',
+    appointmentDate: new Date('2023-01-15T10:00:00Z'), // Use a Date object
+    status: 0,
+    reason: 'Consultation',
+  } as Appointment,
+]));
 
 
     mockUserService.getUserById.and.callFake((id: string) =>

@@ -4,31 +4,27 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../../services/auth/auth.service';
 import { provideRouter } from '@angular/router';
 import { LoginComponent } from './login.component';
-import { of } from 'rxjs';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { of, throwError } from 'rxjs';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let authServiceSpy: jasmine.SpyObj<AuthService>;
   let routerSpy: jasmine.SpyObj<Router>;
-  let httpTestingController: HttpTestingController;
 
   beforeEach(async () => {
-    // Create spies for AuthService and Router
     authServiceSpy = jasmine.createSpyObj('AuthService', ['login', 'validateToken', 'getCurrentUser']);
     routerSpy = jasmine.createSpyObj('Router', ['navigate']);
 
     await TestBed.configureTestingModule({
-      imports: [ReactiveFormsModule, HttpClientTestingModule, LoginComponent], // Import HttpClientTestingModule
+      imports: [ReactiveFormsModule, HttpClientTestingModule, LoginComponent],
       providers: [
         { provide: AuthService, useValue: authServiceSpy },
         { provide: Router, useValue: routerSpy },
         provideRouter([]),
       ],
     }).compileComponents();
-
-    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   beforeEach(() => {
@@ -37,46 +33,74 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  afterEach(() => {
-    httpTestingController.verify(); // Ensure no outstanding HTTP requests
-  });
-
-  it('should create', () => {
+  it('should create the component', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should initialize the form', () => {
+  it('should initialize the login form', () => {
     expect(component.loginForm).toBeTruthy();
-    expect(component.loginForm.get('email')).toBeTruthy();
     expect(component.loginForm.get('username')).toBeTruthy();
     expect(component.loginForm.get('password')).toBeTruthy();
   });
 
-  it('should call AuthService login on form submit if form is valid', () => {
-    // Set valid form values
+  it('should redirect if token is valid during ngOnInit', () => {
+    authServiceSpy.validateToken.and.returnValue(true);
+    authServiceSpy.getCurrentUser.and.returnValue({ role: 'doctor' });
+
+    component.ngOnInit();
+
+    expect(authServiceSpy.validateToken).toHaveBeenCalled();
+    expect(routerSpy.navigate).toHaveBeenCalledWith(['/doctor']);
+  });
+
+  it('should not redirect if token is invalid during ngOnInit', () => {
+    authServiceSpy.validateToken.and.returnValue(false);
+
+    component.ngOnInit();
+
+    expect(authServiceSpy.validateToken).toHaveBeenCalled();
+    expect(routerSpy.navigate).not.toHaveBeenCalled();
+  });
+
+  it('should call AuthService login on valid form submission', () => {
     component.loginForm.setValue({
-      email: 'test@example.com',
       username: 'testuser',
       password: 'password123',
     });
 
-    // Mock AuthService login response
     authServiceSpy.login.and.returnValue(of({ token: 'fake-token' }));
+    authServiceSpy.getCurrentUser.and.returnValue({ role: 'doctor' });
 
-    // Trigger form submit
     component.onSubmit();
 
     expect(authServiceSpy.login).toHaveBeenCalledWith({
       username: 'testuser',
       password: 'password123',
     });
-    expect(routerSpy.navigate).toHaveBeenCalled(); // Check for navigation
+    expect(localStorage.getItem('token')).toBe('fake-token');
+    expect(routerSpy.navigate).toHaveBeenCalledWith(['/doctor']);
+  });
+
+  it('should display alert if login fails', () => {
+    spyOn(window, 'alert');
+    component.loginForm.setValue({
+      username: 'testuser',
+      password: 'wrongpassword',
+    });
+
+    authServiceSpy.login.and.returnValue(throwError(() => new Error('Login failed')));
+
+    component.onSubmit();
+
+    expect(authServiceSpy.login).toHaveBeenCalledWith({
+      username: 'testuser',
+      password: 'wrongpassword',
+    });
+    expect(window.alert).toHaveBeenCalledWith('An error occurred during login');
   });
 
   it('should not call AuthService login if form is invalid', () => {
-    // Set invalid form values
     component.loginForm.setValue({
-      email: '',
       username: '',
       password: '',
     });
@@ -84,5 +108,19 @@ describe('LoginComponent', () => {
     component.onSubmit();
 
     expect(authServiceSpy.login).not.toHaveBeenCalled();
+  });
+
+  it('should display alert if token is missing in response', () => {
+    spyOn(window, 'alert');
+    component.loginForm.setValue({
+      username: 'testuser',
+      password: 'password123',
+    });
+
+    authServiceSpy.login.and.returnValue(of({}));
+
+    component.onSubmit();
+
+    expect(window.alert).toHaveBeenCalledWith('Invalid credentials');
   });
 });

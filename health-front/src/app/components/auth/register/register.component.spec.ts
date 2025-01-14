@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../../services/auth/auth.service';
 import { Router } from '@angular/router';
-import { provideRouter } from '@angular/router';
 import { RegisterComponent } from './register.component';
 import { of, throwError } from 'rxjs';
 
@@ -13,7 +12,6 @@ describe('RegisterComponent', () => {
   let routerSpy: jasmine.SpyObj<Router>;
 
   beforeEach(async () => {
-    // Create spies for AuthService and Router
     authServiceSpy = jasmine.createSpyObj('AuthService', ['register', 'validateDoctorId']);
     routerSpy = jasmine.createSpyObj('Router', ['navigateByUrl']);
 
@@ -23,7 +21,6 @@ describe('RegisterComponent', () => {
       providers: [
         { provide: AuthService, useValue: authServiceSpy },
         { provide: Router, useValue: routerSpy },
-        provideRouter([]),
       ],
     }).compileComponents();
   });
@@ -45,6 +42,7 @@ describe('RegisterComponent', () => {
     expect(component.registerForm.get('password')).toBeTruthy();
     expect(component.registerForm.get('confirmPassword')).toBeTruthy();
     expect(component.registerForm.get('role')).toBeTruthy();
+    expect(component.registerForm.get('doctorId')).toBeTruthy();
   });
 
   it('should validate password match', () => {
@@ -55,7 +53,7 @@ describe('RegisterComponent', () => {
       confirmPassword: 'password123',
       role: 'patient',
       doctorId: '',
-    } as any);
+    });
 
     expect(component.registerForm.valid).toBeTrue();
     expect(component.registerForm.errors).toBeNull();
@@ -64,7 +62,7 @@ describe('RegisterComponent', () => {
     expect(component.registerForm.errors?.['passwordMismatch']).toBeUndefined();
   });
 
-  it('should validate doctor ID if role is doctor', () => {
+  it('should proceed with registration if doctor ID is valid', () => {
     component.registerForm.setValue({
       email: 'doctor@example.com',
       username: 'doctorUser',
@@ -72,14 +70,16 @@ describe('RegisterComponent', () => {
       confirmPassword: 'password123',
       role: 'doctor',
       doctorId: 'validDoctorId',
-    } as any);
+    });
 
     authServiceSpy.validateDoctorId.and.returnValue(of(true));
+    authServiceSpy.register.and.returnValue(of({}));
 
     component.onSubmit();
 
     expect(authServiceSpy.validateDoctorId).toHaveBeenCalledWith('validDoctorId');
     expect(authServiceSpy.register).toHaveBeenCalled();
+    expect(routerSpy.navigateByUrl).toHaveBeenCalledWith('/login');
   });
 
   it('should not proceed with registration if doctor ID is invalid', () => {
@@ -90,7 +90,7 @@ describe('RegisterComponent', () => {
       confirmPassword: 'password123',
       role: 'doctor',
       doctorId: 'invalidDoctorId',
-    } as any);
+    });
 
     authServiceSpy.validateDoctorId.and.returnValue(of(false));
 
@@ -100,7 +100,7 @@ describe('RegisterComponent', () => {
     expect(authServiceSpy.register).not.toHaveBeenCalled();
   });
 
-  it('should call AuthService register directly if role is patient', () => {
+  it('should handle registration for patient role', () => {
     component.registerForm.setValue({
       email: 'patient@example.com',
       username: 'patientUser',
@@ -108,7 +108,7 @@ describe('RegisterComponent', () => {
       confirmPassword: 'password123',
       role: 'patient',
       doctorId: '',
-    } as any);
+    });
 
     authServiceSpy.register.and.returnValue(of({}));
 
@@ -123,7 +123,7 @@ describe('RegisterComponent', () => {
     expect(routerSpy.navigateByUrl).toHaveBeenCalledWith('/login');
   });
 
-  it('should handle registration errors correctly', () => {
+  it('should handle registration errors (username already exists)', () => {
     component.registerForm.setValue({
       email: 'test@example.com',
       username: 'testuser',
@@ -131,13 +131,62 @@ describe('RegisterComponent', () => {
       confirmPassword: 'password123',
       role: 'patient',
       doctorId: '',
-    } as any);
+    });
 
-    authServiceSpy.register.and.returnValue(throwError(() => ({ error: { error: 'Email already registered' } })));
+    authServiceSpy.register.and.returnValue(
+      throwError(() => ({ error: { error: 'Username already exists' } }))
+    );
 
+    spyOn(window, 'alert');
     component.onSubmit();
 
     expect(authServiceSpy.register).toHaveBeenCalled();
-    expect(window.alert).toHaveBeenCalledWith('The email is already registered. Please use another email or login.');
+    expect(window.alert).toHaveBeenCalledWith(
+      'The username is already taken. Please choose another.'
+    );
+  });
+
+  it('should handle registration errors (email already registered)', () => {
+    component.registerForm.setValue({
+      email: 'test@example.com',
+      username: 'testuser',
+      password: 'password123',
+      confirmPassword: 'password123',
+      role: 'patient',
+      doctorId: '',
+    });
+
+    authServiceSpy.register.and.returnValue(
+      throwError(() => ({ error: { error: 'Email already registered' } }))
+    );
+
+    spyOn(window, 'alert');
+    component.onSubmit();
+
+    expect(authServiceSpy.register).toHaveBeenCalled();
+    expect(window.alert).toHaveBeenCalledWith(
+      'The email is already registered. Please use another email or login.'
+    );
+  });
+
+  it('should handle unexpected registration errors', () => {
+    component.registerForm.setValue({
+      email: 'test@example.com',
+      username: 'testuser',
+      password: 'password123',
+      confirmPassword: 'password123',
+      role: 'patient',
+      doctorId: '',
+    });
+
+    authServiceSpy.register.and.returnValue(throwError(() => new Error('Unexpected error')));
+
+    spyOn(window, 'alert');
+    component.onSubmit();
+
+    expect(authServiceSpy.register).toHaveBeenCalled();
+    expect(window.alert).toHaveBeenCalledWith(
+      'An unexpected error occurred. Please try again later.'
+    );
   });
 });
