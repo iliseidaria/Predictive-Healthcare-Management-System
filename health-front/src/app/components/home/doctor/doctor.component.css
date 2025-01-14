@@ -20,8 +20,13 @@ body {
 }
 
 .grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
     padding: 2rem;
-    height: 80vh;
+    height: 100vh;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .title {
@@ -132,9 +137,38 @@ button:hover {
     padding: 10px;
 }
 
-@media (max-width: 768px) {
+.appointments-table tr.appointment-row {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointments-table tr.appointment-row:hover {
+    background-color: rgba(228, 240, 208, 0.1);
+}
+
+.appointments-table tr.appointment-row:active {
+    background-color: rgba(228, 240, 208, 0.2);
+}
+
+@media (max-width: 992px) {
+
+    .appointments-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 830px) {
     .grid-container {
-        padding: 1rem;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        justify-items: center;
+        max-width: 600px;
+        margin: 0 auto;
+        min-height: 100vh;
+        width: 90%;
     }
 
     .title h2 {
@@ -143,5 +177,91 @@ button:hover {
 
     .title h3 {
         font-size: 1.4rem;
+    }
+    
+    .title {
+        width: 100%;
+        max-width: 500px;
+        margin-left: 0;
+        text-align: left;
+        align-items: flex-start;
+    }
+    
+    .profile-button, 
+    .logout-button, 
+    .panel, 
+    .health-panel {
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}
+
+@media (max-width: 660px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 1rem;
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .grid-item {
+        grid-column: 1 !important;
+        grid-row: auto !important;
+        margin: 0.5rem 0;
+    }
+
+    .title {
+        text-align: center;
+        padding: 1rem 0;
+    }
+
+    .title h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .title h3 {
+        font-size: 1.2rem;
+    }
+
+    .panel, .health-panel {
+        padding: 1rem;
+        margin: 0.5rem;
+        border-radius: 10px;
+    }
+
+    .appointments-table {
+        font-size: 0.9rem;
+        overflow-x: auto;
+    }
+
+    .appointments-table th,
+    .appointments-table td {
+        padding: 0.5rem;
+    }
+
+    .wide-button {
+        width: 100%;
+        margin: 0.5rem 0;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .profile-button,
+    .logout-button {
+        position: static;
+        width: 100%;
+        text-align: center;
+        margin: 0.5rem 0;
+    }
+
+    .actions {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }

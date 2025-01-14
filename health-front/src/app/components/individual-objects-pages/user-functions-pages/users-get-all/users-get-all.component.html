@@ -1,6 +1,6 @@
 <button class="back-button" (click)="goBack()">← Back</button>
 <div class="users-container">
-  <h2>Users Management</h2>
+  <h2>USERS MANAGEMENT</h2>
 
   <div *ngIf="loading" class="loading">
     Loading users...
@@ -27,10 +27,8 @@
             <td>{{user.email}}</td>
             <td>{{user.role}}</td>
             <td class="actions-cell">
-              <ng-container *ngIf="user.role !== 'Admin'">
-              <a [routerLink]="['/update-user', user.id]" class="action-btn edit">Edit</a>
               <button (click)="deleteUser(user.id)" class="action-btn delete">Delete</button>
-            </ng-container>
+              <a [routerLink]="['/update-user', user.id]" class="action-btn edit">Edit</a>
             </td>
           </tr>
         </tbody>

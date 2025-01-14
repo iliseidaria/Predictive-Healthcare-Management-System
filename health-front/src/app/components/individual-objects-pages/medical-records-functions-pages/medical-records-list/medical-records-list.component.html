@@ -7,6 +7,16 @@
     <app-logout-button></app-logout-button>
   </div>
 
+  <!-- Create New Medical Record Button (only for admin and doctor) -->
+  <div *ngIf="userRole === 'doctor' || userRole === 'admin'" class="grid-item create-record-button" style="grid-column: 1 / span 2; grid-row: 2;">
+    <button (click)="goToCreateNewRecord()">Create New Medical Record</button>
+  </div>   
+
+  <!-- Back Button -->
+  <div class="grid-item back-button" style="grid-column: 1 / span 2; grid-row: 1;">
+    <button (click)="goBack()">Back</button>
+  </div>
+
   <!-- Title and Subtitle in the first row -->
   <div class="grid-item title" style="grid-column: 3 / span 2; grid-row: 1;">
     <span style="white-space: pre-line">
@@ -33,9 +43,11 @@
       <div style="grid-column: 5 / span 1;">
         <a [routerLink]="['/medical-records/view', record.recordId]">View</a>
       </div>
-       <div style="grid-column: 6/ span 1">
-         <button (click)="deleteRecord(record.recordId)" >Delete</button>
-       </div>
+      <div style="grid-column: 6/ span 1">
+        <button *ngIf="userRole === 'doctor' || userRole === 'admin'" (click)="deleteRecord(record.recordId)">
+          Delete
+        </button>
+      </div>
     </div>
   </div>
 </div>

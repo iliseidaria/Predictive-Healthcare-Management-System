@@ -1,0 +1,22 @@
+<header>
+    <button class="back-button" (click)="goBack()">← Back</button>
+</header>
+<h2>Create Medical Record</h2>
+
+<form (ngSubmit)="createMedicalRecord()">
+  <label for="diagnosis">Diagnosis:</label>
+  <input id="diagnosis" [(ngModel)]="medicalRecordData.diagnosis" name="diagnosis" required>
+
+  <label for="notes">Notes:</label>
+  <textarea id="notes" [(ngModel)]="medicalRecordData.notes" name="notes"></textarea>
+
+  <label for="date">Date:</label>
+  <input id="date" type="datetime-local" [(ngModel)]="medicalRecordData.date" name="date" required>
+
+  <!-- Mesaj de eroare -->
+  <div *ngIf="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <button type="submit">Create Record</button>
+</form>

@@ -143,6 +143,32 @@
   },
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AppointmentController",
+    "Method": "GetDoctorAppointments",
+    "RelativePath": "api/v1/Appointment/doctor/{userId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "size",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AppointmentController",
     "Method": "GetProtectedData",
     "RelativePath": "api/v1/Appointment/protected",
     "HttpMethod": "GET",
@@ -314,6 +340,27 @@
       {
         "Name": "command",
         "Type": "Application.Use_Cases.Commands.UpdatePatientCommand",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
+    "Method": "UpdateUser",
+    "RelativePath": "api/v1/Auth/users/edit/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "command",
+        "Type": "Application.Use_Cases.Commands.UpdateUserCommand",
         "IsRequired": true
       }
     ],

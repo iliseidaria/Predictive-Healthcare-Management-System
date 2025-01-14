@@ -16,7 +16,7 @@
 
 
   <div class="grid-item profile-button" style="grid-column: 5; grid-row: 1;">
-    <app-view-profile-button></app-view-profile-button>
+    <button (click)="navigateToProfile()">View My Profile</button>
   </div>
   <div class="grid-item logout-button" style="grid-column: 6; grid-row: 1;">
     <app-logout-button></app-logout-button>
@@ -33,7 +33,7 @@
   <div class="grid-item panel" style="grid-column: 1 / span 3; grid-row: 3 / span 5;">
     <h3>Upcoming appointments</h3>
     <div *ngIf="upcomingAppointments.length > 0; else noAppointments">
-    <table class="appointments-table">
+    <!-- <table class="appointments-table">
       <thead>
       <tr>
         <th>Date</th>
@@ -59,6 +59,34 @@
           </a>
         </td>
       </tr>
+      </tbody>
+    </table> -->
+    <table class="appointments-table">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Patient</th>
+          <th>Reason</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let appointment of upcomingAppointments">
+          <td>
+            <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+              {{ appointment.appointmentDate | date: 'dd/MM/yyyy' }}
+            </a>
+          </td>
+          <td>
+            <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+              {{ appointment.patientName }}
+            </a>
+          </td>
+          <td>
+            <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
+              {{ appointment.reason }}
+            </a>
+          </td>
+        </tr>
       </tbody>
     </table>
   </div>

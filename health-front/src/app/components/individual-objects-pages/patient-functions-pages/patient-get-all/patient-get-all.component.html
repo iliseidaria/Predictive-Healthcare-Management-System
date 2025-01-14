@@ -1,6 +1,6 @@
 <div class="container">
   <button class="back-button" (click)="goBack()">← Back</button>
-    <h2>PATIENTS</h2>
+  <h2>PATIENTS</h2>
   <table>
     <thead>
       <tr>
@@ -13,15 +13,18 @@
     </thead>
     <tbody>
       <tr *ngFor="let patient of patients">
-        <td>{{patient.email || 'No information'}} </td>
+        <td>{{patient.email || 'No information'}}</td>
         <td>{{ patient.firstName || 'No information' }}</td>
-      <td>{{ patient.lastName || 'No information' }}</td>
-      <td>{{ patient.dateOfBirth ? (patient.dateOfBirth | date: 'mediumDate') : 'No information' }}</td>
-      <td>
-        <button (click)="deletePatient(patient.id)">Delete</button>
-        <a [routerLink]="['/patient-detail', patient.id]">Details</a>
-        <a [routerLink]="['/update-patient', patient.id]">Edit</a>
-      </td>
+        <td>{{ patient.lastName || 'No information' }}</td>
+        <td>{{ patient.dateOfBirth ? (patient.dateOfBirth | date: 'mediumDate') : 'No information' }}</td>
+        <td>
+          <div class="actions">
+            <button (click)="deletePatient(patient.id)">Delete</button>
+            <a [routerLink]="['/patient-detail', patient.id]">Details</a>
+            <a [routerLink]="['/update-patient', patient.id]">Edit</a>
+            <button (click)="createMedicalRecord(patient.id)">Create Medical Record</button>
+          </div>
+        </td>        
       </tr>
     </tbody>
   </table>
@@ -30,6 +33,8 @@
     <button (click)="page = page - 1; loadPatients()" [disabled]="page <= 1">
       Previous
     </button>
-    <button (click)="page = page + 1; loadPatients()" [disabled]="isLastPage()">Next</button>
+    <button (click)="page = page + 1; loadPatients()" [disabled]="isLastPage()">
+      Next
+    </button>
   </div>
 </div>

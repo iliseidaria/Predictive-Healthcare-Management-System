@@ -1,22 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { MedicalRecordsService, MedicalRecord } from '../../../../services/medical-records/medical-records.service';
-import { Router, RouterLink } from '@angular/router';
 import { AuthService } from '../../../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { ViewProfileButtonComponent } from '../../../buttons/view-profile-button/view-profile-button.component';
 import { LogoutButtonComponent } from '../../../buttons/logout-button/logout-button.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-medical-records-list',
   templateUrl: './medical-records-list.component.html',
   standalone: true,
   styleUrls: ['../medical-records-css/medical-records-list.component.css', '../../../home/test-page/css/test-page.component.css'],
-  imports: [RouterLink, CommonModule, ViewProfileButtonComponent, LogoutButtonComponent],
+  imports: [CommonModule, ViewProfileButtonComponent, LogoutButtonComponent, RouterModule],
 })
 export class MedicalRecordsListComponent implements OnInit {
   medicalRecords: MedicalRecord[] = [];
   loading = false;
   error: string | null = null;
+  userRole: string = ''; // Add userRole to store the current user's role
 
   constructor(
     private router: Router,
@@ -26,6 +28,7 @@ export class MedicalRecordsListComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Initializing MedicalRecordsListComponent...');
+    this.userRole = this.authService.getCurrentUser()?.role || ''; // Get the user role
     this.getMedicalRecords();
   }
 
@@ -57,6 +60,20 @@ export class MedicalRecordsListComponent implements OnInit {
         this.loading = false;
       },
     });
+  }
+
+  /**
+   * Navigate to the "Create New Medical Record" page.
+   */
+  goToCreateNewRecord(): void {
+    this.router.navigate(['/get-all-patients']);
+  }
+
+  /**
+   * Go back to the previous page.
+   */
+  goBack(): void {
+    this.router.navigate(['..']); // Navigate back to the previous route
   }
 
   /**

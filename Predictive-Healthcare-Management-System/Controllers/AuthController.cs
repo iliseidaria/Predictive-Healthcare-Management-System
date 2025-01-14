@@ -81,17 +81,6 @@ namespace Predictive_Healthcare_Management_System.Controllers
       return result;
     }
 
-    [HttpGet("doctors")]
-    public async Task<IActionResult> GetAllDoctors(Guid id)
-    {
-      var prescriptions = await _mediator.Send(new GetPrescriptionsByPatientIdQuery { PatientId = id });
-      if (prescriptions == null || !prescriptions.Any())
-      {
-        return NotFound("No prescriptions found for the specified patient.");
-      }
-      return Ok(prescriptions);
-    }
-
     // GET: /api/v1/Auth/users
     [HttpGet("users")]
     [Authorize(Policy = "RequireAdminOrDoctorRole")]
@@ -159,6 +148,25 @@ namespace Predictive_Healthcare_Management_System.Controllers
       if (patient == null)
       {
         return NotFound("Patient not found.");
+      }
+
+      await _mediator.Send(command);
+      return NoContent(); // Return status 204
+    }
+
+    [HttpPut("users/edit/{id}")]
+    [Authorize(Policy = "RequireAdminRole")]
+    public async Task<IActionResult> UpdateUser(Guid id, [FromBody] UpdateUserCommand command)
+    {
+      if (id != command.UserId)
+      {
+        return BadRequest("User ID in the URL does not match the request body.");
+      }
+
+      var patient = await _mediator.Send(new GetUserByIdQuery { Id = id });
+      if (patient == null)
+      {
+        return NotFound("User not found.");
       }
 
       await _mediator.Send(command);

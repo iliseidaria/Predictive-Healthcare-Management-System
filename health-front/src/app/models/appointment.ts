@@ -9,7 +9,7 @@ export interface Appointment {
   patientId: string;
   providerId: string;
   patientName?: string;
-  doctorName?: string;
+  doctorUsername?: string;
   appointmentDate: Date;
   reason: string;
   status: AppointmentStatus;

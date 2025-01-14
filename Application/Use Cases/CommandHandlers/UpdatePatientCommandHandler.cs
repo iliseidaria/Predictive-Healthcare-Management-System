@@ -16,22 +16,6 @@ namespace Application.CommandHandlers
             this.mapper = mapper;
         }
 
-    //  public async Task<Unit> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
-    //  {
-    //      // Check if the patient exists
-    //      var existingPatient = await repository.GetUserByIdAsync(request.PatientId);
-    //      if (existingPatient == null)
-    //      {
-    //          throw new KeyNotFoundException("Patient not found");
-    //      }
-
-    //repository.Detach(existingPatient);
-
-    //var patient = mapper.Map<User>(request);
-    //      await repository.UpdateAsync(patient);
-
-    //      return Unit.Value;
-    //  }
     public async Task<Unit> Handle(UpdatePatientCommand request, CancellationToken cancellationToken)
     {
       var existingPatient = await repository.GetUserByIdAsync(request.PatientId);

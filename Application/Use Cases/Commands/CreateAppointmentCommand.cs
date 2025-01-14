@@ -1,4 +1,4 @@
-﻿using Domain.Entities;
+using Domain.Entities;
 using MediatR;
 
 namespace Application.Use_Cases.Commands
@@ -9,6 +9,6 @@ namespace Application.Use_Cases.Commands
         public Guid ProviderId { get; set; }
         public DateTime AppointmentDate { get; set; }
         public string Reason { get; set; }
-        public AppointmentStatus Status { get; set; }
-    }
+        public AppointmentStatus Status { get; set; } = AppointmentStatus.Scheduled;
+  }
 }

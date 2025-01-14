@@ -3,9 +3,13 @@
     
     <h2>Appointments</h2>
     
-    <!-- <div class="actions">
-      <a class="create-btn" routerLink="/create-appointment">Create New Appointment</a>
-    </div> -->
+    <div class="actions">
+      <a *ngIf="authService.getCurrentUser()?.role === 'doctor'" 
+         class="create-btn" 
+         routerLink="/get-all-patients">
+         Create New Appointment
+      </a>
+  </div>
 
     <!-- Loading State -->
     <div *ngIf="loading" class="loading">
@@ -26,7 +30,7 @@
         <table *ngIf="appointments && appointments.length > 0">
           <thead>
             <tr>
-              <th>Doctor</th>
+              <!-- <th>Doctor</th> -->
               <th>Date</th>
               <th>Time</th>
               <th>Description</th>
@@ -36,7 +40,7 @@
           </thead>
           <tbody>
             <tr *ngFor="let appointment of appointments">
-                <td>{{appointment.doctorName}}</td>
+                <!-- <td>{{appointment.doctorName}}</td> -->
                 <td>{{appointment.appointmentDate | date:'dd/MM/yyyy'}}</td>
                 <td>{{appointment.appointmentDate | date:'shortTime'}}</td>
                 <td>{{appointment.reason}}</td>

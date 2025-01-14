@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { PatientService } from '../../../../services/patient/patient.service';
 import { AuthService } from '../../../../services/auth/auth.service';
-import {RouterLink} from '@angular/router';
+import { Router, RouterLink} from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { NavigationService } from '../../../../services/navigation/navigation.service';
 
@@ -26,8 +26,8 @@ export class PatientGetAllComponent implements OnInit {
   user: any[] = [];
   private navigationService = inject(NavigationService);
 
-  constructor(private patientService: PatientService, private authService: AuthService) {}
-
+  constructor(private patientService: PatientService, private authService: AuthService, private router: Router) {}
+  
   ngOnInit() {
     this.userRole = this.authService.getCurrentUser().role || ''; //pentru html
     this.loadPatients();
@@ -77,6 +77,11 @@ export class PatientGetAllComponent implements OnInit {
       });
     }
   }
+
+  createMedicalRecord(patientId: string): void {
+  console.log(`Creating medical record for patient ID: ${patientId}`);
+  this.router.navigate(['/create-medical-record', patientId]);
+}
 
   goBack(): void {
     this.navigationService.goBack();

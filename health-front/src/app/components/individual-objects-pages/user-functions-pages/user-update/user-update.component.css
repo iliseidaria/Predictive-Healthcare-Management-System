@@ -1,57 +1,151 @@
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  margin: 0 0 0 20px;
+  color: #2E472C;
+  font-size: 2rem;
+}
+
+.back-button {
+  padding: 10px 20px;
+  background-color: #2E472C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #1C2B1B;
+  transform: translateY(-2px);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+label {
+  color: #2E472C;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+input, select {
+  padding: 12px;
+  border: 2px solid #E4F0D0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #2E472C;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(46, 71, 44, 0.2);
+}
+
+button[type="submit"] {
+  padding: 12px;
+  background-color: #2E472C;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  background-color: #1C2B1B;
+  transform: translateY(-2px);
+}
+
+button[type="submit"]:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.current-role {
+  margin-top: 0.5rem;
+  color: #2E472C;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+select option[selected] {
+  background-color: #E4F0D0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin: 1rem;
+    padding: 1.5rem;
   }
-  
-  header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 30px;
-  }
-  
+
   h1 {
-    margin: 0 0 0 20px;
+    font-size: 1.5rem;
   }
-  
+
   .back-button {
     padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 0.9rem;
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  
-  label {
-    font-weight: 500;
-  }
-  
+
   input, select {
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-  }
-  
-  button[type="submit"] {
     padding: 10px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    font-size: 0.9rem;
   }
-  
-  button[type="submit"]:disabled {
-    opacity: 0.7;
-    cursor: not-allowed;
+}
+
+
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0.5rem;
+    padding: 1rem;
   }
+
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+  h1 {
+    margin: 0;
+    font-size: 1.3rem;
+  }
+
+  .back-button {
+    width: 100%;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+  }
+}

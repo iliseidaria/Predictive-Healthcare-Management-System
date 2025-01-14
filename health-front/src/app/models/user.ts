@@ -5,8 +5,10 @@ export enum UserRole {
 }
 
 export interface UsersResponse {
-    users: User[];
-    totalUsers: number;
+    items: any[];
+    totalCount: number;
+    pageNumber: number;
+    pageSize: number;
 }
 
 export interface User {

@@ -9,6 +9,7 @@ namespace Application.DTOs
         public Guid ProviderId { get; set; }
         public DateTime AppointmentDate { get; set; }
         public required string Reason { get; set; }
-        public AppointmentStatus Status { get; set; }
-    }
+        public AppointmentStatus Status { get; set; } = AppointmentStatus.Scheduled;
+
+  }
 }

@@ -29,7 +29,7 @@ export class AppointmentGetAllComponent implements OnInit {
   constructor(
     private appointmentService: AppointmentService,
     private patientService: PatientService,
-    private authService: AuthService,
+    public authService: AuthService,
     private navigationService: NavigationService
   ) {}
 
@@ -51,19 +51,29 @@ export class AppointmentGetAllComponent implements OnInit {
               headers: this.authService.getAuthHeaders()
             })
           );
-
-          forkJoin(patientRequests).subscribe({
-            next: (patients) => {
+  
+          const doctorRequests = appointments.map(appointment =>
+            this.patientService.getPatientById(appointment.providerId, {
+              headers: this.authService.getAuthHeaders()
+            })
+          );
+  
+          forkJoin({
+            patients: forkJoin(patientRequests),
+            doctors: forkJoin(doctorRequests)
+          }).subscribe({
+            next: (results) => {
               this.appointments = appointments.map((appointment, index) => ({
                 ...appointment,
-                patientName: `${patients[index].firstName} ${patients[index].lastName}`
+                patientName: `${results.patients[index].firstName} ${results.patients[index].lastName}`,
+                doctorUsername: results.doctors[index].username
               }));
               this.totalCount = appointments.length;
               this.loading = false;
             },
             error: (error) => {
-              console.error('Error loading patient details:', error);
-              this.error = 'Failed to load patient details';
+              console.error('Error loading details:', error);
+              this.error = 'Failed to load appointment details';
               this.loading = false;
             }
           });
