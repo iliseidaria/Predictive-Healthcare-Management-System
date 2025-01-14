@@ -261,4 +261,7 @@ export class TestPageComponent implements OnInit, OnDestroy {
   searchDoctors(): void {
     this.router.navigate(['/search-doctors']);
   }
+  navigateToProfile(): void {
+    this.router.navigate(['/view-profile']);
+  }
 }

@@ -141,6 +141,10 @@ export class DoctorComponent implements OnInit {
 //     }
 //   }
 
+  navigateToProfile(): void {
+    this.router.navigate(['/view-profile']);
+  }
+
   navigateToPatients(): void {
     this.router.navigate(['/get-all-patients']);
   }
