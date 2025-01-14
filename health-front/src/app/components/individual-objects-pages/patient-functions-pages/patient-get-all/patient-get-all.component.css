@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .container {
   padding: 20px;
   max-width: 1200px;
@@ -16,12 +17,6 @@ h2 {
   color: #333;
   margin-bottom: 20px;
   text-align: center;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
 }
 
 .page-header {
@@ -50,7 +45,7 @@ table {
 }
 
 thead {
-  background-color: #2e472c; /* Primary blue header */
+  background-color: #2e472c; /* Primary color */
 }
 
 th {
@@ -107,6 +102,22 @@ td a:hover {
   background-color: #218838;
 }
 
+td a.create-medical-btn {
+  background-color: #17a2b8;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+td a.create-medical-btn:hover {
+  background-color: #138496; 
+}
+
 .pagination {
   display: flex;
   justify-content: center;
@@ -154,7 +165,8 @@ td a:hover {
 }
 
 .actions {
-  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
   text-align: right;
 }
 

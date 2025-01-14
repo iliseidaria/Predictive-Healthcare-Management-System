@@ -30,6 +30,7 @@ import {
 import { UserGetPrescriptionsComponent } from './components/individual-objects-pages/user-functions-pages/user-get-prescriptions/user-get-prescriptions.component';
 import { DoctorComponent } from './components/home/doctor/doctor.component';
 import {MedicalRecordViewComponent} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-view/medical-records-view.component';
+import { PatientCreateMedicalRecordComponent } from './components/individual-objects-pages/patient-functions-pages/patient-create-medical-record/patient-create-medical-record.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -58,4 +59,5 @@ export const routes: Routes = [
   { path: 'medical-records/delete/:id', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },
   { path: 'medical-records/view/:id', component: MedicalRecordViewComponent, canActivate: [AuthGuard]  },
   { path: 'doctor', component: DoctorComponent, canActivate: [AuthGuard] },
+  { path: 'create-medical-record/:id', component: PatientCreateMedicalRecordComponent, canActivate: [AuthGuard] },
 ];

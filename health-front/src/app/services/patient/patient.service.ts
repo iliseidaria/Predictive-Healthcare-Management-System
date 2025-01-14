@@ -66,4 +66,16 @@ export class PatientService {
   deletePatient(id: string, options?: { headers?: HttpHeaders }): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, options);
   }
+
+  createMedicalRecord(patientId: string, medicalRecordData: any, options?: { headers?: HttpHeaders }): Observable<any> {
+    const url = `${environment.apiUrl}/api/v1/MedicalRecord/`;
+    console.log('Patient ID:', patientId);
+    return this.http.post<any>(url, medicalRecordData, options).pipe(
+      tap({
+        next: (response) => console.log('Medical record created:', response),
+        error: (error) => console.error('Error creating medical record:', error),
+        complete: () => console.log('Medical record creation request completed')
+      })
+    );
+  }  
 }

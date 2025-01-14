@@ -8,17 +8,25 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
   background-color: #f8f9fa;
+  border-radius: 10px;
+  min-height: 100vh; 
 }
 
-h1 {
+h1, h2 {
   color: #333;
-  margin-bottom: 20px;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 50px;
+  margin-top: 50px;
   text-transform: uppercase;
 }
 
@@ -26,10 +34,11 @@ form {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  background-color: #f1f1f1;
   border-radius: 8px;
   width: 100%;
   padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
   max-width: 800px;
 }
@@ -37,52 +46,59 @@ form {
 label {
   align-self: flex-start;
   width: 100%;
-  margin: 10px 0 5px;
-  font-size: 0.9rem;
+  margin: 12px 0 6px;
+  font-size: 1rem;
   font-weight: 600;
   color: #495057;
 }
 
 input,
+textarea,
 select {
   align-self: flex-start;
   width: 100%;
   padding: 12px;
-  margin: 5px 0 15px;
+  margin: 6px 0 18px;
   border: 1px solid #dee2e6;
   border-radius: 5px;
   background: #fff;
   color: #495057;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: all 0.3s ease;
 }
 
 input:focus,
+textarea:focus,
 select:focus {
   border-color: #2e472c;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(46, 71, 44, 0.2);
+  box-shadow: 0 0 5px rgba(46, 71, 44, 0.2);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
 }
 
 button[type="submit"] {
   align-self: center;
   display: block;
   margin: 20px auto;
-  padding: 10px 20px;
+  padding: 12px 20px;
   border: none;
   border-radius: 5px;
   background-color: #2e472c;
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: auto;
-  margin-top: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 200px;
 }
 
 button[type="submit"]:hover {
   background-color: #1c2b1b;
+  transform: scale(1.05);
 }
 
 button[type="submit"]:disabled {
@@ -90,26 +106,8 @@ button[type="submit"]:disabled {
   cursor: not-allowed;
 }
 
-.back-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  padding: 8px 16px;
-  background-color: #2e472c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: background-color 0.3s;
-}
-
-.back-button:hover {
-  background-color: #1c2b1b;
-}
-
 .photo-container {
-  margin: 10px 0;
+  margin: 12px 0;
 }
 
 .photo-container img {
@@ -126,8 +124,6 @@ button[type="submit"]:disabled {
   text-align: center;
   color: #666;
 }
-
-/* ...existing code... */
 
 /* Responsive Design */
 @media (max-width: 1200px) {
@@ -146,7 +142,7 @@ button[type="submit"]:disabled {
     padding: 10px;
   }
 
-  h1 {
+  h1, h2 {
     font-size: 1.3rem;
     margin: 30px 0 15px;
   }
@@ -158,27 +154,16 @@ button[type="submit"]:disabled {
   }
 
   label {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     margin: 8px 0 4px;
   }
 
   input,
+  textarea,
   select {
     padding: 10px;
     margin: 4px 0 12px;
-    font-size: 0.85rem;
-  }
-
-  .photo-container img {
-    max-width: 150px;
-    max-height: 150px;
-  }
-
-  .back-button {
-    position: static;
-    margin: 10px;
-    width: calc(100% - 20px);
-    text-align: center;
+    font-size: 0.9rem;
   }
 
   button[type="submit"] {
@@ -189,7 +174,7 @@ button[type="submit"]:disabled {
 }
 
 @media (max-width: 480px) {
-  h1 {
+  h1, h2 {
     font-size: 1.1rem;
   }
 
@@ -202,6 +187,7 @@ button[type="submit"]:disabled {
   }
 
   input,
+  textarea,
   select {
     padding: 8px;
     font-size: 0.8rem;
@@ -227,4 +213,29 @@ button[type="submit"]:disabled {
   form {
     margin-bottom: 20px;
   }
+}
+
+.error-message {
+  color: #f44336;  
+  background-color: #f8d7da; 
+  border: 1px solid #f44336;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 8px 16px;
+  background-color: #2e472c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
 }
