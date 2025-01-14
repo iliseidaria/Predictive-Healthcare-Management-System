@@ -1,4 +1,8 @@
 import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+
 import { TestPageComponent } from './components/home/test-page/test-page.component';
 import { PatientCreateComponent } from './components/individual-objects-pages/patient-functions-pages/patient-create/patient-create.component';
 import { PatientGetAllComponent } from './components/individual-objects-pages/patient-functions-pages/patient-get-all/patient-get-all.component';
@@ -29,8 +33,9 @@ import {
 } from './components/individual-objects-pages/medical-records-functions-pages/medical-records-edit/medical-records-edit.component';
 import { UserGetPrescriptionsComponent } from './components/individual-objects-pages/user-functions-pages/user-get-prescriptions/user-get-prescriptions.component';
 import { DoctorComponent } from './components/home/doctor/doctor.component';
+import { ViewProfileComponent } from './components/home/view-profile/view-profile.component';
+import { SearchDoctorsComponent  } from './components/home/search-doctors/search-doctors.component';
 import {MedicalRecordViewComponent} from './components/individual-objects-pages/medical-records-functions-pages/medical-records-view/medical-records-view.component';
-import { PatientCreateMedicalRecordComponent } from './components/individual-objects-pages/patient-functions-pages/patient-create-medical-record/patient-create-medical-record.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
@@ -49,6 +54,8 @@ export const routes: Routes = [
   { path: 'update-user/:id', component: UserUpdateComponent, canActivate: [AuthGuard] },
   { path: 'get-user-appointments', component: UserGetAppointmentsComponent, canActivate: [AuthGuard] },
   { path: 'get-all-prescriptions', component: PrescriptionGetAllComponent, canActivate: [AuthGuard] },
+
+  // { path: 'get-user-prescriptions', component: UserGetPraescriptionsComponent, canActivate: [AuthGuard] },
   {path: 'prescriptions/my',component:PrescriptionForUserComponent, canActivate:[AuthGuard]},
   // { path: 'get-user-prescriptions', component: UserGetPrescriptionsComponent, canActivate: [AuthGuard] },
   { path: 'create-prescription', component: PrescriptionCreateComponent, canActivate: [AuthGuard] },
@@ -59,5 +66,6 @@ export const routes: Routes = [
   { path: 'medical-records/delete/:id', component: MedicalRecordDeleteComponent, canActivate: [AuthGuard]  },
   { path: 'medical-records/view/:id', component: MedicalRecordViewComponent, canActivate: [AuthGuard]  },
   { path: 'doctor', component: DoctorComponent, canActivate: [AuthGuard] },
-  { path: 'create-medical-record/:id', component: PatientCreateMedicalRecordComponent, canActivate: [AuthGuard] },
+  { path: 'view-profile', component: ViewProfileComponent, canActivate: [AuthGuard] },
+  { path: 'search-doctors', component: SearchDoctorsComponent, canActivate: [AuthGuard] },
 ];
