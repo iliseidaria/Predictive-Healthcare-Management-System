@@ -1,0 +1,29 @@
+<div>
+  <h2>Search Doctors</h2>
+
+  <input
+    type="text"
+    [(ngModel)]="searchTerm"
+    (input)="filterDoctors()"
+    placeholder="Search by name"
+  />
+  
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div *ngIf="!error">
+    <ul>
+      <li *ngFor="let doctor of doctors">
+        <span>{{ doctor.FirstName }} {{ doctor.LastName }}</span>
+        <button (click)="deleteDoctor(doctor.id)">Delete</button>
+      </li>
+    </ul>
+
+    <div *ngIf="doctors.length === 0">No doctors found</div>
+
+    <div *ngIf="!isLastPage()">
+      <button (click)="page = page + 1; loadDoctors()">Load More</button>
+    </div>
+  </div>
+</div>

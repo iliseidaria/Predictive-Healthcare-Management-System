@@ -1,0 +1,52 @@
+<div class="grid-container">
+  <!-- Title Section -->
+  <div class="grid-item title" style="grid-column: 1 / span 3; grid-row: 1;">
+    <h2>My Profile</h2>
+  </div>
+
+  <!-- Profile Information Panel -->
+  <div class="grid-item panel" style="grid-column: 1 / span 3; grid-row: 2;">
+    <div *ngIf="error; else profileContent">
+      <p>{{ error }}</p>
+    </div>
+
+    <ng-template #profileContent>
+      <div *ngIf="!isEditing" class="profile-info">
+        <p><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+        <p><strong>Email:</strong> {{ user.email }}</p>
+        <p><strong>Role:</strong> {{ user.role }}</p>
+        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Date of Birth:</strong> {{ user.dateOfBirth | date }}</p>
+        <p><strong>Contact:</strong> {{ user.contactInformation }}</p>
+
+        <button (click)="enableEdit()">Edit Profile</button>
+      </div>
+
+      <div *ngIf="isEditing" class="profile-edit-form">
+        <form (ngSubmit)="saveProfile()">
+          <label for="firstName">First Name</label>
+          <input id="firstName" [(ngModel)]="user.firstName" name="firstName" required />
+          
+          <label for="lastName">Last Name</label>
+          <input id="lastName" [(ngModel)]="user.lastName" name="lastName" required />
+          
+          <label for="dateOfBirth">Date of Birth</label>
+          <input id="dateOfBirth" [(ngModel)]="user.dateOfBirth" name="dateOfBirth" type="date" required />
+          
+          <label for="contactInformation">Contact</label>
+          <input id="contactInformation" [(ngModel)]="user.contactInformation" name="contactInformation" required />
+          
+          <button type="submit">Save Changes</button>
+          <button type="button" (click)="cancelEdit()">Cancel</button>
+        </form>
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- Back Button Section -->
+  <div class="grid-item" style="grid-column: 1 / span 3; grid-row: 4;">
+    <button (click)="goBack()">Back</button>
+  </div>
+</div>
+
+<div *ngIf="loading">Loading...</div>
