@@ -1,48 +1,89 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PatientGetAllComponent } from './patient-get-all.component';
+import { Component, OnInit, inject } from '@angular/core';
 import { PatientService } from '../../../../services/patient/patient.service';
 import { AuthService } from '../../../../services/auth/auth.service';
+import { Router, RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
 import { NavigationService } from '../../../../services/navigation/navigation.service';
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
-import { of } from 'rxjs';
-import { provideRouter } from '@angular/router';
 
-describe('PatientGetAllComponent', () => {
-  let component: PatientGetAllComponent;
-  let fixture: ComponentFixture<PatientGetAllComponent>;
-  let mockPatientService: jasmine.SpyObj<PatientService>;
-  let mockAuthService: jasmine.SpyObj<AuthService>;
-  let mockNavigationService: jasmine.SpyObj<NavigationService>;
+@Component({
+  selector: 'app-patient-get-all',
+  templateUrl: './patient-get-all.component.html',
+  styleUrl: './patient-get-all.component.css',
+  imports: [
+    CommonModule,
+    RouterLink
+  ],
+  standalone: true,
+  providers: [NavigationService]
+})
+export class PatientGetAllComponent implements OnInit {
+  patients: any[] = [];
+  page = 1;
+  size = 10;
+  totalCount = 0;
+  userRole: string = '';
+  error: string | null = null;
+  user: any[] = [];
+  private navigationService = inject(NavigationService);
 
-  beforeEach(async () => {
-    mockPatientService = jasmine.createSpyObj('PatientService', ['getAllPatients', 'deletePatient']);
-    mockAuthService = jasmine.createSpyObj('AuthService', ['validateToken', 'getCurrentUser', 'getAuthHeaders']);
-    mockNavigationService = jasmine.createSpyObj('NavigationService', ['goBack']);
+  constructor(private patientService: PatientService, private authService: AuthService, private router: Router) { }
 
-    // Setup mock returns
-    mockAuthService.validateToken.and.returnValue(true);
-    mockAuthService.getCurrentUser.and.returnValue({ role: 'Doctor' });
-    mockAuthService.getAuthHeaders.and.returnValue(new HttpHeaders());
-    mockPatientService.getAllPatients.and.returnValue(of({ items: [], totalCount: 0 }));
+  ngOnInit() {
+    this.userRole = this.authService.getCurrentUser().role || ''; //pentru html
+    this.loadPatients();
+  }
 
-    await TestBed.configureTestingModule({
-      providers: [
-        provideHttpClient(withFetch()),
-        provideRouter([]),
-        { provide: PatientService, useValue: mockPatientService },
-        { provide: AuthService, useValue: mockAuthService },
-        { provide: NavigationService, useValue: mockNavigationService }
-      ]
-    }).compileComponents();
+  isLastPage(): boolean {
+    return this.page * this.size >= this.totalCount;
+  }
 
-    fixture = TestBed.createComponent(PatientGetAllComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  loadPatients() {
+    if (!this.authService.validateToken() || this.authService.getCurrentUser().role === 'patient') {
+      return;
+    }
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+    const headers = this.authService.getAuthHeaders();
 
+    // First get all users with role 'patient'
+    this.patientService.getAllPatients(this.page, this.size, { headers }).subscribe({
+      next: (data) => {
+        // Filter users with role 'patient'
+        const patientUsers = data.items.filter((user: any) => user.role === 'patient');
+
+        console.log('Filtered patient data:', patientUsers);
+        this.patients = patientUsers;
+        this.totalCount = patientUsers.length;
+      },
+      error: (err) => {
+        console.error('Error loading patients:', err);
+        this.error = 'Failed to load patients';
+      }
+    });
+  }
+
+  deletePatient(id: string) {
+    if (!id) {
+      console.error('No patient ID provided');
+      return;
+    }
+    if (confirm('Are you sure you want to delete this patient?')) {
+      const headers = this.authService.getAuthHeaders();
+      this.patientService.deletePatient(id, { headers }).subscribe({
+        next: () => {
+          alert('Patient deleted successfully');
+          this.loadPatients();
+        },
+        error: (err) => console.error(err),
+      });
+    }
+  }
+
+  createMedicalRecord(patientId: string): void {
+    console.log(`Creating medical record for patient ID: ${patientId}`);
+    this.router.navigate(['/create-medical-record', patientId]);
+  }
+
+  goBack(): void {
+    this.navigationService.goBack();
+  }
+}

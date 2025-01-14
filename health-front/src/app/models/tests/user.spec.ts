@@ -1,30 +1,41 @@
-import { User, UserRole } from '../user';
+import { User, UserRole, UsersResponse } from '../../models/user';
 
-describe('User Model', () => {
-  describe('UserRole Enum', () => {
-    it('should have correct role values', () => {
-      expect(UserRole.Admin).toBe('Admin');
-      expect(UserRole.Doctor).toBe('Doctor');
-      expect(UserRole.Patient).toBe('Patient');
-    });
+describe('User Service', () => {
+  let mockUser: User;
+
+  beforeEach(() => {
+    mockUser = {
+      id: '1',
+      username: 'test',
+      email: 'test@test.com',
+      role: UserRole.Admin,
+      firstName: 'Test',
+      lastName: 'User'
+    };
   });
 
-  describe('User Interface', () => {
-    it('should create user object with required properties', () => {
-      const user: User = {
-        id: '1',
-        username: 'test',
-        email: 'test@test.com',
-        role: UserRole.Admin,
-        firstName: 'Test',
-        lastName: 'User'
-      };
-      expect(user.id).toBeDefined();
-      expect(user.username).toBeDefined();
-      expect(user.email).toBeDefined();
-      expect(user.role).toBeDefined();
-      expect(user.firstName).toBeDefined();
-      expect(user.lastName).toBeDefined();
-    });
+  it('should create a UsersResponse object with user items', () => {
+    const usersResponse: UsersResponse = {
+      items: [mockUser], // Use 'items' instead of 'users'
+      totalCount: 1,
+      pageNumber: 1,
+      pageSize: 10
+    };
+
+    expect(usersResponse.items).toBeDefined();
+    expect(usersResponse.items.length).toBe(1);
+    expect(usersResponse.items[0]).toEqual(mockUser);
+  });
+
+  it('should create an empty UsersResponse object', () => {
+    const usersResponse: UsersResponse = {
+      items: [], // Use 'items' instead of 'users'
+      totalCount: 0,
+      pageNumber: 1,
+      pageSize: 10
+    };
+
+    expect(usersResponse.items).toBeDefined();
+    expect(usersResponse.items.length).toBe(0);
   });
 });

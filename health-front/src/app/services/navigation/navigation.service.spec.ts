@@ -1,26 +1,31 @@
 import { TestBed } from '@angular/core/testing';
-import { NavigationService } from './navigation.service';
 import { Location } from '@angular/common';
+import { NavigationService } from './navigation.service';
 
 describe('NavigationService', () => {
-  let service: NavigationService;
-  let location: jasmine.SpyObj<Location>;
+  let navigationService: NavigationService;
+  let locationSpy: jasmine.SpyObj<Location>;
 
   beforeEach(() => {
-    location = jasmine.createSpyObj('Location', ['back']);
-    
+    const mockLocation = jasmine.createSpyObj('Location', ['back']);
+
     TestBed.configureTestingModule({
       providers: [
         NavigationService,
-        { provide: Location, useValue: location }
+        { provide: Location, useValue: mockLocation }
       ]
     });
-    
-    service = TestBed.inject(NavigationService);
+
+    navigationService = TestBed.inject(NavigationService);
+    locationSpy = TestBed.inject(Location) as jasmine.SpyObj<Location>;
   });
 
-  it('should navigate back', () => {
-    service.goBack();
-    expect(location.back).toHaveBeenCalled();
+  it('should be created', () => {
+    expect(navigationService).toBeTruthy();
+  });
+
+  it('should call location.back() when goBack() is called', () => {
+    navigationService.goBack();
+    expect(locationSpy.back).toHaveBeenCalled();
   });
 });

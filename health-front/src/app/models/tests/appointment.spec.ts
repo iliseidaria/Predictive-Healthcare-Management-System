@@ -40,12 +40,12 @@ describe('Appointment Models', () => {
         status: AppointmentStatus.Scheduled,
         appointmentId: '789',
         patientName: 'John Doe',
-        doctorName: 'Dr. Smith'
+        doctorUsername: 'Dr. Smith'
       };
 
       expect(appointment.appointmentId).toBeDefined();
       expect(appointment.patientName).toBeDefined();
-      expect(appointment.doctorName).toBeDefined();
+      expect(appointment.doctorUsername).toBeDefined();
     });
   });
 

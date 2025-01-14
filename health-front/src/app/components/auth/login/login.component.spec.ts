@@ -5,12 +5,14 @@ import { AuthService } from '../../../services/auth/auth.service';
 import { provideRouter } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { of } from 'rxjs';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
   let fixture: ComponentFixture<LoginComponent>;
   let authServiceSpy: jasmine.SpyObj<AuthService>;
   let routerSpy: jasmine.SpyObj<Router>;
+  let httpTestingController: HttpTestingController;
 
   beforeEach(async () => {
     // Create spies for AuthService and Router
@@ -18,20 +20,25 @@ describe('LoginComponent', () => {
     routerSpy = jasmine.createSpyObj('Router', ['navigate']);
 
     await TestBed.configureTestingModule({
-      declarations: [LoginComponent],
-      imports: [ReactiveFormsModule],
+      imports: [ReactiveFormsModule, HttpClientTestingModule, LoginComponent], // Import HttpClientTestingModule
       providers: [
         { provide: AuthService, useValue: authServiceSpy },
         { provide: Router, useValue: routerSpy },
         provideRouter([]),
       ],
     }).compileComponents();
+
+    httpTestingController = TestBed.inject(HttpTestingController);
   });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(LoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+  });
+
+  afterEach(() => {
+    httpTestingController.verify(); // Ensure no outstanding HTTP requests
   });
 
   it('should create', () => {

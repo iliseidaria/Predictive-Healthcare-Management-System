@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 import { UserService } from './user.service';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { User, UsersResponse, UserRole } from '../../models/user';
@@ -8,7 +8,7 @@ import { User, UsersResponse, UserRole } from '../../models/user';
 describe('UserService', () => {
   let service: UserService;
   let httpMock: HttpTestingController;
-  const baseUrl = `${environment.apiUrl}/api/v1/Admin/users`;
+  const baseUrl = `${environment.apiUrl}/api/v1/Auth/users`;
 
   const mockUser: User = {
     id: '123',
@@ -21,7 +21,7 @@ describe('UserService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [provideHttpClientTesting()],
       providers: [UserService]
     });
     service = TestBed.inject(UserService);
@@ -35,15 +35,17 @@ describe('UserService', () => {
   describe('getAllUsers', () => {
     it('should get users with pagination', () => {
       const mockResponse: UsersResponse = {
-        users: [mockUser],
-        totalUsers: 1
+        items: [mockUser], // Use 'items' instead of 'users'
+        totalCount: 1,
+        pageNumber: 1,
+        pageSize: 10
       };
 
       service.getAllUsers(1, 10).subscribe({
         next: (response) => {
           expect(response).toEqual(mockResponse);
-          expect(response.users.length).toBe(1);
-          expect(response.totalUsers).toBe(1);
+          expect(response.items.length).toBe(1);
+          expect(response.totalCount).toBe(1);
         }
       });
 
@@ -54,14 +56,16 @@ describe('UserService', () => {
 
     it('should handle empty response', () => {
       const emptyResponse: UsersResponse = {
-        users: [],
-        totalUsers: 0
+        items: [], // Use 'items' instead of 'users'
+        totalCount: 0,
+        pageNumber: 1,
+        pageSize: 10
       };
 
       service.getAllUsers(1, 10).subscribe({
         next: (response) => {
-          expect(response.users).toEqual([]);
-          expect(response.totalUsers).toBe(0);
+          expect(response.items).toEqual([]);
+          expect(response.totalCount).toBe(0);
         }
       });
 

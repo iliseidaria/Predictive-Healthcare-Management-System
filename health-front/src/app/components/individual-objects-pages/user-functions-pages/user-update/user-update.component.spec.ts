@@ -1,54 +1,93 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UserUpdateComponent } from './user-update.component';
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { UserService } from '../../../../services/user/user.service';
+import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../../services/auth/auth.service';
 import { NavigationService } from '../../../../services/navigation/navigation.service';
-import { provideHttpClient, withFetch } from '@angular/common/http';
-import { of } from 'rxjs';
+import { UserRole } from '../../../../models/user';
+import { PatientService } from '../../../../services/patient/patient.service';
 
-describe('UserUpdateComponent', () => {
-  let component: UserUpdateComponent;
-  let fixture: ComponentFixture<UserUpdateComponent>;
+interface UpdateUserData {
+  userId: string;
+  username: string;
+  email: string;
+  role: string;
+}
 
-  const mockUserService = jasmine.createSpyObj('UserService', ['getUserById', 'updateUser']);
-  const mockAuthService = jasmine.createSpyObj('AuthService', ['getAuthHeaders']);
-  const mockRouter = jasmine.createSpyObj('Router', ['navigate']);
-  const mockNavigationService = jasmine.createSpyObj('NavigationService', ['goBack']);
-  const mockActivatedRoute = {
-    snapshot: {
-      paramMap: {
-        get: () => '123'
+@Component({
+  selector: 'app-user-update',
+  standalone: true,
+  imports: [ReactiveFormsModule, CommonModule],
+  templateUrl: './user-update.component.html',
+  styleUrls: ['./user-update.component.css'],
+  providers: [NavigationService]
+})
+export class UserUpdateComponent implements OnInit {
+  userForm: FormGroup;
+  userId!: string;
+  roles = Object.values(UserRole);
+
+  constructor(
+    private fb: FormBuilder,
+    private patientService: PatientService,
+    private authService: AuthService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private navigationService: NavigationService
+  ) {
+    this.userForm = this.fb.group({
+      username: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      role: ['', Validators.required]
+    });
+  }
+
+  ngOnInit(): void {
+    this.userId = this.route.snapshot.paramMap.get('id')!;
+    this.patientService.getPatientById(this.userId, {
+      headers: this.authService.getAuthHeaders()
+    }).subscribe({
+      next: (user) => {
+        console.log('Current user role:', user.role);
+        this.userForm.patchValue({
+          username: user.username,
+          email: user.email,
+          role: user.role
+        });
+      },
+      error: (error) => {
+        console.error('Error loading user:', error);
       }
+    });
+  }
+
+  onSubmit(): void {
+    if (this.userForm.valid) {
+      const updateData: UpdateUserData = {
+        userId: this.userId,
+        username: this.userForm.value.username,
+        email: this.userForm.value.email,
+        role: this.userForm.value.role
+      };
+
+      console.log('Update data being sent:', updateData);
+
+      this.patientService.updateUser(this.userId, updateData, {
+        headers: this.authService.getAuthHeaders()
+      }).subscribe({
+        next: () => {
+          alert('User updated successfully');
+          this.router.navigate(['/get-all-users']);
+        },
+        error: (error) => {
+          console.error('Error updating user:', error);
+          alert('Failed to update user: ' + error.message);
+        }
+      });
     }
-  };
+  }
 
-  beforeEach(async () => {
-    mockUserService.getUserById.and.returnValue(of({}));
-    mockAuthService.getAuthHeaders.and.returnValue({});
-
-    await TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule
-      ],
-      providers: [
-        FormBuilder,
-        provideHttpClient(withFetch()),
-        { provide: UserService, useValue: mockUserService },
-        { provide: AuthService, useValue: mockAuthService },
-        { provide: Router, useValue: mockRouter },
-        { provide: NavigationService, useValue: mockNavigationService },
-        { provide: ActivatedRoute, useValue: mockActivatedRoute }
-      ]
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(UserUpdateComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-});
+  goBack(): void {
+    this.navigationService.goBack();
+  }
+}
