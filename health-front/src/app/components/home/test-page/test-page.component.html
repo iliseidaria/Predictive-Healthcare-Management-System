@@ -65,7 +65,7 @@
       <thead>
         <tr>
           <th>Date</th>
-          <th>Patient</th>
+          <th>Time</th>
           <th>Reason</th>
         </tr>
       </thead>
@@ -78,7 +78,7 @@
           </td>
           <td>
             <a [routerLink]="['/appointment-detail', appointment.appointmentId]" class="appointment-link">
-              {{ appointment.patientName }}
+              {{ appointment.appointmentDate | date: 'shortTime' }}
             </a>
           </td>
           <td>

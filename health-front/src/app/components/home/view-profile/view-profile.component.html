@@ -13,11 +13,13 @@
     <ng-template #profileContent>
       <div *ngIf="!isEditing" class="profile-info">
         <p><strong>Name:</strong> {{ user.firstName }} {{ user.lastName }}</p>
+        <p><strong>Username:</strong> {{ user.username }}</p>
         <p><strong>Email:</strong> {{ user.email }}</p>
         <p><strong>Role:</strong> {{ user.role }}</p>
-        <p><strong>Username:</strong> {{ user.username }}</p>
+        <p><strong>Gender:</strong> {{ user.gender }}</p>
         <p><strong>Date of Birth:</strong> {{ user.dateOfBirth | date }}</p>
         <p><strong>Contact:</strong> {{ user.contactInformation }}</p>
+        <p><strong>Address:</strong> {{ user.address }}</p>
 
         <button (click)="enableEdit()">Edit Profile</button>
       </div>
@@ -30,14 +32,36 @@
           <label for="lastName">Last Name</label>
           <input id="lastName" [(ngModel)]="user.lastName" name="lastName" required />
           
-          <label for="dateOfBirth">Date of Birth</label>
-          <input id="dateOfBirth" [(ngModel)]="user.dateOfBirth" name="dateOfBirth" type="date" required />
+          <label for="username">Username</label>
+          <input id="username" [(ngModel)]="user.username" name="username" required />
           
+          <label for="email">Email</label>
+          <input id="email" [(ngModel)]="user.email" name="email" type="email" required />
+          
+          <label for="gender">Gender</label>
+          <select id="gender" [(ngModel)]="user.gender" name="gender" required>
+            <option [ngValue]="Gender.Male">Male</option>
+            <option [ngValue]="Gender.Female">Female</option>
+            <option [ngValue]="Gender.Other">Other</option>
+          </select>
+          
+          <label for="dateOfBirth">Date of Birth</label>
+          <input id="dateOfBirth" 
+                [(ngModel)]="user.dateOfBirth" 
+                name="dateOfBirth" 
+                type="date" 
+                required />
+                
           <label for="contactInformation">Contact</label>
           <input id="contactInformation" [(ngModel)]="user.contactInformation" name="contactInformation" required />
           
-          <button type="submit">Save Changes</button>
-          <button type="button" (click)="cancelEdit()">Cancel</button>
+          <label for="address">Address</label>
+          <textarea id="address" [(ngModel)]="user.address" name="address" rows="3"></textarea>
+  
+          <div class="button-group">
+            <button type="submit">Save Changes</button>
+            <button type="button" (click)="cancelEdit()">Cancel</button>
+          </div>
         </form>
       </div>
     </ng-template>

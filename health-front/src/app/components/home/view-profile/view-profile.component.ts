@@ -4,6 +4,7 @@ import { UserService } from '../../../services/user/user.service';
 import { AuthService } from '../../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';  // Importă FormsModule pentru ngModel
+import { Gender, User } from '../../../models/user';
 
 @Component({
   selector: 'app-view-profile',
@@ -14,6 +15,7 @@ import { FormsModule } from '@angular/forms';  // Importă FormsModule pentru ng
 })
 export class ViewProfileComponent implements OnInit {
   user: any = null;
+  Gender = Gender;
   error: string | null = null;
   loading: boolean = false;
   isEditing: boolean = false;  // Variabila care controlează formularul de editare
@@ -42,7 +44,11 @@ export class ViewProfileComponent implements OnInit {
       headers: this.authService.getAuthHeaders()
     }).subscribe({
       next: (response) => {
-        this.user = response;
+        this.user = {
+          ...response,
+          dateOfBirth: this.formatDate(response.dateOfBirth),
+          // gender: parseInt(this.user.gender, 10)
+        };
         this.loading = false;
       },
       error: (error) => {
@@ -62,10 +68,25 @@ export class ViewProfileComponent implements OnInit {
     this.loadProfile();  // Reîncarcă datele pentru a anula modificările
   }
 
+  private formatDate(date: string): string {
+    const parsedDate = new Date(date);
+    const year = parsedDate.getFullYear();
+    const month = (parsedDate.getMonth() + 1).toString().padStart(2, '0');
+    const day = parsedDate.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+
   saveProfile(): void {
     this.loading = true;
 
-    this.userService.updateUser(this.user.id, this.user, {
+    if (!this.user) return;
+    
+    const updateData = {
+      ...this.user,
+      gender: parseInt(this.user.gender, 10)
+    };
+
+    this.userService.updateUser(this.user.id, updateData, {
       headers: this.authService.getAuthHeaders()
     }).subscribe({
       next: (response) => {

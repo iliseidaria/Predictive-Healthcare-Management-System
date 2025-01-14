@@ -205,22 +205,6 @@
   },
   {
     "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
-    "Method": "GetAllDoctors",
-    "RelativePath": "api/v1/Auth/doctors",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Guid",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Predictive_Healthcare_Management_System.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/v1/Auth/login",
     "HttpMethod": "POST",

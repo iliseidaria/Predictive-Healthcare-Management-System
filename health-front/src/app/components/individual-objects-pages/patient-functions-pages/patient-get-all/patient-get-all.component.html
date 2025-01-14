@@ -23,6 +23,12 @@
             <a [routerLink]="['/patient-detail', patient.id]">Details</a>
             <a [routerLink]="['/update-patient', patient.id]">Edit</a>
             <button (click)="createMedicalRecord(patient.id)">Create Medical Record</button>
+            <a *ngIf="authService.getCurrentUser()?.role === 'doctor'"
+              [routerLink]="['/create-appointment']" 
+              [queryParams]="{ patientId: patient.id }"
+              class="action-btn create">
+              Create Appointment
+            </a>
           </div>
         </td>        
       </tr>

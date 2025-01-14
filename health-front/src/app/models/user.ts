@@ -11,11 +11,22 @@ export interface UsersResponse {
     pageSize: number;
 }
 
-export interface User {
+export enum Gender {
+    Male = 0,
+    Female = 1,
+    Other = 2
+  }
+  
+  export interface User {
     id: string;
+    firstName: string;
+    lastName: string;
     username: string;
     email: string;
     role: string;
-    lastName: string,
-  firstName: string,
-}
+    gender: Gender;
+    dateOfBirth: string;
+    contactInformation?: string;
+    address?: string;
+    photo?: string;
+  }
