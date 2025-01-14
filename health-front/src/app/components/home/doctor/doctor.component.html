@@ -24,12 +24,10 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let appointment of upcomingAppointments">
-              <td>
-                <a [routerLink]="['/appointment-detail', appointment.appointmentId]">
-                  {{appointment.appointmentDate | date:'shortTime'}}
-                </a>
-              </td>
+            <tr *ngFor="let appointment of upcomingAppointments"
+                [routerLink]="['/appointment-detail', appointment.appointmentId]"
+                class="appointment-row">
+              <td>{{appointment.appointmentDate | date:'shortTime'}}</td>
               <td>{{appointment.patientName}}</td>
               <td>{{appointment.reason}}</td>
             </tr>
@@ -39,7 +37,19 @@
       <ng-template #noAppointments>
         <p>No upcoming appointments.</p>
       </ng-template>
-      <button (click)="navigateToAppointments()">View All Appointments</button>
+      <button 
+    *ngIf="authService.getCurrentUser()?.role === 'Admin'"
+    (click)="navigateToAllAppointments()"
+    class="wide-button">
+    View All Appointments
+</button>
+
+<button 
+    *ngIf="authService.getCurrentUser()?.role === 'doctor'"
+    (click)="navigateToAppointments()"
+    class="wide-button">
+    View My Appointments
+</button>
     </div>
   
     <!-- Doctor Actions Panel -->
@@ -50,7 +60,6 @@
         <button class="wide-button" (click)="navigateToPatients()">View All Patients</button>
         <button class="wide-button" (click)="navigateToPrescriptions()">Manage Prescriptions</button>
         <button class="wide-button" (click)="navigateToMedicalRecords()">Access Medical Records</button>
-        <button class="wide-button" (click)="navigateToAppointments()">Manage Appointments</button>
         <button 
             *ngIf="authService.getCurrentUser()?.role === 'Admin'"
             class="wide-button" 

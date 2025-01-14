@@ -58,6 +58,10 @@ export class PatientService {
   updatePatient(id: string, patientData: any, options?: { headers?: HttpHeaders }): Observable<any> {
     return this.http.put(`${this.baseUrl}/${id}`, patientData, options);
   }
+  
+  updateUser(id: string, patientData: any, options?: { headers?: HttpHeaders }): Observable<any> {
+    return this.http.put(`${this.baseUrl}/edit/${id}`, patientData, options);
+  }
 
   deletePatient(id: string, options?: { headers?: HttpHeaders }): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`, options);

@@ -1,0 +1,185 @@
+.appointments-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #2e472c;
+    text-align: center;
+    font-size: 2rem;
+    margin: 20px 0;
+  }
+  
+  .table-container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px 0;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  thead {
+    background-color: #2e472c;
+  }
+  
+  th {
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+  }
+  
+  td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  tr:hover {
+    background-color: #f8f9fa;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+  .status-scheduled {
+    background-color: #ffd700;
+    color: #000;
+  }
+  
+  .status-completed {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .status-cancelled {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .action-btn {
+    padding: 6px 12px;
+    border-radius: 5px;
+    margin: 0 5px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+  
+  .action-btn.view {
+    background-color: #2e472c;
+    color: white;
+  }
+  
+  .back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 8px 16px;
+    background-color: #2e472c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  .create-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-weight: 600;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+  .pagination button {
+    padding: 10px 20px;
+    background-color: #2e472c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .pagination button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  .no-data {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    font-style: italic;
+  }
+  
+  .loading, .error-message {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 768px) {
+    .table-responsive {
+      overflow-x: auto;
+    }
+    
+    .back-button {
+      position: static;
+      margin: 10px;
+      width: calc(100% - 20px);
+    }
+  
+    .action-btn {
+      padding: 4px 8px;
+      font-size: 0.8rem;
+    }
+  
+    td {
+      padding: 8px;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .appointments-container {
+      padding: 10px;
+    }
+  
+    .table-container {
+      padding: 10px;
+    }
+  
+    h2 {
+      font-size: 1.2rem;
+    }
+  
+    .status-badge {
+      padding: 4px 8px;
+      font-size: 0.8rem;
+    }
+  }

@@ -27,10 +27,8 @@
             <td>{{user.email}}</td>
             <td>{{user.role}}</td>
             <td class="actions-cell">
-              <ng-container *ngIf="user.role !== 'Admin'">
               <button (click)="deleteUser(user.id)" class="action-btn delete">Delete</button>
               <a [routerLink]="['/update-user', user.id]" class="action-btn edit">Edit</a>
-            </ng-container>
             </td>
           </tr>
         </tbody>

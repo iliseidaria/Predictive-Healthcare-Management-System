@@ -4,11 +4,7 @@ import { AuthService } from '../../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
 import { interval, Subscription } from 'rxjs';
 import { forkJoin } from 'rxjs';
-import { ActivatedRoute } from '@angular/router';
-import  {RouterModule} from '@angular/router';
 import { AppointmentService } from '../../../services/appointment/appointment.service';
-import { NavigationService } from '../../../services/navigation/navigation.service';
-import { Appointment, AppointmentStatus } from '../../../models/appointment';
 import {RouterLink} from '@angular/router';
 import { UserService } from '../../../services/user/user.service';
 import { ViewProfileButtonComponent } from '../../buttons/view-profile-button/view-profile-button.component';
@@ -47,48 +43,145 @@ export class TestPageComponent implements OnInit, OnDestroy {
       this.authService.validateToken();
     });
   }
+  // loadAppointments(): void {
+  //   if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+  //     this.loading = true;
+
+  //     // Fetch appointments
+  //     this.appointmentService.getAppointments(1, 10).subscribe({
+  //       next: (appointments) => {
+  //         // Fetch user details for patientId and providerId in each appointment
+  //         const userRequests = appointments.flatMap((appointment) => [
+  //           this.patientService.getUserById(appointment.patientId, {
+  //             headers: this.authService.getAuthHeaders()
+  //           }),
+  //           this.patientService.getUserById(appointment.providerId, {
+  //             headers: this.authService.getAuthHeaders()
+  //           })
+  //         ]);
+
+  //         forkJoin(userRequests).subscribe({
+  //           next: (users) => {
+  //             // Process the users to map patientId and providerId to their names
+  //             const userMap = new Map(
+  //               users.map((user: any) => [user.id, `${user.firstName} ${user.lastName}`])
+  //             );
+
+  //             this.appointments = appointments.map((appointment) => ({
+  //               ...appointment,
+  //               patientName: userMap.get(appointment.patientId) || 'Unknown Patient',
+  //               doctorName: userMap.get(appointment.providerId) || 'Unknown Doctor'
+  //             }));
+
+  //             // Sort and filter for upcoming appointments
+  //             const now = new Date();
+  //             this.upcomingAppointments = this.appointments
+  //               .filter((appointment) => new Date(appointment.appointmentDate) > now)
+  //               .sort((a, b) => new Date(a.appointmentDate).getTime() - new Date(b.appointmentDate).getTime())
+  //               .slice(0, 2);
+
+  //             this.loading = false;
+  //           },
+  //           error: (error) => {
+  //             console.error('Error loading user details:', error);
+  //             this.error = 'Failed to load user details';
+  //             this.loading = false;
+  //           }
+  //         });
+  //       },
+  //       error: (error) => {
+  //         this.error = 'Failed to load appointments';
+  //         this.loading = false;
+  //         console.error('Error:', error);
+  //       }
+  //     });
+  //   }
+  // }
+
+  // loadAppointments(): void {
+  //   if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+  //     this.loading = true;
+  //     this.appointmentService.getAppointments(1, 10).subscribe({
+  //       next: (appointments) => {
+  //         // Only fetch patient details
+  //         const patientRequests = appointments.map(appointment =>
+  //           this.patientService.getUserById(appointment.patientId, {
+  //             headers: this.authService.getAuthHeaders()
+  //           })
+  //         );
+
+  //         forkJoin(patientRequests).subscribe({
+  //           next: (patients) => {
+  //             const patientMap = new Map(
+  //               patients.map((patient: any) => [patient.id, `${patient.firstName} ${patient.lastName}`])
+  //             );
+
+  //             this.appointments = appointments.map((appointment) => ({
+  //               ...appointment,
+  //               patientName: patientMap.get(appointment.patientId) || 'Unknown Patient'
+  //             }));
+
+  //             const now = new Date();
+  //             this.upcomingAppointments = this.appointments
+  //               .filter((appointment) => new Date(appointment.appointmentDate) > now)
+  //               .sort((a, b) => new Date(a.appointmentDate).getTime() - new Date(b.appointmentDate).getTime())
+  //               .slice(0, 2);
+
+  //             this.loading = false;
+  //           },
+  //           error: (error) => {
+  //             console.error('Error loading patient details:', error);
+  //             this.error = 'Failed to load patient details';
+  //             this.loading = false;
+  //           }
+  //         });
+  //       },
+  //       error: (error) => {
+  //         this.error = 'Failed to load appointments';
+  //         this.loading = false;
+  //         console.error('Error:', error);
+  //       }
+  //     });
+  //   }
+  // }
+
+
+
   loadAppointments(): void {
     if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
       this.loading = true;
-
-      // Fetch appointments
       this.appointmentService.getAppointments(1, 10).subscribe({
         next: (appointments) => {
-          // Fetch user details for patientId and providerId in each appointment
-          const userRequests = appointments.flatMap((appointment) => [
+          const patientRequests = appointments.map(appointment =>
             this.patientService.getUserById(appointment.patientId, {
               headers: this.authService.getAuthHeaders()
-            }),
-            this.patientService.getUserById(appointment.providerId, {
-              headers: this.authService.getAuthHeaders()
             })
-          ]);
+          );
 
-          forkJoin(userRequests).subscribe({
-            next: (users) => {
-              // Process the users to map patientId and providerId to their names
-              const userMap = new Map(
-                users.map((user: any) => [user.id, `${user.firstName} ${user.lastName}`])
+          forkJoin(patientRequests).subscribe({
+            next: (patients) => {
+              const patientMap = new Map(
+                patients.map((patient: any) => [patient.id, `${patient.firstName} ${patient.lastName}`])
               );
 
               this.appointments = appointments.map((appointment) => ({
                 ...appointment,
-                patientName: userMap.get(appointment.patientId) || 'Unknown Patient',
-                doctorName: userMap.get(appointment.providerId) || 'Unknown Doctor'
+                patientName: patientMap.get(appointment.patientId) || 'Unknown Patient'
               }));
 
-              // Sort and filter for upcoming appointments
               const now = new Date();
               this.upcomingAppointments = this.appointments
-                .filter((appointment) => new Date(appointment.appointmentDate) > now)
+                .filter(appointment => 
+                  new Date(appointment.appointmentDate) > now && 
+                  appointment.status === 0) // 0 = Scheduled status
                 .sort((a, b) => new Date(a.appointmentDate).getTime() - new Date(b.appointmentDate).getTime())
                 .slice(0, 2);
 
               this.loading = false;
             },
             error: (error) => {
-              console.error('Error loading user details:', error);
-              this.error = 'Failed to load user details';
+              console.error('Error loading patient details:', error);
+              this.error = 'Failed to load patient details';
               this.loading = false;
             }
           });

@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AppointmentService } from '../../../../services/appointment/appointment.service';
 import { AuthService } from '../../../../services/auth/auth.service';
 import { CommonModule } from '@angular/common';
@@ -14,7 +14,7 @@ import { NavigationService } from '../../../../services/navigation/navigation.se
   templateUrl: './appointment-create.component.html',
   styleUrl: './appointment-create.component.css'
 })
-export class AppointmentCreateComponent {
+export class AppointmentCreateComponent implements OnInit {
   appointmentForm: FormGroup;
 
   constructor(
@@ -22,7 +22,8 @@ export class AppointmentCreateComponent {
     private appointmentService: AppointmentService,
     private authService: AuthService,
     private router: Router,
-    private navigationService: NavigationService
+    private navigationService: NavigationService,
+    private route: ActivatedRoute
   ) {
     this.appointmentForm = this.fb.group({
       patientId: ['', [Validators.required]],
@@ -32,19 +33,20 @@ export class AppointmentCreateComponent {
     });
   }
 
-  goBack(): void {
-    this.navigationService.goBack();
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['patientId']) {
+        this.appointmentForm.patchValue({
+          patientId: params['patientId']
+        });
+      }
+    });
   }
 
   onSubmit() {
-    if (this.appointmentForm.valid && this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+    if (this.appointmentForm.valid) {
       const formValue = this.appointmentForm.value;
       const currentUser = this.authService.getCurrentUser();
-
-      if (!currentUser?.id) {
-        alert('Provider ID not available. Please log in again.');
-        return;
-      }
 
       const dateStr = formValue.appointmentDate;
       const timeStr = formValue.appointmentTime;
@@ -55,15 +57,14 @@ export class AppointmentCreateComponent {
         providerId: currentUser.id,
         appointmentDate: combinedDate,
         reason: formValue.reason,
-        status: AppointmentStatus.Scheduled
+        status: AppointmentStatus.Scheduled // Explicitly set to enum value
       };
 
-      console.log('Form Data Sent:', appointment);
+      console.log('Sending appointment:', appointment); // Debug log
+
       this.appointmentService.createAppointment(appointment).subscribe({
         next: (response: AppointmentResponse) => {
-          console.log('Full response:', response);
           alert('Appointment created successfully!');
-          console.log('Response ID:', response.id);
           this.router.navigateByUrl(`/appointment-detail/${response.id}`);
         },
         error: (error) => {
@@ -72,5 +73,39 @@ export class AppointmentCreateComponent {
         }
       });
     }
+  }
+
+  // onSubmit() {
+  //   if (this.appointmentForm.valid) {
+  //     const formValue = this.appointmentForm.value;
+  //     const currentUser = this.authService.getCurrentUser();
+
+  //     const dateStr = formValue.appointmentDate;
+  //     const timeStr = formValue.appointmentTime;
+  //     const combinedDate = new Date(`${dateStr}T${timeStr}`);
+
+  //     const appointment: Appointment = {
+  //       patientId: formValue.patientId,
+  //       providerId: currentUser.id, // Get from current user
+  //       appointmentDate: combinedDate,
+  //       reason: formValue.reason,
+  //       status: 0
+  //     };
+
+  //     this.appointmentService.createAppointment(appointment).subscribe({
+  //       next: (response: AppointmentResponse) => {
+  //         alert('Appointment created successfully!');
+  //         this.router.navigateByUrl(`/appointment-detail/${response.id}`);
+  //       },
+  //       error: (error) => {
+  //         console.error('Error creating appointment:', error);
+  //         alert('Failed to create appointment');
+  //       }
+  //     });
+  //   }
+  // }
+
+  goBack(): void {
+    this.navigationService.goBack();
   }
 }

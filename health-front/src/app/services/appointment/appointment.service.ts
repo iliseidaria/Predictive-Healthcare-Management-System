@@ -76,42 +76,13 @@ export class AppointmentService {
       })
     );
   }
-
-  // Add after getUserAppointments method
-// getDoctorAppointments(doctorId: string, page: number, size: number, options?: { headers?: HttpHeaders }): Observable<any> {
-//   const params = new HttpParams()
-//     .set('pageNumber', page.toString())
-//     .set('pageSize', size.toString());
-
-//   return this.http.get<any>(
-//     `${this.apiUrl}/doctor/${doctorId}`,
-//     { 
-//       params,
-//       headers: this.authService.getAuthHeaders(),
-//       ...options 
-//     }
-//   ).pipe(
-//     tap(response => console.log('Doctor Appointments Response:', response)),
-//     catchError(error => {
-//       console.error('Error fetching doctor appointments:', error);
-//       throw error;
-//     })
-//   );
-// }
-
-  // getAppointments(page: number, pageSize: number): Observable<PaginatedResponse> {
-  //   const params = { page: page.toString(), pageSize: pageSize.toString() };
-  //   return this.http.get<PaginatedResponse>(this.apiUrl, {
-  //     headers: this.authService.getAuthHeaders(),
-  //     params
-  //   });
-  // }
-
-  // getAppointments(): Observable<Appointment[]> {
-  //   return this.http.get<Appointment[]>(this.apiUrl, {
-  //     headers: this.authService.getAuthHeaders()
-  //   });
-  // }
+  
+  getDoctorAppointments(doctorId: string, page: number, size: number): Observable<Appointment[]> {
+    return this.http.get<Appointment[]>(
+      `${this.apiUrl}/doctor/${doctorId}`,
+      { params: new HttpParams().set('page', page.toString()).set('size', size.toString()) }
+    );
+  }
 
   getAppointmentById(id: string): Observable<Appointment> {
     return this.http.get<Appointment>(`${this.apiUrl}/${id}`, {
@@ -136,4 +107,18 @@ export class AppointmentService {
       headers: this.authService.getAuthHeaders()
     });
   }
+
+  // cred ca trebuie si in back sa schimbi statusul dupa ce trece data programarii
+  // checkAndUpdateStatus(appointment: Appointment): void {
+  //   const now = new Date();
+  //   const appointmentDate = new Date(appointment.appointmentDate);
+    
+  //   if (appointmentDate < now && appointment.status === AppointmentStatus.Scheduled) {
+  //     this.updateAppointmentStatus(appointment.appointmentId, AppointmentStatus.Completed)
+  //       .subscribe({
+  //         next: () => console.log('Appointment auto-completed'),
+  //         error: (error) => console.error('Error auto-completing appointment:', error)
+  //       });
+  //   }
+  // }
 }

@@ -27,7 +27,18 @@ namespace Application.Use_Cases.CommandHandlers
                 throw new Exception("Patient not found");
             }
 
+            if (request.Status == 0) // If no status is sent, use default
+            {
+              request.Status = AppointmentStatus.Scheduled;
+            }
+
             var appointment = _mapper.Map<Appointment>(request);
+
+            if (appointment.Status == 0)
+            {
+              appointment.Status = AppointmentStatus.Scheduled;
+            }
+
             return await _appointmentRepository.AddAppointmentAsync(appointment);
         }
     }

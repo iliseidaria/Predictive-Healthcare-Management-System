@@ -49,18 +49,18 @@ namespace Predictive_Healthcare_Management_System.Controllers
           return Ok(response);
         }
 
+    // GET: api/v1/Appointment/doctor/{userId}
+    [HttpGet("doctor/{userId}")]
+    public async Task<IActionResult> GetDoctorAppointments(Guid userId, [FromQuery] int page = 1, [FromQuery] int size = 10)
+    {
+      var query = new GetUserAppointmentsQuery(userId, page, size);
+      var response = await _mediator.Send(query);
+      return Ok(response);
+    }
+
     [HttpPost]
         public async Task<IActionResult> CreateAppointment(CreateAppointmentCommand command)
         {
-            /*if (command == null)
-            {
-                return BadRequest();
-            }
-
-            var result = await _mediator.Send(command);
-            return CreatedAtAction(nameof(GetById), new { id = result }, result);
-        */
-
             var appointmentId = await _mediator.Send(command);
             return CreatedAtAction(nameof(GetById), new { id = appointmentId }, new { id = appointmentId });
         }

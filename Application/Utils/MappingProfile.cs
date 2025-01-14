@@ -46,9 +46,17 @@ namespace Application.Utils
 
       // Appointment mappings
       CreateMap<Appointment, AppointmentDto>().ReverseMap();
-            CreateMap<CreateAppointmentCommand, Appointment>().ReverseMap();
-            CreateMap<UpdateAppointmentCommand, Appointment>().ReverseMap();
+            //CreateMap<CreateAppointmentCommand, Appointment>().ReverseMap();
+      CreateMap<UpdateAppointmentCommand, Appointment>().ReverseMap();
 
-        }
+      CreateMap<CreateAppointmentCommand, Appointment>()
+            .ForMember(dest => dest.Status,
+                      opt => opt.MapFrom(src => src.Status))
+            .AfterMap((src, dest) => {
+              if (dest.Status == 0)
+                dest.Status = AppointmentStatus.Scheduled;
+            });
+
+    }
     }
 }

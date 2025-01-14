@@ -18,8 +18,14 @@
       <td>{{ patient.lastName || 'No information' }}</td>
       <td>{{ patient.dateOfBirth ? (patient.dateOfBirth | date: 'mediumDate') : 'No information' }}</td>
       <td>
-        <button (click)="deletePatient(patient.id)">Delete</button>
+        <a *ngIf="authService.getCurrentUser()?.role === 'doctor'"
+           [routerLink]="['/create-appointment']" 
+           [queryParams]="{ patientId: patient.id }"
+           class="action-btn create">
+          Create Appointment
+        </a>
         <a [routerLink]="['/patient-detail', patient.id]">Details</a>
+        <button (click)="deletePatient(patient.id)">Delete</button>
         <a [routerLink]="['/update-patient', patient.id]">Edit</a>
       </td>
       </tr>

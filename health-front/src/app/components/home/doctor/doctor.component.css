@@ -137,6 +137,18 @@ button:hover {
     padding: 10px;
 }
 
+.appointments-table tr.appointment-row {
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.appointments-table tr.appointment-row:hover {
+    background-color: rgba(228, 240, 208, 0.1);
+}
+
+.appointments-table tr.appointment-row:active {
+    background-color: rgba(228, 240, 208, 0.2);
+}
 
 @media (max-width: 992px) {
 

@@ -7,6 +7,13 @@ import { NavigationService } from '../../../../services/navigation/navigation.se
 import { UserRole } from '../../../../models/user';
 import { PatientService } from '../../../../services/patient/patient.service';
 
+interface UpdateUserData {
+  userId: string;
+  username: string;
+  email: string;
+  role: string;
+}
+
 @Component({
   selector: 'app-user-update',
   standalone: true,
@@ -41,7 +48,12 @@ export class UserUpdateComponent implements OnInit {
       headers: this.authService.getAuthHeaders()
     }).subscribe({
       next: (user) => {
-        this.userForm.patchValue(user);
+        console.log('Current user role:', user.role);
+        this.userForm.patchValue({
+          username: user.username,
+          email: user.email,
+          role: user.role
+        });
       },
       error: (error) => {
         console.error('Error loading user:', error);
@@ -51,7 +63,16 @@ export class UserUpdateComponent implements OnInit {
 
   onSubmit(): void {
     if (this.userForm.valid) {
-      this.patientService.updatePatient(this.userId, this.userForm.value, {
+      const updateData: UpdateUserData = {
+        userId: this.userId,
+        username: this.userForm.value.username,
+        email: this.userForm.value.email,
+        role: this.userForm.value.role
+      };
+
+      console.log('Update data being sent:', updateData);
+
+      this.patientService.updateUser(this.userId, updateData, {
         headers: this.authService.getAuthHeaders()
       }).subscribe({
         next: () => {
@@ -60,7 +81,7 @@ export class UserUpdateComponent implements OnInit {
         },
         error: (error) => {
           console.error('Error updating user:', error);
-          alert('Failed to update user');
+          alert('Failed to update user: ' + error.message);
         }
       });
     }

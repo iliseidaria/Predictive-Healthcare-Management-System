@@ -6,6 +6,7 @@ import { PatientService } from '../../../../services/patient/patient.service';
 import { AuthService } from '../../../../services/auth/auth.service';
 import { NavigationService } from '../../../../services/navigation/navigation.service';
 import { Appointment, AppointmentStatus } from '../../../../models/appointment';
+import { forkJoin } from 'rxjs';
 
 @Component({
   selector: 'app-appointment-detail',
@@ -45,18 +46,24 @@ export class AppointmentDetailComponent implements OnInit {
       this.loading = true;
       this.appointmentService.getAppointmentById(id).subscribe({
         next: (appointment) => {
-          this.patientService.getPatientById(appointment.patientId, {
-            headers: this.authService.getAuthHeaders()
+          forkJoin({
+            patient: this.patientService.getPatientById(appointment.patientId, {
+              headers: this.authService.getAuthHeaders()
+            }),
+            doctor: this.patientService.getPatientById(appointment.providerId, {
+              headers: this.authService.getAuthHeaders()
+            })
           }).subscribe({
-            next: (patient) => {
+            next: (results) => {
               this.appointment = {
                 ...appointment,
-                patientName: `${patient.firstName} ${patient.lastName}`
+                patientName: `${results.patient.firstName} ${results.patient.lastName}`,
+                doctorUsername: results.doctor.username
               };
               this.loading = false;
             },
             error: (error) => {
-              this.error = 'Failed to load patient details';
+              this.error = 'Failed to load appointment details';
               this.loading = false;
             }
           });

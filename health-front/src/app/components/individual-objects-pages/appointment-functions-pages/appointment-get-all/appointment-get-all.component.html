@@ -4,7 +4,11 @@
     <h2>Appointments</h2>
     
     <div class="actions">
-      <a class="create-btn" routerLink="/create-appointment">Create New Appointment</a>
+      <a *ngIf="authService.getCurrentUser()?.role === 'Doctor'"
+         class="create-btn" 
+         routerLink="/create-appointment">
+        Create New Appointment
+      </a>
     </div>
 
     <!-- Loading State -->
@@ -34,7 +38,7 @@
           <tbody>
             <tr *ngFor="let appointment of appointments">
                 <td>{{appointment.patientName}}</td>
-                <td>{{appointment.doctorName}}</td>
+                <td>{{appointment.doctorUsername}}</td>
                 <td>{{appointment.appointmentDate | date:'dd/MM/yyyy'}}</td>
                 <td>{{appointment.appointmentDate | date:'shortTime'}}</td>
                 <td>{{appointment.reason}}</td>

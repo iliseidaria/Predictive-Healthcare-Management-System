@@ -39,73 +39,117 @@ export class DoctorComponent implements OnInit {
   }
 
   loadAppointments(): void {
-    const currentUser = this.authService.getCurrentUser();
-    if (!currentUser || currentUser.role !== 'doctor') {
-      this.error = 'Unauthorized access';
-      return;
-    }
-  
-    this.loading = true;
-    this.appointmentService.getUserAppointments(currentUser.id, 1, 5, {
-      headers: this.authService.getAuthHeaders()
-    }).subscribe({
-      next: (response: any) => {
-        // Ensure we have an array of appointments
-        const appointments = Array.isArray(response) ? response : response.items || [];
-        
-        // Create user requests only if we have appointments
-        if (appointments.length > 0) {
-          const userRequests = appointments.flatMap((appointment: any) => [
+    if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+      this.loading = true;
+      this.appointmentService.getAppointments(1, 10).subscribe({
+        next: (appointments) => {
+          const patientRequests = appointments.map(appointment =>
             this.userService.getUserById(appointment.patientId, {
               headers: this.authService.getAuthHeaders()
-            }),
-            this.userService.getUserById(appointment.providerId, {
-              headers: this.authService.getAuthHeaders()
             })
-          ]);
+          );
 
-          forkJoin(userRequests).subscribe({
-            next: (users: any) => {
-              const userMap = new Map(
-                users.map((user: any) => [user.id, `${user.firstName} ${user.lastName}`])
+          forkJoin(patientRequests).subscribe({
+            next: (patients) => {
+              const patientMap = new Map(
+                patients.map((patient: any) => [patient.id, `${patient.firstName} ${patient.lastName}`])
               );
 
-              this.appointments = appointments.map((appointment: any) => ({
+              this.appointments = appointments.map((appointment) => ({
                 ...appointment,
-                patientName: userMap.get(appointment.patientId) || 'Unknown Patient',
-                doctorName: userMap.get(appointment.providerId) || 'Unknown Doctor'
+                patientName: patientMap.get(appointment.patientId) || 'Unknown Patient'
               }));
 
               const now = new Date();
               this.upcomingAppointments = this.appointments
-                .filter((appointment) => new Date(appointment.appointmentDate) > now)
+                .filter(appointment => 
+                  new Date(appointment.appointmentDate) > now && 
+                  appointment.status === 0) // 0 = Scheduled status
                 .sort((a, b) => new Date(a.appointmentDate).getTime() - new Date(b.appointmentDate).getTime())
-                .slice(0, 3);
+                .slice(0, 2);
+
+              this.loading = false;
             },
             error: (error) => {
-              console.error('Error loading user details:', error);
-              this.error = 'Failed to load user details';
+              console.error('Error loading patient details:', error);
+              this.error = 'Failed to load patient details';
+              this.loading = false;
             }
           });
-        } else {
-          this.appointments = [];
-          this.upcomingAppointments = [];
+        },
+        error: (error) => {
+          this.error = 'Failed to load appointments';
+          this.loading = false;
+          console.error('Error:', error);
         }
-        this.loading = false;
-      },
-      error: (error) => {
-        this.error = 'Failed to load appointments';
-        console.error('Error:', error);
-        this.loading = false;
-      }
-    });
-}
+      });
+    }
+  }
+
+//  loadAppointments(): void {
+//     if (this.authService.validateToken() && this.authService.getCurrentUser().role !== 'Patient') {
+//       this.loading = true;
+
+//       // Fetch appointments
+//       this.appointmentService.getAppointments(1, 10).subscribe({
+//         next: (appointments) => {
+//           // Fetch user details for patientId and providerId in each appointment
+//           const userRequests = appointments.flatMap((appointment) => [
+//             this.userService.getUserById(appointment.patientId, {
+//               headers: this.authService.getAuthHeaders()
+//             }),
+//             this.userService.getUserById(appointment.providerId, {
+//               headers: this.authService.getAuthHeaders()
+//             })
+//           ]);
+
+//           forkJoin(userRequests).subscribe({
+//             next: (users) => {
+//               // Process the users to map patientId and providerId to their names
+//               const userMap = new Map(
+//                 users.map((user: any) => [user.id, `${user.firstName} ${user.lastName}`])
+//               );
+
+//               this.appointments = appointments.map((appointment) => ({
+//                 ...appointment,
+//                 patientName: userMap.get(appointment.patientId) || 'Unknown Patient',
+//                 doctorName: userMap.get(appointment.providerId) || 'Unknown Doctor'
+//               }));
+
+//               // Sort and filter for upcoming appointments
+//               const now = new Date();
+//               this.upcomingAppointments = this.appointments
+//                 .filter((appointment) => new Date(appointment.appointmentDate) > now)
+//                 .sort((a, b) => new Date(a.appointmentDate).getTime() - new Date(b.appointmentDate).getTime())
+//                 .slice(0, 2);
+
+//               this.loading = false;
+//             },
+//             error: (error) => {
+//               console.error('Error loading user details:', error);
+//               this.error = 'Failed to load user details';
+//               this.loading = false;
+//             }
+//           });
+//         },
+//         error: (error) => {
+//           this.error = 'Failed to load appointments';
+//           this.loading = false;
+//           console.error('Error:', error);
+//         }
+//       });
+//     }
+//   }
 
   navigateToPatients(): void {
     this.router.navigate(['/get-all-patients']);
   }
 
   navigateToAppointments(): void {
+    this.router.navigate(['/get-user-appointments']);
+  }
+
+  navigateToAllAppointments(): void {
     this.router.navigate(['/get-all-appointments']);
   }
 

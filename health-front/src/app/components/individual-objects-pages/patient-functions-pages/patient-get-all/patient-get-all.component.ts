@@ -26,7 +26,7 @@ export class PatientGetAllComponent implements OnInit {
   user: any[] = [];
   private navigationService = inject(NavigationService);
 
-  constructor(private patientService: PatientService, private authService: AuthService) {}
+  constructor(private patientService: PatientService, public authService: AuthService) {}
 
   ngOnInit() {
     this.userRole = this.authService.getCurrentUser().role || ''; //pentru html

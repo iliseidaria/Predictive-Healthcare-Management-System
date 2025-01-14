@@ -1,4 +1,5 @@
 using Domain.Entities;
+using Infrastructure.Migrations;
 using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -57,10 +58,19 @@ namespace Infrastructure.Repositories
 
     public async Task<bool> UpdateAsync(User patient)
     {
-      //context.Users.Attach(patient);
       context.Entry(patient).State = EntityState.Modified;
       return await context.SaveChangesAsync() > 0;
     }
+
+    public async Task<bool> UpdateUserAsync(User user)
+    {
+      context.Entry(user).State = EntityState.Modified;
+      context.Entry(user).Property(x => x.Username).IsModified = true;
+      context.Entry(user).Property(x => x.Email).IsModified = true;
+      context.Entry(user).Property(x => x.Role).IsModified = true;
+      return await context.SaveChangesAsync() > 0;
+    }
+
     public void Detach(User patient)
     {
       context.Entry(patient).State = EntityState.Detached;
